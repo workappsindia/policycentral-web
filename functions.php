@@ -268,17 +268,19 @@ function pc_output_schema($schema) {
 }
 
 // ═══════════════════════════════════════════════
-// OPEN GRAPH — handled by Rank Math
-// OG image fallback: set default image if Rank Math doesn't have one
+// OPEN GRAPH IMAGE — ensure og:image is always present
+// Rank Math handles og:title, og:description, og:url
+// We add the image tag directly as a safety net
 // ═══════════════════════════════════════════════
 
-add_filter('rank_math/opengraph/facebook/og_image', 'pc_default_og_image');
-add_filter('rank_math/opengraph/twitter/twitter_image', 'pc_default_og_image');
-function pc_default_og_image($image) {
-    if (empty($image)) {
-        return get_template_directory_uri() . '/images/home-hero-option3.png';
-    }
-    return $image;
+add_action('wp_head', 'pc_ensure_og_image', 99);
+function pc_ensure_og_image() {
+    $image = esc_url(get_template_directory_uri() . '/images/home-hero-option3.png');
+    echo '<meta property="og:image" content="' . $image . '">' . "\n";
+    echo '<meta property="og:image:width" content="1200">' . "\n";
+    echo '<meta property="og:image:height" content="630">' . "\n";
+    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+    echo '<meta name="twitter:image" content="' . $image . '">' . "\n";
 }
 
 // ═══════════════════════════════════════════════
