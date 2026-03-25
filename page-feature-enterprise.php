@@ -72,6 +72,55 @@ get_header();
 .ent-int-dot{width:6px;height:6px;border-radius:50%;background:#22C55E;flex-shrink:0}
 .ent-int-label{font-size:9px;font-weight:700;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif;flex:1}
 .ent-int-check{font-size:10px;color:#22C55E;font-weight:700}
+
+/* ── SSO Auth Flow Mockup ── */
+.ent-sso-mockup{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
+.ent-sso-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}
+.ent-sso-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.ent-sso-head-icon svg{width:14px;height:14px;color:#fff}
+.ent-sso-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
+.ent-sso-body{padding:16px}
+.ent-sso-header{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.ent-sso-providers{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.ent-sso-provider{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;border:1px solid var(--gray-200);background:var(--gray-50)}
+.ent-sso-provider-logo{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.ent-sso-provider-logo.azure{background:linear-gradient(135deg,#0078D4,#106EBE)}
+.ent-sso-provider-logo.okta{background:linear-gradient(135deg,#007DC1,#00A1E0)}
+.ent-sso-provider-logo.saml{background:linear-gradient(135deg,#F59E0B,#D97706)}
+.ent-sso-provider-logo svg{width:14px;height:14px;color:#fff}
+.ent-sso-provider-info{flex:1}
+.ent-sso-provider-name{font-size:11px;font-weight:700;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.ent-sso-provider-sub{font-size:9px;color:var(--gray-400);margin-top:1px}
+.ent-sso-status{font-size:9px;font-weight:700;color:#059669;font-family:'Plus Jakarta Sans',sans-serif}
+.ent-sso-divider{height:1px;background:var(--gray-100);margin:10px 0}
+.ent-sso-flow{display:flex;align-items:center;gap:6px;justify-content:center;padding:8px 0}
+.ent-sso-step{display:flex;flex-direction:column;align-items:center;gap:4px}
+.ent-sso-step-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ent-sso-step-dot svg{width:14px;height:14px;color:#fff}
+.ent-sso-step-dot.s1{background:linear-gradient(135deg,#4338CA,#6366F1)}
+.ent-sso-step-dot.s2{background:linear-gradient(135deg,#059669,#10B981)}
+.ent-sso-step-dot.s3{background:linear-gradient(135deg,#D97706,#F59E0B)}
+.ent-sso-step-label{font-size:8px;font-weight:700;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap}
+.ent-sso-arrow{color:var(--gray-300);font-size:14px;margin-bottom:14px}
+
+/* ── Departments Hierarchy Mockup ── */
+.ent-dept-mockup{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
+.ent-sso-mockup,.ent-dept-mockup{max-width:100%}
+.ent-dept-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#059669,#047857);color:#fff}
+.ent-dept-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.ent-dept-head-icon svg{width:14px;height:14px;color:#fff}
+.ent-dept-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
+.ent-dept-body{padding:14px 16px}
+.ent-dept-org{display:flex;flex-direction:column;gap:6px}
+.ent-dept-root{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:9px;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(4,120,87,.04));border:1px solid rgba(5,150,105,.2)}
+.ent-dept-root-icon{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ent-dept-root-icon svg{width:12px;height:12px;color:#fff}
+.ent-dept-root-name{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.ent-dept-children{display:flex;flex-direction:column;gap:4px;padding-left:16px;border-left:2px solid rgba(5,150,105,.2);margin-left:12px}
+.ent-dept-child{display:flex;align-items:center;gap:7px;padding:6px 10px;border-radius:8px;background:var(--gray-50);border:1px solid var(--gray-100)}
+.ent-dept-child-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.ent-dept-child-name{font-size:10px;font-weight:700;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif;flex:1}
+.ent-dept-child-count{font-size:9px;font-weight:700;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif}
 </style>
 
 

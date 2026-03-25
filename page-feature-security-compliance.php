@@ -77,6 +77,70 @@ get_header();
 .sec-log-info{flex:1}
 .sec-log-action{font-size:9px;font-weight:700;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif}
 .sec-log-meta{font-size:8px;color:var(--gray-400);margin-top:1px}
+
+/* ── MFA Flow Mockup ── */
+.sec-feat-mfa{background:#1E293B;border-radius:16px;border:1px solid rgba(255,255,255,.08);box-shadow:0 16px 48px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.15);overflow:hidden;width:100%;max-width:400px}
+.sec-feat-mfa-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#0F172A;border-bottom:1px solid rgba(255,255,255,.06)}
+.sec-feat-mfa-head-icon{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#1D4ED8,#3B82F6);display:flex;align-items:center;justify-content:center}
+.sec-feat-mfa-head-icon svg{width:14px;height:14px;color:#fff}
+.sec-feat-mfa-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.75)}
+.sec-feat-mfa-body{padding:16px}
+.sec-feat-mfa-steps{display:flex;flex-direction:column;gap:10px}
+.sec-feat-mfa-step{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.sec-feat-mfa-step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
+.sec-feat-mfa-step-num.s1{background:linear-gradient(135deg,#1D4ED8,#3B82F6)}
+.sec-feat-mfa-step-num.s2{background:linear-gradient(135deg,#059669,#10B981)}
+.sec-feat-mfa-step-num.s3{background:linear-gradient(135deg,#7C3AED,#A78BFA)}
+.sec-feat-mfa-step-info{flex:1}
+.sec-feat-mfa-step-title{font-size:12px;font-weight:700;color:rgba(255,255,255,.85);font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-mfa-step-sub{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px}
+.sec-feat-mfa-step-check{font-size:14px;color:#22C55E;font-weight:700}
+.sec-feat-mfa-result{margin-top:12px;padding:10px 14px;border-radius:10px;background:rgba(5,150,105,.12);border:1px solid rgba(16,185,129,.25);display:flex;align-items:center;gap:8px}
+.sec-feat-mfa-result-dot{width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0}
+.sec-feat-mfa-result-text{font-size:11px;font-weight:700;color:#6EE7B7;font-family:'Plus Jakarta Sans',sans-serif}
+
+/* ── Audit Log Mockup ── */
+.sec-feat-audit{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
+.sec-feat-audit-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#059669,#047857);color:#fff}
+.sec-feat-audit-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.sec-feat-audit-head-icon svg{width:14px;height:14px;color:#fff}
+.sec-feat-audit-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-audit-body{padding:12px 16px;display:flex;flex-direction:column;gap:6px}
+.sec-feat-audit-entry{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:9px;border:1px solid var(--gray-100);background:var(--gray-50)}
+.sec-feat-audit-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.sec-feat-audit-dot.ok{background:#22C55E}
+.sec-feat-audit-dot.warn{background:#F59E0B}
+.sec-feat-audit-dot.info{background:#3B82F6}
+.sec-feat-audit-info{flex:1}
+.sec-feat-audit-action{font-size:11px;font-weight:700;color:var(--gray-800);font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-audit-meta{font-size:9px;color:var(--gray-400);margin-top:2px;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-audit-time{font-size:9px;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
+.sec-feat-audit-badge{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:5px 10px;border-radius:6px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.18);font-size:9px;font-weight:800;color:#059669;font-family:'Plus Jakarta Sans',sans-serif;margin-left:16px;margin-bottom:8px}
+
+/* ── Compliance Dashboard Mockup ── */
+.sec-feat-comp{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
+.sec-feat-comp-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}
+.sec-feat-comp-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.sec-feat-comp-head-icon svg{width:14px;height:14px;color:#fff}
+.sec-feat-comp-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-comp-body{padding:14px 16px}
+.sec-feat-comp-label{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:10px}
+.sec-feat-comp-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;justify-content:center}
+.sec-feat-comp-badge{display:flex;flex-direction:column;align-items:center;padding:10px 12px;border-radius:10px;border:1.5px solid;gap:4px;min-width:72px}
+.sec-feat-comp-badge-icon{font-size:18px}
+.sec-feat-comp-badge-name{font-size:10px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-comp-badge-sub{font-size:8px;font-weight:600;opacity:.7;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-feat-comp-badge.soc{border-color:rgba(67,56,202,.3);background:rgba(99,102,241,.06);color:#4338CA}
+.sec-feat-comp-badge.iso{border-color:rgba(5,150,105,.3);background:rgba(5,150,105,.06);color:#059669}
+.sec-feat-comp-badge.gdpr{border-color:rgba(217,119,6,.3);background:rgba(217,119,6,.06);color:#D97706}
+.sec-feat-comp-badge.rbi{border-color:rgba(225,29,72,.3);background:rgba(225,29,72,.06);color:#E11D48}
+.sec-feat-comp-divider{height:1px;background:var(--gray-100);margin:8px 0}
+.sec-feat-comp-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.sec-feat-comp-bar-label{font-size:9px;font-weight:700;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;width:80px;flex-shrink:0}
+.sec-feat-comp-bar-wrap{flex:1;height:5px;border-radius:3px;background:var(--gray-100);overflow:hidden}
+.sec-feat-comp-bar-fill{height:100%;border-radius:3px}
+.sec-feat-comp-bar-val{font-size:9px;font-weight:700;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap}
+.sec-feat-mfa,.sec-feat-audit,.sec-feat-comp{max-width:100%}
 </style>
 
 

@@ -162,6 +162,7 @@ body.admin-bar #nav{top:44px}
 .di-sub{font-size:11px;color:var(--gray-400);margin-top:1px}
 .drop-hr{height:1px;background:var(--gray-100);margin:5px 0}
 .dw{min-width:380px}
+.mob-nav-cta{display:none}
 
 
 /* ══════════════════════════════════════════════════════════════
