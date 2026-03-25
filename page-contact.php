@@ -22,36 +22,7 @@ get_header();
     <!-- LEFT: Form -->
     <div class="contact-form-wrap reveal rd1">
       <h3>For inquiries or support, please fill out the form below, and we will get back to you as soon as possible.</h3>
-      <form onsubmit="return false;" autocomplete="off">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your name <span class="req">*</span></label>
-            <input type="text" class="form-input" placeholder="Enter your full name" required>
-          </div>
-          <div class="form-group">
-            <label>Company name <span class="req">*</span></label>
-            <input type="text" class="form-input" placeholder="Enter your company name" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your email <span class="req">*</span></label>
-            <input type="email" class="form-input" placeholder="you@company.com" required>
-          </div>
-          <div class="form-group">
-            <label>Contact number</label>
-            <input type="tel" class="form-input" placeholder="Enter phone number with country code">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Your message</label>
-          <textarea class="form-input" placeholder="Tell us how we can help you..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">
-          Send Message
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
-      </form>
+      <?php echo do_shortcode('[fluentform id="1"]'); ?>
     </div>
 
     <!-- RIGHT: Offices -->
