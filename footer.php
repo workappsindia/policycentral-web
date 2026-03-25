@@ -49,7 +49,11 @@
 
   <div class="foot-bot">
     <span>&copy; <?php echo date('Y'); ?> PolicyCentral.ai. All rights reserved.</span>
-    <span>Policy Management Software</span>
+    <a href="<?php echo esc_url(home_url('/')); ?>" style="color:var(--gray-600)">Policy Management Software</a>
+    <div class="foot-legal">
+      <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a>
+      <a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms &amp; Conditions</a>
+    </div>
   </div>
 </div>
 </footer>
