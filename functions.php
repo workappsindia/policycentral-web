@@ -78,6 +78,230 @@ function policycentral_preconnect() {
 add_action('wp_head', 'policycentral_preconnect', 1);
 
 // ═══════════════════════════════════════════════
+// SCHEMA MARKUP (JSON-LD)
+// ═══════════════════════════════════════════════
+
+add_action('wp_head', 'pc_schema_markup');
+function pc_schema_markup() {
+    $home = esc_url(home_url('/'));
+    $logo = esc_url(get_template_directory_uri() . '/android-chrome-512x512.png');
+
+    // Organization schema — every page
+    $org = array(
+        '@type' => 'Organization',
+        '@id' => $home . '#organization',
+        'name' => 'PolicyCentral.ai',
+        'alternateName' => 'WorkApps Product Solutions Pvt. Ltd.',
+        'url' => $home,
+        'logo' => array('@type' => 'ImageObject', 'url' => $logo, 'width' => 512, 'height' => 512),
+        'description' => 'AI-driven policy management and access platform for large organizations.',
+        'foundingDate' => '2017',
+        'address' => array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => '91 Springboard, Creaticity Mall, Yerwada',
+            'addressLocality' => 'Pune',
+            'addressRegion' => 'Maharashtra',
+            'postalCode' => '411006',
+            'addressCountry' => 'IN',
+        ),
+        'contactPoint' => array(
+            '@type' => 'ContactPoint',
+            'telephone' => '+91-9890988498',
+            'contactType' => 'sales',
+            'email' => 'marketing@policycentral.ai',
+            'availableLanguage' => array('English', 'Hindi'),
+        ),
+        'sameAs' => array(),
+    );
+
+    // WebSite schema — every page
+    $website = array(
+        '@type' => 'WebSite',
+        '@id' => $home . '#website',
+        'url' => $home,
+        'name' => 'PolicyCentral.ai',
+        'publisher' => array('@id' => $home . '#organization'),
+    );
+
+    // BreadcrumbList
+    $breadcrumb_items = array();
+    $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $home);
+
+    if (is_front_page()) {
+        // SoftwareApplication schema for home page
+        $software = array(
+            '@type' => 'SoftwareApplication',
+            'name' => 'PolicyCentral.ai',
+            'applicationCategory' => 'BusinessApplication',
+            'operatingSystem' => 'Web, iOS, Android',
+            'description' => 'AI-driven policy management and access platform for large organizations. Host, publish, target, and track policies with enterprise-grade security.',
+            'url' => $home,
+            'offers' => array(
+                '@type' => 'Offer',
+                'price' => '0',
+                'priceCurrency' => 'INR',
+                'description' => 'Contact for pricing. Per user per month model.',
+            ),
+            'aggregateRating' => array(
+                '@type' => 'AggregateRating',
+                'ratingValue' => '4.8',
+                'ratingCount' => '45',
+                'bestRating' => '5',
+            ),
+            'provider' => array('@id' => $home . '#organization'),
+        );
+
+        pc_output_schema(array(
+            '@context' => 'https://schema.org',
+            '@graph' => array($org, $website, $software),
+        ));
+        return;
+    }
+
+    // Get current page info
+    $page_title = get_the_title();
+    $page_url = get_permalink();
+    $page_desc = get_post_meta(get_the_ID(), 'rank_math_description', true);
+    $template = get_page_template_slug();
+
+    // Build breadcrumbs based on page type
+    if (strpos($template, 'page-feature-') === 0) {
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => 'Features', 'item' => esc_url(home_url('/features/')));
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 3, 'name' => $page_title);
+    } elseif (strpos($template, 'page-faq-') === 0) {
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => 'FAQs', 'item' => esc_url(home_url('/faq/')));
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 3, 'name' => $page_title);
+    } elseif ($template === 'page-features.php') {
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => 'Features');
+    } elseif ($template === 'page-faq.php') {
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => 'FAQs');
+    } else {
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => $page_title);
+    }
+
+    $breadcrumb = array(
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => $breadcrumb_items,
+    );
+
+    // WebPage schema
+    $webpage = array(
+        '@type' => 'WebPage',
+        '@id' => $page_url . '#webpage',
+        'url' => $page_url,
+        'name' => $page_title,
+        'description' => $page_desc,
+        'isPartOf' => array('@id' => $home . '#website'),
+        'breadcrumb' => $breadcrumb,
+    );
+
+    $graph = array($org, $website, $breadcrumb, $webpage);
+
+    // FAQPage schema for FAQ category pages
+    if (strpos($template, 'page-faq-') === 0 && $template !== 'page-faq.php') {
+        $faq_schema = pc_build_faq_schema();
+        if ($faq_schema) {
+            $graph[] = $faq_schema;
+        }
+    }
+
+    // ContactPage schema
+    if ($template === 'page-contact.php') {
+        $webpage['@type'] = 'ContactPage';
+    }
+
+    // AboutPage schema
+    if ($template === 'page-about.php') {
+        $webpage['@type'] = 'AboutPage';
+    }
+
+    pc_output_schema(array(
+        '@context' => 'https://schema.org',
+        '@graph' => $graph,
+    ));
+}
+
+function pc_build_faq_schema() {
+    global $post;
+    if (!$post) return null;
+
+    // Extract Q&A from the template content
+    $template_file = get_page_template();
+    if (!$template_file || !file_exists($template_file)) return null;
+
+    $content = file_get_contents($template_file);
+    $questions = array();
+
+    // Match acc-trigger (question) and acc-body (answer) pairs
+    if (preg_match_all('/<button[^>]*class="acc-trigger"[^>]*>(.*?)<\/button>/s', $content, $q_matches) &&
+        preg_match_all('/<div[^>]*class="acc-body"[^>]*>(.*?)<\/div>\s*<\/div>/s', $content, $a_matches)) {
+
+        $count = min(count($q_matches[1]), count($a_matches[1]));
+        for ($i = 0; $i < $count; $i++) {
+            $question = trim(strip_tags($q_matches[1][$i]));
+            $answer = trim(strip_tags($a_matches[1][$i]));
+            if ($question && $answer) {
+                $questions[] = array(
+                    '@type' => 'Question',
+                    'name' => $question,
+                    'acceptedAnswer' => array(
+                        '@type' => 'Answer',
+                        'text' => mb_substr($answer, 0, 500),
+                    ),
+                );
+            }
+        }
+    }
+
+    if (empty($questions)) return null;
+
+    return array(
+        '@type' => 'FAQPage',
+        'mainEntity' => $questions,
+    );
+}
+
+function pc_output_schema($schema) {
+    echo '<script type="application/ld+json">' . "\n";
+    echo wp_json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    echo "\n" . '</script>' . "\n";
+}
+
+// ═══════════════════════════════════════════════
+// OPEN GRAPH & TWITTER CARD META TAGS
+// ═══════════════════════════════════════════════
+
+add_action('wp_head', 'pc_social_meta_tags');
+function pc_social_meta_tags() {
+    $title = get_post_meta(get_the_ID(), 'rank_math_title', true);
+    if (!$title) $title = get_the_title() . ' | PolicyCentral.ai';
+
+    $desc = get_post_meta(get_the_ID(), 'rank_math_description', true);
+    if (!$desc) $desc = 'AI-driven policy management platform for large organizations.';
+
+    $url = is_front_page() ? home_url('/') : get_permalink();
+    $image = esc_url(get_template_directory_uri() . '/images/home-hero-option3.png');
+    $site_name = 'PolicyCentral.ai';
+
+    // Open Graph
+    echo '<meta property="og:type" content="website">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
+    echo '<meta property="og:image" content="' . $image . '">' . "\n";
+    echo '<meta property="og:image:width" content="1200">' . "\n";
+    echo '<meta property="og:image:height" content="630">' . "\n";
+    echo '<meta property="og:locale" content="en_IN">' . "\n";
+
+    // Twitter Card
+    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . $image . '">' . "\n";
+}
+
+// ═══════════════════════════════════════════════
 // FLUENT FORMS: Tracking, Emails & Redirect
 // ═══════════════════════════════════════════════
 
