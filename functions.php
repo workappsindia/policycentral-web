@@ -268,37 +268,17 @@ function pc_output_schema($schema) {
 }
 
 // ═══════════════════════════════════════════════
-// OPEN GRAPH & TWITTER CARD META TAGS
+// OPEN GRAPH — handled by Rank Math
+// OG image fallback: set default image if Rank Math doesn't have one
 // ═══════════════════════════════════════════════
 
-add_action('wp_head', 'pc_social_meta_tags');
-function pc_social_meta_tags() {
-    $title = get_post_meta(get_the_ID(), 'rank_math_title', true);
-    if (!$title) $title = get_the_title() . ' | PolicyCentral.ai';
-
-    $desc = get_post_meta(get_the_ID(), 'rank_math_description', true);
-    if (!$desc) $desc = 'AI-driven policy management platform for large organizations.';
-
-    $url = is_front_page() ? home_url('/') : get_permalink();
-    $image = esc_url(get_template_directory_uri() . '/images/home-hero-option3.png');
-    $site_name = 'PolicyCentral.ai';
-
-    // Open Graph
-    echo '<meta property="og:type" content="website">' . "\n";
-    echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
-    echo '<meta property="og:title" content="' . esc_attr($title) . '">' . "\n";
-    echo '<meta property="og:description" content="' . esc_attr($desc) . '">' . "\n";
-    echo '<meta property="og:url" content="' . esc_url($url) . '">' . "\n";
-    echo '<meta property="og:image" content="' . $image . '">' . "\n";
-    echo '<meta property="og:image:width" content="1200">' . "\n";
-    echo '<meta property="og:image:height" content="630">' . "\n";
-    echo '<meta property="og:locale" content="en_IN">' . "\n";
-
-    // Twitter Card
-    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
-    echo '<meta name="twitter:title" content="' . esc_attr($title) . '">' . "\n";
-    echo '<meta name="twitter:description" content="' . esc_attr($desc) . '">' . "\n";
-    echo '<meta name="twitter:image" content="' . $image . '">' . "\n";
+add_filter('rank_math/opengraph/facebook/og_image', 'pc_default_og_image');
+add_filter('rank_math/opengraph/twitter/twitter_image', 'pc_default_og_image');
+function pc_default_og_image($image) {
+    if (empty($image)) {
+        return get_template_directory_uri() . '/images/home-hero-option3.png';
+    }
+    return $image;
 }
 
 // ═══════════════════════════════════════════════
