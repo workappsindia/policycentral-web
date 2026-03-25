@@ -651,7 +651,7 @@
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="fblock-bottom-link fblock-explore-makers">Explore all AI-Powered Policy Intelligence features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="fblock-bottom-link fblock-explore-makers">Explore all AI-Powered Policy Intelligence features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
   <!-- ═══ PANEL 2 : FOR THE EMPLOYEES ═══ -->
@@ -1132,7 +1132,7 @@
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="fblock-bottom-link fblock-explore-employees">Explore all Policy Distribution &amp; Targeting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="fblock-bottom-link fblock-explore-employees">Explore all Policy Distribution &amp; Targeting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
   <!-- ═══ PANEL 3 : FOR THE ORGANIZATION ═══ -->
@@ -1550,7 +1550,7 @@
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="fblock-bottom-link fblock-explore-org">Explore all Tracking, Analytics &amp; Reporting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="fblock-bottom-link fblock-explore-org">Explore all Tracking, Analytics &amp; Reporting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
 </div>

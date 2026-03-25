@@ -7,7 +7,7 @@ get_header();
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">Publishing &amp; Distribution FAQs</div>
   <h1>Creating, targeting, and managing <em>policies at scale</em></h1>
   <p>How to publish policies, target the right audience, manage versions, and operate a multi-department policy library without IT.</p>

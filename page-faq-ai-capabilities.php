@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">AI Capabilities FAQs</div>
   <h1>Eight AI features built on <em>Amazon Bedrock</em></h1>
   <p>What each AI feature does, how it's powered, what it costs, and how your team controls output before employees see it.</p>

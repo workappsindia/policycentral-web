@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128274; Hosting &amp; Security FAQs</div>
   <h1>Data sovereignty, AWS architecture, <em>and certifications</em></h1>
   <p>Where your data lives, how it's protected, what security certifications the platform holds, and how it handles regulated industry requirements.</p>

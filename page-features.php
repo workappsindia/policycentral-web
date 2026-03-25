@@ -16,7 +16,7 @@ get_header();
 <div class="cat-grid">
 
 
-  <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="cat-card reveal rd1">
+  <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="cat-card reveal rd1">
     <div class="cat-emoji">&#x1F9E0;</div>
     <h3>AI-Powered Policy Intelligence</h3>
     <p>Translate, summarize, generate audio, and chatbot, powered by AWS AI services.</p>
@@ -25,7 +25,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="cat-card reveal rd2">
+  <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>" class="cat-card reveal rd2">
     <div class="cat-emoji">&#x270F;&#xFE0F;</div>
     <h3>Policy Creation &amp; Content Management</h3>
     <p>Word-style editor, rich media, PDF viewer, and video hosting. Create policies effortlessly.</p>
@@ -34,7 +34,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="cat-card reveal rd3">
+  <a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>" class="cat-card reveal rd3">
     <div class="cat-emoji">&#x1F4CB;</div>
     <h3>Publisher Controls &amp; Workflow</h3>
     <p>Approval workflows, version control, expiry, and resend. Full publishing lifecycle.</p>
@@ -45,7 +45,7 @@ get_header();
   </a>
 
 
-  <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="cat-card reveal rd1">
+  <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="cat-card reveal rd1">
     <div class="cat-emoji">&#x1F3AF;</div>
     <h3>Policy Distribution &amp; Targeting</h3>
     <p>Target by profile, evergreen sharing, mail merge, and public access. Precision delivery.</p>
@@ -54,7 +54,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="cat-card reveal rd2">
+  <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>" class="cat-card reveal rd2">
     <div class="cat-emoji">&#x1F4F1;</div>
     <h3>Employee Portal &amp; Mobile Experience</h3>
     <p>White-label mobile app, advanced search, and smart folders. Access anywhere.</p>
@@ -63,7 +63,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="cat-card reveal rd3">
+  <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>" class="cat-card reveal rd3">
     <div class="cat-emoji">&#x2705;</div>
     <h3>Employee Interaction &amp; Acknowledgement</h3>
     <p>E-signatures, response buttons, comments, and emoji reactions. Drive engagement.</p>
@@ -74,7 +74,7 @@ get_header();
   </a>
 
 
-  <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="cat-card reveal rd1">
+  <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="cat-card reveal rd1">
     <div class="cat-emoji">&#x1F4CA;</div>
     <h3>Tracking, Analytics &amp; Reporting</h3>
     <p>Read receipts, engagement analytics, compliance reports, search analytics.</p>
@@ -83,7 +83,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="cat-card reveal rd2">
+  <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>" class="cat-card reveal rd2">
     <div class="cat-emoji">&#x1F3E2;</div>
     <h3>Enterprise Features</h3>
     <p>SSO, Active Directory, white-label, API integrations, multi-department.</p>
@@ -92,7 +92,7 @@ get_header();
       <span class="cat-arrow">&rarr;</span>
     </div>
   </a>
-  <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="cat-card reveal rd3">
+  <a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>" class="cat-card reveal rd3">
     <div class="cat-emoji">&#x1F512;</div>
     <h3>Banking-Grade Security &amp; Compliance</h3>
     <p>AES-256 encryption, VAPT, IP restriction, audit logs, flexible deployment.</p>
@@ -113,7 +113,7 @@ get_header();
       <span class="af-emoji">&#x1F9E0;</span>
       <h3>AI-Powered Policy Intelligence</h3>
       <span class="af-count">8 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Multi-Language Policy Translation</h4><p>Translate policies into 10 Indian languages including Hindi, Marathi, Tamil, Telugu, and more for maximum comprehension.</p></div></div>
@@ -133,7 +133,7 @@ get_header();
       <span class="af-emoji">&#x270F;&#xFE0F;</span>
       <h3>Policy Creation &amp; Content Management</h3>
       <span class="af-count">8 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Word-Style Editor</h4><p>Familiar document-writing interface with full support for headings, fonts, lists, tables, and formatting.</p></div></div>
@@ -153,7 +153,7 @@ get_header();
       <span class="af-emoji">&#x1F4CB;</span>
       <h3>Publisher Controls &amp; Workflow Management</h3>
       <span class="af-count">12 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Dedicated Publisher Role</h4><p>Assign a dedicated publisher role with specific permissions to manage policies and access reports.</p></div></div>
@@ -177,7 +177,7 @@ get_header();
       <span class="af-emoji">&#x1F3AF;</span>
       <h3>Policy Distribution &amp; Targeting</h3>
       <span class="af-count">7 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Target Using Employee Profile Fields</h4><p>Share policies by department, location, grade, or designation, synced with Active Directory or HRMS.</p></div></div>
@@ -196,7 +196,7 @@ get_header();
       <span class="af-emoji">&#x1F4F1;</span>
       <h3>Employee Portal &amp; Mobile Experience</h3>
       <span class="af-count">19 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Web-Based Policy Viewing</h4><p>Clean, scrollable web pages with responsive formatting across all screen sizes and devices.</p></div></div>
@@ -227,7 +227,7 @@ get_header();
       <span class="af-emoji">&#x2705;</span>
       <h3>Employee Interaction &amp; Acknowledgement</h3>
       <span class="af-count">6 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Policy Acknowledgement and Signing</h4><p>Multiple signing methods including AD password, Aadhaar-based verification, and digital signatures with audit trails.</p></div></div>
@@ -245,7 +245,7 @@ get_header();
       <span class="af-emoji">&#x1F4CA;</span>
       <h3>Tracking, Analytics &amp; Reporting</h3>
       <span class="af-count">8 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Policy-Level Read Receipts</h4><p>Track exactly who read each policy, when they read it, and how many times with per-employee granularity.</p></div></div>
@@ -265,7 +265,7 @@ get_header();
       <span class="af-emoji">&#x1F3E2;</span>
       <h3>Enterprise Features</h3>
       <span class="af-count">7 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Single Sign-On &amp; Active Directory Integration</h4><p>Authenticate users via Active Directory with SSO support using existing enterprise credentials.</p></div></div>
@@ -284,7 +284,7 @@ get_header();
       <span class="af-emoji">&#x1F512;</span>
       <h3>Banking-Grade Security &amp; Compliance</h3>
       <span class="af-count">17 features</span>
-      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>">View details &rarr;</a>
+      <a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>">View details &rarr;</a>
     </div>
     <div class="af-list">
       <div class="af-item"><div class="af-dot"></div><div><h4>Annual VAPT and Source Code Review</h4><p>Regular vulnerability assessment and penetration testing with certification reports available.</p></div></div>

@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">Features &amp; Dashboard FAQs</div>
   <h1>What the platform <em>actually does</em>, feature by feature</h1>
   <p>Detailed breakdowns of search, employee experience, admin dashboards, content formats, version control, and every core capability.</p>

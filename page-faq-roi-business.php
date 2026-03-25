@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128200; ROI &amp; Business Case FAQs</div>
   <h1>Concrete numbers to build your <em>internal business case</em></h1>
   <p>Time savings, cost comparisons, compliance ROI, and the specific data points to justify PolicyCentral.ai to your leadership team.</p>

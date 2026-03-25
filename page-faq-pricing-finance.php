@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128176; Pricing &amp; Finance FAQs</div>
   <h1>Financial due diligence, TCO, and <em>contract terms</em></h1>
   <p>Total cost of ownership, pricing model, implementation cost, contract structure, payback period, and the financial case for PolicyCentral.ai.</p>

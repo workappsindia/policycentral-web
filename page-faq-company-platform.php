@@ -7,7 +7,7 @@ get_header(); ?>
 <!-- FAQ HERO -->
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">Company &amp; Platform FAQs</div>
   <h1>Who built this, and <em>why does it exist?</em></h1>
   <p>Background on PolicyCentral.ai, its parent company <a href="https://workapps.com" target="_blank">WorkApps</a>, the customer base, and the problem it was designed to solve.</p>

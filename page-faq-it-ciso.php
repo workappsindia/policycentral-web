@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128737;&#65039; IT &amp; CISO FAQs</div>
   <h1>Everything your security team <em>will ask about</em></h1>
   <p>Data residency, access control, vendor security posture, third-party risk assessment, portability, and ongoing maintenance burden.</p>

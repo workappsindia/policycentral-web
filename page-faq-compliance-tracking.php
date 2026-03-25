@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">Compliance &amp; Tracking FAQs</div>
   <h1>How attestation, read receipts, and <em>audit trails</em> work</h1>
   <p>Practical answers about tracking who has read what, how attestation is enforced, and what documentation regulators will see.</p>

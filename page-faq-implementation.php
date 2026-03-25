@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128640; Implementation &amp; Integration FAQs</div>
   <h1>Setup timelines, integrations, and <em>what IT actually needs to do</em></h1>
   <p>How long implementation takes, what your IT team needs to do, how HRMS and AD integration works, and how to migrate legacy policy libraries.</p>

@@ -11,19 +11,19 @@
     <div class="foot-col">
       <h5><a href="<?php echo esc_url(home_url('/features/')); ?>" style="color:inherit;text-decoration:none">Features</a></h5>
       <ul class="foot-links">
-        <li><a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>">AI-Powered Policy Intelligence</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>">Policy Creation &amp; Content Management</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>">Publisher Controls &amp; Workflow Management</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>">Policy Distribution &amp; Targeting</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>">Employee Portal &amp; Mobile Experience</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>">Employee Interaction &amp; Acknowledgement</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>">Tracking, Analytics &amp; Reporting</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>">Enterprise Features</a></li>
-        <li><a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>">Banking-Grade Security &amp; Compliance</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>">AI-Powered Policy Intelligence</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/content-management/')); ?>">Policy Creation &amp; Content Management</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>">Publisher Controls &amp; Workflow Management</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>">Policy Distribution &amp; Targeting</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>">Employee Portal &amp; Mobile Experience</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>">Employee Interaction &amp; Acknowledgement</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>">Tracking, Analytics &amp; Reporting</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>">Enterprise Features</a></li>
+        <li><a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>">Banking-Grade Security &amp; Compliance</a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h5><a href="<?php echo esc_url(home_url('/faqs/')); ?>" style="color:inherit;text-decoration:none">FAQs</a></h5>
+      <h5><a href="<?php echo esc_url(home_url('/faq/')); ?>" style="color:inherit;text-decoration:none">FAQs</a></h5>
       <ul class="foot-links">
         <li><a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>">Company &amp; Platform</a></li>
         <li><a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>">AI Capabilities</a></li>
