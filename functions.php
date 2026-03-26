@@ -512,7 +512,7 @@ function pc_process_lead_emails($lead_id) {
 }
 
 function pc_send_admin_lead_notification($lead_id, $full_name, $company, $email, $phone, $message) {
-    $admin_email = 'punkaj@psdigital.io';
+    $admin_email = 'contact@policycentral.ai';
 
     $tracking = array(
         'IP Address' => pc_get_client_ip(),
@@ -848,7 +848,7 @@ function pc_build_user_email($name) {
  */
 add_action('fluentform/submission_inserted', 'pc_send_admin_notification', 30, 3);
 function pc_send_admin_notification($entryId, $formData, $form) {
-    $admin_email = 'punkaj@psdigital.io';
+    $admin_email = 'contact@policycentral.ai';
     $tracking = array(
         'IP Address'      => pc_get_client_ip(),
         'User Agent'      => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'N/A',
