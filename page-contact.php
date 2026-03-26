@@ -8,7 +8,6 @@ get_header();
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
   <div class="section-header reveal">
-    <span class="eyebrow">Contact Us</span>
     <h1 style="margin-top:18px;font-size:clamp(32px,4.2vw,54px)">We are always going to be<br><span class="g-text">super excited</span> to hear from you.</h1>
   </div>
 </div>
@@ -21,13 +20,44 @@ get_header();
 
     <!-- LEFT: Form -->
     <div class="contact-form-wrap reveal rd1">
-      <h3>For inquiries or support, please fill out the form below, and we will get back to you as soon as possible.</h3>
-      <?php echo do_shortcode('[fluentform id="1"]'); ?>
+      <p class="form-helper-text">For inquiries or support, please fill out the form below, and we will get back to you as soon as possible.</p>
+      <form id="pc-contact-form" autocomplete="off" novalidate>
+        <?php wp_nonce_field('pc_contact_submit', 'pc_nonce'); ?>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your name <span class="req">*</span></label>
+            <input type="text" name="full_name" class="form-input" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Company name <span class="req">*</span></label>
+            <input type="text" name="company" class="form-input" placeholder="Enter your company name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your email <span class="req">*</span></label>
+            <input type="email" name="email" class="form-input" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Contact number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="Enter phone number with country code">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your message</label>
+          <textarea name="message" class="form-input" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <div class="form-status" id="form-status" style="display:none"></div>
+        <button type="submit" class="btn-submit" id="btn-submit">
+          Send Message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
     </div>
 
     <!-- RIGHT: Offices -->
     <div class="offices-wrap reveal rd2">
-      <h3 class="g-text" style="margin-bottom:24px">Our Offices</h3>
+      <h2 class="g-text" style="margin-bottom:24px">Our Offices</h2>
 
       <!-- Pune - Registered -->
       <div class="office-cards">
@@ -82,5 +112,64 @@ get_header();
   </div>
 </div>
 </section>
+
+<script>
+(function(){
+  var form = document.getElementById('pc-contact-form');
+  var btn  = document.getElementById('btn-submit');
+  var status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Client-side validation
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Disable button, show loading
+    btn.disabled = true;
+    btn.innerHTML = 'Sending... <svg class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;animation:spin .8s linear infinite"><circle cx="12" cy="12" r="10" stroke-dasharray="30 70" stroke-linecap="round"/></svg>';
+    status.style.display = 'none';
+
+    var data = new FormData(form);
+    data.append('action', 'pc_contact_submit');
+
+    fetch('<?php echo admin_url("admin-ajax.php"); ?>', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if (res.success) {
+        // GTM event
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({ event: 'form_submit', form_name: 'contact_form' });
+        // Store form data in cookies for thank-you page
+        var expires = new Date(Date.now() + 5 * 60 * 1000).toUTCString();
+        document.cookie = 'pc_ty_name=' + encodeURIComponent(data.get('full_name')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        document.cookie = 'pc_ty_company=' + encodeURIComponent(data.get('company')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        document.cookie = 'pc_ty_email=' + encodeURIComponent(data.get('email')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        // Redirect to thank you
+        window.location.href = '<?php echo home_url("/thank-you/"); ?>';
+      } else {
+        status.style.display = 'block';
+        status.className = 'form-status error';
+        status.textContent = res.data || 'Something went wrong. Please try again.';
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+      }
+    })
+    .catch(function(){
+      status.style.display = 'block';
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please check your connection and try again.';
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+    });
+  });
+})();
+</script>
 
 <?php get_footer(); ?>

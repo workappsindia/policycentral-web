@@ -50,7 +50,7 @@ get_header();
 .dt-targets-hd{display:flex;align-items:center;gap:6px;margin-bottom:8px}
 .dt-targets-icon{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#D97706,#B45309);display:flex;align-items:center;justify-content:center}
 .dt-targets-icon svg{width:11px;height:11px;color:#fff}
-.dt-targets h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.dt-targets h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
 .dt-chip-row{display:flex;flex-direction:column;gap:4px}
 .dt-chip{display:flex;align-items:center;justify-content:space-between;padding:4px 8px;border-radius:6px;font-size:9px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
 .dt-chip-dept{background:rgba(6,148,162,.08);color:#0694A2;border:1px solid rgba(6,148,162,.18)}
@@ -63,7 +63,7 @@ get_header();
 .dt-evergreen-hd{display:flex;align-items:center;gap:7px;margin-bottom:5px}
 .dt-evergreen-icon{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center}
 .dt-evergreen-icon svg{width:13px;height:13px;color:#fff}
-.dt-evergreen h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.dt-evergreen h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
 .dt-evergreen-sub{font-size:9px;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;padding-left:2px}
 .dt-evergreen-badge{display:inline-flex;align-items:center;gap:4px;margin-top:6px;padding:3px 8px;border-radius:5px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);font-size:8px;font-weight:800;color:#059669;font-family:'Plus Jakarta Sans',sans-serif}
 .dt-evergreen-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:#059669}
@@ -73,7 +73,7 @@ get_header();
 .dt-merge-hd{display:flex;align-items:center;gap:6px;margin-bottom:7px}
 .dt-merge-icon{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#4338CA,#6366F1);display:flex;align-items:center;justify-content:center}
 .dt-merge-icon svg{width:11px;height:11px;color:#fff}
-.dt-merge h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.dt-merge h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
 .dt-merge-preview{background:var(--gray-50);border-radius:7px;padding:7px 9px;border:1px solid var(--gray-100)}
 .dt-merge-line{font-size:9px;color:var(--gray-600);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.5}
 .dt-merge-field{display:inline-block;padding:1px 5px;border-radius:3px;background:rgba(67,56,202,.1);color:#4338CA;font-weight:800;border:1px solid rgba(67,56,202,.2);font-size:8px}
@@ -146,12 +146,12 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content reveal">
-    <h1>Policy Distribution<br>&amp; <span class="accent">Targeting</span></h1>
+    <h1>Policy Distribution <br>&amp; <span class="accent">Targeting</span></h1>
     <p class="subtitle">Deliver the right policies to the right employees through flexible targeting and controlled access.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -227,7 +227,7 @@ get_header();
           <div class="dt-targets-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
           </div>
-          <h5>Filter By Field</h5>
+          <h3>Filter By Field</h3>
         </div>
         <div class="dt-chip-row">
           <div class="dt-chip dt-chip-dept">Department <span class="dt-chip-count">8 filters</span></div>
@@ -242,7 +242,7 @@ get_header();
           <div class="dt-evergreen-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
           </div>
-          <h5>Evergreen Share</h5>
+          <h3>Evergreen Share</h3>
         </div>
         <div class="dt-evergreen-sub">Auto-include future joiners</div>
         <div class="dt-evergreen-badge">New Joiners Auto-Included</div>
@@ -254,7 +254,7 @@ get_header();
           <div class="dt-merge-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <h5>Mail Merge</h5>
+          <h3>Mail Merge</h3>
         </div>
         <div class="dt-merge-preview">
           <div class="dt-merge-line">Dear <span class="dt-merge-field">{Employee Name}</span>,</div>
@@ -431,7 +431,7 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Ready to Transform Your<br>Policy <span class="g-text">Distribution</span>?</h2>
+    <h2>Ready to Transform Your <br>Policy <span class="g-text">Distribution</span>?</h2>
     <p>See how PolicyCentral.ai delivers the right policies to the right people, every time.</p>
     <div class="cta-buttons">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -448,7 +448,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -470,12 +470,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -491,7 +491,7 @@ get_header();
   <div class="other-grid">
     <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="other-card reveal rd2">
@@ -506,7 +506,7 @@ get_header();
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd1">

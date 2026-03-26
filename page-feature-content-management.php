@@ -50,7 +50,7 @@ get_header();
 @keyframes cardSlideIn{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 .hm-upload-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#3B82F6,#2563EB);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
 .hm-upload-icon svg{width:15px;height:15px;color:#fff}
-.hm-upload h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px}
+.hm-upload h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px}
 .hm-upload-flow{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif}
 .hm-upload-chip{padding:3px 7px;border-radius:4px;font-weight:700}
 .hm-upload-chip.docx{background:rgba(59,130,246,.1);color:#2563EB;border:1px solid rgba(59,130,246,.2)}
@@ -59,7 +59,7 @@ get_header();
 
 /* Format Card - floating */
 .hm-formats{position:absolute;bottom:-16px;left:-14px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:cardSlideIn .6s ease-out both;animation-delay:.5s}
-.hm-formats h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.hm-formats h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .hm-format-row{display:flex;gap:5px}
 .hm-format-pill{display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:6px;font-size:9px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
 .hm-format-pill svg{width:11px;height:11px}
@@ -70,7 +70,7 @@ get_header();
 
 /* Responsive Card - floating */
 .hm-responsive{position:absolute;bottom:50px;right:-24px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:cardSlideIn .6s ease-out both;animation-delay:.7s}
-.hm-responsive h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.hm-responsive h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .hm-device-row{display:flex;align-items:center;gap:8px}
 .hm-device{display:flex;flex-direction:column;align-items:center;gap:3px}
 .hm-device-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center}
@@ -157,9 +157,9 @@ get_header();
     <h1>Policy Creation &amp;<br><span class="accent">Content Management</span></h1>
     <p class="subtitle">Create, enrich, and publish policies in multiple formats with a flexible and intuitive authoring experience designed for modern enterprises.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -231,7 +231,7 @@ get_header();
         <div class="hm-upload-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
         </div>
-        <h5>Word Upload</h5>
+        <h3>Word Upload</h3>
         <div class="hm-upload-flow">
           <span class="hm-upload-chip docx">.docx</span>
           <span class="hm-upload-arrow">→</span>
@@ -242,7 +242,7 @@ get_header();
 
       <!-- Floating Card: Multi-format -->
       <div class="hm-formats">
-        <h5>Multi-Format Support</h5>
+        <h3>Multi-Format Support</h3>
         <div class="hm-format-row">
           <span class="hm-format-pill hm-fmt-web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Web</span>
           <span class="hm-format-pill hm-fmt-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> PDF</span>
@@ -253,7 +253,7 @@ get_header();
 
       <!-- Floating Card: Responsive Viewing -->
       <div class="hm-responsive">
-        <h5>Responsive Viewing</h5>
+        <h3>Responsive Viewing</h3>
         <div class="hm-device-row">
           <div class="hm-device">
             <div class="hm-device-icon desk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
@@ -278,7 +278,7 @@ get_header();
 <section class="features-section">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Everything You Need to<br><span class="g-text">Create Great Policies</span></h2>
+    <h2>Everything You Need to <br><span class="g-text">Create Great Policies</span></h2>
     <p>A complete content management toolkit built specifically for policy authoring and publishing workflows.</p>
   </div>
 
@@ -463,7 +463,7 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Ready to streamline your<br>policy <span class="g-text">content creation</span>?</h2>
+    <h2>Ready to streamline your <br>policy <span class="g-text">content creation</span>?</h2>
     <p>See how our content management tools simplify authoring, enrich policies with multimedia, and ensure a great reading experience.</p>
     <div class="cta-buttons">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -480,7 +480,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -502,12 +502,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -523,7 +523,7 @@ get_header();
   <div class="other-grid">
     <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="other-card reveal rd2">
@@ -538,7 +538,7 @@ get_header();
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd1">

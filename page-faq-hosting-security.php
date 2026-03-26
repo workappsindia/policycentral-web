@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128274; Hosting &amp; Security FAQs</div>
   <h1>Data sovereignty, AWS architecture, <em>and certifications</em></h1>
   <p>Where your data lives, how it's protected, what security certifications the platform holds, and how it handles regulated industry requirements.</p>
@@ -40,7 +40,7 @@ get_header(); ?>
     </div>
 
     <div class="faq-section" data-sec="hosting" id="hosting">
-      <div class="section-title"><span>&#9729;&#65039;</span> Hosting &amp; Deployment</div>
+      <h2 class="section-title"><span>&#9729;&#65039;</span> Hosting &amp; Deployment</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">Where does our policy data actually live?</span>
@@ -80,7 +80,7 @@ get_header(); ?>
     </div>
 
     <div class="faq-section" data-sec="certifications" id="certifications">
-      <div class="section-title"><span>&#128737;&#65039;</span> Security &amp; Certifications</div>
+      <h2 class="section-title"><span>&#128737;&#65039;</span> Security &amp; Certifications</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">What security certifications does PolicyCentral.ai hold?</span>
@@ -129,7 +129,7 @@ get_header(); ?>
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">&#127970;</span>Company &amp; Platform</a>
     <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">&#129302;</span>AI Capabilities</a>

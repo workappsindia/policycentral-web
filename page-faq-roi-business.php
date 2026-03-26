@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128200; ROI &amp; Business Case FAQs</div>
   <h1>Concrete numbers to build your <em>internal business case</em></h1>
   <p>Time savings, cost comparisons, compliance ROI, and the specific data points to justify PolicyCentral.ai to your leadership team.</p>
@@ -42,7 +42,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="numbers" id="numbers">
-      <div class="section-title"><span>&#128202;</span> The Numbers</div>
+      <h2 class="section-title"><span>&#128202;</span> The Numbers</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">What are the core ROI metrics I can cite in an internal proposal?</span>
@@ -82,7 +82,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="comparison" id="comparison">
-      <div class="section-title"><span>&#9878;&#65039;</span> vs. Alternatives</div>
+      <h2 class="section-title"><span>&#9878;&#65039;</span> vs. Alternatives</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">How does the cost compare to building in-house or using SharePoint?</span>
@@ -104,7 +104,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="internal" id="internal">
-      <div class="section-title"><span>&#128227;</span> Building the Internal Case</div>
+      <h2 class="section-title"><span>&#128227;</span> Building the Internal Case</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">Who are the key internal stakeholders I need buy-in from?</span>
@@ -135,7 +135,7 @@ get_header();
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">&#127970;</span>Company &amp; Platform</a>
     <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">&#129302;</span>AI Capabilities</a>

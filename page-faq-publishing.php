@@ -7,7 +7,7 @@ get_header();
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">Publishing &amp; Distribution FAQs</div>
   <h1>Creating, targeting, and managing <em>policies at scale</em></h1>
   <p>How to publish policies, target the right audience, manage versions, and operate a multi-department policy library without IT.</p>
@@ -31,7 +31,7 @@ get_header();
     <div class="content-header"><div class="content-icon">📢</div><div><p>How to publish policies, target the right audience, manage versions, and operate a multi-department policy library without IT.</p></div></div>
 
     <div class="faq-section" data-sec="creating" id="creating">
-      <div class="section-title"><span>✏️</span> Creating Policies</div>
+      <h2 class="section-title"><span>✏️</span> Creating Policies</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Do we need IT support to create and publish policies?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">No. The content editor is Gmail-like, so any HR, compliance, or operations manager can use it without technical training. It supports: copy-paste from Word (formatting preserved), bulk PDF upload, rich text formatting (tables, font color, size, bold, links), and media embedding (images, GIFs, YouTube videos, audio). IT is only involved in initial setup (AD integration, HRMS sync, email gateway), not day-to-day policy operations.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Can I just copy-paste from existing Word or PDF policies?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Yes, by design. Copy-paste from Word into the editor preserves formatting. PDFs can be bulk-uploaded and are immediately searchable. For organizations with 50–500+ existing policies, migration effort is measured in hours or days, not weeks. AI enhancement features (summaries, translations, audio) can then be applied to existing content without requiring any rewriting.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What is the Maker-Checker process and why does it matter for FSI?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Maker-Checker is a governance workflow where a policy created by one admin (Maker) must be reviewed and approved by designated approvers (Checkers) before going live. Recommended or mandated by RBI and other regulators for operational documents, it prevents unauthorized policy publications. The platform maintains a complete trail of who created, who approved, when, and any review comments. This audit trail is available for regulatory inspection.</div></div></div>
@@ -39,7 +39,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="targeting" id="targeting">
-      <div class="section-title"><span>🎯</span> Targeting &amp; Segmentation</div>
+      <h2 class="section-title"><span>🎯</span> Targeting &amp; Segmentation</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">How granular can targeting be?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Targeting is multi-dimensional and combinable: <strong>Department</strong>, <strong>Designation</strong>, <strong>Grade</strong>, <strong>Location</strong> (state, city, or specific branch), <strong>Gender</strong>, or a <strong>specific list of individual employees</strong>. Filters combine, so you can publish to "all female employees at Grade 6 and above in Maharashtra branches." This precision makes policy libraries genuinely personalized, directly improving relevance and read rates.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Can we publish policies for employees who haven't joined yet?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Yes. The <strong>Future Employees</strong> feature publishes policies now with instructions to automatically distribute them to any employee who joins and matches the specified profile criteria. When a new joiner is added to HRMS and synced, they receive all relevant pending policies automatically, with no manual action required. Makes onboarding compliance systematic and scalable, particularly for campus hiring and branch expansion.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">How does "Resend to Unread Only" help compliance managers?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">"Resend to Unread Only" filters for only those employees who haven't opened a specific policy and sends a fresh notification exclusively to them. Rather than a blanket re-notification to all employees (including those who already read and attested, creating noise and resentment), this targeted approach focuses administrative energy on the actual non-compliance problem and avoids the "cry wolf" effect where employees start ignoring notifications.</div></div></div>
@@ -49,13 +49,13 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="library" id="library">
-      <div class="section-title"><span>🗂️</span> Library Management</div>
+      <h2 class="section-title"><span>🗂️</span> Library Management</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">How do we organize a large policy library?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">A <strong>department-based folder structure</strong> mirrors your organizational hierarchy: HR policies under HR, InfoSec under IT, product policies under Operations. Each employee sees only folders and policies relevant to their profile. Administrators with cross-department visibility see the full library with filters by department, date, version, and read status.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What happens to old policy versions - are they deleted or archived?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Archived, not deleted. All previous versions are maintained in a version history log accessible to admins but not surfaced to employees by default. Employees always see the current version; admins and auditors can retrieve any historical version with its original publish date, approver trail, and associated compliance data. Essential for regulatory audits where inspectors ask: "What was your AML policy in Q2 FY24, and do you have evidence employees were aware?"</div></div></div>
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">🏢</span>Company &amp; Platform</a>
         <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">🤖</span>AI Capabilities</a>

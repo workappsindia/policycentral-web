@@ -9,21 +9,21 @@
       <p>AI-driven policy management platform for large organizations.</p>
     </div>
     <div class="foot-col">
-      <h5><a href="<?php echo esc_url(home_url('/features/')); ?>" style="color:inherit;text-decoration:none">Features</a></h5>
+      <h3><a href="<?php echo esc_url(home_url('/features/')); ?>" style="color:inherit;text-decoration:none">Features</a></h3>
       <ul class="foot-links">
-        <li><a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>">AI-Powered Policy Intelligence</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/content-management/')); ?>">Policy Creation &amp; Content Management</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>">Publisher Controls &amp; Workflow Management</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>">Policy Distribution &amp; Targeting</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>">Employee Portal &amp; Mobile Experience</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>">Employee Interaction &amp; Acknowledgement</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>">Tracking, Analytics &amp; Reporting</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>">Enterprise Features</a></li>
-        <li><a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>">Banking-Grade Security &amp; Compliance</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>">Gen AI-Powered Policy Intelligence</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>">Policy Creation &amp; Content Management</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>">Publisher Controls &amp; Workflow Management</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>">Policy Distribution &amp; Targeting</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>">Employee Portal &amp; Mobile App</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>">Employee Interaction &amp; Acknowledgement</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>">Tracking, Analytics &amp; Reporting</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>">Enterprise Features</a></li>
+        <li><a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>">Banking-Grade Security &amp; Compliance</a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h5><a href="<?php echo esc_url(home_url('/faq/')); ?>" style="color:inherit;text-decoration:none">FAQs</a></h5>
+      <h3><a href="<?php echo esc_url(home_url('/faqs/')); ?>" style="color:inherit;text-decoration:none">FAQs</a></h3>
       <ul class="foot-links">
         <li><a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>">Company &amp; Platform</a></li>
         <li><a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>">AI Capabilities</a></li>
@@ -38,22 +38,20 @@
       </ul>
     </div>
     <div class="foot-col">
-      <h5><a href="<?php echo esc_url(home_url('/about/')); ?>" style="color:inherit;text-decoration:none">About</a></h5>
+      <h3><a href="<?php echo esc_url(home_url('/about/')); ?>" style="color:inherit;text-decoration:none">About</a></h3>
       <ul class="foot-links">
         <li><a href="<?php echo esc_url(home_url('/team/')); ?>">Team</a></li>
         <li><a href="<?php echo esc_url(home_url('/culture/')); ?>">Our Culture</a></li>
         <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact Us</a></li>
+        <li><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a></li>
+        <li><a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms &amp; Conditions</a></li>
       </ul>
     </div>
   </div>
 
   <div class="foot-bot">
     <span>&copy; <?php echo date('Y'); ?> PolicyCentral.ai. All rights reserved.</span>
-    <a href="<?php echo esc_url(home_url('/')); ?>" style="color:var(--gray-600)">Policy Management Software</a>
-    <div class="foot-legal">
-      <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a>
-      <a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms &amp; Conditions</a>
-    </div>
+    <span>Policy Management Software</span>
   </div>
 </div>
 </footer>

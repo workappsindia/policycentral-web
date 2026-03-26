@@ -45,7 +45,7 @@ get_header();
 @keyframes aimCardIn{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 .aim-trans-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#7C3AED,#4338CA);display:flex;align-items:center;justify-content:center;margin-bottom:7px}
 .aim-trans-icon svg{width:14px;height:14px;color:#fff}
-.aim-translation h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:5px}
+.aim-translation h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:5px}
 .aim-lang-row-card{display:flex;flex-direction:column;gap:3px}
 .aim-lang-item{display:flex;align-items:center;gap:6px;font-size:9px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;color:var(--gray-600)}
 .aim-lang-flag{font-size:12px}
@@ -55,7 +55,7 @@ get_header();
 
 /* AI Features Card - floating bottom-left */
 .aim-features{position:absolute;bottom:-18px;left:-16px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:aimCardIn .6s ease-out both;animation-delay:.5s}
-.aim-features h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.aim-features h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .aim-feature-pills{display:flex;gap:4px;flex-wrap:wrap;max-width:190px}
 .aim-fpill{display:flex;align-items:center;gap:3px;padding:4px 8px;border-radius:6px;font-size:9px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
 .aim-fpill svg{width:10px;height:10px}
@@ -69,7 +69,7 @@ get_header();
 .aim-chat-header{display:flex;align-items:center;gap:6px;margin-bottom:7px}
 .aim-chat-icon{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,#4338CA,#7C3AED);display:flex;align-items:center;justify-content:center}
 .aim-chat-icon svg{width:11px;height:11px;color:#fff}
-.aim-chat h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.aim-chat h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
 .aim-chat-bubble{border-radius:8px;padding:6px 8px;font-size:9px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.4;margin-bottom:4px}
 .aim-bubble-q{background:var(--gray-100);color:var(--gray-700);border-radius:8px 8px 8px 2px}
 .aim-bubble-a{background:linear-gradient(135deg,rgba(67,56,202,.1),rgba(124,58,237,.1));color:#4338CA;border:1px solid rgba(67,56,202,.15);border-radius:8px 8px 2px 8px}
@@ -134,23 +134,23 @@ get_header();
 <section class="fpage-hero">
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
-  <div class="hero-content reveal">
-    <h1>AI-Powered Policy<br><span class="accent">Intelligence</span></h1>
+  <div class="hero-content">
+    <h1>Gen AI-Powered <br><span class="accent">Policy Intelligence</span></h1>
     <p class="subtitle">Leverage Generative AI to simplify policy communication, improve comprehension, and enhance employee engagement across your organization.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       <a href="<?php echo esc_url(home_url('/features/')); ?>">Features</a>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      <span style="color:var(--accent)">AI-Powered Policy Intelligence</span>
+      <span style="color:var(--accent)">Gen AI-Powered Policy Intelligence</span>
     </div>
   </div>
-  <div class="hero-screenshot-wrap reveal rd2">
+  <div class="hero-screenshot-wrap">
     <div class="hero-ss-glow hsg1"></div>
     <div class="hero-ss-glow hsg2"></div>
     <div class="aim-mockup">
@@ -193,7 +193,7 @@ get_header();
         <div class="aim-trans-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
         </div>
-        <h5>10 Languages</h5>
+        <h3>10 Languages</h3>
         <div class="aim-lang-row-card">
           <div class="aim-lang-item"><span class="aim-lang-flag">🇮🇳</span>Hindi<div class="aim-lang-bar"><div class="aim-lang-bar-fill" style="width:90%"></div></div></div>
           <div class="aim-lang-item"><span class="aim-lang-flag">🇮🇳</span>Tamil<div class="aim-lang-bar"><div class="aim-lang-bar-fill" style="width:78%"></div></div></div>
@@ -204,7 +204,7 @@ get_header();
 
       <!-- Floating Card: AI Features -->
       <div class="aim-features">
-        <h5>AI-Generated Assets</h5>
+        <h3>AI-Generated Assets</h3>
         <div class="aim-feature-pills">
           <span class="aim-fpill aim-fp-summary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Summary</span>
           <span class="aim-fpill aim-fp-faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQ</span>
@@ -219,7 +219,7 @@ get_header();
           <div class="aim-chat-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h5>GPT Policy Chat</h5>
+          <h3>GPT Policy Chat</h3>
         </div>
         <div class="aim-chat-bubble aim-bubble-q">How many leaves do I get?</div>
         <div class="aim-chat-bubble aim-bubble-a">You are entitled to 18 annual leaves + 12 casual leaves per year...</div>
@@ -233,7 +233,7 @@ get_header();
 <section class="features-section">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Intelligent Features That<br><span class="g-text">Transform Policy Management</span></h2>
+    <h2>Intelligent Features That <br><span class="g-text">Transform Policy Management</span></h2>
     <p>Powered by AWS AI services, these features automate and enhance every aspect of policy communication.</p>
   </div>
   <!-- ═══ HERO FEATURE: GPT for Policy Documents ═══ -->
@@ -387,7 +387,7 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Ready to see AI-powered<br>policy management <span class="g-text">in action</span>?</h2>
+    <h2>Ready to see AI-powered <br>policy management <span class="g-text">in action</span>?</h2>
     <p>Schedule a personalized demo to explore how our AI features can transform policy communication across your organization.</p>
     <div class="cta-buttons">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -404,7 +404,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -426,12 +426,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -462,7 +462,7 @@ get_header();
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd1">

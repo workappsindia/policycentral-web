@@ -51,7 +51,7 @@ get_header();
 @keyframes pwfCardIn{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 .pwf-approval-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#059669,#0E7490);display:flex;align-items:center;justify-content:center;margin-bottom:7px}
 .pwf-approval-icon svg{width:14px;height:14px;color:#fff}
-.pwf-approval h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.pwf-approval h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .pwf-pipeline{display:flex;align-items:center;gap:4px}
 .pwf-pipe-node{display:flex;flex-direction:column;align-items:center;gap:2px}
 .pwf-pipe-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px}
@@ -63,7 +63,7 @@ get_header();
 
 /* Version Control Card - floating bottom-left */
 .pwf-version{position:absolute;bottom:-18px;left:-16px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:pwfCardIn .6s ease-out both;animation-delay:.5s}
-.pwf-version h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.pwf-version h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .pwf-ver-list{display:flex;flex-direction:column;gap:4px}
 .pwf-ver-item{display:flex;align-items:center;gap:7px;font-size:9px;font-family:'Plus Jakarta Sans',sans-serif}
 .pwf-ver-tag{padding:2px 6px;border-radius:4px;font-weight:700;font-size:8px}
@@ -76,61 +76,16 @@ get_header();
 .pwf-expiry{position:absolute;bottom:44px;right:-22px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;min-width:152px;animation:pwfCardIn .6s ease-out both;animation-delay:.7s}
 .pwf-expiry-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#D97706,#B45309);display:flex;align-items:center;justify-content:center;margin-bottom:7px}
 .pwf-expiry-icon svg{width:14px;height:14px;color:#fff}
-.pwf-expiry h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px}
+.pwf-expiry h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:4px}
 .pwf-expiry-date{font-size:12px;font-weight:800;color:#D97706;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:3px}
 .pwf-expiry-sub{font-size:8px;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif}
 .pwf-expiry-bar-wrap{margin-top:6px;background:var(--gray-100);border-radius:3px;height:5px;overflow:hidden}
 .pwf-expiry-bar{height:100%;width:72%;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:3px}
+/* Workflow Illustration */.pw-workflow,.pw-versions{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:0 20px 60px rgba(0,0,0,.10),0 8px 24px rgba(0,0,0,.06);overflow:hidden;width:100%;max-width:420px}.pw-wf-head,.pw-ver-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);font-size:11px;font-weight:700;color:var(--gray-500)}.pw-wf-head-icon,.pw-ver-head-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.pw-wf-head-icon{background:linear-gradient(135deg,#4338CA,#6366F1)}.pw-ver-head-icon{background:linear-gradient(135deg,#059669,#047857)}.pw-wf-head-icon svg,.pw-ver-head-icon svg{width:14px;height:14px;color:#fff}.pw-wf-head-badge,.pw-ver-head-badge{margin-left:auto;padding:3px 9px;border-radius:6px;font-size:9px;font-weight:800}.pw-wf-head-badge{background:rgba(67,56,202,.1);color:#4338CA}.pw-ver-head-badge{background:rgba(5,150,105,.1);color:#059669}.pw-wf-body,.pw-ver-body{padding:14px 16px}/* Workflow Steps */.pw-wf-step{display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--gray-50);border-radius:8px;border:1px solid var(--gray-100);margin-bottom:6px}.pw-wf-dot{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px}.pw-dot-done{background:#059669;color:#fff}.pw-dot-done svg{width:12px;height:12px}.pw-dot-active{background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}.pw-dot-pending{background:var(--gray-200);color:var(--gray-400)}.pw-dot-pending svg{width:12px;height:12px}.pw-wf-info{flex:1}.pw-wf-label{font-size:10px;font-weight:700;color:var(--gray-700)}.pw-wf-sub{font-size:8px;color:var(--gray-400);margin-top:1px}.pw-wf-badge{padding:2px 8px;border-radius:4px;font-size:8px;font-weight:700;flex-shrink:0}.pw-badge-done{background:rgba(5,150,105,.1);color:#059669}.pw-badge-review{background:rgba(67,56,202,.1);color:#4338CA}.pw-badge-wait{background:rgba(217,119,6,.1);color:#D97706}/* Version Rows */.pw-ver-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;border:1px solid var(--gray-100);margin-bottom:6px}.pw-ver-active{background:rgba(5,150,105,.04);border-color:rgba(5,150,105,.2)}.pw-ver-num{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0}.pw-vnum-active{background:linear-gradient(135deg,#059669,#34d399);color:#fff}.pw-vnum-old{background:var(--gray-100);color:var(--gray-400)}.pw-ver-info{flex:1}.pw-ver-title{font-size:10px;font-weight:700;color:var(--gray-700)}.pw-ver-date{font-size:8px;color:var(--gray-400);margin-top:1px}.pw-ver-diff{font-size:9px;font-weight:700;flex-shrink:0}.pw-diff-add{color:#059669}.pw-diff-rm{color:#EF4444}.pw-ver-status{padding:2px 8px;border-radius:4px;font-size:8px;font-weight:700;flex-shrink:0}.pw-status-live{background:rgba(5,150,105,.1);color:#059669}.pw-status-arch{background:var(--gray-100);color:var(--gray-400)}
 </style>
 
 
 <!-- HERO -->
-<!-- Workflow & Version History Mockup CSS -->
-<style>
-.pw-workflow{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.pw-wf-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}
-.pw-wf-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.pw-wf-head-icon svg{width:14px;height:14px;color:#fff}
-.pw-wf-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
-.pw-wf-head-badge{margin-left:auto;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.2);font-size:9px;font-weight:800;letter-spacing:.03em}
-.pw-wf-body{padding:14px 16px;display:flex;flex-direction:column;gap:0}
-.pw-wf-step{display:flex;align-items:flex-start;gap:10px;padding:10px 0;position:relative}
-.pw-wf-step:not(:last-child)::after{content:'';position:absolute;left:13px;top:30px;bottom:-10px;width:2px;background:var(--gray-100)}
-.pw-wf-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;position:relative;z-index:1}
-.pw-dot-done{background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.pw-dot-active{background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff;box-shadow:0 0 0 4px rgba(99,102,241,.15)}
-.pw-dot-pending{background:var(--gray-100);color:var(--gray-400);border:1.5px solid var(--gray-200)}
-.pw-wf-info{flex:1}
-.pw-wf-label{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:2px}
-.pw-wf-sub{font-size:9px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;color:var(--gray-400)}
-.pw-wf-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:5px;font-size:9px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;margin-left:auto;flex-shrink:0}
-.pw-badge-done{background:rgba(5,150,105,.1);color:#059669;border:1px solid rgba(5,150,105,.2)}
-.pw-badge-review{background:rgba(67,56,202,.1);color:#4338CA;border:1px solid rgba(67,56,202,.2)}
-.pw-badge-wait{background:var(--gray-100);color:var(--gray-400);border:1px solid var(--gray-200)}
-.pw-versions{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.pw-ver-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.pw-ver-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.pw-ver-head-icon svg{width:14px;height:14px;color:#fff}
-.pw-ver-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
-.pw-ver-head-badge{margin-left:auto;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.2);font-size:9px;font-weight:800;letter-spacing:.03em}
-.pw-ver-body{padding:14px 16px;display:flex;flex-direction:column;gap:6px}
-.pw-ver-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;border:1px solid var(--gray-100)}
-.pw-ver-row.pw-ver-active{border-color:rgba(5,150,105,.25);background:rgba(5,150,105,.04)}
-.pw-ver-num{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
-.pw-vnum-active{background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.pw-vnum-old{background:var(--gray-100);color:var(--gray-500)}
-.pw-ver-info{flex:1}
-.pw-ver-title{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
-.pw-ver-date{font-size:9px;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;color:var(--gray-400);margin-top:1px}
-.pw-ver-diff{display:flex;align-items:center;gap:3px;font-size:9px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
-.pw-diff-add{color:#059669}
-.pw-diff-rm{color:#E11D48}
-.pw-ver-status{padding:2px 7px;border-radius:5px;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
-.pw-status-live{background:rgba(5,150,105,.1);color:#059669;border:1px solid rgba(5,150,105,.2)}
-.pw-status-arch{background:var(--gray-100);color:var(--gray-400);border:1px solid var(--gray-200)}
-@media(max-width:900px){.pw-workflow,.pw-versions{max-width:100%}}
-</style>
-
 <section class="fpage-hero">
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
@@ -138,9 +93,9 @@ get_header();
     <h1>Publisher Controls &amp;<br><span class="accent">Workflow Management</span></h1>
     <p class="subtitle">Structured publishing controls to manage policy creation, approvals, updates, and communication efficiently across your entire organization.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -203,7 +158,7 @@ get_header();
         <div class="pwf-approval-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h5>Approval Pipeline</h5>
+        <h3>Approval Pipeline</h3>
         <div class="pwf-pipeline">
           <div class="pwf-pipe-node">
             <div class="pwf-pipe-dot pwf-pipe-done">✓</div>
@@ -224,7 +179,7 @@ get_header();
 
       <!-- Floating Card: Version Control -->
       <div class="pwf-version">
-        <h5>Version History</h5>
+        <h3>Version History</h3>
         <div class="pwf-ver-list">
           <div class="pwf-ver-item">
             <span class="pwf-ver-tag pwf-ver-current">v3.2</span>
@@ -247,7 +202,7 @@ get_header();
         <div class="pwf-expiry-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
-        <h5>Policy Expiry</h5>
+        <h3>Policy Expiry</h3>
         <div class="pwf-expiry-date">31 Dec 2026</div>
         <div class="pwf-expiry-sub">282 days remaining</div>
         <div class="pwf-expiry-bar-wrap"><div class="pwf-expiry-bar"></div></div>
@@ -261,7 +216,7 @@ get_header();
 <section class="features-section">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Complete Control Over Your<br><span class="g-text">Publishing Workflow</span></h2>
+    <h2>Complete Control Over Your <br><span class="g-text">Publishing Workflow</span></h2>
     <p>From creation to approval, publishing, and lifecycle management, every step is covered.</p>
   </div>
 
@@ -487,7 +442,7 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Ready to take control of your<br>publishing <span class="g-text">workflow</span>?</h2>
+    <h2>Ready to take control of your <br>publishing <span class="g-text">workflow</span>?</h2>
     <p>See how structured publishing controls, approval workflows, and lifecycle management can transform your policy operations.</p>
     <div class="cta-buttons">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -504,7 +459,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -526,12 +481,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -545,42 +500,42 @@ get_header();
     <p>Discover the full breadth of PolicyCentral.ai capabilities.</p>
   </div>
   <div class="other-grid">
-    <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
       <h4>Policy Creation &amp; Content Management</h4>
       <p>Author, version, organize policies</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
       <h4>Distribution &amp; Targeting</h4>
       <p>Target audiences, push notifications</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
       <h4>Employee Interaction &amp; Acknowledgement</h4>
       <p>Read receipts, e-sign, quizzes</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
       <h4>Tracking, Analytics &amp; Reporting</h4>
       <p>Dashboards, compliance reports</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h4>Enterprise Features</h4>
       <p>AD, SSO, white-label, multi-entity</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h4>Security &amp; Compliance</h4>
       <p>Encryption, RBAC, audit logs</p>

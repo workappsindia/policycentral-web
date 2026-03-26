@@ -8,7 +8,6 @@ get_header();
 <div class="hero-mesh"></div>
 <div class="container">
   <div class="hero-content reveal">
-    <span class="eyebrow">OUR TEAM</span>
     <h1 style="margin-top:18px">We want our work to matter, and we want it to <span class="g-text">make the world a better place.</span></h1>
     <p>Founded in 2017, WorkApps Product Solutions is a pioneering Indian software company dedicated to providing secure, innovative solutions for the financial sector. A 40-member team, venture funded by SRI Capital and Better Capital, headquartered in India with a subsidiary in the US.</p>
   </div>
@@ -74,7 +73,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2024/09/sashiReddy.png" alt="Sashi Reddi" loading="lazy">
       </div>
-      <h4>Sashi Reddi</h4>
+      <h3>Sashi Reddi</h3>
       <div class="inv-role">Managing Partner, SRI Capital</div>
     </div>
 
@@ -82,7 +81,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2024/09/saradSanghi.png" alt="Sharad Sanghi" loading="lazy">
       </div>
-      <h4>Sharad Sanghi</h4>
+      <h3>Sharad Sanghi</h3>
       <div class="inv-role">CEO, Neysa Networks</div>
     </div>
 
@@ -90,7 +89,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2025/05/vaibhavDomkundwar.png" alt="Vaibhav Domkundwar" loading="lazy">
       </div>
-      <h4>Vaibhav Domkundwar</h4>
+      <h3>Vaibhav Domkundwar</h3>
       <div class="inv-role">Founder &amp; CEO, Better Capital</div>
     </div>
 
@@ -98,7 +97,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2024/09/atulRuia.png" alt="Atul Ruia" loading="lazy">
       </div>
-      <h4>Atul Ruia</h4>
+      <h3>Atul Ruia</h3>
       <div class="inv-role">Chairman, Phoenix Mills</div>
     </div>
 
@@ -106,7 +105,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2025/05/SunishSharma.png" alt="Sunish Sharma" loading="lazy">
       </div>
-      <h4>Sunish Sharma</h4>
+      <h3>Sunish Sharma</h3>
       <div class="inv-role">Managing Partner, Kedaara Capital</div>
     </div>
 
@@ -114,7 +113,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2025/05/NishantSharma.png" alt="Nishant Sharma" loading="lazy">
       </div>
-      <h4>Nishant Sharma</h4>
+      <h3>Nishant Sharma</h3>
       <div class="inv-role">Managing Partner, Kedaara Capital</div>
     </div>
 
@@ -122,7 +121,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2024/09/harvinderjitSinghBhatia.png" alt="Harvinderjit Singh Bhatia" loading="lazy">
       </div>
-      <h4>Harvinderjit Singh Bhatia</h4>
+      <h3>Harvinderjit Singh Bhatia</h3>
       <div class="inv-role">Co-Founder &amp; CEO, Radiowalla &amp; The Vinners Group</div>
     </div>
 
@@ -130,7 +129,7 @@ get_header();
       <div class="investor-card-img">
         <img src="https://web.videocx.io/wp-content/uploads/2024/09/tusharVyas.png" alt="Tushar Vyas" loading="lazy">
       </div>
-      <h4>Tushar Vyas</h4>
+      <h3>Tushar Vyas</h3>
       <div class="inv-role">President South Asia, GroupM</div>
     </div>
 

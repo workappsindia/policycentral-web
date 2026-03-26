@@ -1,0 +1,20 @@
+# PolicyCentral.ai robots.txt
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /thank-you/
+Disallow: /thank-you-2/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?replytocom=
+Disallow: /wp-login.php
+
+# Sitemaps
+Sitemap: https://dev.policycentral.ai/sitemap_index.xml

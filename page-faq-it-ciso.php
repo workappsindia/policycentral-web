@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128737;&#65039; IT &amp; CISO FAQs</div>
   <h1>Everything your security team <em>will ask about</em></h1>
   <p>Data residency, access control, vendor security posture, third-party risk assessment, portability, and ongoing maintenance burden.</p>
@@ -42,7 +42,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="data-security" id="data-security">
-      <div class="section-title"><span>&#128272;</span> Data Security &amp; Residency</div>
+      <h2 class="section-title"><span>&#128272;</span> Data Security &amp; Residency</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">Our CISO's first question: where does the data live, and can we verify it?</span>
@@ -82,7 +82,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="access-control" id="access-control">
-      <div class="section-title"><span>&#128273;</span> Access Control &amp; Identity</div>
+      <h2 class="section-title"><span>&#128273;</span> Access Control &amp; Identity</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">How is role-based access control implemented?</span>
@@ -122,7 +122,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="portability" id="portability">
-      <div class="section-title"><span>&#128228;</span> Portability &amp; Vendor Risk</div>
+      <h2 class="section-title"><span>&#128228;</span> Portability &amp; Vendor Risk</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">What is our exit strategy - can we get our data back if we move to another platform?</span>
@@ -144,7 +144,7 @@ get_header();
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">&#127970;</span>Company &amp; Platform</a>
     <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">&#129302;</span>AI Capabilities</a>

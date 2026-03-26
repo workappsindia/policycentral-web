@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">AI Capabilities FAQs</div>
   <h1>Eight AI features built on <em>Amazon Bedrock</em></h1>
   <p>What each AI feature does, how it's powered, what it costs, and how your team controls output before employees see it.</p>
@@ -29,7 +29,7 @@ get_header(); ?>
     <div class="content-header"><div class="content-icon">🤖</div><div><p>What each AI feature does, how it's powered, what it costs, and how your team controls output before employees see it.</p></div></div>
 
     <div class="faq-section" data-sec="ai-overview" id="ai-overview">
-      <div class="section-title"><span>🧠</span> AI Overview</div>
+      <h2 class="section-title"><span>🧠</span> AI Overview</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Is the AI in PolicyCentral.ai real, or just a marketing label?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">It is real and specific. PolicyCentral.ai uses <strong>Amazon Bedrock</strong>, AWS's managed foundation model service, trusted in production by 68% of Fortune 1000 companies, to power eight distinct AI functions: Smart Summarization, Policy Content Improvisation, Automated FAQ Generation, Infographic Creation, Quiz Creation, and an AI-Powered Policy Chatbot (Amazon Bedrock + Lex). It also uses <strong>Amazon Polly</strong> for audio versions and <strong>Amazon Translate</strong> for 10 Indian language translations. Eight independent, deployable features, not a single "AI mode."</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Which AWS AI services power PolicyCentral.ai?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer"><strong>Amazon Bedrock</strong>: LLM-powered policy summarization, policy content improvisation, FAQ generation, and infographic creation. <strong>Amazon Polly</strong>: Neural text-to-speech for natural-sounding audio policy versions in multiple Indian accents. <strong>Amazon Translate</strong>: Neural machine translation into 10 Indian languages with cultural nuance preservation. <strong>Amazon Lex</strong>: Conversational AI for the policy chatbot feature.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Do I need any technical expertise to use these AI features?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">None. Every AI feature is activated with a single button click from the admin interface. You publish a policy and then choose to generate a summary, create an audio version, translate it, or produce an infographic, each with one action. No prompt engineering, no model configuration, no IT ticket required. The Gmail-like editor means non-technical HR, compliance, or operations managers access all AI features independently.</div></div></div>
@@ -37,7 +37,7 @@ get_header(); ?>
     </div>
 
     <div class="faq-section" data-sec="ai-features" id="ai-features">
-      <div class="section-title"><span>✨</span> Individual AI Features</div>
+      <h2 class="section-title"><span>✨</span> Individual AI Features</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What does Smart Summarization do and who benefits from it?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Smart Summarization uses Amazon Bedrock LLMs to generate a concise summary of a policy document highlighting key points, action items, and critical obligations. Designed for: <strong>busy executives</strong> who need to understand policy intent in 60 seconds, <strong>employees</strong> who read the summary before deciding how deeply to engage the full document, and <strong>new joiners</strong> getting up to speed on a large policy library. The summary appears alongside the full policy, not as a replacement.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What does Policy Content Improvisation actually do to my policy text?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">Policy Content Improvisation uses Amazon Bedrock to: modernize dense legal language into plain English, improve structural clarity (better paragraph breaks, clearer headings), standardize tone and terminology across policies written by different authors, and remove ambiguous phrasing. The system works on <em>your</em> content and doesn't change compliance intent, only improves readability. The original and improvised versions are shown side-by-side for admin comparison before publishing.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">How does Automated FAQ Generation reduce support queries?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">The AI analyzes policy content and generates likely employee questions with answers derived directly from the policy text. These FAQs appear within the policy reading experience, enabling employee self-service. For organizations where policy-related helpdesk queries represent meaningful HR ticket volume, this directly reduces that load and surfaces which questions employees are most likely to ask, revealing comprehension gaps before they become behavioral compliance issues.</div></div></div>
@@ -49,7 +49,7 @@ get_header(); ?>
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">🏢</span>Company &amp; Platform</a>
         <a href="<?php echo esc_url(home_url('/faq/features-dashboard/')); ?>" class="other-link"><span class="oi">⚙️</span>Features &amp; Dashboard</a>

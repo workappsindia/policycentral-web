@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
 <!-- HERO -->
-<section id="hero">
-<div class="hero-mesh"></div>
-<div class="hero-grid">
+<section class="fpage-hero" id="hero">
+<div class="fpage-hero-mesh"></div>
+<div class="hero-grid container">
   <div class="hero-content">
-    <h1 class="hero-h1">An AI-driven policy<br>management and access<br>platform for large organizations</h1>
+    <h1>An AI-driven policy <br>management and access <br>platform for large <br>organizations</h1>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
   </div>
   <div class="hero-screenshot-wrap">
@@ -81,15 +81,15 @@
             <div class="hs-browser-bar"><span class="hs-dot red"></span><span class="hs-dot yellow"></span><span class="hs-dot green"></span><span class="hs-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#179D97" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> PolicyCentral.ai</span><span class="hs-badge-pub">Published</span></div>
             <div class="hs-doc-content">
               <div class="hs-doc-tags"><span class="hs-tag teal">Compliance</span><span class="hs-tag purple">GDPR</span><span class="hs-tag amber">All Employees</span></div>
-              <h4 class="hs-doc-h">1. Purpose</h4>
+              <h3 class="hs-doc-h">1. Purpose</h3>
               <div class="hs-doc-line w80"></div>
               <div class="hs-doc-line w95"></div>
               <div class="hs-doc-line w70"></div>
-              <h4 class="hs-doc-h mt">2. Scope</h4>
+              <h3 class="hs-doc-h mt">2. Scope</h3>
               <div class="hs-doc-line w90"></div>
               <div class="hs-doc-line w60"></div>
               <div class="hs-ai-bar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#179D97" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M18 14a6 6 0 0 1-12 0"/></svg> AI Summary</div>
-              <h4 class="hs-doc-h mt">3. Key Requirements</h4>
+              <h3 class="hs-doc-h mt">3. Key Requirements</h3>
               <div class="hs-doc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span class="hs-doc-line-inline w75"></span></div>
               <div class="hs-doc-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span class="hs-doc-line-inline w65"></span></div>
               <div class="hs-doc-check unchecked"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></svg> <span class="hs-doc-line-inline w55"></span></div>
@@ -102,7 +102,7 @@
         <div class="hero-slide">
           <div class="hs-card hs-compliance">
             <div class="hs-comp-header">
-              <h3 class="hs-comp-title">Compliance Tracking</h3>
+              <h2 class="hs-comp-title">Compliance Tracking</h2>
               <span class="hs-comp-sub">Real-time status</span>
             </div>
             <div class="hs-comp-body">
@@ -133,7 +133,7 @@
           <div class="hs-card hs-ai">
             <div class="hs-ai-header">
               <div class="hs-ai-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M18 14a6 6 0 0 1-12 0"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
-              <div><h3 class="hs-ai-title">Gen AI Policy Intelligence</h3><span class="hs-ai-sub">AI-powered features for every policy</span></div>
+              <div><h2 class="hs-ai-title">Gen AI Policy Intelligence</h2><span class="hs-ai-sub">AI-powered features for every policy</span></div>
             </div>
             <div class="hs-ai-grid">
               <div class="hs-ai-feat">
@@ -164,7 +164,7 @@
         <div class="hero-slide">
           <div class="hs-card hs-usecases">
             <div class="hs-uc-header">
-              <h3 class="hs-uc-title">More than just policies</h3>
+              <h2 class="hs-uc-title">More than just policies</h2>
               <span class="hs-uc-sub">Every communication, managed &amp; tracked</span>
             </div>
             <div class="hs-uc-grid">
@@ -219,12 +219,12 @@
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -241,7 +241,7 @@
     <div class="jarrow">›</div>
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><span class="jlabel">Publish</span><span class="jdesc">Publish using a HTML editor &amp; add images, videos, Youtube links</span></div>
     <div class="jarrow">›</div>
-    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><span class="jlabel">Target</span><span class="jdesc">AI-powered features to make policy understanding easy</span></div>
+    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="jlabel">Enable AI</span><span class="jdesc">AI-powered features to make policy understanding easy</span></div>
     <div class="jarrow">›</div>
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span class="jlabel">Share</span><span class="jdesc">Share policies with various &amp; custom employee groups</span></div>
     <div class="jarrow">›</div>
@@ -266,22 +266,22 @@
 <div class="container">
   <div class="section-header reveal">
     <span class="eyebrow">Full Features List</span>
-    <h2>Everything your enterprise<br>needs, out of the box</h2>
+    <h2>Everything your enterprise <br>needs, out of the box</h2>
   </div>
 
   <!-- ═══ PANEL 1 : FOR THE POLICY MAKERS ═══ -->
   <div class="fblock fblock-makers reveal">
     <div class="fblock-header">
       <span class="fblock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></span>
-      <div><h3 class="fblock-title">For the Policy Makers</h3><p class="fblock-sub">Create, enrich, and publish with AI-powered tools</p></div>
+      <div><h2 class="fblock-title">For the Policy Makers</h2><p class="fblock-sub">Create, enrich, and publish with AI-powered tools</p></div>
     </div>
     <div class="ftabs" data-group="makers">
-      <button class="ftab on" data-panel="makers-ai">AI-Powered Policy Intelligence</button>
+      <button class="ftab on" data-panel="makers-ai">Gen AI-Powered Policy Intelligence</button>
       <button class="ftab" data-panel="makers-content">Policy Creation &amp; Content Management</button>
       <button class="ftab" data-panel="makers-publish">Publisher Controls &amp; Workflow Management</button>
     </div>
 
-    <!-- Tab 1: AI-Powered Policy Intelligence - TIMELINE VERSION (original layout commented below) -->
+    <!-- Tab 1: Gen AI-Powered Policy Intelligence - TIMELINE VERSION (original layout commented below) -->
     <div class="fpanel tl-panel on" id="makers-ai">
       <!-- Left: Visual that changes per feature -->
       <div class="timeline-vis">
@@ -389,29 +389,29 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
-          <div><h4>Multi-Language Translation</h4><p>Translate policies into 10 Indian languages including Hindi, Tamil, Bengali, and Marathi, powered by AWS Translate.</p></div>
+          <div><h3>Multi-Language Translation</h3><p>Translate policies into 10 Indian languages including Hindi, Tamil, Bengali, and Marathi, powered by AWS Translate.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg></div>
-          <div><h4>Text-to-Speech Audio</h4><p>Convert policy text into natural-sounding audio in 60+ voices. Employees can listen on any device, powered by Amazon Polly.</p></div>
+          <div><h3>Text-to-Speech Audio</h3><p>Convert policy text into natural-sounding audio in 60+ voices. Employees can listen on any device, powered by Amazon Polly.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          <div><h4>AI Summaries, FAQs &amp; Infographics</h4><p>Auto-generate plain-language summaries, FAQs, and visual infographics from any policy, powered by Amazon Bedrock.</p></div>
+          <div><h3>AI Summaries, FAQs &amp; Infographics</h3><p>Auto-generate plain-language summaries, FAQs, and visual infographics from any policy, powered by Amazon Bedrock.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <div><h4>Policy GPT Chatbot</h4><p>Conversational chatbot answers employee questions from their specific policies. Instant, 24/7, powered by Bedrock &amp; Lex.</p></div>
+          <div><h3>Policy GPT Chatbot</h3><p>Conversational chatbot answers employee questions from their specific policies. Instant, 24/7, powered by Bedrock &amp; Lex.</p></div>
         </div>
       </div>
     </div>
     <!-- ORIGINAL Tab 1 layout (uncomment to revert, remove timeline version above):
     <div class="fpanel on" id="makers-ai">
       <div class="flist">
-        <div class="fitem"><div class="ib ib-teal">...</div><div><h4>Multi-Language Translation</h4><p>...</p></div></div>
-        <div class="fitem"><div class="ib ib-violet">...</div><div><h4>Text-to-Speech Audio</h4><p>...</p></div></div>
-        <div class="fitem"><div class="ib ib-em">...</div><div><h4>AI Summaries, FAQs & Infographics</h4><p>...</p></div></div>
-        <div class="fitem"><div class="ib ib-amber">...</div><div><h4>Policy GPT Chatbot</h4><p>...</p></div></div>
+        <div class="fitem"><div class="ib ib-teal">...</div><div><h3>Multi-Language Translation</h3><p>...</p></div></div>
+        <div class="fitem"><div class="ib ib-violet">...</div><div><h3>Text-to-Speech Audio</h3><p>...</p></div></div>
+        <div class="fitem"><div class="ib ib-em">...</div><div><h3>AI Summaries, FAQs & Infographics</h3><p>...</p></div></div>
+        <div class="fitem"><div class="ib ib-amber">...</div><div><h3>Policy GPT Chatbot</h3><p>...</p></div></div>
       </div>
       <div class="fvis">...</div>
     </div>
@@ -519,19 +519,19 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-          <div><h4>Word-Style Policy Editor</h4><p>Familiar document-writing interface with headings, fonts, and lists. Create policies like writing a document, no IT needed.</p></div>
+          <div><h3>Word-Style Policy Editor</h3><p>Familiar document-writing interface with headings, fonts, and lists. Create policies like writing a document, no IT needed.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-          <div><h4>Rich Media &amp; Video Hosting</h4><p>Embed images, videos, YouTube links, audio, and GIFs. Secure private video hosting, not publicly accessible.</p></div>
+          <div><h3>Rich Media &amp; Video Hosting</h3><p>Embed images, videos, YouTube links, audio, and GIFs. Secure private video hosting, not publicly accessible.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <div><h4>Word Upload &amp; PDF Viewer</h4><p>Upload Word docs auto-converted to HTML, or publish PDFs with built-in responsive viewer. No file size limits.</p></div>
+          <div><h3>Word Upload &amp; PDF Viewer</h3><p>Upload Word docs auto-converted to HTML, or publish PDFs with built-in responsive viewer. No file size limits.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <div><h4>Web Article Display</h4><p>Policies render as responsive web articles, delivering a beautiful reading experience across desktops, tablets, and mobiles.</p></div>
+          <div><h3>Web Article Display</h3><p>Policies render as responsive web articles, delivering a beautiful reading experience across desktops, tablets, and mobiles.</p></div>
         </div>
       </div>
     </div>
@@ -635,34 +635,34 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <div><h4>Maker-Checker Approval</h4><p>Send policies for review before publication. Single or multi-level approval workflow with one-click sign-off.</p></div>
+          <div><h3>Maker-Checker Approval</h3><p>Send policies for review before publication. Single or multi-level approval workflow with one-click sign-off.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.18-3.68"/></svg></div>
-          <div><h4>Version Control &amp; Real-Time Edits</h4><p>Maintain multiple policy versions with version numbers. Edit content, targeting, and settings even after publication.</p></div>
+          <div><h3>Version Control &amp; Real-Time Edits</h3><p>Maintain multiple policy versions with version numbers. Edit content, targeting, and settings even after publication.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><h4>Expiry &amp; Auto-Deletion</h4><p>Set policy expiry dates and configure automatic deletion. Outdated content is removed without manual intervention.</p></div>
+          <div><h3>Expiry &amp; Auto-Deletion</h3><p>Set policy expiry dates and configure automatic deletion. Outdated content is removed without manual intervention.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></div>
-          <div><h4>Resend, Unpublish &amp; Recall</h4><p>Resend to unread users only, unpublish instantly, or permanently recall. Full lifecycle control with one click.</p></div>
+          <div><h3>Resend, Unpublish &amp; Recall</h3><p>Resend to unread users only, unpublish instantly, or permanently recall. Full lifecycle control with one click.</p></div>
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="fblock-bottom-link fblock-explore-makers">Explore all AI-Powered Policy Intelligence features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="fblock-bottom-link fblock-explore-makers">Explore all Gen AI-Powered Policy Intelligence features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
   <!-- ═══ PANEL 2 : FOR THE EMPLOYEES ═══ -->
   <div class="fblock fblock-employees reveal">
     <div class="fblock-header">
       <span class="fblock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-      <div><h3 class="fblock-title">For the Employees</h3><p class="fblock-sub">Access, engage, and acknowledge on any device</p></div>
+      <div><h2 class="fblock-title">For the Employees</h2><p class="fblock-sub">Access, engage, and acknowledge on any device</p></div>
     </div>
     <div class="ftabs" data-group="employees">
       <button class="ftab on" data-panel="emp-distribution">Policy Distribution &amp; Targeting</button>
-      <button class="ftab" data-panel="emp-portal">Employee Portal &amp; Mobile Experience</button>
+      <button class="ftab" data-panel="emp-portal">Employee Portal &amp; Mobile App</button>
       <button class="ftab" data-panel="emp-interact">Employee Interaction &amp; Acknowledgement</button>
     </div>
 
@@ -793,24 +793,24 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-          <div><h4>Target by Profile Fields</h4><p>Share policies by department, location, grade, and designation, synced from your Active Directory or HRMS automatically.</p></div>
+          <div><h3>Target by Profile Fields</h3><p>Share policies by department, location, grade, and designation, synced from your Active Directory or HRMS automatically.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.18-3.68"/></svg></div>
-          <div><h4>Evergreen Auto-Sharing</h4><p>Enable Evergreen mode so future employees matching the profile criteria automatically receive the policy on joining.</p></div>
+          <div><h3>Evergreen Auto-Sharing</h3><p>Enable Evergreen mode so future employees matching the profile criteria automatically receive the policy on joining.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-          <div><h4>Personalized Content (Mail Merge)</h4><p>Upload a spreadsheet to send different content to different employees within the same policy, like mail merge for policies.</p></div>
+          <div><h3>Personalized Content (Mail Merge)</h3><p>Upload a spreadsheet to send different content to different employees within the same policy, like mail merge for policies.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <div><h4>Public Access Policies</h4><p>Make select policies publicly accessible for candidates, vendors, or visitors. No login required.</p></div>
+          <div><h3>Public Access Policies</h3><p>Make select policies publicly accessible for candidates, vendors, or visitors. No login required.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- Tab 5: Employee Portal & Mobile Experience - TIMELINE VERSION -->
+    <!-- Tab 5: Employee Portal & Mobile App - TIMELINE VERSION -->
     <div class="fpanel tl-panel" id="emp-portal">
       <div class="timeline-vis">
         <!-- Visual 0: Dedicated Mobile App -->
@@ -951,19 +951,19 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-          <div><h4>Dedicated Mobile App</h4><p>White-label mobile app for Android &amp; iOS, published under your enterprise app store accounts.</p></div>
+          <div><h3>Dedicated Mobile App</h3><p>White-label mobile app for Android &amp; iOS, published under your enterprise app store accounts.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <div><h4>Advanced Search</h4><p>Google-style search across policy titles, content, and inside Word, PDF, Excel, PowerPoint attachments.</p></div>
+          <div><h3>Advanced Search</h3><p>Google-style search across policy titles, content, and inside Word, PDF, Excel, PowerPoint attachments.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <div><h4>Calendar &amp; Dashboard View</h4><p>Personalized dashboard with unread counts, pending responses, and calendar view for policy deadlines &amp; events.</p></div>
+          <div><h3>Calendar &amp; Dashboard View</h3><p>Personalized dashboard with unread counts, pending responses, and calendar view for policy deadlines &amp; events.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
-          <div><h4>Smart Folders &amp; Views</h4><p>Structured folders by department or sender, list/tile views, content snippets, unread counts, and star-to-save.</p></div>
+          <div><h3>Smart Folders &amp; Views</h3><p>Structured folders by department or sender, list/tile views, content snippets, unread counts, and star-to-save.</p></div>
         </div>
       </div>
     </div>
@@ -1116,30 +1116,30 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-          <div><h4>Policy Signing &amp; Acknowledgement</h4><p>Formal sign-off via AD password, Aadhaar, or digital signature tools, each with secure timestamp and audit trail.</p></div>
+          <div><h3>Policy Signing &amp; Acknowledgement</h3><p>Formal sign-off via AD password, Aadhaar, or digital signature tools, each with secure timestamp and audit trail.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></div>
-          <div><h4>One-Click Response Buttons</h4><p>Custom response buttons like Helpful/Not Helpful, Approve/Reject. Collect quick feedback directly within policies.</p></div>
+          <div><h3>One-Click Response Buttons</h3><p>Custom response buttons like Helpful/Not Helpful, Approve/Reject. Collect quick feedback directly within policies.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <div><h4>Questions &amp; Comments</h4><p>Employees can ask questions or comment on policies, all consolidated in downloadable reports for publishers.</p></div>
+          <div><h3>Questions &amp; Comments</h3><p>Employees can ask questions or comment on policies, all consolidated in downloadable reports for publishers.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
-          <div><h4>Emoji Reactions &amp; Recommendations</h4><p>12+ emoji reactions to gauge sentiment, plus peer-to-peer policy recommendations for knowledge sharing.</p></div>
+          <div><h3>Emoji Reactions &amp; Recommendations</h3><p>12+ emoji reactions to gauge sentiment, plus peer-to-peer policy recommendations for knowledge sharing.</p></div>
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="fblock-bottom-link fblock-explore-employees">Explore all Policy Distribution &amp; Targeting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="fblock-bottom-link fblock-explore-employees">Explore all Policy Distribution &amp; Targeting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
   <!-- ═══ PANEL 3 : FOR THE ORGANIZATION ═══ -->
   <div class="fblock fblock-org reveal">
     <div class="fblock-header">
       <span class="fblock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-      <div><h3 class="fblock-title">For the Organization</h3><p class="fblock-sub">Track compliance, scale enterprise-wide, stay secure</p></div>
+      <div><h2 class="fblock-title">For the Organization</h2><p class="fblock-sub">Track compliance, scale enterprise-wide, stay secure</p></div>
     </div>
     <div class="ftabs" data-group="org">
       <button class="ftab on" data-panel="org-tracking">Tracking, Analytics &amp; Reporting</button>
@@ -1263,19 +1263,19 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <div><h4>Policy-Level Read Receipts</h4><p>See who read each policy, when they last accessed it, and how many times viewed, with detailed per-employee breakdown.</p></div>
+          <div><h3>Policy-Level Read Receipts</h3><p>See who read each policy, when they last accessed it, and how many times viewed, with detailed per-employee breakdown.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <div><h4>Timeline Engagement Analytics</h4><p>Track how read receipts evolve over time to understand engagement trends and monitor overall policy awareness.</p></div>
+          <div><h3>Timeline Engagement Analytics</h3><p>Track how read receipts evolve over time to understand engagement trends and monitor overall policy awareness.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <div><h4>All Policy Reports</h4><p>Consolidated reports covering all policies: engagement metrics, acknowledgements, responses, reactions, and comments.</p></div>
+          <div><h3>All Policy Reports</h3><p>Consolidated reports covering all policies: engagement metrics, acknowledgements, responses, reactions, and comments.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <div><h4>Search Analytics</h4><p>Monthly report of keywords employees search for. Identify communication gaps and what employees need most.</p></div>
+          <div><h3>Search Analytics</h3><p>Monthly report of keywords employees search for. Identify communication gaps and what employees need most.</p></div>
         </div>
       </div>
     </div>
@@ -1398,19 +1398,19 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <div><h4>SSO &amp; Active Directory</h4><p>Integrate with AD, LDAP, and Azure AD for seamless authentication. Employee profiles auto-sync, no extra passwords.</p></div>
+          <div><h3>SSO &amp; Active Directory</h3><p>Integrate with AD, LDAP, and Azure AD for seamless authentication. Employee profiles auto-sync, no extra passwords.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-          <div><h4>White-Label &amp; Custom Domain</h4><p>Deploy on your subdomain, fully branded with your logo. White-labelled mobile apps published under your app store accounts.</p></div>
+          <div><h3>White-Label &amp; Custom Domain</h3><p>Deploy on your subdomain, fully branded with your logo. White-labelled mobile apps published under your app store accounts.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg></div>
-          <div><h4>API &amp; System Integrations</h4><p>REST API for HRMS, intranet, or ERP integration. WebView embedding and redirection-based quick setups supported.</p></div>
+          <div><h3>API &amp; System Integrations</h3><p>REST API for HRMS, intranet, or ERP integration. WebView embedding and redirection-based quick setups supported.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
-          <div><h4>Multi-Department &amp; Non-AD Users</h4><p>Multiple departments publish independently. Support partners and contractors with OTP-based login, no AD required.</p></div>
+          <div><h3>Multi-Department &amp; Non-AD Users</h3><p>Multiple departments publish independently. Support partners and contractors with OTP-based login, no AD required.</p></div>
         </div>
       </div>
     </div>
@@ -1534,23 +1534,23 @@
         <div class="timeline-progress"></div>
         <div class="tl-item tl-active" data-tl-index="0">
           <div class="ib ib-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div><h4>Bank-Grade Encryption &amp; VAPT</h4><p>AES-256 at rest, TLS 1.2+ in transit, annual VAPT and source code reviews. Certification reports available.</p></div>
+          <div><h3>Bank-Grade Encryption &amp; VAPT</h3><p>AES-256 at rest, TLS 1.2+ in transit, annual VAPT and source code reviews. Certification reports available.</p></div>
         </div>
         <div class="tl-item" data-tl-index="1">
           <div class="ib ib-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-          <div><h4>IP Restriction &amp; Screenshot Protection</h4><p>Restrict portal access to office networks. Block screenshots on Android, detect on iOS to prevent unauthorized sharing.</p></div>
+          <div><h3>IP Restriction &amp; Screenshot Protection</h3><p>Restrict portal access to office networks. Block screenshots on Android, detect on iOS to prevent unauthorized sharing.</p></div>
         </div>
         <div class="tl-item" data-tl-index="2">
           <div class="ib ib-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div><h4>Tamper-Proof Audit Logs</h4><p>Every view, edit, approval, download, and login logged. Complete audit trail for governance and compliance.</p></div>
+          <div><h3>Tamper-Proof Audit Logs</h3><p>Every view, edit, approval, download, and login logged. Complete audit trail for governance and compliance.</p></div>
         </div>
         <div class="tl-item" data-tl-index="3">
           <div class="ib ib-lime"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg></div>
-          <div><h4>Flexible Deployment &amp; Compliance</h4><p>SaaS or deploy on your AWS account. Aligned with ISO 27001, SOC 2, GDPR, NIST, and RBI BFSI guidelines.</p></div>
+          <div><h3>Flexible Deployment &amp; Compliance</h3><p>SaaS or deploy on your AWS account. Aligned with ISO 27001, SOC 2, GDPR, NIST, and RBI BFSI guidelines.</p></div>
         </div>
       </div>
     </div>
-    <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="fblock-bottom-link fblock-explore-org">Explore all Tracking, Analytics &amp; Reporting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="fblock-bottom-link fblock-explore-org">Explore all Tracking, Analytics &amp; Reporting features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
 
 </div>
@@ -1702,13 +1702,13 @@
 <div class="container">
   <div class="section-header reveal">
     <span class="eyebrow">Contact Us</span>
-    <h2>Ready to see PolicyCentral.ai<br>at your organisation?</h2>
+    <h2>Ready to see PolicyCentral.ai <br>at your organisation?</h2>
   </div>
   <div class="contact-wrap">
     <div class="contact-direct reveal" style="text-align:center;margin-bottom:32px;padding:28px 32px;background:linear-gradient(135deg,rgba(6,148,162,.04),rgba(67,56,202,.04));border:1px solid rgba(6,148,162,.15);border-radius:16px;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap">
       <div style="font-size:15px;font-weight:700;color:var(--gray-800);font-family:'Plus Jakarta Sans',sans-serif">Kaizad Shroff <span style="font-weight:500;color:var(--gray-500);font-size:13px">&mdash; Business Head</span></div>
       <a href="tel:+919890988498" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72"/></svg>+91 98909 88498</a>
-      <a href="mailto:marketing@policycentral.ai" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>marketing@policycentral.ai</a>
+      <a href="mailto:contact@policycentral.ai" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@policycentral.ai</a>
     </div>
     <div class="cform reveal">
       <div class="fg2">

@@ -50,6 +50,63 @@ document.querySelectorAll('.nav-item .nav-link').forEach(link => {
   });
 });
 
+/* --- GTM dataLayer events --- */
+window.dataLayer = window.dataLayer || [];
+
+// Contact form submission
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('.btn-submit');
+  if (btn) {
+    var form = btn.closest('form');
+    if (form && form.checkValidity()) {
+      dataLayer.push({ event: 'form_submit', form_name: 'contact_form' });
+    }
+  }
+});
+
+// Download Presentation click
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="download/presentation"]');
+  if (link) {
+    dataLayer.push({ event: 'download_click', file_name: 'PolicyCentral_Presentation' });
+  }
+});
+
+// Web Demo click
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="demo.policycentral.ai"]');
+  if (link && !link.href.includes('mobile')) {
+    dataLayer.push({ event: 'demo_click', demo_type: 'web_demo' });
+  }
+});
+
+// Mobile Demo click
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="demo.policycentral.ai/mobile"]');
+  if (link) {
+    dataLayer.push({ event: 'demo_click', demo_type: 'mobile_demo' });
+  }
+});
+
+// Contact Us CTA clicks (nav + page CTAs, not the form submit)
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="/contact"]');
+  if (link && link.classList.contains('btn')) {
+    dataLayer.push({ event: 'cta_click', cta_text: link.textContent.trim().replace(/\s+/g, ' '), cta_location: link.closest('nav') ? 'nav' : 'page' });
+  }
+});
+
+// External link clicks (workapps.com, videocx.io)
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[target="_blank"]');
+  if (link) {
+    var href = link.href;
+    if (href.includes('workapps.com') || href.includes('videocx.io')) {
+      dataLayer.push({ event: 'external_link_click', link_url: href, link_text: link.textContent.trim().replace(/\s+/g, ' ') });
+    }
+  }
+});
+
 /* --- Window resize handler (clean up mobile nav state) --- */
 window.addEventListener('resize', () => {
   if (window.innerWidth > 1024) {

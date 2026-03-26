@@ -7,12 +7,21 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url(get_template_directory_uri()); ?>/apple-touch-icon.png">
-<link rel="manifest" href="<?php echo esc_url(get_template_directory_uri()); ?>/site.webmanifest">
-<meta name="theme-color" content="#179D97">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WLN5RZKL');</script>
+<!-- End Google Tag Manager -->
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLN5RZKL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV -->
 <nav id="nav">
@@ -35,17 +44,17 @@
     <li class="nav-item">
       <a href="<?php echo esc_url(home_url('/features/')); ?>" class="nav-link">Features<svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="4 6 8 10 12 6"/></svg></a>
       <div class="dropdown dw">
-        <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="di-title">AI-Powered Policy Intelligence</div><div class="di-sub">Smart search, summaries, chatbot</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div class="di-title">Policy Creation &amp; Content Management</div><div class="di-sub">Author, version, organize policies</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><div class="di-title">Publisher Controls &amp; Workflow Management</div><div class="di-sub">Approvals, publishing, workflows</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="di-title">Gen AI-Powered Policy Intelligence</div><div class="di-sub">Smart search, summaries, chatbot</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div><div class="di-title">Policy Creation &amp; Content Management</div><div class="di-sub">Author, version, organize policies</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><div class="di-title">Publisher Controls &amp; Workflow Management</div><div class="di-sub">Approvals, publishing, workflows</div></div></a>
         <div class="drop-hr"></div>
-        <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div><div><div class="di-title">Policy Distribution &amp; Targeting</div><div class="di-sub">Target audiences, push notifications</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div><div><div class="di-title">Employee Portal &amp; Mobile Experience</div><div class="di-sub">Mobile app, multi-language access</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="di-title">Employee Interaction &amp; Acknowledgement</div><div class="di-sub">Read receipts, e-sign, quizzes</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div><div><div class="di-title">Policy Distribution &amp; Targeting</div><div class="di-sub">Target audiences, push notifications</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div><div><div class="di-title">Employee Portal &amp; Mobile App</div><div class="di-sub">Mobile app, multi-language access</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="di-title">Employee Interaction &amp; Acknowledgement</div><div class="di-sub">Read receipts, e-sign, quizzes</div></div></a>
         <div class="drop-hr"></div>
-        <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="di-title">Tracking, Analytics &amp; Reporting</div><div class="di-sub">Dashboards, compliance reports</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><div class="di-title">Enterprise Features</div><div class="di-sub">AD, SSO, white-label, multi-entity</div></div></a>
-        <a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="di-title">Banking-Grade Security &amp; Compliance</div><div class="di-sub">Encryption, RBAC, audit logs</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="di-title">Tracking, Analytics &amp; Reporting</div><div class="di-sub">Dashboards, compliance reports</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><div class="di-title">Enterprise Features</div><div class="di-sub">AD, SSO, white-label, multi-entity</div></div></a>
+        <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="di-title">Banking-Grade Security &amp; Compliance</div><div class="di-sub">Encryption, RBAC, audit logs</div></div></a>
       </div>
     </li>
     <li class="nav-item" style="display:none"><!-- HIDDEN: Re-enable when content ready -->
@@ -61,7 +70,7 @@
       </div>
     </li>
     <li class="nav-item">
-      <a href="<?php echo esc_url(home_url('/faq/')); ?>" class="nav-link">FAQs<svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="4 6 8 10 12 6"/></svg></a>
+      <a href="<?php echo esc_url(home_url('/faqs/')); ?>" class="nav-link">FAQs<svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="4 6 8 10 12 6"/></svg></a>
       <div class="dropdown dw">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><div class="di-title">Company &amp; Platform</div><div class="di-sub">About PolicyCentral.ai</div></div></a>
         <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><div class="di-title">AI Capabilities</div><div class="di-sub">AI search, summaries &amp; chatbot</div></div></a>

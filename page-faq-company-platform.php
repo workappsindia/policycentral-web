@@ -7,7 +7,7 @@ get_header(); ?>
 <!-- FAQ HERO -->
 <section class="faq-hero">
 <div class="container">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">Company &amp; Platform FAQs</div>
   <h1>Who built this, and <em>why does it exist?</em></h1>
   <p>Background on PolicyCentral.ai, its parent company <a href="https://workapps.com" target="_blank">WorkApps</a>, the customer base, and the problem it was designed to solve.</p>
@@ -39,7 +39,7 @@ get_header(); ?>
     </div>
 
     <div class="faq-section" data-sec="about" id="about">
-      <div class="section-title"><span>🏛️</span> About the Company</div>
+      <h2 class="section-title"><span>🏛️</span> About the Company</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Who is behind PolicyCentral.ai?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">PolicyCentral.ai is a product by <strong><a href="https://workapps.com" target="_blank" style="color:inherit">WorkApps</a></strong>, incorporated in 2017, venture-funded, with a team of 40 people. WorkApps launched Video KYC in India in May 2020 with Kotak Mahindra Bank, the first in the country, and then launched the first full Video Banking platform with AU Small Finance Bank. The company processes <strong>3.1 million Video KYCs every month</strong> and serves 70+ FSI customers. It is an <strong>AWS Global ISV Partner</strong>.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">Is this a startup with a new product, or is there a proven track record?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">PolicyCentral.ai is live at scale: <span class="pill">83,700 employees</span> at Kotak Mahindra Bank with 465 active policies, <span class="pill">37,000 employees</span> at L&amp;T Financial Services with 93 policies, and <span class="pill">9,000 employees</span> at Arohan Finance with 102 policies. These are live, ongoing deployments at some of India's most compliance-intensive financial institutions, not pilots or POCs.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">How long has the company been operating and is it financially stable?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">WorkApps has been operational since 2017, 8 years in a space where most SaaS startups fail within 3. The company is venture-funded with 70+ live FSI customers spanning major banks, NBFCs, and insurance companies. The scale of deployment (Kotak's 83,700 employees alone) is a meaningful signal of financial stability and product maturity.</div></div></div>
@@ -47,7 +47,7 @@ get_header(); ?>
     </div>
 
     <div class="faq-section" data-sec="product" id="product">
-      <div class="section-title"><span>📦</span> What is PolicyCentral.ai</div>
+      <h2 class="section-title"><span>📦</span> What is PolicyCentral.ai</h2>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What is PolicyCentral.ai in plain terms?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">It is an <strong>AI-powered platform</strong> for organizations to host, distribute, track, and manage all their policies, turning static PDFs into engaging, web-native content that employees actually read, with real-time compliance tracking that shows exactly who has read and attested to what.</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What specific problem does PolicyCentral.ai solve?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer"><strong>68% of employees don't read policy documents</strong>, and organizations can't prove compliance during audits. Traditional approaches (shared drives, email attachments, intranets) have no tracking, no engagement, no multilingual support, and no audit trail. This creates: regulatory exposure (you can't prove employees were informed), operational risk (employees make decisions without current policy), and massive admin burden (compliance teams spend 40+ hours/week chasing attestations manually).</div></div></div>
       <div class="acc-item"><button class="acc-trigger"><span class="acc-q">What else can PolicyCentral.ai be used for beyond HR policies?</span><span class="acc-icon">+</span></button><div class="acc-body"><div class="acc-answer">The platform is used for: HR policies and circulars, <strong>Branch circulars</strong> (time-sensitive operational instructions), <strong>Corporate updates</strong> (leadership communications), <strong>Regulatory updates</strong> (new RBI/SEBI/IRDAI guidelines requiring documented employee awareness), InfoSec policies, Product guidelines, and Onboarding documentation. Any document that needs to be distributed, tracked, and attested across a workforce is a valid use case.</div></div></div>
@@ -59,7 +59,7 @@ get_header(); ?>
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">🤖</span>AI Capabilities</a>
         <a href="<?php echo esc_url(home_url('/faq/features-dashboard/')); ?>" class="other-link"><span class="oi">⚙️</span>Features &amp; Dashboard</a>

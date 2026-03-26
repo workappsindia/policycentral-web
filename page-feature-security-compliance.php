@@ -49,7 +49,7 @@ get_header();
 .sec-mfa-header{display:flex;align-items:center;gap:7px;margin-bottom:8px}
 .sec-mfa-icon{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#1D4ED8,#3B82F6);display:flex;align-items:center;justify-content:center}
 .sec-mfa-icon svg{width:13px;height:13px;color:#fff}
-.sec-mfa h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.sec-mfa h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
 .sec-mfa-steps{display:flex;flex-direction:column;gap:4px}
 .sec-mfa-step{display:flex;align-items:center;gap:6px;padding:3px 0}
 .sec-step-num{width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#059669,#10B981);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
@@ -58,7 +58,7 @@ get_header();
 
 /* Encryption floating card */
 .sec-enc{position:absolute;bottom:-18px;left:-16px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:secCardIn .6s ease-out both;animation-delay:.5s}
-.sec-enc h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.sec-enc h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .sec-enc-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:6px;background:linear-gradient(135deg,#059669,#10B981);margin-bottom:6px}
 .sec-enc-badge svg{width:10px;height:10px;color:#fff}
 .sec-enc-badge span{font-size:9px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif}
@@ -68,7 +68,7 @@ get_header();
 
 /* Audit Log floating card */
 .sec-audit{position:absolute;bottom:30px;right:-22px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:secCardIn .6s ease-out both;animation-delay:.7s}
-.sec-audit h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.sec-audit h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .sec-log-entry{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid var(--gray-100)}
 .sec-log-entry:last-child{border-bottom:none;padding-bottom:0}
 .sec-log-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
@@ -77,70 +77,7 @@ get_header();
 .sec-log-info{flex:1}
 .sec-log-action{font-size:9px;font-weight:700;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif}
 .sec-log-meta{font-size:8px;color:var(--gray-400);margin-top:1px}
-
-/* ── MFA Flow Mockup ── */
-.sec-feat-mfa{background:#1E293B;border-radius:16px;border:1px solid rgba(255,255,255,.08);box-shadow:0 16px 48px rgba(0,0,0,.25),0 4px 16px rgba(0,0,0,.15);overflow:hidden;width:100%;max-width:400px}
-.sec-feat-mfa-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#0F172A;border-bottom:1px solid rgba(255,255,255,.06)}
-.sec-feat-mfa-head-icon{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#1D4ED8,#3B82F6);display:flex;align-items:center;justify-content:center}
-.sec-feat-mfa-head-icon svg{width:14px;height:14px;color:#fff}
-.sec-feat-mfa-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;color:rgba(255,255,255,.75)}
-.sec-feat-mfa-body{padding:16px}
-.sec-feat-mfa-steps{display:flex;flex-direction:column;gap:10px}
-.sec-feat-mfa-step{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
-.sec-feat-mfa-step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
-.sec-feat-mfa-step-num.s1{background:linear-gradient(135deg,#1D4ED8,#3B82F6)}
-.sec-feat-mfa-step-num.s2{background:linear-gradient(135deg,#059669,#10B981)}
-.sec-feat-mfa-step-num.s3{background:linear-gradient(135deg,#7C3AED,#A78BFA)}
-.sec-feat-mfa-step-info{flex:1}
-.sec-feat-mfa-step-title{font-size:12px;font-weight:700;color:rgba(255,255,255,.85);font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-mfa-step-sub{font-size:10px;color:rgba(255,255,255,.4);margin-top:2px}
-.sec-feat-mfa-step-check{font-size:14px;color:#22C55E;font-weight:700}
-.sec-feat-mfa-result{margin-top:12px;padding:10px 14px;border-radius:10px;background:rgba(5,150,105,.12);border:1px solid rgba(16,185,129,.25);display:flex;align-items:center;gap:8px}
-.sec-feat-mfa-result-dot{width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0}
-.sec-feat-mfa-result-text{font-size:11px;font-weight:700;color:#6EE7B7;font-family:'Plus Jakarta Sans',sans-serif}
-
-/* ── Audit Log Mockup ── */
-.sec-feat-audit{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.sec-feat-audit-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.sec-feat-audit-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.sec-feat-audit-head-icon svg{width:14px;height:14px;color:#fff}
-.sec-feat-audit-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-audit-body{padding:12px 16px;display:flex;flex-direction:column;gap:6px}
-.sec-feat-audit-entry{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:9px;border:1px solid var(--gray-100);background:var(--gray-50)}
-.sec-feat-audit-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:3px}
-.sec-feat-audit-dot.ok{background:#22C55E}
-.sec-feat-audit-dot.warn{background:#F59E0B}
-.sec-feat-audit-dot.info{background:#3B82F6}
-.sec-feat-audit-info{flex:1}
-.sec-feat-audit-action{font-size:11px;font-weight:700;color:var(--gray-800);font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-audit-meta{font-size:9px;color:var(--gray-400);margin-top:2px;font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-audit-time{font-size:9px;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;flex-shrink:0}
-.sec-feat-audit-badge{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:5px 10px;border-radius:6px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.18);font-size:9px;font-weight:800;color:#059669;font-family:'Plus Jakarta Sans',sans-serif;margin-left:16px;margin-bottom:8px}
-
-/* ── Compliance Dashboard Mockup ── */
-.sec-feat-comp{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.sec-feat-comp-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}
-.sec-feat-comp-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.sec-feat-comp-head-icon svg{width:14px;height:14px;color:#fff}
-.sec-feat-comp-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-comp-body{padding:14px 16px}
-.sec-feat-comp-label{font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:10px}
-.sec-feat-comp-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;justify-content:center}
-.sec-feat-comp-badge{display:flex;flex-direction:column;align-items:center;padding:10px 12px;border-radius:10px;border:1.5px solid;gap:4px;min-width:72px}
-.sec-feat-comp-badge-icon{font-size:18px}
-.sec-feat-comp-badge-name{font-size:10px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-comp-badge-sub{font-size:8px;font-weight:600;opacity:.7;font-family:'Plus Jakarta Sans',sans-serif}
-.sec-feat-comp-badge.soc{border-color:rgba(67,56,202,.3);background:rgba(99,102,241,.06);color:#4338CA}
-.sec-feat-comp-badge.iso{border-color:rgba(5,150,105,.3);background:rgba(5,150,105,.06);color:#059669}
-.sec-feat-comp-badge.gdpr{border-color:rgba(217,119,6,.3);background:rgba(217,119,6,.06);color:#D97706}
-.sec-feat-comp-badge.rbi{border-color:rgba(225,29,72,.3);background:rgba(225,29,72,.06);color:#E11D48}
-.sec-feat-comp-divider{height:1px;background:var(--gray-100);margin:8px 0}
-.sec-feat-comp-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
-.sec-feat-comp-bar-label{font-size:9px;font-weight:700;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;width:80px;flex-shrink:0}
-.sec-feat-comp-bar-wrap{flex:1;height:5px;border-radius:3px;background:var(--gray-100);overflow:hidden}
-.sec-feat-comp-bar-fill{height:100%;border-radius:3px}
-.sec-feat-comp-bar-val{font-size:9px;font-weight:700;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap}
-.sec-feat-mfa,.sec-feat-audit,.sec-feat-comp{max-width:100%}
+/* Feature Hero Illustrations - MFA */.sec-feat-mfa,.sec-feat-audit,.sec-feat-comp{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:0 20px 60px rgba(0,0,0,.10),0 8px 24px rgba(0,0,0,.06);overflow:hidden;width:100%;max-width:420px}.sec-feat-mfa-head,.sec-feat-audit-head,.sec-feat-comp-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);font-size:11px;font-weight:700;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif}.sec-feat-mfa-head-icon,.sec-feat-audit-head-icon,.sec-feat-comp-head-icon{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#4338CA,#6366F1);display:flex;align-items:center;justify-content:center;flex-shrink:0}.sec-feat-mfa-head-icon svg,.sec-feat-audit-head-icon svg,.sec-feat-comp-head-icon svg{width:14px;height:14px;color:#fff}.sec-feat-audit-head-icon{background:linear-gradient(135deg,#059669,#047857)}.sec-feat-comp-head-icon{background:linear-gradient(135deg,#4338CA,#6366F1)}.sec-feat-mfa-body,.sec-feat-audit-body,.sec-feat-comp-body{padding:14px 16px}/* MFA Steps */.sec-feat-mfa-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}.sec-feat-mfa-step{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--gray-50);border-radius:10px;border:1px solid var(--gray-100)}.sec-feat-mfa-step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;font-family:"Plus Jakarta Sans",sans-serif;flex-shrink:0}.sec-feat-mfa-step-num.s1{background:linear-gradient(135deg,#4338CA,#6366F1)}.sec-feat-mfa-step-num.s2{background:linear-gradient(135deg,#059669,#34d399)}.sec-feat-mfa-step-num.s3{background:linear-gradient(135deg,#D97706,#F59E0B)}.sec-feat-mfa-step-info{flex:1}.sec-feat-mfa-step-title{font-size:11px;font-weight:700;color:var(--gray-900);font-family:"Plus Jakarta Sans",sans-serif}.sec-feat-mfa-step-sub{font-size:9px;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif;margin-top:1px}.sec-feat-mfa-step-check{color:#059669;font-size:14px;font-weight:700}.sec-feat-mfa-result{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(5,150,105,.08);border-radius:8px;border:1px solid rgba(5,150,105,.2)}.sec-feat-mfa-result-dot{width:8px;height:8px;border-radius:50%;background:#059669;flex-shrink:0;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}.sec-feat-mfa-result-text{font-size:10px;font-weight:700;color:#059669;font-family:"Plus Jakarta Sans",sans-serif}/* Audit Trail */.sec-feat-audit-entry{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--gray-50)}.sec-feat-audit-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px}.sec-feat-audit-dot.ok{background:#059669}.sec-feat-audit-dot.info{background:#4338CA}.sec-feat-audit-dot.warn{background:#EF4444}.sec-feat-audit-info{flex:1}.sec-feat-audit-action{font-size:10px;font-weight:700;color:var(--gray-700);font-family:"Plus Jakarta Sans",sans-serif}.sec-feat-audit-meta{font-size:8px;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif;margin-top:2px}.sec-feat-audit-time{font-size:9px;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif;flex-shrink:0}.sec-feat-audit-badge{display:inline-flex;align-items:center;gap:5px;margin-top:10px;padding:5px 10px;border-radius:6px;background:rgba(5,150,105,.08);border:1px solid rgba(5,150,105,.2);font-size:9px;font-weight:700;color:#059669;font-family:"Plus Jakarta Sans",sans-serif}/* Compliance Framework */.sec-feat-comp-label{font-size:9px;font-weight:700;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}.sec-feat-comp-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}.sec-feat-comp-badge{display:flex;flex-direction:column;align-items:center;padding:8px 4px;border-radius:8px;border:1px solid var(--gray-100);background:var(--gray-50);text-align:center}.sec-feat-comp-badge-icon{font-size:16px;margin-bottom:3px}.sec-feat-comp-badge-name{font-size:9px;font-weight:800;color:var(--gray-700);font-family:"Plus Jakarta Sans",sans-serif}.sec-feat-comp-badge-sub{font-size:7px;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif}.sec-feat-comp-badge.soc{border-color:rgba(67,56,202,.2);background:rgba(67,56,202,.04)}.sec-feat-comp-badge.iso{border-color:rgba(5,150,105,.2);background:rgba(5,150,105,.04)}.sec-feat-comp-badge.gdpr{border-color:rgba(217,119,6,.2);background:rgba(217,119,6,.04)}.sec-feat-comp-badge.rbi{border-color:rgba(239,68,68,.2);background:rgba(239,68,68,.04)}.sec-feat-comp-divider{height:1px;background:var(--gray-100);margin:12px 0}.sec-feat-comp-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}.sec-feat-comp-bar-label{font-size:9px;font-weight:600;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif;width:80px;flex-shrink:0;text-align:right}.sec-feat-comp-bar-wrap{flex:1;height:10px;background:var(--gray-200);border-radius:5px;overflow:hidden}.sec-feat-comp-bar-fill{height:100%;border-radius:5px}.sec-feat-comp-bar-val{font-size:9px;font-weight:800;color:var(--gray-600);font-family:"Plus Jakarta Sans",sans-serif;width:30px;flex-shrink:0}
 </style>
 
 
@@ -149,12 +86,12 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content reveal">
-    <h1>Banking-Grade Security<br>&amp; <span class="accent">Compliance</span></h1>
+    <h1>Banking-Grade Security <br>&amp; <span class="accent">Compliance</span></h1>
     <p class="subtitle">Enterprise-grade security controls to meet the requirements of banks, financial institutions, and large enterprises.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -235,7 +172,7 @@ get_header();
           <div class="sec-mfa-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg>
           </div>
-          <h5>MFA Verification</h5>
+          <h3>MFA Verification</h3>
         </div>
         <div class="sec-mfa-steps">
           <div class="sec-mfa-step">
@@ -258,7 +195,7 @@ get_header();
 
       <!-- Floating Card: Encryption -->
       <div class="sec-enc">
-        <h5>Data Security</h5>
+        <h3>Data Security</h3>
         <div class="sec-enc-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <span>AES-256 Encrypted</span>
@@ -279,7 +216,7 @@ get_header();
 
       <!-- Floating Card: Audit Log -->
       <div class="sec-audit">
-        <h5>Audit Trail</h5>
+        <h3>Audit Trail</h3>
         <div class="sec-log-entry">
           <div class="sec-log-dot ok"></div>
           <div class="sec-log-info">
@@ -661,10 +598,10 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Security That Meets<br><span style="color:var(--accent)">Banking Standards</span></h2>
+    <h2>Security That Meets <br><span style="color:var(--accent)">Banking Standards</span></h2>
     <p>See how PolicyCentral's security architecture meets the requirements of regulated industries.</p>
     <div class="cta-buttons">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
       <a href="<?php echo esc_url(home_url('/features/')); ?>" class="btn btn-outline">View All Features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>
@@ -678,7 +615,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -701,12 +638,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -719,42 +656,42 @@ get_header();
     <h2>Other <span style="color:var(--accent)">Features</span></h2>
   </div>
   <div class="other-grid">
-    <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
       <h4>Policy Creation &amp; Content Management</h4>
       <p>Author, version, organize policies</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
       <h4>Publisher Controls &amp; Workflow</h4>
       <p>Approvals, publishing, workflows</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
       <h4>Policy Distribution &amp; Targeting</h4>
       <p>Target audiences, push notifications</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
       <h4>Employee Interaction &amp; Acknowledgement</h4>
       <p>Read receipts, e-sign, quizzes</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/tracking-reporting/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
       <h4>Tracking, Analytics &amp; Reporting</h4>
       <p>Dashboards, compliance reports</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h4>Enterprise Features</h4>
       <p>AD, SSO, white-label, multi-entity</p>

@@ -9,7 +9,7 @@ get_header();
 <section class="faq-hero">
 <div class="hero-mesh"></div>
 <div class="container" style="position:relative;z-index:1">
-  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faq/')); ?>">FAQs</a></div>
+  <div class="breadcrumb"><a href="<?php echo esc_url(home_url('/faqs/')); ?>">FAQs</a></div>
   <div class="faq-tag">&#128176; Pricing &amp; Finance FAQs</div>
   <h1>Financial due diligence, TCO, and <em>contract terms</em></h1>
   <p>Total cost of ownership, pricing model, implementation cost, contract structure, payback period, and the financial case for PolicyCentral.ai.</p>
@@ -42,7 +42,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="pricing" id="pricing">
-      <div class="section-title"><span>&#128179;</span> Pricing &amp; Cost Structure</div>
+      <h2 class="section-title"><span>&#128179;</span> Pricing &amp; Cost Structure</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">How is PolicyCentral.ai priced?</span>
@@ -73,7 +73,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="tco" id="tco">
-      <div class="section-title"><span>&#129518;</span> Total Cost of Ownership</div>
+      <h2 class="section-title"><span>&#129518;</span> Total Cost of Ownership</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">How does year 1 TCO compare to our current approach?</span>
@@ -113,7 +113,7 @@ get_header();
     </div>
 
     <div class="faq-section" data-sec="contract" id="contract">
-      <div class="section-title"><span>&#128221;</span> Contract &amp; Commercial Terms</div>
+      <h2 class="section-title"><span>&#128221;</span> Contract &amp; Commercial Terms</h2>
       <div class="acc-item">
     <button class="acc-trigger">
       <span class="acc-q">What does the standard contract look like?</span>
@@ -153,7 +153,7 @@ get_header();
     </div>
 
     <div class="other-cats">
-      <h3>Explore other FAQ categories</h3>
+      <h2>Explore other FAQ categories</h2>
       <div class="other-grid">
         <a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>" class="other-link"><span class="oi">&#127970;</span>Company &amp; Platform</a>
     <a href="<?php echo esc_url(home_url('/faq/ai-capabilities/')); ?>" class="other-link"><span class="oi">&#129302;</span>AI Capabilities</a>

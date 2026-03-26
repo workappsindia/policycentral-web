@@ -42,7 +42,7 @@ get_header();
 .ei-esign{position:absolute;top:-14px;right:-20px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:12px 14px;min-width:162px;animation:eiCardIn .6s ease-out both;animation-delay:.3s}
 .ei-esign-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
 .ei-esign-icon svg{width:15px;height:15px;color:#fff}
-.ei-esign h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.ei-esign h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .ei-sig-area{height:26px;border-radius:6px;border:1.5px dashed rgba(5,150,105,.4);background:rgba(5,150,105,.04);display:flex;align-items:center;padding:0 8px;margin-bottom:7px}
 .ei-sig-line{font-size:14px;color:rgba(5,150,105,.7);font-family:'Plus Jakarta Sans',sans-serif;font-style:italic;font-weight:600;line-height:1}
 .ei-ack-btn{display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 10px;border-radius:6px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;width:100%}
@@ -50,7 +50,7 @@ get_header();
 
 /* Q&A Floating Card */
 .ei-qa{position:absolute;bottom:-18px;left:-16px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:11px 13px;min-width:170px;animation:eiCardIn .6s ease-out both;animation-delay:.5s}
-.ei-qa h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:7px}
+.ei-qa h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:7px}
 .ei-qa-item{margin-bottom:6px}
 .ei-qa-q{display:flex;align-items:flex-start;gap:5px;margin-bottom:3px}
 .ei-qa-q-dot{width:14px;height:14px;border-radius:50%;background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:800;color:#7C3AED;font-family:'Plus Jakarta Sans',sans-serif;margin-top:1px}
@@ -61,7 +61,7 @@ get_header();
 
 /* Reactions Floating Card */
 .ei-react{position:absolute;bottom:52px;right:-22px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:eiCardIn .6s ease-out both;animation-delay:.7s}
-.ei-react h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.ei-react h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .ei-react-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
 .ei-react-item{display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px 6px;border-radius:7px;background:var(--gray-50);border:1px solid var(--gray-100)}
 .ei-react-emoji{font-size:14px;line-height:1}
@@ -104,6 +104,7 @@ get_header();
   .ei-mockup{max-width:300px}
   .cta-section{padding:56px 0}
 }
+/* Reactions Illustration */.fv-reactions{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:0 20px 60px rgba(0,0,0,.10),0 8px 24px rgba(0,0,0,.06);overflow:hidden;width:100%;max-width:420px}.fv-reactions-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);font-size:11px;font-weight:700;color:var(--gray-500);font-family:sans-serif}.fv-reactions-head-icon{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#7C3AED,#A78BFA);display:flex;align-items:center;justify-content:center;flex-shrink:0}.fv-reactions-head-icon svg{width:14px;height:14px;color:#fff}.fv-reactions-head-badge{margin-left:auto;padding:3px 9px;border-radius:6px;background:rgba(124,58,237,.1);color:#7C3AED;font-size:9px;font-weight:800}.fv-reactions-body{padding:14px 16px}.fv-policy-snippet{background:var(--gray-50);border-radius:8px;border:1px solid var(--gray-100);padding:10px 12px;margin-bottom:12px}.fv-policy-snip-title{font-size:10px;font-weight:700;color:var(--gray-700);margin-bottom:6px}.fv-snip-line{height:4px;background:var(--gray-200);border-radius:2px;margin-bottom:4px}.fv-react-bar{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}.fv-react-pill{display:flex;align-items:center;gap:4px;padding:4px 8px;border-radius:6px;background:var(--gray-50);border:1px solid var(--gray-100)}.fv-react-pill.active{background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.25)}.fv-react-emoji{font-size:13px}.fv-react-count{font-size:10px;font-weight:700;color:var(--gray-700)}.fv-react-summary{display:flex;flex-direction:column;gap:5px}.fv-react-stat{display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:6px;background:var(--gray-50);border:1px solid var(--gray-100)}.fv-react-stat.top{background:rgba(124,58,237,.06);border-color:rgba(124,58,237,.2)}.fv-react-stat-emoji{font-size:13px}.fv-react-stat-n{font-size:11px;font-weight:800;color:var(--gray-800)}.fv-react-stat-lbl{font-size:9px;color:var(--gray-400)}.fv-sig-label{font-size:9px;font-weight:700;color:var(--gray-500);margin-bottom:4px}.fv-sig-area{padding:6px 10px;border-radius:6px;border:1px dashed var(--gray-300);margin-bottom:8px}.fv-sig-text{font-size:14px;font-weight:700;color:var(--gray-800);font-style:italic}
 </style>
 
 <!-- HERO -->
@@ -111,12 +112,12 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content reveal">
-    <h1>Employee Interaction<br>&amp; <span class="accent">Acknowledgement</span></h1>
+    <h1>Employee Interaction <br>&amp; <span class="accent">Acknowledgement</span></h1>
     <p class="subtitle">Capture employee acknowledgement, feedback, and engagement directly within the policy platform.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -169,7 +170,7 @@ get_header();
         <div class="ei-esign-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h5>Policy Acknowledgement</h5>
+        <h3>Policy Acknowledgement</h3>
         <div class="ei-sig-area">
           <span class="ei-sig-line">Priya Sharma</span>
         </div>
@@ -181,7 +182,7 @@ get_header();
 
       <!-- Floating Card: Q&A -->
       <div class="ei-qa">
-        <h5>Employee Questions</h5>
+        <h3>Employee Questions</h3>
         <div class="ei-qa-item">
           <div class="ei-qa-q">
             <div class="ei-qa-q-dot">Q</div>
@@ -196,7 +197,7 @@ get_header();
 
       <!-- Floating Card: Reactions Summary -->
       <div class="ei-react">
-        <h5>Reactions</h5>
+        <h3>Reactions</h3>
         <div class="ei-react-grid">
           <div class="ei-react-item top-r">
             <span class="ei-react-emoji">&#128077;</span>
@@ -380,7 +381,7 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Turn Policy Compliance into<br>Active <span class="g-text">Engagement</span></h2>
+    <h2>Turn Policy Compliance into <br>Active <span class="g-text">Engagement</span></h2>
     <p>See how PolicyCentral.ai transforms one-way policy publishing into two-way employee interaction.</p>
     <div class="cta-buttons">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Contact Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -397,7 +398,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -419,12 +420,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -440,7 +441,7 @@ get_header();
   <div class="other-grid">
     <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="other-card reveal rd2">
@@ -460,7 +461,7 @@ get_header();
     </a>
     <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
     <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="other-card reveal rd2">

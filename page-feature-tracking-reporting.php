@@ -53,7 +53,7 @@ get_header();
 .tr-receipts{position:absolute;top:-14px;right:-20px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:12px 14px;min-width:158px;animation:trCardIn .6s ease-out both;animation-delay:.3s}
 .tr-receipts-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
 .tr-receipts-icon svg{width:15px;height:15px;color:#fff}
-.tr-receipts h5{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px}
+.tr-receipts h3{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px}
 .tr-donut-wrap{display:flex;align-items:center;gap:10px}
 .tr-donut{width:44px;height:44px;border-radius:50%;background:conic-gradient(#059669 0% 85%,#E5E7EB 85% 100%);flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center}
 .tr-donut::after{content:'';position:absolute;width:28px;height:28px;background:#fff;border-radius:50%}
@@ -66,7 +66,7 @@ get_header();
 
 /* Timeline Floating Card */
 .tr-timeline{position:absolute;bottom:-18px;left:-16px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:11px 13px;min-width:172px;animation:trCardIn .6s ease-out both;animation-delay:.5s}
-.tr-timeline h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px}
+.tr-timeline h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:8px}
 .tr-tl-chart{display:flex;align-items:flex-end;gap:4px;height:38px;margin-bottom:5px}
 .tr-tl-bar{flex:1;border-radius:3px 3px 0 0;min-height:4px}
 .tr-tl-bar.tl-b1{background:#059669;opacity:.3;height:40%}
@@ -83,7 +83,7 @@ get_header();
 
 /* Reports Floating Card */
 .tr-reports{position:absolute;bottom:52px;right:-22px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.12),0 4px 12px rgba(0,0,0,.06);padding:10px 12px;animation:trCardIn .6s ease-out both;animation-delay:.7s}
-.tr-reports h5{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
+.tr-reports h3{font-size:10px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
 .tr-report-row{display:flex;flex-direction:column;gap:4px}
 .tr-report-item{display:flex;align-items:center;gap:7px;padding:4px 7px;border-radius:6px;background:var(--gray-50);border:1px solid var(--gray-100)}
 .tr-report-icon{width:20px;height:20px;border-radius:5px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
@@ -93,55 +93,7 @@ get_header();
 .tr-report-icon.ri-csv{background:linear-gradient(135deg,#0694A2,#2dd4bf)}
 .tr-report-name{font-size:9px;font-weight:700;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif}
 .tr-report-type{font-size:8px;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif}
-
-/* ── Read Receipts Mockup ── */
-.tr-feat-receipts{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.tr-feat-receipts-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#059669,#047857);color:#fff}
-.tr-feat-receipts-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.tr-feat-receipts-head-icon svg{width:14px;height:14px;color:#fff}
-.tr-feat-receipts-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;flex:1}
-.tr-feat-receipts-head-badge{padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.2);font-size:9px;font-weight:800;letter-spacing:.03em;font-family:'Plus Jakarta Sans',sans-serif}
-.tr-feat-receipts-body{padding:14px 16px}
-.tr-feat-receipt-label{font-size:9px;font-weight:700;color:#059669;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:7px;display:flex;align-items:center;gap:4px}
-.tr-feat-receipt-label svg{width:10px;height:10px}
-.tr-feat-emp-row{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:8px;margin-bottom:4px;border:1px solid var(--gray-100)}
-.tr-feat-emp-avatar{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;color:#fff;flex-shrink:0}
-.tr-feat-emp-name{font-size:10px;font-weight:700;color:var(--gray-800);font-family:'Plus Jakarta Sans',sans-serif;flex:1}
-.tr-feat-emp-time{font-size:9px;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif}
-.tr-feat-emp-status{padding:2px 7px;border-radius:5px;font-size:8px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif}
-.tr-feat-emp-read{background:rgba(5,150,105,.1);color:#059669;border:1px solid rgba(5,150,105,.2)}
-.tr-feat-emp-unread{background:rgba(225,29,72,.08);color:#E11D48;border:1px solid rgba(225,29,72,.2)}
-
-/* ── Comprehensive Report Mockup ── */
-.tr-feat-report{background:#fff;border-radius:16px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);overflow:hidden;width:100%;max-width:400px}
-.tr-feat-report-head{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(135deg,#4338CA,#6366F1);color:#fff}
-.tr-feat-report-head-icon{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
-.tr-feat-report-head-icon svg{width:14px;height:14px;color:#fff}
-.tr-feat-report-head span{font-size:12px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;flex:1}
-.tr-feat-report-body{padding:14px 16px}
-.tr-feat-report-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
-.tr-feat-report-stat{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:8px;padding:7px;text-align:center}
-.tr-feat-report-stat-num{font-size:16px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;color:#4338CA}
-.tr-feat-report-stat-label{font-size:8px;font-weight:600;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;margin-top:1px}
-.tr-feat-chart-label{font-size:9px;font-weight:700;color:#4338CA;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:6px}
-.tr-feat-chart-bars{display:flex;align-items:flex-end;gap:5px;height:44px;margin-bottom:10px}
-.tr-feat-chart-bar{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(180deg,#6366F1,#4338CA)}
-.tr-feat-chart-bar-sm{opacity:.4}
-.tr-feat-donut-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
-.tr-feat-donut{width:68px;height:68px;border-radius:50%;background:conic-gradient(#059669 0% 68%,#E5E7EB 68% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
-.tr-feat-donut::after{content:'';position:absolute;width:46px;height:46px;border-radius:50%;background:#fff}
-.tr-feat-donut-label{position:absolute;font-size:12px;font-weight:800;color:#059669;font-family:'Plus Jakarta Sans',sans-serif;z-index:1}
-.tr-feat-donut-legend{flex:1}
-.tr-feat-donut-legend-item{display:flex;align-items:center;gap:6px;margin-bottom:4px}
-.tr-feat-donut-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.tr-feat-donut-legend-text{font-size:11px;font-weight:600;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif}
-.tr-feat-export-row{display:flex;gap:5px}
-.tr-feat-export-btn{display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:7px;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;cursor:default;border:1px solid}
-.tr-feat-export-btn svg{width:10px;height:10px}
-.tr-feat-export-pdf{background:rgba(225,29,72,.08);color:#E11D48;border-color:rgba(225,29,72,.2)}
-.tr-feat-export-xlsx{background:rgba(5,150,105,.08);color:#059669;border-color:rgba(5,150,105,.2)}
-.tr-feat-export-csv{background:rgba(99,102,241,.08);color:#4338CA;border-color:rgba(99,102,241,.2)}
-.tr-feat-receipts,.tr-feat-report{max-width:100%}
+/* Feature Hero Illustrations */.tr-feat-receipts,.tr-feat-report{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:0 20px 60px rgba(0,0,0,.10),0 8px 24px rgba(0,0,0,.06);overflow:hidden;width:100%;max-width:420px}.tr-feat-receipts-head,.tr-feat-report-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);font-size:11px;font-weight:700;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif}.tr-feat-receipts-head-icon,.tr-feat-report-head-icon{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center;flex-shrink:0}.tr-feat-receipts-head-icon svg,.tr-feat-report-head-icon svg{width:14px;height:14px;color:#fff}.tr-feat-receipts-head-badge{margin-left:auto;padding:3px 9px;border-radius:6px;background:linear-gradient(135deg,#047857,#059669);color:#fff;font-size:9px;font-weight:800;font-family:"Plus Jakarta Sans",sans-serif}.tr-feat-receipts-body,.tr-feat-report-body{padding:14px 16px}.tr-feat-donut-row{display:flex;align-items:center;gap:14px;margin-bottom:12px}.tr-feat-donut{width:56px;height:56px;border-radius:50%;background:conic-gradient(#059669 0% 68%,#E5E7EB 68% 100%);flex-shrink:0;display:flex;align-items:center;justify-content:center}.tr-feat-donut-label{font-size:12px;font-weight:800;color:#059669;font-family:"Plus Jakarta Sans",sans-serif;background:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:1}.tr-feat-donut-legend{display:flex;flex-direction:column;gap:4px}.tr-feat-donut-legend-item{display:flex;align-items:center;gap:6px}.tr-feat-donut-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.tr-feat-donut-legend-text{font-size:10px;font-weight:600;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif}.tr-feat-receipt-label{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:8px;padding-top:10px;border-top:1px solid var(--gray-100)}.tr-feat-receipt-label svg{width:14px;height:14px;flex-shrink:0}.tr-feat-emp-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--gray-50)}.tr-feat-emp-avatar{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:800;font-family:"Plus Jakarta Sans",sans-serif;flex-shrink:0}.tr-feat-emp-name{font-size:10px;font-weight:600;color:var(--gray-700);font-family:"Plus Jakarta Sans",sans-serif;flex:1}.tr-feat-emp-time{font-size:9px;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif}.tr-feat-emp-status{font-size:9px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;padding:2px 8px;border-radius:4px}.tr-feat-emp-read{background:rgba(5,150,105,.1);color:#059669}.tr-feat-emp-unread{background:rgba(217,119,6,.1);color:#D97706}.tr-feat-report-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}.tr-feat-report-stat{background:var(--gray-50);border-radius:8px;border:1px solid var(--gray-100);padding:8px 10px;text-align:center}.tr-feat-report-stat-num{font-size:18px;font-weight:800;color:var(--gray-900);font-family:"Plus Jakarta Sans",sans-serif;line-height:1}.tr-feat-report-stat-label{font-size:8px;font-weight:600;color:var(--gray-400);font-family:"Plus Jakarta Sans",sans-serif;margin-top:2px}.tr-feat-chart-label{font-size:9px;font-weight:700;color:var(--gray-500);font-family:"Plus Jakarta Sans",sans-serif;margin-bottom:8px}.tr-feat-chart-bars{display:flex;align-items:flex-end;gap:6px;height:60px;margin-bottom:12px}.tr-feat-chart-bar{flex:1;background:linear-gradient(180deg,#059669,#34d399);border-radius:4px 4px 0 0;min-height:6px}.tr-feat-chart-bar-sm{background:linear-gradient(180deg,#0694A2,#2dd4bf)}.tr-feat-export-row{display:flex;gap:8px}.tr-feat-export-btn{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:7px;font-size:10px;font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;border:1px solid var(--gray-200);cursor:pointer}.tr-feat-export-btn svg{width:12px;height:12px}.tr-feat-export-pdf{color:#EF4444;background:rgba(239,68,68,.06)}.tr-feat-export-xlsx{color:#059669;background:rgba(5,150,105,.06)}.tr-feat-export-csv{color:#0694A2;background:rgba(6,148,162,.06)}
 </style>
 
 
@@ -150,12 +102,12 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content reveal">
-    <h1>Tracking, Analytics<br>&amp; <span class="accent">Reporting</span></h1>
+    <h1>Tracking, Analytics <br>&amp; <span class="accent">Reporting</span></h1>
     <p class="subtitle">Comprehensive tracking and reporting to monitor policy engagement, compliance, and employee responses across every level of the organization.</p>
     <div class="hero-btns">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary" style="padding:14px 28px;font-size:14px;">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost" style="padding:14px 28px;font-size:14px;">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
     <div class="breadcrumb">
       <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
@@ -227,7 +179,7 @@ get_header();
         <div class="tr-receipts-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
-        <h5>Read Receipts</h5>
+        <h3>Read Receipts</h3>
         <div class="tr-donut-wrap">
           <div class="tr-donut">
             <span class="tr-donut-pct">85%</span>
@@ -241,7 +193,7 @@ get_header();
 
       <!-- Floating Card: Timeline -->
       <div class="tr-timeline">
-        <h5>Engagement Timeline</h5>
+        <h3>Engagement Timeline</h3>
         <div class="tr-tl-chart">
           <div class="tr-tl-bar tl-b1"></div>
           <div class="tr-tl-bar tl-b2"></div>
@@ -265,7 +217,7 @@ get_header();
 
       <!-- Floating Card: Export Reports -->
       <div class="tr-reports">
-        <h5>Export Reports</h5>
+        <h3>Export Reports</h3>
         <div class="tr-report-row">
           <div class="tr-report-item">
             <div class="tr-report-icon ri-pdf">
@@ -501,10 +453,10 @@ get_header();
 <section class="cta-section">
 <div class="container">
   <div class="cta-inner reveal">
-    <h2>Ready to Track Policy<br><span style="color:var(--accent)">Engagement</span>?</h2>
+    <h2>Ready to Track Policy <br><span style="color:var(--accent)">Engagement</span>?</h2>
     <p>See how real-time analytics and comprehensive reporting can transform your compliance monitoring.</p>
     <div class="cta-buttons">
-      <a href="https://cdn.prod.website-files.com/68efc4b526c2e63e771e121e/68f20c9b61c79f027f17c460_794813c088428a5b000f3ae90bcb8edd_PolicyCenter.co.pdf" target="_blank" class="btn btn-primary" style="padding:14px 28px;font-size:14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
       <a href="<?php echo esc_url(home_url('/features/')); ?>" class="btn btn-outline">View All Features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>
@@ -518,7 +470,7 @@ get_header();
     <span class="eyebrow">Product Demo</span>
     <h2>Watch PolicyCentral.ai in action</h2>
   </div>
-  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1\' style=\'width:100%;height:100%;border:none;position:absolute;inset:0\' allow=\'autoplay;fullscreen\' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
+  <div class="demo-frame reveal" onclick="this.innerHTML='<iframe src='https://www.youtube.com/embed/VhS97FE4UX0?autoplay=1' style='width:100%;height:100%;border:none;position:absolute;inset:0' allow='autoplay;fullscreen' allowfullscreen></iframe>';this.style.cursor='default';this.onclick=null">
     <div class="demo-grid"></div>
     <div class="demo-glow dg1"></div>
     <div class="demo-glow dg2"></div>
@@ -541,12 +493,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&T Financial Services"></div>
-      <div class="cchip"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance"></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
@@ -559,42 +511,42 @@ get_header();
     <h2>Other <span style="color:var(--accent)">Features</span></h2>
   </div>
   <div class="other-grid">
-    <a href="<?php echo esc_url(home_url('/features/ai-intelligence/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h4>AI-Powered Policy Intelligence</h4>
+      <h4>Gen AI-Powered Policy Intelligence</h4>
       <p>Smart search, summaries, chatbot</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/content-management/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
       <h4>Policy Creation &amp; Content Management</h4>
       <p>Author, version, organize policies</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/publisher-controls/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
       <h4>Publisher Controls &amp; Workflow</h4>
       <p>Approvals, publishing, workflows</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/distribution-targeting/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></div>
       <h4>Policy Distribution &amp; Targeting</h4>
       <p>Target audiences, push notifications</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-portal/')); ?>" class="other-card reveal rd1">
+    <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="other-card reveal rd1">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h4>Employee Portal &amp; Mobile</h4>
+      <h4>Employee Portal Employee Portal &amp; Mobileamp; Mobile App</h4>
       <p>Mobile app, multi-language access</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/employee-interaction/')); ?>" class="other-card reveal rd2">
+    <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="other-card reveal rd2">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
       <h4>Employee Interaction &amp; Acknowledgement</h4>
       <p>Read receipts, e-sign, quizzes</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/enterprise/')); ?>" class="other-card reveal rd3">
+    <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="other-card reveal rd3">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h4>Enterprise Features</h4>
       <p>AD, SSO, white-label, multi-entity</p>
     </a>
-    <a href="<?php echo esc_url(home_url('/features/security-compliance/')); ?>" class="other-card reveal rd4">
+    <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="other-card reveal rd4">
       <div class="other-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h4>Banking-Grade Security &amp; Compliance</h4>
       <p>Encryption, RBAC, audit logs</p>
