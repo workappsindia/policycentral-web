@@ -1710,26 +1710,102 @@
       <a href="tel:+919890988498" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72"/></svg>+91 98909 88498</a>
       <a href="mailto:contact@policycentral.ai" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--teal)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@policycentral.ai</a>
     </div>
-    <div class="cform reveal">
-      <div class="fg2">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="Rahul"></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
-      </div>
-      <div class="fg2">
-        <div class="fg"><label>Work Email</label><input type="email" placeholder="rahul@company.com"></div>
-        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"></div>
-      </div>
-      <div class="fg2">
-        <div class="fg"><label>Company</label><input type="text" placeholder="Acme Corp"></div>
-        <div class="fg"><label>No. of Employees</label><select><option value="">Select range</option><option>50–200</option><option>200–500</option><option>500–2,000</option><option>2,000–10,000</option><option>10,000+</option></select></div>
-      </div>
-      <div class="fg"><label>How can we help?</label><textarea placeholder="Tell us about your requirements, current challenges, or the specific features you're interested in..."></textarea></div>
-      <button class="f-submit">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+    <div class="contact-form-wrap reveal">
+      <p class="form-helper-text">For inquiries or support, please fill out the form below, and we will get back to you as soon as possible.</p>
+      <form id="pc-contact-form" autocomplete="off" novalidate>
+        <?php wp_nonce_field('pc_contact_submit', 'pc_nonce'); ?>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your name <span class="req">*</span></label>
+            <input type="text" name="full_name" class="form-input" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Company name <span class="req">*</span></label>
+            <input type="text" name="company" class="form-input" placeholder="Enter your company name" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your email <span class="req">*</span></label>
+            <input type="email" name="email" class="form-input" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Contact number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="Enter phone number with country code">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your message</label>
+          <textarea name="message" class="form-input" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <div class="form-status" id="form-status" style="display:none"></div>
+        <button type="submit" class="btn-submit" id="btn-submit">
+          Send Message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
     </div>
   </div>
 </div>
 </section>
 
-<!-- FOOTER -->
+<script>
+(function(){
+  var form = document.getElementById('pc-contact-form');
+  var btn  = document.getElementById('btn-submit');
+  var status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Client-side validation
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Disable button, show loading
+    btn.disabled = true;
+    btn.innerHTML = 'Sending... <svg class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px;animation:spin .8s linear infinite"><circle cx="12" cy="12" r="10" stroke-dasharray="30 70" stroke-linecap="round"/></svg>';
+    status.style.display = 'none';
+
+    var data = new FormData(form);
+    data.append('action', 'pc_contact_submit');
+
+    fetch('<?php echo admin_url("admin-ajax.php"); ?>', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(res){
+      if (res.success) {
+        // GTM event
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({ event: 'form_submit', form_name: 'contact_form' });
+        // Store form data in cookies for thank-you page
+        var expires = new Date(Date.now() + 5 * 60 * 1000).toUTCString();
+        document.cookie = 'pc_ty_name=' + encodeURIComponent(data.get('full_name')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        document.cookie = 'pc_ty_company=' + encodeURIComponent(data.get('company')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        document.cookie = 'pc_ty_email=' + encodeURIComponent(data.get('email')) + ';expires=' + expires + ';path=/;SameSite=Lax';
+        // Redirect to thank you
+        window.location.href = '<?php echo home_url("/thank-you/"); ?>';
+      } else {
+        status.style.display = 'block';
+        status.className = 'form-status error';
+        status.textContent = res.data || 'Something went wrong. Please try again.';
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+      }
+    })
+    .catch(function(){
+      status.style.display = 'block';
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please check your connection and try again.';
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
+    });
+  });
+})();
+</script>
 
 <?php get_footer(); ?>
