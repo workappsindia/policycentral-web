@@ -271,8 +271,7 @@ body.has-sticky{padding-bottom:68px}
         <a href="<?php echo esc_url(home_url('/search/')); ?>">Search</a>
       </div>
       <h1 class="hero-hed fade-up d1">
-        Our AI has read our policy,<br>
-        <span class="g-text">so you don't have to.</span>
+        Search everything on <span class="g-text">PolicyCentral.ai</span>
       </h1>
       <p class="hero-sub fade-up d2">Submit a query. Get an instant answer. <strong>No reading required.</strong></p>
 
