@@ -13,16 +13,20 @@
  * ROUTING RULES:
  * - Local  (policycentralai.local)   → punkaj@psdigital.io
  * - Dev    (dev.policycentral.ai)    → punkaj@psdigital.io
- * - Prod   (policycentral.ai + www)  → contact@policycentral.ai
- * - Unknown hosts                    → contact@policycentral.ai (safe default)
+ * - Prod   (policycentral.ai + www)  → contact@policycentral.ai, punkaj@psdigital.io
+ * - Unknown hosts                    → same as prod (safe default)
  *
  * TO CHANGE A DESTINATION:
  * Edit the constants below. That's the ONLY thing you should edit in this file.
+ * Multiple recipients: comma-separated, no spaces. wp_mail() splits on commas.
  */
 
 // ── Destination addresses (edit these to change routing) ──────────────
 define('PC_MAIL_DEV_RECIPIENT',  'punkaj@psdigital.io');
-define('PC_MAIL_PROD_RECIPIENT', 'contact@policycentral.ai');
+// Production: dual-recipient so punkaj@psdigital.io gets visibility even when
+// client's team receives them. If contact@ bounces or is ignored, punkaj still
+// knows a lead came in.
+define('PC_MAIL_PROD_RECIPIENT', 'contact@policycentral.ai,punkaj@psdigital.io');
 
 /**
  * Returns the correct admin/lead notification recipient for the current host.
