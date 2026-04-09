@@ -3,6 +3,9 @@
  * PolicyCentral Theme Functions
  */
 
+// PolicyGPT AI Search System
+require_once get_template_directory() . '/includes/pcgpt.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -923,4 +926,24 @@ function pc_send_admin_notification($entryId, $formData, $form) {
     );
 
     wp_mail($admin_email, $subject, $body, $headers);
+}
+
+// ═══════════════════════════════════════════════
+// DISABLE COMMENTS ON DEV SITE
+// ═══════════════════════════════════════════════
+if ( strpos( $_SERVER['HTTP_HOST'], 'dev.' ) === 0 ) {
+    // Disable comments and pingbacks
+    add_filter( 'comments_open', '__return_false', 20, 2 );
+    add_filter( 'pings_open', '__return_false', 20, 2 );
+    // Hide existing comments
+    add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+    // Remove comments from admin menu
+    add_action( 'admin_menu', function() {
+        remove_menu_page( 'edit-comments.php' );
+    });
+    // Remove comments from admin bar
+    add_action( 'wp_before_admin_bar_render', function() {
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu( 'comments' );
+    });
 }

@@ -56,6 +56,43 @@
 </div>
 </footer>
 
+<!-- PolicyGPT Floating Chat Widget -->
+<?php if ( !is_page_template('page-search.php') ) : ?>
+<div id="pcgpt-widget-trigger" class="pcgpt-widget-trigger" aria-label="Ask PolicyGPT">
+  <svg viewBox="0 0 24 24" fill="none" width="26" height="26">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 7C12 7 13.2 9.8 12 11C10.8 9.8 12 7 12 7Z" fill="#fff"/>
+    <path d="M12 15C12 15 10.8 12.2 12 11C13.2 12.2 12 15 12 15Z" fill="#fff"/>
+    <path d="M8 11C8 11 10.8 9.8 12 11C10.8 12.2 8 11 8 11Z" fill="#fff"/>
+    <path d="M16 11C16 11 13.2 12.2 12 11C13.2 9.8 16 11 16 11Z" fill="#fff"/>
+  </svg>
+</div>
+<div id="pcgpt-widget-panel" class="pcgpt-widget-panel">
+  <div class="pw-header">
+    <div class="pw-header-left">
+      <div class="pw-header-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div>
+        <div class="pw-header-title">PolicyGPT</div>
+        <div class="pw-header-sub">AI-powered policy assistant</div>
+      </div>
+    </div>
+    <button id="pcgpt-widget-close" class="pw-close" aria-label="Close">&times;</button>
+  </div>
+  <div id="pcgpt-widget-messages" class="pw-messages">
+    <div class="pw-welcome">
+      <div class="pw-welcome-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="pw-welcome-text">Hi! I'm PolicyGPT. Ask me anything about PolicyCentral.ai — features, security, compliance, pricing, or hosting.</p>
+    </div>
+  </div>
+  <div class="pw-input-bar">
+    <input type="text" id="pcgpt-widget-input" class="pw-input" placeholder="Ask a question..." autocomplete="off" />
+    <button id="pcgpt-widget-send" class="pw-send" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+<?php endif; ?>
+
 <?php wp_footer(); ?>
 </body>
 </html>
