@@ -131,10 +131,29 @@ class PCL_DB {
             (int) $lead_id
         ));
 
+        // Suppress errors going to stdout/response; we want them logged instead
+        $prev_show = $wpdb->show_errors;
+        $wpdb->show_errors = false;
+        $wpdb->suppress_errors(true);
+
         if ($existing) {
-            return (bool) $wpdb->update(self::intel_table(), $row, array('lead_id' => (int) $lead_id));
+            $result = $wpdb->update(self::intel_table(), $row, array('lead_id' => (int) $lead_id));
+        } else {
+            $result = $wpdb->insert(self::intel_table(), $row);
         }
-        return (bool) $wpdb->insert(self::intel_table(), $row);
+
+        // Restore and log any DB error
+        $wpdb->show_errors = $prev_show;
+        $wpdb->suppress_errors(false);
+
+        if ($result === false) {
+            error_log('PCL_DB::save_intel FAILED for lead ' . $lead_id . ' — ' . $wpdb->last_error);
+            error_log('PCL_DB::save_intel last query: ' . substr($wpdb->last_query, 0, 500));
+        } else {
+            error_log('PCL_DB::save_intel OK for lead ' . $lead_id . ' (' . ($existing ? 'updated' : 'inserted') . ')');
+        }
+
+        return $result !== false;
     }
 
     /**
