@@ -28,8 +28,41 @@ define('PC_MAIL_PROD_RECIPIENT', 'contact@policycentral.ai');
  * Returns the correct admin/lead notification recipient for the current host.
  * Used by contact form + FluentForm handlers in functions.php.
  */
+/**
+ * Resolve the current hostname reliably.
+ *
+ * We can't rely on HTTP_HOST alone because:
+ * - In CLI / cron / background workers, HTTP_HOST may be empty or "127.0.0.1"
+ * - wp_remote_post loopback requests may have a different host header
+ *
+ * WordPress's home_url() is the most reliable source — it reads from the
+ * wp_options 'siteurl' / 'home' option which is stable regardless of context.
+ */
+function pc_get_current_host() {
+    // Try HTTP_HOST first (most accurate for real requests)
+    if (!empty($_SERVER['HTTP_HOST'])) {
+        $host = strtolower($_SERVER['HTTP_HOST']);
+        // Ignore useless values like "127.0.0.1" / "localhost"
+        if ($host !== '127.0.0.1' && $host !== 'localhost' && $host !== '') {
+            return $host;
+        }
+    }
+
+    // Fall back to WordPress home_url (authoritative — reads wp_options)
+    $home = get_option('home', get_option('siteurl', ''));
+    if ($home) {
+        $parsed = wp_parse_url($home);
+        if (!empty($parsed['host'])) {
+            return strtolower($parsed['host']);
+        }
+    }
+
+    // Last resort: SERVER_NAME
+    return isset($_SERVER['SERVER_NAME']) ? strtolower($_SERVER['SERVER_NAME']) : '';
+}
+
 function pc_get_admin_lead_email() {
-    $host = isset($_SERVER['HTTP_HOST']) ? strtolower($_SERVER['HTTP_HOST']) : '';
+    $host = pc_get_current_host();
 
     // Local by Flywheel
     if (strpos($host, '.local') !== false) {
@@ -47,10 +80,9 @@ function pc_get_admin_lead_email() {
 
 /**
  * Returns a human-readable environment label. Useful for debugging / email subjects.
- * Not currently used in emails but available if needed.
  */
 function pc_get_environment_label() {
-    $host = isset($_SERVER['HTTP_HOST']) ? strtolower($_SERVER['HTTP_HOST']) : '';
+    $host = pc_get_current_host();
     if (strpos($host, '.local') !== false) return 'local';
     if (strpos($host, 'dev.') === 0)       return 'dev';
     return 'production';
