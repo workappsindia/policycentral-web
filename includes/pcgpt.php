@@ -2,105 +2,18 @@
 /**
  * PolicyGPT — AI Search System
  * Database, AJAX handlers, admin pages, streaming proxy
+ *
+ * Migrations (table creation, page creation, etc.) live in:
+ * includes/migrations/ — auto-loaded by runner.php on admin_init
  */
 
+// Load the migrations runner (handles all DB schema + content setup)
+require_once __DIR__ . '/migrations/runner.php';
+
 // ═══════════════════════════════════════════════
-// A. DATABASE SETUP
+// A. DEFAULT KNOWLEDGE BASE CONTENT
+// Used by migration 001 to seed the initial database
 // ═══════════════════════════════════════════════
-
-function pcgpt_maybe_create_tables() {
-    $version = get_option('pcgpt_db_version', '0');
-    if ($version === '1.0') return;
-
-    global $wpdb;
-    $charset = $wpdb->get_charset_collate();
-
-    require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-
-    // Knowledge base
-    dbDelta("CREATE TABLE {$wpdb->prefix}pcgpt_knowledge (
-        id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-        category_id VARCHAR(50) NOT NULL,
-        content LONGTEXT NOT NULL,
-        updated_by BIGINT UNSIGNED NULL,
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (id),
-        UNIQUE KEY category_id (category_id)
-    ) $charset;");
-
-    // Query logs
-    dbDelta("CREATE TABLE {$wpdb->prefix}pcgpt_queries (
-        id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-        query TEXT NOT NULL,
-        response LONGTEXT NULL,
-        category VARCHAR(50) NULL,
-        ip_address VARCHAR(45) DEFAULT '',
-        user_agent TEXT DEFAULT '',
-        session_id VARCHAR(64) DEFAULT '',
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (id),
-        KEY created_at (created_at)
-    ) $charset;");
-
-    // Config (contact info, bot behaviour)
-    dbDelta("CREATE TABLE {$wpdb->prefix}pcgpt_config (
-        id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-        config_key VARCHAR(100) NOT NULL,
-        config_value LONGTEXT NOT NULL,
-        updated_by BIGINT UNSIGNED NULL,
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (id),
-        UNIQUE KEY config_key (config_key)
-    ) $charset;");
-
-    // Seed defaults
-    pcgpt_seed_defaults();
-
-    update_option('pcgpt_db_version', '1.0');
-}
-add_action('admin_init', 'pcgpt_maybe_create_tables');
-
-function pcgpt_seed_defaults() {
-    global $wpdb;
-    $table_kb = $wpdb->prefix . 'pcgpt_knowledge';
-    $table_config = $wpdb->prefix . 'pcgpt_config';
-
-    $defaults = pcgpt_get_default_knowledge();
-    foreach ($defaults as $cat_id => $content) {
-        $wpdb->query($wpdb->prepare(
-            "INSERT IGNORE INTO $table_kb (category_id, content, updated_at) VALUES (%s, %s, %s)",
-            $cat_id, $content, current_time('mysql')
-        ));
-    }
-
-    // Contact defaults
-    $contact = json_encode(array(
-        'name'  => 'Kaizad Shroff',
-        'role'  => 'Business Head',
-        'phone' => '+91 98909 88498',
-        'email' => 'contact@policycentral.ai',
-        'web'   => 'https://www.policycentral.ai',
-        'wa'    => 'https://wa.me/919890988498',
-    ));
-    $wpdb->query($wpdb->prepare(
-        "INSERT IGNORE INTO $table_config (config_key, config_value, updated_at) VALUES (%s, %s, %s)",
-        'contact', $contact, current_time('mysql')
-    ));
-
-    // Behaviour defaults
-    $behaviour = json_encode(array(
-        'name'    => 'PolicyGPT',
-        'tone'    => 'confident_witty',
-        'length'  => 'balanced',
-        'pricing' => 'deflect',
-        'custom'  => 'Always emphasise that PolicyCentral.ai is trusted by leading BFSI organisations including HDFC Life and Kotak Mahindra Bank. Be direct and confident. Avoid generic AI-sounding language.',
-        'avoid'   => 'Specific pricing numbers, competitor names, unannounced features, internal roadmap details',
-    ));
-    $wpdb->query($wpdb->prepare(
-        "INSERT IGNORE INTO $table_config (config_key, config_value, updated_at) VALUES (%s, %s, %s)",
-        'behaviour', $behaviour, current_time('mysql')
-    ));
-}
 
 function pcgpt_get_default_knowledge() {
     return array(
