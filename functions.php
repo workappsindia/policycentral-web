@@ -3,6 +3,15 @@
  * PolicyCentral Theme Functions
  */
 
+// Mail routing (environment-aware admin/lead email destinations)
+require_once get_template_directory() . '/includes/mail-routing.php';
+
+// PolicyGPT AI Search System
+require_once get_template_directory() . '/includes/pcgpt.php';
+
+// Lead Intelligence System (non-blocking lead capture + Claude enrichment)
+require_once get_template_directory() . '/includes/lead-intelligence/loader.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -371,19 +380,19 @@ add_action('wp_ajax_pc_contact_submit', 'pc_handle_contact_form');
 add_action('wp_ajax_nopriv_pc_contact_submit', 'pc_handle_contact_form');
 
 function pc_handle_contact_form() {
-    // Verify nonce
+    // ── Verify nonce ─────────────────────────────────────────────────
     if (!isset($_POST['pc_nonce']) || !wp_verify_nonce($_POST['pc_nonce'], 'pc_contact_submit')) {
         wp_send_json_error('Security check failed. Please refresh and try again.');
     }
 
-    // Sanitize inputs
+    // ── Sanitize inputs ───────────────────────────────────────────────
     $full_name = isset($_POST['full_name']) ? sanitize_text_field(trim($_POST['full_name'])) : '';
     $company   = isset($_POST['company'])   ? sanitize_text_field(trim($_POST['company']))   : '';
     $email     = isset($_POST['email'])     ? sanitize_email(trim($_POST['email']))           : '';
     $phone     = isset($_POST['phone'])     ? sanitize_text_field(trim($_POST['phone']))     : '';
     $message   = isset($_POST['message'])   ? sanitize_textarea_field(trim($_POST['message'])): '';
 
-    // Validate required fields
+    // ── Validate required fields ──────────────────────────────────────
     if (empty($full_name) || empty($company) || empty($email)) {
         wp_send_json_error('Please fill in all required fields.');
     }
@@ -391,7 +400,7 @@ function pc_handle_contact_form() {
         wp_send_json_error('Please enter a valid email address.');
     }
 
-    // Rate limiting: max 3 submissions per IP per hour
+    // ── Rate limiting: max 10 submissions per IP per hour ─────────────
     $ip = pc_get_client_ip();
     $transient_key = 'pc_form_' . md5($ip);
     $submissions = get_transient($transient_key);
@@ -400,33 +409,23 @@ function pc_handle_contact_form() {
     }
     set_transient($transient_key, ($submissions ? $submissions + 1 : 1), HOUR_IN_SECONDS);
 
-    // Save to database (custom table)
+    // ── Capture tracking/session data ─────────────────────────────────
+    $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field($_SERVER['HTTP_USER_AGENT']) : '';
+    $referrer   = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : '';
+    $host       = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+    $proto      = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $page_url   = $referrer ?: ($host ? "{$proto}://{$host}" . ($_SERVER['REQUEST_URI'] ?? '') : '');
+    $page_source = isset($_POST['page_source']) ? sanitize_text_field($_POST['page_source']) : '';
+
+    // Geo lookup (1s timeout, never blocks long)
+    $geo = function_exists('pc_lead_lookup_geo') ? pc_lead_lookup_geo($ip) : array(
+        'geo_city' => '', 'geo_region' => '', 'geo_country' => ''
+    );
+
+    // ── Save to database ──────────────────────────────────────────────
+    // Table schema ensured by migration 003 (runs on admin_init).
     global $wpdb;
     $table = $wpdb->prefix . 'pc_leads';
-
-    // Create table if it doesn't exist
-    if ($wpdb->get_var("SHOW TABLES LIKE '$table'") !== $table) {
-        $charset_collate = $wpdb->get_charset_collate();
-        $wpdb->query("CREATE TABLE $table (
-            id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-            full_name VARCHAR(255) NOT NULL,
-            company VARCHAR(255) NOT NULL,
-            email VARCHAR(255) NOT NULL,
-            phone VARCHAR(50) DEFAULT '',
-            message TEXT DEFAULT '',
-            ip_address VARCHAR(45) DEFAULT '',
-            user_agent TEXT DEFAULT '',
-            referrer TEXT DEFAULT '',
-            os VARCHAR(50) DEFAULT '',
-            browser VARCHAR(50) DEFAULT '',
-            device_type VARCHAR(20) DEFAULT '',
-            utm_source VARCHAR(100) DEFAULT '',
-            utm_medium VARCHAR(100) DEFAULT '',
-            utm_campaign VARCHAR(100) DEFAULT '',
-            submitted_at DATETIME NOT NULL,
-            PRIMARY KEY (id)
-        ) $charset_collate;");
-    }
 
     $wpdb->insert($table, array(
         'full_name'    => $full_name,
@@ -435,43 +434,54 @@ function pc_handle_contact_form() {
         'phone'        => $phone,
         'message'      => $message,
         'ip_address'   => $ip,
-        'user_agent'   => isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field($_SERVER['HTTP_USER_AGENT']) : '',
-        'referrer'     => isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : '',
+        'user_agent'   => $user_agent,
+        'referrer'     => $referrer,
         'os'           => pc_detect_os(),
         'browser'      => pc_detect_browser(),
         'device_type'  => wp_is_mobile() ? 'Mobile' : 'Desktop',
-        'utm_source'   => isset($_COOKIE['pc_utm_source']) ? sanitize_text_field($_COOKIE['pc_utm_source']) : '',
-        'utm_medium'   => isset($_COOKIE['pc_utm_medium']) ? sanitize_text_field($_COOKIE['pc_utm_medium']) : '',
+        'geo_city'     => $geo['geo_city']    ?? '',
+        'geo_region'   => $geo['geo_region']  ?? '',
+        'geo_country'  => $geo['geo_country'] ?? '',
+        'utm_source'   => isset($_COOKIE['pc_utm_source'])   ? sanitize_text_field($_COOKIE['pc_utm_source'])   : '',
+        'utm_medium'   => isset($_COOKIE['pc_utm_medium'])   ? sanitize_text_field($_COOKIE['pc_utm_medium'])   : '',
         'utm_campaign' => isset($_COOKIE['pc_utm_campaign']) ? sanitize_text_field($_COOKIE['pc_utm_campaign']) : '',
+        'page_source'  => $page_source,
+        'page_url'     => $page_url,
+        'enrichment_status' => 'new',
         'submitted_at' => current_time('mysql'),
     ));
 
-    $lead_id = $wpdb->insert_id;
-    $first_name = explode(' ', $full_name)[0];
-    error_log("PC_DEBUG: lead_id=" . $lead_id . " email=" . $email . " first_name=" . $first_name);
+    $lead_id = (int) $wpdb->insert_id;
+    if (!$lead_id) {
+        error_log('PC_FORM: Failed to insert lead: ' . $wpdb->last_error);
+        wp_send_json_error('Could not save your submission. Please try again.');
+    }
 
-    // Ensure PHP has enough time for SMTP
-    set_time_limit(60);
+    // Finalize with reference_id (PC-000123) and first_name
+    if (class_exists('PCL_DB')) {
+        PCL_DB::finalize_lead($lead_id, $full_name);
+    }
 
-    // Send emails BEFORE responding (correct WordPress AJAX pattern)
-    add_action('wp_mail_failed', function($error) {
-        error_log('PC_MAIL_FAIL: ' . $error->get_error_message());
-    });
+    error_log("PC_FORM: lead $lead_id saved. Firing background tasks…");
 
-    $user_subject = "We've got your message! Our policy? Reply fast.";
-    $user_body = pc_build_user_email($first_name);
-    $user_headers = array(
-        'Content-Type: text/html; charset=UTF-8',
-        'From: PolicyCentral.ai <marketing@policycentral.ai>',
-    );
-    $r1 = wp_mail($email, $user_subject, $user_body, $user_headers);
-    error_log('PC_FORM: User email to ' . $email . ' = ' . ($r1 ? 'sent' : 'FAILED'));
+    // ── Fire TWO non-blocking background processes ───────────────────
+    // These run in SEPARATE PHP-FPM workers. They do NOT block this request.
+    //
+    // Process 1: send user confirmation email (fast, 2-5s)
+    // Process 2: call Claude + send admin email with intelligence (slow, 1-2min)
+    //
+    // They're intentionally separate so a Claude failure can't block user email,
+    // and user confirmation doesn't wait for 1-2min Claude research.
+    if (function_exists('pc_fire_background')) {
+        pc_fire_background('pc_lead_send_confirmation', array('lead_id' => $lead_id));
+        pc_fire_background('pc_lead_run_enrichment',    array('lead_id' => $lead_id));
+    }
 
-    pc_send_admin_lead_notification($lead_id, $full_name, $company, $email, $phone, $message);
-    error_log('PC_FORM: Admin email sent for lead #' . $lead_id);
-
-    // THEN send success response (this kills execution)
-    wp_send_json_success(array('lead_id' => $lead_id));
+    // ── Return success IMMEDIATELY — do not wait for emails ──────────
+    wp_send_json_success(array(
+        'lead_id'      => $lead_id,
+        'reference_id' => class_exists('PCL_DB') ? PCL_DB::format_reference_id($lead_id) : '',
+    ));
 }
 
 // ═══════════════════════════════════════════════
@@ -512,7 +522,7 @@ function pc_process_lead_emails($lead_id) {
 }
 
 function pc_send_admin_lead_notification($lead_id, $full_name, $company, $email, $phone, $message) {
-    $admin_email = 'contact@policycentral.ai';
+    $admin_email = pc_get_admin_lead_email();
 
     $tracking = array(
         'IP Address' => pc_get_client_ip(),
@@ -848,7 +858,7 @@ function pc_build_user_email($name) {
  */
 add_action('fluentform/submission_inserted', 'pc_send_admin_notification', 30, 3);
 function pc_send_admin_notification($entryId, $formData, $form) {
-    $admin_email = 'contact@policycentral.ai';
+    $admin_email = pc_get_admin_lead_email();
     $tracking = array(
         'IP Address'      => pc_get_client_ip(),
         'User Agent'      => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'N/A',
@@ -923,4 +933,24 @@ function pc_send_admin_notification($entryId, $formData, $form) {
     );
 
     wp_mail($admin_email, $subject, $body, $headers);
+}
+
+// ═══════════════════════════════════════════════
+// DISABLE COMMENTS ON DEV SITE
+// ═══════════════════════════════════════════════
+if ( strpos( $_SERVER['HTTP_HOST'], 'dev.' ) === 0 ) {
+    // Disable comments and pingbacks
+    add_filter( 'comments_open', '__return_false', 20, 2 );
+    add_filter( 'pings_open', '__return_false', 20, 2 );
+    // Hide existing comments
+    add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+    // Remove comments from admin menu
+    add_action( 'admin_menu', function() {
+        remove_menu_page( 'edit-comments.php' );
+    });
+    // Remove comments from admin bar
+    add_action( 'wp_before_admin_bar_render', function() {
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu( 'comments' );
+    });
 }
