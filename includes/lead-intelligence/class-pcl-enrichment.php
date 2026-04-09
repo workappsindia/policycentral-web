@@ -73,13 +73,28 @@ class PCL_Enrichment {
 
         list($enrichment, $raw_body) = $result;
 
-        // Save enrichment to DB
-        PCL_DB::save_intel($lead_id, $enrichment, $raw_body);
+        // Save enrichment to DB — this MUST succeed before we mark enriched
+        $saved = PCL_DB::save_intel($lead_id, $enrichment, $raw_body);
+
+        if (!$saved) {
+            error_log("PCL_Enrichment: save_intel failed for lead $lead_id — sending FALLBACK admin email (no intel block)");
+            PCL_DB::update_status($lead_id, 'failed');
+            self::send_fallback_admin_email($lead_id);
+            return;
+        }
+
         PCL_DB::update_status($lead_id, 'enriched');
 
         // Send enriched admin email
         $fresh_lead = PCL_DB::get_lead($lead_id);
         $intel      = PCL_DB::get_intel($lead_id);
+
+        if (!$intel) {
+            error_log("PCL_Enrichment: intel row missing after save for lead $lead_id — sending fallback");
+            self::send_fallback_admin_email($lead_id);
+            return;
+        }
+
         $sent = PCL_Mailer::send_admin_notification($fresh_lead, $intel);
 
         if ($sent) {

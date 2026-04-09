@@ -34,6 +34,7 @@ function pcgpt_get_migrations() {
         1 => 'pcgpt_migration_001_initial_tables',
         2 => 'pcgpt_migration_002_create_pages',
         3 => 'pcgpt_migration_003_lead_intelligence',
+        4 => 'pcgpt_migration_004_widen_intel_columns',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
