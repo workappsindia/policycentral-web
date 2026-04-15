@@ -1,0 +1,97 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-pa" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a33"/>
+      <stop offset="55%" stop-color="#1a1b4d"/>
+      <stop offset="100%" stop-color="#2d1a56"/>
+    </linearGradient>
+    <radialGradient id="orb-teal-pa" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#179D97" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#179D97" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-violet-pa" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-emerald-pa" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#059669" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-pa" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#5EEAD4" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+    <linearGradient id="title-pa" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="55%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="chip-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="100%" stop-color="#179D97"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="380" fill="url(#bg-pa)"/>
+  <rect width="680" height="380" fill="url(#grid-pa)"/>
+
+  <circle cx="80" cy="80" r="200" fill="url(#orb-teal-pa)"/>
+  <circle cx="600" cy="330" r="220" fill="url(#orb-violet-pa)"/>
+  <circle cx="380" cy="40" r="120" fill="url(#orb-emerald-pa)"/>
+
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#5EEAD4" stroke-width="1.5" opacity="0.75"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.75"/>
+
+  <rect x="48" y="48" width="3" height="100" rx="1.5" fill="#5EEAD4"/>
+  <rect x="48" y="150" width="3" height="100" rx="1.5" fill="#A78BFA"/>
+  <rect x="48" y="252" width="3" height="80" rx="1.5" fill="#F59E0B"/>
+
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#5EEAD4" letter-spacing="3" opacity="0.9" font-weight="700">HR + COMPLIANCE</text>
+
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">POLICY</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="url(#title-pa)" letter-spacing="-1">AUDIT</text>
+
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#5EEAD4" opacity="0.85" letter-spacing="1">A checklist for Indian organisations</text>
+
+  <line x1="68" y1="268" x2="320" y2="268" stroke="#A78BFA" stroke-width="0.7" opacity="0.45"/>
+
+  <rect x="68"  y="286" width="10" height="10" rx="2" fill="#5EEAD4"/>
+  <rect x="86"  y="286" width="10" height="10" rx="2" fill="#A78BFA"/>
+  <rect x="104" y="286" width="10" height="10" rx="2" fill="#F59E0B"/>
+  <rect x="122" y="286" width="10" height="10" rx="2" fill="rgba(94,234,212,0.35)"/>
+  <rect x="140" y="286" width="10" height="10" rx="2" fill="rgba(94,234,212,0.18)"/>
+
+  <g font-family="'Courier New', monospace" font-size="9" font-weight="700" letter-spacing="1">
+    <rect x="68"  y="312" width="54" height="18" rx="9" fill="rgba(94,234,212,0.15)" stroke="#5EEAD4" stroke-width="0.8"/>
+    <text x="95"  y="325" fill="#5EEAD4" text-anchor="middle">POSH</text>
+    <rect x="128" y="312" width="74" height="18" rx="9" fill="rgba(167,139,250,0.15)" stroke="#A78BFA" stroke-width="0.8"/>
+    <text x="165" y="325" fill="#A78BFA" text-anchor="middle">GRATUITY</text>
+    <rect x="208" y="312" width="106" height="18" rx="9" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="0.8"/>
+    <text x="261" y="325" fill="#F59E0B" text-anchor="middle">STANDING ORDERS</text>
+    <rect x="320" y="312" width="54" height="18" rx="9" fill="rgba(5,150,105,0.18)" stroke="#34D399" stroke-width="0.8"/>
+    <text x="347" y="325" fill="#34D399" text-anchor="middle">DPDP</text>
+  </g>
+
+  <rect x="430" y="80" width="188" height="220" rx="6" fill="rgba(94,234,212,0.04)" stroke="#5EEAD4" stroke-width="0.75" opacity="0.55"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="url(#chip-grad)"/>
+
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#5EEAD4" text-anchor="middle" letter-spacing="2" opacity="0.85" font-weight="700">6 PHASES</text>
+
+  <line x1="450" y1="136" x2="598" y2="136" stroke="#A78BFA" stroke-width="0.5" opacity="0.35"/>
+
+  <g font-family="'Courier New', monospace" font-size="11">
+    <circle cx="458" cy="157" r="3" fill="#5EEAD4"/>
+    <text x="468" y="160" fill="#ffffff" opacity="0.95" font-weight="700">01 &#183; Inventory</text>
+    <circle cx="458" cy="179" r="3" fill="#5EEAD4" opacity="0.8"/>
+    <text x="468" y="182" fill="#ffffff" opacity="0.85">02 &#183; Currency review</text>
+    <circle cx="458" cy="201" r="3" fill="#A78BFA" opacity="0.9"/>
+    <text x="468" y="204" fill="#ffffff" opacity="0.75">03 &#183; Version control</text>
+    <circle cx="458" cy="223" r="3" fill="#A78BFA" opacity="0.65"/>
+    <text x="468" y="226" fill="#ffffff" opacity="0.6">04 &#183; Acknowledgment</text>
+    <circle cx="458" cy="245" r="3" fill="#F59E0B" opacity="0.8"/>
+    <text x="468" y="248" fill="#ffffff" opacity="0.5">05 &#183; Accessibility</text>
+    <circle cx="458" cy="267" r="3" fill="#F59E0B" opacity="0.5"/>
+    <text x="468" y="270" fill="#ffffff" opacity="0.35">06 &#183; Readiness pack</text>
+  </g>
+
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#5EEAD4" opacity="0.55" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>

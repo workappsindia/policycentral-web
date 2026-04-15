@@ -1697,6 +1697,39 @@
 </div>
 </section>
 
+<!-- LATEST FROM BLOG -->
+<?php
+$pcb_home_posts = new WP_Query(array(
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
+    'posts_per_page' => 3,
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+));
+if ($pcb_home_posts->have_posts()) : ?>
+<section class="pcb-home-blog" id="blog">
+  <div class="container">
+    <div class="pcb-home-blog-header reveal">
+      <div class="pcb-home-blog-heading">
+        <span class="eyebrow">From our blog</span>
+        <h2>Insights on <span class="g-text">policy management</span></h2>
+        <p>Practical guides, industry perspectives, and product thinking from the PolicyCentral.ai team.</p>
+      </div>
+      <div class="pcb-home-blog-cta">
+        <a href="<?php echo esc_url(home_url('/blogs/')); ?>" class="btn btn-secondary">View all articles
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="pcb-grid pcb-grid--3 reveal">
+      <?php while ($pcb_home_posts->have_posts()) : $pcb_home_posts->the_post(); ?>
+        <?php get_template_part('template-parts/blog-card'); ?>
+      <?php endwhile; ?>
+    </div>
+  </div>
+</section>
+<?php endif; wp_reset_postdata(); ?>
+
 <!-- CONTACT -->
 <section id="contact" class="section">
 <div class="container">
