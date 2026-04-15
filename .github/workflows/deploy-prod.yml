@@ -17,7 +17,7 @@ jobs:
           host: ${{ secrets.PROD_SERVER_HOST }}
           username: ${{ secrets.PROD_SERVER_USER }}
           key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
-          source: "*.php,*.css,*.svg,*.png,*.ico,*.webmanifest,js/*,images/*,includes/*"
+          source: "*.php,*.css,*.svg,*.png,*.ico,*.webmanifest,js/*,images/*,includes/*,assets/*,template-parts/*"
           target: /opt/bitnami/wordpress/wp-content/themes/policycentral/
 
       - name: Fix permissions and clear cache
