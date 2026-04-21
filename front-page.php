@@ -1589,7 +1589,7 @@
     <h2>More than policies. Every communication,<br>managed and tracked.</h2>
   </div>
   <div class="uc-grid">
-    <div class="uccard reveal rd1">
+    <a href="<?php echo esc_url(home_url('/use-cases/policy-management/')); ?>" class="uccard reveal rd1">
       <div class="uc-bar" style="background:linear-gradient(90deg,#0694A2,#4338CA)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--teal-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#0694A2" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
@@ -1601,8 +1601,8 @@
           <li><div class="ub-dot" style="background:#0694A2"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Compliance tracking</li>
         </ul>
       </div>
-    </div>
-    <div class="uccard reveal rd2">
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/corporate-updates/')); ?>" class="uccard reveal rd2">
       <div class="uc-bar" style="background:linear-gradient(90deg,#059669,#0694A2)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--em-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
@@ -1614,8 +1614,8 @@
           <li><div class="ub-dot" style="background:#059669"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Priority flagging</li>
         </ul>
       </div>
-    </div>
-    <div class="uccard reveal rd3">
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/product-information/')); ?>" class="uccard reveal rd3">
       <div class="uc-bar" style="background:linear-gradient(90deg,#7C3AED,#4338CA)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--violet-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
@@ -1627,8 +1627,8 @@
           <li><div class="ub-dot" style="background:#7C3AED"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>AI-powered search</li>
         </ul>
       </div>
-    </div>
-    <div class="uccard reveal rd1">
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/sops/')); ?>" class="uccard reveal rd1">
       <div class="uc-bar" style="background:linear-gradient(90deg,#D97706,#059669)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--amber-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
@@ -1640,8 +1640,8 @@
           <li><div class="ub-dot" style="background:#D97706"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Audit-ready reports</li>
         </ul>
       </div>
-    </div>
-    <div class="uccard reveal rd2">
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/branch-circulars/')); ?>" class="uccard reveal rd2">
       <div class="uc-bar" style="background:linear-gradient(90deg,#E11D48,#D97706)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--rose-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
@@ -1653,8 +1653,8 @@
           <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Read receipt tracking</li>
         </ul>
       </div>
-    </div>
-    <div class="uccard reveal rd3">
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/business-requirement-docs/')); ?>" class="uccard reveal rd3">
       <div class="uc-bar" style="background:linear-gradient(90deg,#4338CA,#7C3AED)"></div>
       <div class="uc-in">
         <div class="uc-icon" style="background:linear-gradient(135deg,rgba(67,56,202,.1),rgba(124,58,237,.1))"><svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
@@ -1666,7 +1666,7 @@
           <li><div class="ub-dot" style="background:#4338CA"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Approval workflows</li>
         </ul>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 </section>

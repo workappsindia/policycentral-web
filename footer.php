@@ -23,6 +23,17 @@
       </ul>
     </div>
     <div class="foot-col">
+      <h3><a href="<?php echo esc_url(home_url('/use-cases/')); ?>" style="color:inherit;text-decoration:none">Use Cases</a></h3>
+      <ul class="foot-links">
+        <li><a href="<?php echo esc_url(home_url('/use-cases/policy-management/')); ?>">Policy Management</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/corporate-updates/')); ?>">Corporate Updates</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/product-information/')); ?>">Product Information</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/sops/')); ?>">SOPs</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/branch-circulars/')); ?>">Branch Circulars</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/business-requirement-docs/')); ?>">Business Req. Docs</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
       <h3><a href="<?php echo esc_url(home_url('/faqs/')); ?>" style="color:inherit;text-decoration:none">FAQs</a></h3>
       <ul class="foot-links">
         <li><a href="<?php echo esc_url(home_url('/faq/company-platform/')); ?>">Company &amp; Platform</a></li>
@@ -38,19 +49,23 @@
       </ul>
     </div>
     <div class="foot-col">
-      <h3><a href="<?php echo esc_url(home_url('/about/')); ?>" style="color:inherit;text-decoration:none">About</a></h3>
+      <h3><a href="<?php echo esc_url(home_url('/about/')); ?>" style="color:inherit;text-decoration:none">Company</a></h3>
       <ul class="foot-links">
         <li><a href="<?php echo esc_url(home_url('/team/')); ?>">Team</a></li>
         <li><a href="<?php echo esc_url(home_url('/culture/')); ?>">Our Culture</a></li>
+        <li><a href="<?php echo esc_url(home_url('/blogs/')); ?>">Blog</a></li>
         <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact Us</a></li>
-        <li><a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a></li>
-        <li><a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms &amp; Conditions</a></li>
       </ul>
     </div>
   </div>
 
   <div class="foot-bot">
     <span>&copy; <?php echo date('Y'); ?> PolicyCentral.ai. All rights reserved.</span>
+    <span class="foot-legal">
+      <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">Privacy Policy</a>
+      <span class="foot-legal-sep">&middot;</span>
+      <a href="<?php echo esc_url(home_url('/terms/')); ?>">Terms &amp; Conditions</a>
+    </span>
     <span>Policy Management Software</span>
   </div>
 </div>
