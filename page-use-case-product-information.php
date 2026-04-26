@@ -174,6 +174,21 @@ get_header();
 }
 @media(max-width:768px){.uc-sc-grid{grid-template-columns:1fr}.uc-ch-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.pi-mockup{max-width:340px}.pi-float-search,.pi-float-comments{position:relative;top:0;right:0;left:0;bottom:0;margin-top:10px;min-width:auto}}
+
+/* ── ALSO INCLUDED (secondary capabilities, nested under main capabilities) ── */
+.uc-also{margin-top:24px}
+.uc-also-intro{text-align:center;max-width:none;margin:0 auto 28px;font-size:15px;color:var(--gray-800);line-height:1.7;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uc-also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+.uc-also-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 20px;transition:all .25s var(--ease);text-decoration:none;color:inherit}
+.uc-also-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.uc-also-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.uc-also-icon svg{width:17px;height:17px;color:#fff}
+.uc-also-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:800;color:var(--gray-900);margin-bottom:6px;line-height:1.35;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.uc-also-arrow{flex-shrink:0;width:14px;height:14px;color:var(--gray-400);transition:all .2s var(--spring);margin-top:3px}
+.uc-also-card:hover .uc-also-arrow{color:var(--accent);transform:translateX(3px)}
+.uc-also-card p{font-size:12.5px;color:var(--gray-600);line-height:1.6}
+@media(max-width:900px){.uc-also-grid{grid-template-columns:repeat(2,1fr)}.uc-also-intro{white-space:normal;font-size:14px}}
+@media(max-width:560px){.uc-also-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- HERO -->
@@ -298,13 +313,13 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Four capabilities that play a critical role<br>in <span class="g-text">product-GTM alignment.</span></h2>
+    <h2>Capabilities that play a critical role<br>in <span class="g-text">product-GTM alignment.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <h3>1. Fast versioning, for teams shipping weekly.</h3>
+      <h3>Fast versioning, for teams shipping weekly.</h3>
       <p>A product artefact can have a new version every fortnight and still carry its full history. Every version shows what changed, who approved it, and who has acknowledged the latest. Sales knows exactly whether they're pitching the current pricing or the superseded one.</p>
       <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Version Control <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -324,7 +339,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-      <h3>2. 4D Intelligent Search, answers mid-conversation.</h3>
+      <h3>4D Intelligent Search, answers mid-conversation.</h3>
       <p>A sales rep on a call types a three-word query and gets the exact line from the current pricing sheet. Search spans titles, body text, attached files, and content <em>inside</em> files. No switching to Slack. No pinging Product. The answer arrives while the customer is still on the line.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-cap-link">Explore 4D Search <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -350,7 +365,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-      <h3>3. Rich media that actually gets watched.</h3>
+      <h3>Rich media that actually gets watched.</h3>
       <p>Loom walkthroughs of new features. Three-minute PM demos. Audio-only release notes for reps on the road. PDFs, images, embedded videos, whatever format the content needs, the platform carries. Screenshot protection keeps competitive product content inside.</p>
       <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="uc-cap-link">Explore Content Management <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -373,7 +388,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg></div>
-      <h3>4. Cross-function targeting, the right team, the right moment.</h3>
+      <h3>Cross-function targeting, the right team, the right moment.</h3>
       <p>The pricing sheet goes to Sales, CS, and SEs but not to Engineering. The technical deep-dive goes to SEs and Eng but not to Marketing. The launch note goes to every GTM function simultaneously. AD/HRMS sync handles the audience lists; no manual maintenance. New joiners auto-receive everything relevant to their role.</p>
       <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Distribution &amp; Targeting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -386,6 +401,42 @@ get_header();
         <div class="fv-t-group on"><span class="fv-t-dot"></span><span class="fv-t-name">Marketing, Product Mkt</span><span class="fv-t-count">28 users</span></div>
         <div class="fv-t-group"><span class="fv-t-dot"></span><span class="fv-t-name">Engineering</span><span class="fv-t-count">off &middot; not in scope</span></div>
       </div>
+    </div>
+  </div>
+
+  <div class="uc-also">
+    <p class="uc-also-intro reveal">Quieter capabilities the product, GTM, and revops teams lean on, ready on day one.</p>
+    <div class="uc-also-grid">
+      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Personalized Employee Dashboard <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Each rep sees what's new in their stack, ranked by relevance, never buried under irrelevant releases.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Policy Search Analytics <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>See what reps are searching for. The questions you didn't know they had become the FAQs you should have written.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>AI-Generated FAQs <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Auto-extract the questions every release prompts, then publish the answers alongside the release notes.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Calendar View for Releases <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Release dates, training sessions, pricing changes, all on a calendar your GTM team can subscribe to.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+        <h3>HRMS &amp; Intranet Integration <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Audience lists by team, region, and quota stay current via your existing employee data systems.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>SSO &amp; Active Directory <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>One-click login through your existing identity provider. No extra password to manage.</p>
+      </a>
     </div>
   </div>
 </div>

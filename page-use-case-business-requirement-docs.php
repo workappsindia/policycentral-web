@@ -200,6 +200,21 @@ get_header();
 .fv-ba-onboard-text{flex:1}
 .fv-ba-onboard-title{font-size:11px;font-weight:800;color:var(--gray-900)}
 .fv-ba-onboard-sub{font-size:9.5px;color:var(--gray-500);font-weight:600;margin-top:1px}
+
+/* ── ALSO INCLUDED (secondary capabilities, nested under main capabilities) ── */
+.uc-also{margin-top:24px}
+.uc-also-intro{text-align:center;max-width:none;margin:0 auto 28px;font-size:15px;color:var(--gray-800);line-height:1.7;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uc-also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+.uc-also-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 20px;transition:all .25s var(--ease);text-decoration:none;color:inherit}
+.uc-also-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.uc-also-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.uc-also-icon svg{width:17px;height:17px;color:#fff}
+.uc-also-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:800;color:var(--gray-900);margin-bottom:6px;line-height:1.35;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.uc-also-arrow{flex-shrink:0;width:14px;height:14px;color:var(--gray-400);transition:all .2s var(--spring);margin-top:3px}
+.uc-also-card:hover .uc-also-arrow{color:var(--accent);transform:translateX(3px)}
+.uc-also-card p{font-size:12.5px;color:var(--gray-600);line-height:1.6}
+@media(max-width:900px){.uc-also-grid{grid-template-columns:repeat(2,1fr)}.uc-also-intro{white-space:normal;font-size:14px}}
+@media(max-width:560px){.uc-also-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- HERO -->
@@ -207,7 +222,7 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content">
-    <h1>Specs, BRDs, and <br>technical handoffs, <span class="accent">async across shifts.</span></h1>
+    <h1>Specs, BRDs, and <br>technical handoffs, <span class="accent">written once, read everywhere.</span></h1>
     <p class="subtitle">Business Requirement Documents, project specs, architecture notes, and technical guidelines, written once, handed across time zones without losing the thread. Built for Engineering, Product, Architecture, and Tech Leadership in distributed delivery organisations.</p>
     <div class="hero-btns">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -321,13 +336,13 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Six capabilities that play a critical role<br>in <span class="g-text">async specification work.</span></h2>
+    <h2>Capabilities that play a critical role<br>in <span class="g-text">async specification work.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-      <h3>1. Word-style editor + .docx upload.</h3>
+      <h3>Word-style editor + .docx upload.</h3>
       <p>Authors write BRDs in the familiar Word-style editor, or upload an existing .docx and have it auto-converted to structured, responsive web content. No format breaks. No "Table didn't render." No Markdown religion. The spec lives where your delivery organisation can actually work on it.</p>
       <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="uc-cap-link">Explore Content Management <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -350,7 +365,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-      <h3>2. Rich media in-line, diagrams that live with the spec.</h3>
+      <h3>Rich media in-line, diagrams that live with the spec.</h3>
       <p>Architecture diagrams embedded next to the text that describes them. Loom walkthroughs of a complex flow. Screenshots with annotations. Secure video of the tech-lead's whiteboard session. The visual artefacts travel with the words, not as attachments on a separate shared drive.</p>
       <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="uc-cap-link">Explore Content Management <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -373,7 +388,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <h3>3. Version control, built for iteration.</h3>
+      <h3>Version control, built for iteration.</h3>
       <p>A spec can move from v1.0 to v2.3 inside a sprint. Every version preserved. What changed is visible as a diff. Reviewers see the delta since their last sign-off, not the whole doc from scratch. No "can you re-send me the latest version" ever again.</p>
       <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Version Control <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -390,7 +405,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-      <h3>4. Threaded comments and cross-shift targeting.</h3>
+      <h3>Threaded comments and cross-shift targeting.</h3>
       <p>Reviewers leave comments inline on the spec, threaded, resolvable, attributable. Target the spec to the reviewers that matter: Arch in Bangalore, QA in Poland, Product in Austin. Everyone sees what's pending and what's closed. No separate Slack channel for the questions.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="uc-cap-link">Explore Interaction &amp; Comments <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -408,7 +423,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-      <h3>5. 4D Intelligent Search, answers without a handover call.</h3>
+      <h3>4D Intelligent Search, answers without a handover call.</h3>
       <p>Search across spec titles, body, attached files, and the content inside those files. "Where is the idempotency key defined?" returns the exact section from BRD-337, plus the architecture decision log thread, plus the QA test case that covers it. An engineer in Austin finds the answer at 10 AM Central without pinging the architect in Bangalore at 3 AM.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-cap-link">Explore 4D Intelligent Search <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -438,7 +453,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h3>6. AI summaries that shrink new-joiner onboarding.</h3>
+      <h3>AI summaries that shrink new-joiner onboarding.</h3>
       <p>A new engineer joins a programme in the middle of sprint 7. Auto-generated summaries of every BRD, the goals, the decisions, the constraints, the open questions, get them productive in an hour instead of a week of scattered reading. The same AI stack that powers PolicyGPT, applied to specifications.</p>
       <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Gen AI Intelligence <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -463,6 +478,42 @@ get_header();
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="uc-also">
+    <p class="uc-also-intro reveal">Quieter capabilities the engineering, product, and architecture teams lean on, ready on day one.</p>
+    <div class="uc-also-grid">
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>SSO &amp; Active Directory <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>One-click login through your existing identity provider. No extra password to manage.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Personalized Engineer Dashboard <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Each engineer sees the BRDs and architecture notes that touch their service, ranked by what's changed.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Individual Spec-Read Report <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Per-engineer view of every spec read, acknowledged, or pending. Critical when a handoff goes wrong.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Spec Search Analytics <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>See what teams search inside the BRDs. The repeat queries reveal the sections that need clearer prose.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="2"/></svg></div>
+        <h3>VAPT &amp; Source Code Review <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Independently penetration-tested every year, with source code reviewed by external specialists.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Flexible Deployment <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Cloud, private cloud, or on-premise, to match your data-residency and security policy.</p>
+      </a>
     </div>
   </div>
 </div>

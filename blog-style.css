@@ -335,6 +335,17 @@ a.pcb-card-author:hover{color:var(--teal)}
 .pcb-example-body strong{color:var(--indigo);font-size:1.1em;font-weight:800}
 
 /* ══════════════════════════════════════════════════════════════
+   ARTICLE FIGURES (inline images with captions)
+   ══════════════════════════════════════════════════════════════ */
+.pcb-figure{margin:36px 0;padding:0;display:block}
+.pcb-figure img{width:100%;height:auto;display:block;border-radius:var(--r-md);border:1px solid var(--gray-200);box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.pcb-figure figcaption{margin-top:12px;text-align:center;font-size:13.5px;color:var(--gray-500);line-height:1.5;font-style:italic}
+@media (max-width:680px){
+  .pcb-figure{margin:28px 0}
+  .pcb-figure figcaption{font-size:12.5px}
+}
+
+/* ══════════════════════════════════════════════════════════════
    HOMEPAGE BLOG SECTION
    ══════════════════════════════════════════════════════════════ */
 .pcb-home-blog{padding:96px 0;background:linear-gradient(180deg,#fff 0%,var(--gray-50) 100%);border-top:1px solid var(--border)}

@@ -604,11 +604,11 @@ get_header();
       <!-- Panel 4: Access -->
       <div class="lc-panel">
         <h3>Access Anywhere</h3>
-        <p>Mobile-first design means employees can read policies on any device. Offline access, multi-language support, and text-to-speech for true accessibility.</p>
+        <p>Mobile-first design means employees can read policies on any device. Multi-language support and text-to-speech for true accessibility.</p>
         <div class="lc-tags">
           <span class="lc-tag">Mobile App</span>
-          <span class="lc-tag">Offline Access</span>
           <span class="lc-tag">Multi-Language</span>
+          <span class="lc-tag">Text-to-Speech</span>
         </div>
       </div>
 

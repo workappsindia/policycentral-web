@@ -1594,7 +1594,7 @@
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--teal-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#0694A2" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3>Policy Management</h3>
-        <p>Create, publish and manage all organisational policies with version control, approval workflows and full audit trails.</p>
+        <p>Host, publish and manage all organisational policies with version control, approval workflows and full audit trails.</p>
         <ul class="uc-bullets">
           <li><div class="ub-dot" style="background:#0694A2"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Version-controlled updates</li>
           <li><div class="ub-dot" style="background:#0694A2"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Maker-checker approval</li>

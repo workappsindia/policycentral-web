@@ -121,9 +121,9 @@ function pcgpt_migration_006_seed_first_blog_post() {
     ), 'post_tag', false);
 
     // Featured image — attach from theme assets/blog-images/
-    $image_path = get_template_directory() . '/assets/blog-images/gratuity-rules-india.png';
+    $image_path = get_template_directory() . '/assets/blog-images/gratuity-rules.jpg';
     if (file_exists($image_path)) {
-        pcgpt_attach_post_featured_image($post_id, $image_path, 'gratuity-rules-india.png', 'Gratuity Rules in India');
+        pcgpt_attach_post_featured_image($post_id, $image_path, 'gratuity-rules.jpg', 'Gratuity Rules in India');
     }
 }
 

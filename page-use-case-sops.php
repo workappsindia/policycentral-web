@@ -40,13 +40,6 @@ get_header();
 .so-action-icon svg{width:14px;height:14px;color:#fff}
 .so-action-text{flex:1;font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:700;color:var(--gray-800);line-height:1.3}
 
-.so-float-offline{position:absolute;top:32px;right:-30px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.15);padding:11px 13px;min-width:156px;animation:soCardIn .6s ease-out both;animation-delay:.3s}
-.so-off-head{display:flex;align-items:center;gap:6px;margin-bottom:6px}
-.so-off-icon{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#059669,#047857);display:flex;align-items:center;justify-content:center}
-.so-off-icon svg{width:10px;height:10px;color:#fff}
-.so-off-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:800;color:var(--gray-900)}
-.so-off-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:9px;color:var(--gray-500);font-weight:600;line-height:1.35}
-
 .so-float-quiz{position:absolute;bottom:40px;left:-30px;z-index:3;background:#fff;border-radius:12px;border:1px solid var(--gray-200);box-shadow:0 12px 36px rgba(0,0,0,.15);padding:11px 13px;min-width:170px;animation:soCardIn .6s ease-out both;animation-delay:.55s}
 .so-quiz-head{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .so-quiz-icon{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center}
@@ -149,14 +142,13 @@ get_header();
 
 @media(max-width:1024px){
   .so-mockup{max-width:360px;margin:0 auto}
-  .so-float-offline{right:-10px;top:10px}
   .so-float-quiz{left:-10px;bottom:20px}
   .fv-info,.fv-quiz,.fv-lang,.fv-mobile{max-width:100%}
   .uc-vignette-card{grid-template-columns:1fr;gap:20px;padding:32px 28px}
   .uc-vignette-card::before{top:20px;bottom:20px}
 }
 @media(max-width:768px){.uc-sc-grid{grid-template-columns:1fr}.uc-ch-grid{grid-template-columns:1fr}}
-@media(max-width:640px){.so-phone{width:220px}.so-screen{height:460px}.so-float-offline,.so-float-quiz{position:relative;top:0;right:0;left:0;bottom:0;margin-top:10px;min-width:auto}}
+@media(max-width:640px){.so-phone{width:220px}.so-screen{height:460px}.so-float-quiz{position:relative;top:0;right:0;left:0;bottom:0;margin-top:10px;min-width:auto}}
 
 /* Capability 5: Maker-checker approval */
 .fv-so-maker{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:var(--shadow-lg);padding:18px;width:100%;max-width:360px}
@@ -189,6 +181,21 @@ get_header();
 .fv-sa-log-action{color:var(--gray-800);font-weight:600}
 .fv-sa-log-action strong{color:var(--gray-900);font-weight:800}
 .fv-sa-log-actor{color:var(--accent-dark);font-weight:700;text-align:right;font-size:9px}
+
+/* ── ALSO INCLUDED (secondary capabilities, nested under main capabilities) ── */
+.uc-also{margin-top:24px}
+.uc-also-intro{text-align:center;max-width:none;margin:0 auto 28px;font-size:15px;color:var(--gray-800);line-height:1.7;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uc-also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+.uc-also-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 20px;transition:all .25s var(--ease);text-decoration:none;color:inherit}
+.uc-also-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.uc-also-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.uc-also-icon svg{width:17px;height:17px;color:#fff}
+.uc-also-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:800;color:var(--gray-900);margin-bottom:6px;line-height:1.35;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.uc-also-arrow{flex-shrink:0;width:14px;height:14px;color:var(--gray-400);transition:all .2s var(--spring);margin-top:3px}
+.uc-also-card:hover .uc-also-arrow{color:var(--accent);transform:translateX(3px)}
+.uc-also-card p{font-size:12.5px;color:var(--gray-600);line-height:1.6}
+@media(max-width:900px){.uc-also-grid{grid-template-columns:repeat(2,1fr)}.uc-also-intro{white-space:normal;font-size:14px}}
+@media(max-width:560px){.uc-also-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- HERO -->
@@ -242,10 +249,6 @@ get_header();
         </div>
       </div>
 
-      <div class="so-float-offline">
-        <div class="so-off-head"><div class="so-off-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span class="so-off-title">Offline ready</span></div>
-        <div class="so-off-sub">Cached on device &middot; works without signal in the field</div>
-      </div>
       <div class="so-float-quiz">
         <div class="so-quiz-head"><div class="so-quiz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><span class="so-quiz-title">Quiz passed</span></div>
         <div class="so-quiz-score">9/10</div>
@@ -278,7 +281,7 @@ get_header();
     <div class="uc-vignette-content">
       <p>A retail bank has thousands of branches across towns and cities. A microfinance institution has field agents on motorbikes between villages. An insurer has claims assessors at the scene of an accident. A hospital has nurses at the bedside.</p>
       <p>The person who needs an SOP at that moment is <strong>not at a desktop, may not read English as a first language, and does not have time to figure out where the document lives</strong>. They need it on the phone they're already holding, in the language they think in, with the key process as a visual, and a short check at the end that confirms they got it.</p>
-      <p>That's what SOPs on PolicyCentral.ai look like. AI-generated infographics for procedural flows, 10 Indian languages, offline access, and a three-question quiz to prove comprehension, all tracked back to the compliance dashboard the operations head already runs.</p>
+      <p>That's what SOPs on PolicyCentral.ai look like. AI-generated infographics for procedural flows, 10 Indian languages, instant search across the SOP and its attachments, and a three-question quiz to prove comprehension, all tracked back to the compliance dashboard the operations head already runs.</p>
     </div>
   </div>
 </div>
@@ -288,13 +291,13 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Six capabilities that play a critical role<br>in <span class="g-text">mid-task retrieval.</span></h2>
+    <h2>Capabilities that play a critical role<br>in <span class="g-text">mid-task retrieval.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-      <h3>1. AI infographics for procedural flows.</h3>
+      <h3>AI infographics for procedural flows.</h3>
       <p>Feed the platform a text SOP; it produces a visual flowchart of the process: the steps, the decisions, the branches. Easier to grasp at a glance, easier to recall under pressure. The PM for the SOP reviews and approves the generated visual before it ever reaches the floor.</p>
       <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore AI Intelligence <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -314,7 +317,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-      <h3>2. Quizzes that confirm comprehension, not scrolling.</h3>
+      <h3>Quizzes that confirm comprehension, not scrolling.</h3>
       <p>Three to five multiple-choice questions auto-generated from the SOP content. A pass is the signal that the person actually understood the process, not just that they swiped to the bottom. Failed quizzes route straight to the supervisor dashboard for a follow-up conversation.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="uc-cap-link">Explore Interaction &amp; Acknowledgement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -335,7 +338,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-      <h3>3. Ten Indian languages, comprehension's biggest lever.</h3>
+      <h3>Ten Indian languages, comprehension's biggest lever.</h3>
       <p>Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, Urdu. An employee reading a process in their first language is measurably more likely to follow it correctly. Every translation reviewed by a human before it reaches the floor.</p>
       <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Translation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -353,8 +356,8 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
-      <h3>4. Mobile-native, offline-capable, searchable in 3 words.</h3>
-      <p>White-label iOS and Android apps with native push. Policies and SOPs cache on the device, the field agent between villages with no signal still has the SOP open. 4D search across title, body, attachments, and content inside attachments gets the answer in seconds.</p>
+      <h3>Mobile-native, searchable in three words.</h3>
+      <p>White-label iOS and Android apps with native push, the SOP update lands on the floor agent's phone the moment it goes live. 4D search across title, body, attachments, and content inside attachments gets the answer in seconds, no scrolling through a fifty-page document to find the one paragraph that matters.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-cap-link">Explore Employee Portal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
@@ -362,7 +365,7 @@ get_header();
         <div class="fv-m-title">On the field phone</div>
         <div class="fv-m-grid">
           <div class="fv-m-card"><div class="fv-m-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/></svg></div><div class="fv-m-card-title">White-label app</div><div class="fv-m-card-sub">Your brand &middot; iOS + Android</div></div>
-          <div class="fv-m-card"><div class="fv-m-card-icon alt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fv-m-card-title">Offline-ready</div><div class="fv-m-card-sub">No signal needed &middot; cache on device</div></div>
+          <div class="fv-m-card"><div class="fv-m-card-icon alt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 8h14M5 12h14M5 16h10"/></svg></div><div class="fv-m-card-title">10 languages</div><div class="fv-m-card-sub">Read in your first language</div></div>
           <div class="fv-m-card"><div class="fv-m-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="fv-m-card-title">4D search</div><div class="fv-m-card-sub">Title &middot; body &middot; file &middot; in-file</div></div>
           <div class="fv-m-card"><div class="fv-m-card-icon alt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="fv-m-card-title">Push notify</div><div class="fv-m-card-sub">SOP updated &middot; instant alert</div></div>
         </div>
@@ -373,7 +376,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></div>
-      <h3>5. Maker-checker approval, with quality in the loop.</h3>
+      <h3>Maker-checker approval, with quality in the loop.</h3>
       <p>SOPs don't reach the floor until the process owner, the quality lead, and the compliance officer have signed off. Every approval step, every reviewer, every timestamp is captured automatically. When an auditor asks who authorised this SOP on which date, the answer is one click away.</p>
       <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Publisher Controls <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -382,7 +385,7 @@ get_header();
         <div class="fv-sm-title">Claims Intake SOP v4.2, Approval</div>
         <div class="fv-sm-step">
           <div class="fv-sm-av a">PM</div>
-          <div class="fv-sm-body"><div class="fv-sm-role">Process Owner, drafted</div><div class="fv-sm-time">Apr 02 &middot; 10:12 AM</div></div>
+          <div class="fv-sm-body"><div class="fv-sm-role">Process Owner, uploaded</div><div class="fv-sm-time">Apr 02 &middot; 10:12 AM</div></div>
           <span class="fv-sm-status">Signed</span>
         </div>
         <div class="fv-sm-step">
@@ -402,7 +405,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-      <h3>6. Version control and audit trail, compliance-grade.</h3>
+      <h3>Version control and audit trail, compliance-grade.</h3>
       <p>Every SOP version preserved with timestamps, approvers, and what changed. Every acknowledgement, every quiz attempt, every read, logged. Export audit-ready reports by SOP, cohort, or date range. ISO, GMP, or internal operational audits: one filter, one download, every answer provable.</p>
       <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-cap-link">Explore Tracking &amp; Reporting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -418,9 +421,45 @@ get_header();
           <div class="fv-sa-label">Recent activity</div>
           <div class="fv-sa-log-row"><span class="fv-sa-log-time">11:22 AM</span><span class="fv-sa-log-action"><strong>Quiz</strong>, 9 of 10</span><span class="fv-sa-log-actor">Priya S.</span></div>
           <div class="fv-sa-log-row"><span class="fv-sa-log-time">Apr 05</span><span class="fv-sa-log-action"><strong>Publish</strong>, v4.2 Live</span><span class="fv-sa-log-actor">Compliance</span></div>
-          <div class="fv-sa-log-row"><span class="fv-sa-log-time">Apr 02</span><span class="fv-sa-log-action"><strong>Draft</strong>, v4.2 created</span><span class="fv-sa-log-actor">Process Mgr</span></div>
+          <div class="fv-sa-log-row"><span class="fv-sa-log-time">Apr 02</span><span class="fv-sa-log-action"><strong>Upload</strong>, v4.2 added</span><span class="fv-sa-log-actor">Process Mgr</span></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="uc-also">
+    <p class="uc-also-intro reveal">Quieter capabilities the operations and quality teams lean on, ready on day one.</p>
+    <div class="uc-also-grid">
+      <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Evergreen for future joiners <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Every new floor agent who joins after publish date auto-receives the SOP on day one. No manual chase.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Personalized Employee Dashboard <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Each agent sees the SOPs that govern their role, in their branch, in their language, ranked by what's new.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Policy Search Analytics <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>See exactly what the floor is searching for. The repeat queries are the SOP gaps no one filed a ticket about.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Individual Employee Report <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Per-agent view of every SOP read, quizzed, or pending. Useful when ops asks who's been through the new flow.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+        <h3>HRMS Integration <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Branch transfers, role changes, and new joiner data flow in automatically. SOP audiences stay current.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Automated Policy Expiry <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Set a date; the SOP retires and archives on schedule. The old version stays traceable for audit.</p>
+      </a>
     </div>
   </div>
 </div>
@@ -438,13 +477,13 @@ get_header();
       <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9l9-7 9 7"/></svg></div>
       <h3>A customer at the teller window</h3>
       <p>A teller hits an edge case in the KYC process. They open the SOP app, see the infographic of the decision tree in Hindi, confirm the step, all before the customer loses patience.</p>
-      <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Infographic &rarr; Native language &rarr; On-device</div>
+      <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Infographic &rarr; Native language &rarr; Mobile-first</div>
     </div>
     <div class="uc-sc reveal rd2">
-      <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <h3>A field agent between villages</h3>
-      <p>No signal on the highway. The SOP is already cached on the phone. Agent reads the claim-intake process in Marathi, takes the photos, fills the form, syncs when they get back to 4G.</p>
-      <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Offline mode &rarr; Regional language &rarr; Auto-sync</div>
+      <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h3>A field officer at a customer's doorstep</h3>
+      <p>A microfinance officer at a borrower's home hits a documentation edge case the standard onboarding flow didn't anticipate. They open the SOP on their phone, search "income proof exception" in three words, and complete the visit without rescheduling.</p>
+      <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Mobile-first &rarr; Quick search &rarr; Exception flow</div>
     </div>
     <div class="uc-sc reveal rd3">
       <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>

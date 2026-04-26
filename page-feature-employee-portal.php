@@ -378,7 +378,7 @@ get_header();
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2.5"/></svg></div>
       <h3>Dedicated Mobile Application</h3>
-      <p>White-label mobile app for Android and iOS. Company-branded experience with push notifications, offline access, and native performance for on-the-go policy engagement. Employees get instant alerts the moment a new policy is published.</p>
+      <p>White-label mobile app for Android and iOS. Company-branded experience with push notifications and native performance for on-the-go policy engagement. Employees get instant alerts the moment a new policy is published.</p>
       <span class="feature-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg> Android &amp; iOS · White-Label</span>
     </div>
     <div class="feat-hero-visual">

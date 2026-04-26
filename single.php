@@ -89,8 +89,9 @@ if (have_posts()) : while (have_posts()) : the_post();
           <?php the_content(); ?>
         </div>
 
-        <!-- Tags -->
-        <?php
+        <!-- Tags: hidden until tag archive pages are built. Data still set
+             on posts via migrations so we don't lose classification. -->
+        <?php /*
         $tags = get_the_tags();
         if ($tags && !is_wp_error($tags)) : ?>
           <div class="pcb-tags">
@@ -99,7 +100,7 @@ if (have_posts()) : while (have_posts()) : the_post();
               <a href="<?php echo esc_url(get_tag_link($tag)); ?>" class="pcb-tag">#<?php echo esc_html($tag->name); ?></a>
             <?php endforeach; ?>
           </div>
-        <?php endif; ?>
+        <?php endif; */ ?>
 
         <!-- End CTA -->
         <?php echo pcb_end_cta(); ?>

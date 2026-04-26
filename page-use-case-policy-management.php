@@ -193,7 +193,7 @@ get_header();
   .pm-mockup{max-width:420px;margin:0 auto}
   .pm-versions{right:-8px;top:-8px}
   .pm-audit{left:-8px;bottom:-10px}
-  .fv-maker-checker,.fv-versions,.fv-ack,.fv-audit{max-width:100%}
+  .fv-maker-checker,.fv-versions,.fv-ack,.fv-audit,.fv-ai,.fv-onboard{max-width:100%}
   .uc-vignette-card{grid-template-columns:1fr;gap:20px;padding:32px 28px}
   .uc-vignette-card::before{top:20px;bottom:20px}
 }
@@ -222,6 +222,20 @@ get_header();
 .fv-ai-q{font-size:10.5px;font-weight:700;color:var(--gray-800);font-family:'Plus Jakarta Sans',sans-serif;padding:7px 10px;background:var(--gray-50);border-radius:8px 8px 8px 2px;margin-bottom:4px;border:1px solid var(--gray-100)}
 .fv-ai-a{font-size:10px;color:var(--gray-700);font-family:'Plus Jakarta Sans',sans-serif;padding:7px 10px;background:linear-gradient(135deg,rgba(67,56,202,.06),rgba(124,58,237,.06));border-radius:8px 8px 2px 8px;border:1px solid rgba(67,56,202,.12);line-height:1.45;margin-bottom:10px}
 .fv-ai-a strong{color:#4338CA;font-weight:800}
+
+/* Capability 1: Onboarding (.docx + .pdf + no size caps) visual */
+.fv-onboard{background:#fff;border-radius:14px;border:1px solid var(--gray-200);box-shadow:0 16px 48px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04);padding:18px;width:100%;max-width:360px}
+.fv-on-title{font-size:12px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:14px}
+.fv-on-row{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;background:var(--gray-50);margin-bottom:6px;border:1px solid var(--gray-100)}
+.fv-on-ext{font-family:'Plus Jakarta Sans',sans-serif;font-size:9.5px;font-weight:800;letter-spacing:.04em;padding:6px 8px;border-radius:6px;flex-shrink:0;width:42px;text-align:center}
+.fv-on-ext.docx{background:rgba(37,99,235,.1);color:#1D4ED8;border:1px solid rgba(37,99,235,.2)}
+.fv-on-ext.pdf{background:rgba(220,38,38,.08);color:#B91C1C;border:1px solid rgba(220,38,38,.18)}
+.fv-on-body{flex:1;min-width:0}
+.fv-on-name{font-size:11px;font-weight:800;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.fv-on-meta{font-size:10px;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;margin-top:1px}
+.fv-on-status{padding:3px 8px;border-radius:6px;font-size:9px;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif;background:rgba(5,150,105,.1);color:#059669;border:1px solid rgba(5,150,105,.2)}
+.fv-on-foot{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.fv-on-chip{font-family:'Plus Jakarta Sans',sans-serif;font-size:9.5px;font-weight:700;padding:5px 9px;border-radius:6px;background:rgba(14,116,144,.08);color:#0E7490;border:1px solid rgba(14,116,144,.18)}
 .fv-ai-langs{display:flex;gap:4px;flex-wrap:wrap}
 .fv-ai-lang{padding:3px 8px;border-radius:5px;background:rgba(14,116,144,.08);color:#0E7490;font-family:'Plus Jakarta Sans',sans-serif;font-size:9.5px;font-weight:700;border:1px solid rgba(14,116,144,.18)}
 
@@ -241,6 +255,22 @@ get_header();
 .fv-dist-match{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--gray-100);font-family:'Plus Jakarta Sans',sans-serif}
 .fv-dist-match-l{font-size:10px;color:var(--gray-500);font-weight:600}
 .fv-dist-match-v{font-size:13px;font-weight:800;color:var(--accent-dark)}
+
+/* ── ALSO INCLUDED (secondary capabilities, nested under main capabilities) ── */
+.uc-also{margin-top:24px}
+.uc-also-intro{text-align:center;max-width:none;margin:0 auto 28px;font-size:15px;color:var(--gray-800);line-height:1.7;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.uc-also-intro{white-space:normal;font-size:14px}}
+.uc-also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+.uc-also-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 20px;transition:all .25s var(--ease);text-decoration:none;color:inherit}
+.uc-also-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.uc-also-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.uc-also-icon svg{width:17px;height:17px;color:#fff}
+.uc-also-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:800;color:var(--gray-900);margin-bottom:6px;line-height:1.35;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.uc-also-arrow{flex-shrink:0;width:14px;height:14px;color:var(--gray-400);transition:all .2s var(--spring);margin-top:3px}
+.uc-also-card:hover .uc-also-arrow{color:var(--accent);transform:translateX(3px)}
+.uc-also-card p{font-size:12.5px;color:var(--gray-600);line-height:1.6}
+@media(max-width:900px){.uc-also-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.uc-also-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- HERO -->
@@ -248,8 +278,8 @@ get_header();
 <div class="fpage-hero-mesh"></div>
 <div class="hero-grid container">
   <div class="hero-content">
-    <h1>Policy management, <br>from <span class="accent">first draft to final audit</span>.</h1>
-    <p class="subtitle">The full lifecycle of every organisational policy, authored, approved, targeted, acknowledged, and audit-ready, running on one platform. Built for Compliance, Legal, HR, Risk, and Internal Audit teams at regulated enterprises.</p>
+    <h1>Policy management, <br>from <span class="accent">first upload to final audit</span>.</h1>
+    <p class="subtitle">The full lifecycle of every organisational policy, hosted, approved, targeted, acknowledged, and audit-ready, running on one platform. Built for Compliance, Legal, HR, Risk, and Internal Audit teams at regulated enterprises.</p>
     <div class="hero-btns">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">See a live demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -345,7 +375,7 @@ get_header();
 <div class="container">
   <div class="uc-scene-inner reveal">
     <h2>Your organisation runs on <span class="g-text">hundreds of policies.</span></h2>
-    <p>A Code of Conduct. KYC. Credit and lending. IT acceptable use. Whistleblower. Data handling. POSH. Variable pay. Each one gets drafted, reviewed, legally vetted, approved, rolled out, acknowledged, refreshed, superseded, and one day, asked about by a regulator.</p>
+    <p>A Code of Conduct. KYC. Credit and lending. IT acceptable use. Whistleblower. Data handling. POSH. Variable pay. Each one gets hosted, reviewed, legally vetted, approved, rolled out, acknowledged, refreshed, superseded, and one day, asked about by a regulator.</p>
     <p>Doing that work through email, Word, and a shared drive is how gaps appear. Doing it on one platform with a governance spine is how they don't.</p>
   </div>
 </div>
@@ -372,33 +402,97 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Six capabilities that play a critical role<br>in the <span class="g-text">policy lifecycle.</span></h2>
+    <h2>Capabilities that play a critical role<br>in the <span class="g-text">policy lifecycle.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
-      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></div>
-      <h3>1. Maker-checker approval, built in.</h3>
-      <p>Policies move through single or multi-level sign-off before they go live. Drafters draft, reviewers review, approvers approve, and the governance trail is created automatically. Any AI-enhanced content (summaries, translations, FAQs, infographics) passes through the same checker before an employee ever sees it. Compliance retains the final word.</p>
-      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Publisher Controls <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+      <h3>Bring your existing library on, in days, not quarters.</h3>
+      <p>Most customers arrive with a policy library already written, often in Word and PDF. Upload .docx files and have them auto-converted to clean, structured HTML, with headings, tables, and images preserved. Keep PDF policies as PDFs and let employees read them through the built-in inline viewer, no downloads, no third-party plugin. There are no caps on document length, attachments, or media size, so a 200-page master circular travels as easily as a one-page advisory.</p>
+      <a href="<?php echo esc_url(home_url('/feature/content-management/')); ?>" class="uc-cap-link">Explore Content Management <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
-      <div class="fv-maker-checker">
-        <div class="fv-mc-title">Code of Conduct v3.1, Approval</div>
-        <div class="fv-mc-step done">
-          <div class="fv-mc-avatar">AM</div>
-          <div class="fv-mc-content"><div class="fv-mc-role">Drafted by Legal</div><div class="fv-mc-time">Mar 08 &middot; 11:42 AM</div></div>
-          <span class="fv-mc-status">Signed</span>
+      <div class="fv-onboard">
+        <div class="fv-on-title">Onboard your existing library</div>
+        <div class="fv-on-row">
+          <span class="fv-on-ext docx">.docx</span>
+          <div class="fv-on-body"><div class="fv-on-name">Auto-converted to clean HTML</div><div class="fv-on-meta">Tables, headings, images preserved</div></div>
+          <span class="fv-on-status">Converted</span>
         </div>
-        <div class="fv-mc-step done">
-          <div class="fv-mc-avatar v2">RJ</div>
-          <div class="fv-mc-content"><div class="fv-mc-role">Reviewed by Risk</div><div class="fv-mc-time">Mar 10 &middot; 4:15 PM</div></div>
-          <span class="fv-mc-status">Signed</span>
+        <div class="fv-on-row">
+          <span class="fv-on-ext pdf">.pdf</span>
+          <div class="fv-on-body"><div class="fv-on-name">Inline PDF viewer</div><div class="fv-on-meta">Read in-platform, no downloads</div></div>
+          <span class="fv-on-status">Live</span>
         </div>
-        <div class="fv-mc-step done">
-          <div class="fv-mc-avatar v3">SK</div>
-          <div class="fv-mc-content"><div class="fv-mc-role">Approved by CHRO</div><div class="fv-mc-time">Mar 12 &middot; 9:03 AM</div></div>
-          <span class="fv-mc-status">Signed</span>
+        <div class="fv-on-foot">
+          <span class="fv-on-chip">No size caps</span>
+          <span class="fv-on-chip">Any document length</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
+    <div class="feat-hero-content">
+      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <h3>AI that makes policies actually readable.</h3>
+      <p>Auto-generated summaries, FAQs, infographics, and audio versions. Translations into ten Indian languages so a branch employee can read the KYC policy in Tamil. And PolicyGPT, an in-product chatbot where employees ask "how many casual leaves do I get?" in natural language and get an answer grounded in the current policy text, not the open internet. Every AI output runs through the same maker-checker review before it reaches an employee.</p>
+      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Gen AI Intelligence <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="feat-hero-visual">
+      <div class="fv-ai">
+        <div class="fv-ai-header">
+          <span class="fv-ai-badge">&#x2728; AI ENHANCED</span>
+          <span class="fv-ai-title">KYC Policy v3.1</span>
+        </div>
+        <div class="fv-ai-summary">
+          <div class="fv-ai-summary-label">Auto-summary</div>
+          <div class="fv-ai-summary-line l1"></div>
+          <div class="fv-ai-summary-line l2"></div>
+          <div class="fv-ai-summary-line l3"></div>
+        </div>
+        <div class="fv-ai-q">How many days to complete KYC verification?</div>
+        <div class="fv-ai-a"><strong>PolicyGPT:</strong> Within 30 days of onboarding, per section 3.2 of KYC Policy v3.1.</div>
+        <div class="fv-ai-langs">
+          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Hindi</span>
+          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Tamil</span>
+          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Marathi</span>
+          <span class="fv-ai-lang">+7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feat-hero feat-hero-uc reveal">
+    <div class="feat-hero-content">
+      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <h3>Precision distribution, self-maintaining.</h3>
+      <p>Target policies by department, role, location, grade, or any combination. Audience lists stay current by syncing with Active Directory or your HRMS, no manual upkeep. Evergreen Mode auto-sends the policy to every matching new joiner from their first day. Mail-merge personalises content per recipient without hand-editing. A policy meant for branch-facing staff in Maharashtra reaches exactly those people, the day they join.</p>
+      <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Distribution &amp; Targeting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="feat-hero-visual">
+      <div class="fv-dist">
+        <div class="fv-dist-title">Audience, KYC Policy v3.1</div>
+        <div class="fv-dist-label">Targeting</div>
+        <div class="fv-dist-chips">
+          <span class="fv-dist-chip on">Dept: Branch Banking</span>
+          <span class="fv-dist-chip on">Role: Teller</span>
+          <span class="fv-dist-chip on">Role: Cashier</span>
+          <span class="fv-dist-chip">Role: Relationship Mgr</span>
+          <span class="fv-dist-chip on">State: Maharashtra</span>
+          <span class="fv-dist-chip on">State: Gujarat</span>
+        </div>
+        <div class="fv-dist-ever">
+          <div class="fv-dist-ever-toggle"></div>
+          <div class="fv-dist-ever-body">
+            <div class="fv-dist-ever-t">Evergreen Mode: ON</div>
+            <div class="fv-dist-ever-s">Future joiners matching these filters auto-receive on day one</div>
+          </div>
+        </div>
+        <div class="fv-dist-match">
+          <span class="fv-dist-match-l">Current match</span>
+          <span class="fv-dist-match-v">342 branches &middot; 4,127 employees</span>
         </div>
       </div>
     </div>
@@ -407,7 +501,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <h3>2. Version control an auditor can read.</h3>
+      <h3>Version control an auditor can read.</h3>
       <p>Every version is preserved. Show exactly which policy was in force on any given date, who approved it, when it was superseded, and what changed between versions. Multiple versions can run in parallel when needed. Minor post-publication corrections don't destroy the history.</p>
       <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Version Control <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -435,7 +529,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-      <h3>3. Acknowledgement that holds up.</h3>
+      <h3>Acknowledgement that holds up.</h3>
       <p>Every read receipt, e-signature, and quiz score is captured with a timestamp and tied to the exact policy version. Mandatory deadlines, automatic resends to the unread, and manager-level escalation mean acknowledgement lives in the compliance dashboard, not in someone's inbox.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="uc-cap-link">Explore Interaction &amp; Acknowledgement <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -469,7 +563,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-      <h3>4. An audit trail that writes itself.</h3>
+      <h3>An audit trail that writes itself.</h3>
       <p>Every action, draft, edit, approval, publish, recall, acknowledgement, escalation, is logged. Export to regulator-ready formats; filter by policy, cohort, or date range. What used to take compliance teams weeks to assemble becomes a report in minutes.</p>
       <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-cap-link">Explore Tracking &amp; Reporting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -501,7 +595,7 @@ get_header();
         </div>
         <div class="fv-audit-row">
           <span class="fv-audit-time">Mar 08</span>
-          <span class="fv-audit-action"><strong>Draft</strong>, v3.1 created</span>
+          <span class="fv-audit-action"><strong>Upload</strong>, v3.1 added</span>
           <span class="fv-audit-actor">Legal</span>
         </div>
       </div>
@@ -510,66 +604,66 @@ get_header();
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
-      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <h3>5. AI that makes policies actually readable.</h3>
-      <p>Auto-generated summaries, FAQs, infographics, and audio versions. Translations into ten Indian languages so a branch employee can read the KYC policy in Tamil. And PolicyGPT, an in-product chatbot where employees ask "how many casual leaves do I get?" in natural language and get an answer grounded in the current policy text, not the open internet. Every AI output runs through the same maker-checker review before it reaches an employee.</p>
-      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Gen AI Intelligence <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></div>
+      <h3>Maker-checker approval, built in.</h3>
+      <p>Policies move through single or multi-level sign-off before they go live. Reviewers review, approvers approve, and the governance trail is created automatically. Any AI-enhanced content (summaries, translations, FAQs, infographics) passes through the same checker before an employee ever sees it. Compliance retains the final word.</p>
+      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Publisher Controls <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
-      <div class="fv-ai">
-        <div class="fv-ai-header">
-          <span class="fv-ai-badge">&#x2728; AI ENHANCED</span>
-          <span class="fv-ai-title">KYC Policy v3.1</span>
+      <div class="fv-maker-checker">
+        <div class="fv-mc-title">Code of Conduct v3.1, Approval</div>
+        <div class="fv-mc-step done">
+          <div class="fv-mc-avatar">AM</div>
+          <div class="fv-mc-content"><div class="fv-mc-role">Uploaded by Legal</div><div class="fv-mc-time">Mar 08 &middot; 11:42 AM</div></div>
+          <span class="fv-mc-status">Signed</span>
         </div>
-        <div class="fv-ai-summary">
-          <div class="fv-ai-summary-label">Auto-summary</div>
-          <div class="fv-ai-summary-line l1"></div>
-          <div class="fv-ai-summary-line l2"></div>
-          <div class="fv-ai-summary-line l3"></div>
+        <div class="fv-mc-step done">
+          <div class="fv-mc-avatar v2">RJ</div>
+          <div class="fv-mc-content"><div class="fv-mc-role">Reviewed by Risk</div><div class="fv-mc-time">Mar 10 &middot; 4:15 PM</div></div>
+          <span class="fv-mc-status">Signed</span>
         </div>
-        <div class="fv-ai-q">How many days to complete KYC verification?</div>
-        <div class="fv-ai-a"><strong>PolicyGPT:</strong> Within 30 days of onboarding, per section 3.2 of KYC Policy v3.1.</div>
-        <div class="fv-ai-langs">
-          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Hindi</span>
-          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Tamil</span>
-          <span class="fv-ai-lang">&#x1F1EE;&#x1F1F3; Marathi</span>
-          <span class="fv-ai-lang">+7</span>
+        <div class="fv-mc-step done">
+          <div class="fv-mc-avatar v3">SK</div>
+          <div class="fv-mc-content"><div class="fv-mc-role">Approved by CHRO</div><div class="fv-mc-time">Mar 12 &middot; 9:03 AM</div></div>
+          <span class="fv-mc-status">Signed</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
-    <div class="feat-hero-content">
-      <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-      <h3>6. Precision distribution, self-maintaining.</h3>
-      <p>Target policies by department, role, location, grade, or any combination. Audience lists stay current by syncing with Active Directory or your HRMS, no manual upkeep. Evergreen Mode auto-sends the policy to every matching new joiner from their first day. Mail-merge personalises content per recipient without hand-editing. A policy meant for branch-facing staff in Maharashtra reaches exactly those people, the day they join.</p>
-      <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Distribution &amp; Targeting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-    </div>
-    <div class="feat-hero-visual">
-      <div class="fv-dist">
-        <div class="fv-dist-title">Audience, KYC Policy v3.1</div>
-        <div class="fv-dist-label">Targeting</div>
-        <div class="fv-dist-chips">
-          <span class="fv-dist-chip on">Dept: Branch Banking</span>
-          <span class="fv-dist-chip on">Role: Teller</span>
-          <span class="fv-dist-chip on">Role: Cashier</span>
-          <span class="fv-dist-chip">Role: Relationship Mgr</span>
-          <span class="fv-dist-chip on">State: Maharashtra</span>
-          <span class="fv-dist-chip on">State: Gujarat</span>
-        </div>
-        <div class="fv-dist-ever">
-          <div class="fv-dist-ever-toggle"></div>
-          <div class="fv-dist-ever-body">
-            <div class="fv-dist-ever-t">Evergreen Mode: ON</div>
-            <div class="fv-dist-ever-s">Future joiners matching these filters auto-receive on day one</div>
-          </div>
-        </div>
-        <div class="fv-dist-match">
-          <span class="fv-dist-match-l">Current match</span>
-          <span class="fv-dist-match-v">342 branches &middot; 4,127 employees</span>
-        </div>
-      </div>
+  <div class="uc-also">
+    <p class="uc-also-intro reveal">Quieter capabilities that compliance, IT, and procurement teams care about, ready on day one.</p>
+    <div class="uc-also-grid">
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>SSO &amp; Active Directory <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>One-click login through your existing identity provider. No extra password to manage.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/enterprise/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+        <h3>HRMS &amp; Intranet Integration <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Audience lists, employee data, and existing portals stay in sync without manual upkeep.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="2"/></svg></div>
+        <h3>VAPT &amp; Source Code Review <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Independently penetration-tested every year, with source code reviewed by external specialists.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Individual Employee Policy Report <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Per-employee view of every policy read, e-signed, quizzed, or pending, in one click.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Automated Policy Expiry <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Set a date; the platform retires and archives the policy on schedule, no manual chasing.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Flexible Deployment <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Cloud, private cloud, or on-premise, to match your data-residency and security rules.</p>
+      </a>
     </div>
   </div>
 </div>
@@ -593,7 +687,7 @@ get_header();
     <div class="uc-sc reveal rd2">
       <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
       <h3>A new Code of Conduct is rolled out</h3>
-      <p>Legal drafts, the CHRO approves, it goes live to every employee, and auto-includes joiners who land after publish date. Resend-to-unread chases stragglers. A short quiz confirms comprehension.</p>
+      <p>Legal uploads, the CHRO approves, it goes live to every employee, and auto-includes joiners who land after publish date. Resend-to-unread chases stragglers. A short quiz confirms comprehension.</p>
       <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Maker-Checker &rarr; Evergreen distribution &rarr; Quiz</div>
     </div>
 
@@ -669,7 +763,7 @@ get_header();
 <div class="container">
   <div class="cta-inner reveal" style="text-align:center;max-width:720px;margin:0 auto">
     <h2>Ready to see <span class="g-text">your own audit questions</span> answered live?</h2>
-    <p style="font-size:16px;color:var(--gray-500);margin:14px 0 28px;line-height:1.7">Bring a policy your compliance team actually cares about. In 20 minutes we'll walk through its lifecycle on PolicyCentral.ai, drafting, approval, distribution, acknowledgement, and the audit trail behind it.</p>
+    <p style="font-size:16px;color:var(--gray-500);margin:14px 0 28px;line-height:1.7">Bring a policy your compliance team actually cares about. In 20 minutes we'll walk through its lifecycle on PolicyCentral.ai, hosting, approval, distribution, acknowledgement, and the audit trail behind it.</p>
     <div class="cta-buttons" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="<?php echo esc_url(home_url('/use-cases/')); ?>" class="btn btn-outline">Explore other use cases <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>

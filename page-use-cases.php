@@ -8,27 +8,27 @@ get_header();
 <section class="faq-hero">
 <div class="container">
   <h1>Every <em>piece of information</em> your people need.<br>Delivered, acknowledged, and proven read.</h1>
-  <p style="max-width:920px">PolicyCentral.ai is built around one idea: structured information only does its job when it reaches the right people, in the right language, at the right moment, with proof they understood it. Whether it's policies, circulars, SOPs, product docs, leadership messages, or internal specs, the product is the same. The content it carries changes.</p>
+  <p style="max-width:920px">PolicyCentral.ai is built around one idea: structured information only does its job when it reaches the right people, in the right language, at the right moment, with proof they understood it.</p>
 </div>
 </section>
 
 
 <!-- THE THESIS + 7-STEP LIFECYCLE -->
-<section class="section" style="padding:72px 0 96px;background:#fff;border-top:1px solid var(--gray-100)">
+<section class="section" style="padding:72px 0 40px;background:#fff">
 <div class="container">
   <div class="section-header reveal" style="max-width:940px;margin:0 auto 48px">
-    <p style="max-width:880px;font-size:18px;margin:0 auto">Across every content type, PolicyCentral.ai runs the same seven-stage lifecycle.</p>
+    <p style="max-width:880px;font-size:clamp(22px,3.2vw,32px);font-weight:800;line-height:1.2;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.01em;margin:0 auto">The complete policy lifecycle, managed in one place.</p>
   </div>
   <div class="journey reveal">
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg></div><span class="jlabel">Host</span><span class="jdesc">Host all organisational content in one place, accessible to the right people</span></div>
     <div class="jarrow">&rsaquo;</div>
-    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><span class="jlabel">Publish</span><span class="jdesc">Author in a rich HTML editor with images, videos, diagrams and attachments</span></div>
+    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><span class="jlabel">Publish</span><span class="jdesc">Publish via a rich HTML editor with images, videos, diagrams and attachments</span></div>
     <div class="jarrow">&rsaquo;</div>
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="jlabel">Enable AI</span><span class="jdesc">Summaries, FAQs, translations, audio, infographics, and PolicyGPT</span></div>
     <div class="jarrow">&rsaquo;</div>
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span class="jlabel">Share</span><span class="jdesc">Target by department, role, location, grade or custom groups</span></div>
     <div class="jarrow">&rsaquo;</div>
-    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/></svg></div><span class="jlabel">Access</span><span class="jdesc">Structured web portal and white-label mobile app with offline read</span></div>
+    <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="2"/></svg></div><span class="jlabel">Access</span><span class="jdesc">Structured web portal and white-label mobile app for on-the-go reading</span></div>
     <div class="jarrow">&rsaquo;</div>
     <div class="jstep"><div class="jicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div><span class="jlabel">Manage</span><span class="jdesc">Version control, expiry, edit, recall, retarget, resend to unread</span></div>
     <div class="jarrow">&rsaquo;</div>
@@ -39,7 +39,7 @@ get_header();
 
 
 <!-- USE CASE GRID (same design as home page) -->
-<section class="section" style="padding:72px 0 88px">
+<section class="section" style="padding:24px 0 88px">
 <div class="container">
   <div class="uc-grid">
     <a href="<?php echo esc_url(home_url('/use-cases/policy-management/')); ?>" class="uccard reveal rd1">
@@ -47,7 +47,7 @@ get_header();
       <div class="uc-in">
         <div class="uc-icon" style="background:var(--teal-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#0694A2" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3>Policy Management</h3>
-        <p>Create, publish and manage all organisational policies with version control, approval workflows and full audit trails.</p>
+        <p>Host, publish and manage all organisational policies with version control, approval workflows and full audit trails.</p>
         <ul class="uc-bullets">
           <li><div class="ub-dot" style="background:#0694A2"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Version-controlled updates</li>
           <li><div class="ub-dot" style="background:#0694A2"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Maker-checker approval</li>
@@ -146,9 +146,10 @@ get_header();
 <!-- CTA -->
 <section style="padding:80px 0;background:#fff;border-top:1px solid var(--gray-100)">
 <div class="container">
-  <div class="cta-inner reveal" style="text-align:center;max-width:720px;margin:0 auto">
-    <h2>See the platform <span class="g-text">against your own use case</span></h2>
-    <p style="font-size:16px;color:var(--gray-500);margin:14px 0 28px">Bring a real policy, a real circular, or a real spec. We'll show you what the lifecycle looks like on PolicyCentral.ai. End to end.</p>
+  <div class="cta-inner reveal" style="text-align:center;max-width:1100px;margin:0 auto">
+    <h2 class="uc-cta-h2" style="white-space:nowrap">See the platform <span class="g-text">against your own use case</span></h2>
+    <p class="uc-cta-p" style="font-size:16px;color:var(--gray-500);margin:14px 0 28px;white-space:nowrap">Bring a real policy, a real circular, or a real spec. We'll show you what the lifecycle looks like on PolicyCentral.ai.</p>
+    <style>@media(max-width:1100px){.uc-cta-h2,.uc-cta-p{white-space:normal !important}}</style>
     <div class="cta-buttons" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="<?php echo esc_url(home_url('/features/')); ?>" class="btn btn-secondary">Browse all features</a>

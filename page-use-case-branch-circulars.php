@@ -195,6 +195,21 @@ get_header();
 .fv-recall{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:10px;background:linear-gradient(135deg,rgba(217,119,6,.08),rgba(245,158,11,.08));border:1px solid rgba(217,119,6,.2);font-family:'Plus Jakarta Sans',sans-serif}
 .fv-recall svg{width:16px;height:16px;color:#B45309;flex-shrink:0}
 .fv-recall-text{font-size:10.5px;font-weight:700;color:#78350F;line-height:1.4}
+
+/* ── ALSO INCLUDED (secondary capabilities, nested under main capabilities) ── */
+.uc-also{margin-top:24px}
+.uc-also-intro{text-align:center;max-width:none;margin:0 auto 28px;font-size:15px;color:var(--gray-800);line-height:1.7;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uc-also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1100px;margin:0 auto}
+.uc-also-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 20px;transition:all .25s var(--ease);text-decoration:none;color:inherit}
+.uc-also-card:hover{border-color:var(--accent-border);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.uc-also-icon{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.uc-also-icon svg{width:17px;height:17px;color:#fff}
+.uc-also-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:800;color:var(--gray-900);margin-bottom:6px;line-height:1.35;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.uc-also-arrow{flex-shrink:0;width:14px;height:14px;color:var(--gray-400);transition:all .2s var(--spring);margin-top:3px}
+.uc-also-card:hover .uc-also-arrow{color:var(--accent);transform:translateX(3px)}
+.uc-also-card p{font-size:12.5px;color:var(--gray-600);line-height:1.6}
+@media(max-width:900px){.uc-also-grid{grid-template-columns:repeat(2,1fr)}.uc-also-intro{white-space:normal;font-size:14px}}
+@media(max-width:560px){.uc-also-grid{grid-template-columns:1fr}}
 </style>
 
 <!-- HERO -->
@@ -307,13 +322,13 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Six capabilities that play a critical role<br>in <span class="g-text">branch distribution.</span></h2>
+    <h2>Capabilities that play a critical role<br>in <span class="g-text">branch distribution.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <h3>1. Location-based targeting, synced with HRMS.</h3>
+      <h3>Location-based targeting, synced with HRMS.</h3>
       <p>Target a circular to a state, a zone, a circle, a branch type, a specific set of branches, or individual branches by name. Audience fields pull from Active Directory or the HRMS, so when a branch opens, closes, or moves zones, the targeting stays accurate without manual maintenance.</p>
       <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Distribution &amp; Targeting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -345,7 +360,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-      <h3>2. Regional languages, what the region actually reads.</h3>
+      <h3>Regional languages, what the region actually reads.</h3>
       <p>A Marathi circular for Maharashtra. Gujarati for Gujarat. Tamil for Tamil Nadu. Ten Indian languages, auto-translated and reviewable by a regional coordinator before it goes live. Branch staff read in their first language, comprehension up, compliance friction down.</p>
       <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Translation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -363,7 +378,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <h3>3. Evergreen inclusion, for every new joiner, forever.</h3>
+      <h3>Evergreen inclusion, for every new joiner, forever.</h3>
       <p>A branch manager joins the Pune region in June. They automatically receive every currently-live Western-region circular on day one, the cash-handling advisory from April, the regional festival calendar, the Diwali branch timing notice. No chasing HR, no missed onboarding doc. The circular audience auto-maintains.</p>
       <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Evergreen Mode <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -389,7 +404,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <h3>4. Branch-level acknowledgement dashboard.</h3>
+      <h3>Branch-level acknowledgement dashboard.</h3>
       <p>See which branches have read and acknowledged, which haven't, and where to escalate. Sort by region, circle, or branch type. Resend-to-unread only pings the stragglers; branch managers who already signed don't get re-notified.</p>
       <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-cap-link">Explore Tracking &amp; Reporting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -408,7 +423,7 @@ get_header();
   <div class="feat-hero feat-hero-uc reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-      <h3>5. White-label mobile app with push.</h3>
+      <h3>White-label mobile app with push.</h3>
       <p>Branch managers and tellers live on their phones, not desktops. PolicyCentral.ai's Android and iOS apps go out under your organisation's branding, from your enterprise app store accounts. A Sunday-night cash-handling advisory push-notifies every branch manager, and lands before Monday's shift begins.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-cap-link">Explore Employee Portal &amp; Mobile App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -437,7 +452,7 @@ get_header();
   <div class="feat-hero feat-hero-uc feat-hero-uc-soft reversed reveal">
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
-      <h3>6. Personalisation per branch, correction per mistake.</h3>
+      <h3>Personalisation per branch, correction per message.</h3>
       <p>Mail-merge every circular by branch name, manager name, state-specific dates, or any HRMS field, in a single dispatch. And when a figure goes out wrong, which it will, recall or edit in one click. Resend-to-unread chases only those who haven't opened it. No apology thread, no confusion about which version is live.</p>
       <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-cap-link">Explore Publisher Controls <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
@@ -453,6 +468,42 @@ get_header();
           <span class="fv-recall-text">Figure off? Edit once. Resend only to those who haven't seen it.</span>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="uc-also">
+    <p class="uc-also-intro reveal">Quieter capabilities the distribution and regional ops teams lean on, ready on day one.</p>
+    <div class="uc-also-grid">
+      <a href="<?php echo esc_url(home_url('/feature/employee-portal/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Calendar View for Events <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Effective dates, regulator deadlines, and circular release schedules, all on one calendar branches can subscribe to.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>AI-Generated FAQs <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Auto-generate the questions every circular triggers, then publish answers alongside, in regional languages.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zm-18 0a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+        <h3>Audio Version of Circulars <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Branch managers listen on the commute. Reach the people who don't read at their desks.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd1">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Policy Search Analytics <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>See what branches search after a circular drops. The repeat queries reveal the clauses that need rewriting.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/publisher-controls/')); ?>" class="uc-also-card reveal rd2">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Automated Circular Expiry <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Set a sunset date; the circular auto-retires and archives. Old guidance never sits beside live guidance.</p>
+      </a>
+      <a href="<?php echo esc_url(home_url('/feature/security-compliance/')); ?>" class="uc-also-card reveal rd3">
+        <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>SSO &amp; Active Directory <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+        <p>Branch staff log in through your existing identity provider. No extra password to manage.</p>
+      </a>
     </div>
   </div>
 </div>

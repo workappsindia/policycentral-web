@@ -11,22 +11,34 @@ $cat_slug = get_query_var('pcb_category');
 if (!$cat_slug) $cat_slug = get_query_var('category_name');
 $term = $cat_slug ? get_term_by('slug', $cat_slug, 'category') : null;
 if (!$term) $term = get_queried_object();
+
+// Split the category name so the last word renders inside <em>, matching
+// the FAQ hero's "Frequently Asked <em>Questions</em>" pattern.
+$cat_name  = $term ? $term->name : 'Category';
+$name_bits = explode(' ', $cat_name);
+$last_word = array_pop($name_bits);
+$lead_part = implode(' ', $name_bits);
 ?>
 <main id="content" class="pcb-page">
 
-  <section class="pcb-hero pcb-hero--sm">
+  <!-- CATEGORY HERO (mirrors FAQ hero design) -->
+  <section class="faq-hero pcb-cat-hero">
+    <div class="hero-mesh" aria-hidden="true"></div>
     <div class="container">
-      <div class="pcb-hero-inner">
-        <nav class="pcb-breadcrumb" aria-label="Breadcrumb">
-          <a href="<?php echo esc_url(home_url('/blogs/')); ?>">Blogs</a>
-          <span aria-hidden="true">/</span>
-          <span><?php echo esc_html($term ? $term->name : 'Category'); ?></span>
-        </nav>
-        <h1 class="pcb-hero-title"><?php echo esc_html($term ? $term->name : 'Category'); ?></h1>
-        <?php if ($term && $term->description) : ?>
-          <p class="pcb-hero-sub"><?php echo esc_html($term->description); ?></p>
+      <a href="<?php echo esc_url(home_url('/blogs/')); ?>" class="faq-tag pcb-cat-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="11" height="11" style="margin-right:2px"><polyline points="15 18 9 12 15 6"/></svg>
+        All Blogs
+      </a>
+      <h1>
+        <?php if ($lead_part !== '') : ?>
+          <?php echo esc_html($lead_part); ?> <em><?php echo esc_html($last_word); ?></em>
+        <?php else : ?>
+          <em><?php echo esc_html($last_word); ?></em>
         <?php endif; ?>
-      </div>
+      </h1>
+      <?php if ($term && $term->description) : ?>
+        <p><?php echo esc_html($term->description); ?></p>
+      <?php endif; ?>
     </div>
   </section>
 

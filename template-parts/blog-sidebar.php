@@ -19,7 +19,10 @@ $show_toc = !empty($args['show_toc']);
 $toc_items = $show_toc ? pcb_build_toc() : array();
 
 $categories = get_categories(array(
-    'hide_empty' => false,
+    // hide_empty=true: categories with zero posts (e.g. Corporate Updates,
+    // SOPs, Branch Circulars, etc.) stay hidden in the sidebar until a
+    // post is published in them. The category terms still exist in the DB.
+    'hide_empty' => true,
     'orderby'    => 'count',
     'order'      => 'DESC',
     'exclude'    => array_filter(array(
