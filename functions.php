@@ -12,6 +12,9 @@ require_once get_template_directory() . '/includes/pcgpt.php';
 // Lead Intelligence System (non-blocking lead capture + Claude enrichment)
 require_once get_template_directory() . '/includes/lead-intelligence/loader.php';
 
+// Blog Module (Guest Authors CPT, URL rewrites, content enhancements)
+require_once get_template_directory() . '/includes/blog/loader.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -30,6 +33,23 @@ function policycentral_scripts() {
 
     // Main stylesheet
     wp_enqueue_style('policycentral-style', get_stylesheet_uri(), array('policycentral-fonts'), '1.0.17');
+
+    // Blog stylesheet (only on blog views + homepage for the "Latest from our blog" section)
+    if (is_singular('post') || is_page_template('page-blogs.php') || is_category() || is_tag() || is_search() ||
+        get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page()) {
+        wp_enqueue_style('policycentral-blog',
+            get_template_directory_uri() . '/blog-style.css',
+            array('policycentral-style'), '1.0.5'
+        );
+    }
+
+    // Blog JS (TOC scrollspy) — single posts only
+    if (is_singular('post')) {
+        wp_enqueue_script('policycentral-blog',
+            get_template_directory_uri() . '/js/blog.js',
+            array(), '1.0.0', true
+        );
+    }
 
     // Shared JS (all pages)
     wp_enqueue_script('policycentral-main',

@@ -1,0 +1,376 @@
+/* ══════════════════════════════════════════════════════════════
+   PolicyCentral Blog Stylesheet
+   Extends style.css — uses its CSS variables, fonts, buttons, gradients
+   Scoped with .pcb- prefix to avoid collisions
+   ══════════════════════════════════════════════════════════════ */
+
+/* ──────── Layout ──────── */
+/* No top padding on the page wrapper — the hero handles its own nav
+   clearance with calc(var(--nav-h) + N) so the gradient extends up
+   behind the fixed transparent nav (matches the main site pattern). */
+.pcb-page,.pcb-single{background:#fff}
+.pcb-wrap{padding-top:56px;padding-bottom:96px}
+.pcb-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px;align-items:start}
+.pcb-layout--single{grid-template-columns:minmax(0,1fr) 300px;gap:64px}
+@media (max-width:960px){
+  .pcb-layout,.pcb-layout--single{grid-template-columns:1fr;gap:48px}
+  .pcb-wrap{padding-top:36px;padding-bottom:64px}
+}
+
+/* ──────── Hero (index, category, search) ──────── */
+.pcb-hero{padding:calc(var(--nav-h) + 80px) 0 56px;background:linear-gradient(180deg,rgba(23,157,151,.06) 0%,rgba(124,58,237,.04) 50%,#fff 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.pcb-hero::before{content:'';position:absolute;top:-100px;left:-100px;width:360px;height:360px;background:radial-gradient(circle,rgba(23,157,151,.18),transparent);border-radius:50%;filter:blur(20px);pointer-events:none}
+.pcb-hero::after{content:'';position:absolute;bottom:-140px;right:-100px;width:380px;height:380px;background:radial-gradient(circle,rgba(124,58,237,.15),transparent);border-radius:50%;filter:blur(24px);pointer-events:none}
+.pcb-hero--sm{padding:calc(var(--nav-h) + 20px) 0 28px}
+
+/* /blogs/ index: gradient runs through the whole page, no hard line under the hero */
+.pcb-page--index{background:linear-gradient(180deg,rgba(23,157,151,.06) 0%,rgba(124,58,237,.04) 22%,rgba(23,157,151,.02) 55%,#fff 100%)}
+.pcb-page--index .pcb-hero{background:transparent;border-bottom:0}
+.pcb-hero-inner{max-width:880px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.pcb-hero-title{margin:0 0 16px;font-size:clamp(28px,3.6vw,44px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
+.pcb-hero-sub{font-size:clamp(16px,1.6vw,19px);color:var(--gray-600);line-height:1.6;max-width:640px;margin:0 auto}
+
+/* ──────── Breadcrumb ──────── */
+.pcb-breadcrumb{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-500);margin-bottom:14px}
+.pcb-breadcrumb a{color:var(--teal);font-weight:600;transition:color .15s var(--ease)}
+.pcb-breadcrumb a:hover{color:var(--indigo)}
+.pcb-breadcrumb span[aria-hidden]{color:var(--gray-300)}
+
+/* ══════════════════════════════════════════════════════════════
+   BLOG CARD
+   ══════════════════════════════════════════════════════════════ */
+.pcb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:32px}
+.pcb-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:820px){.pcb-grid--3{grid-template-columns:1fr}}
+
+.pcb-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease);display:flex;flex-direction:column}
+.pcb-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(23,157,151,.25)}
+.pcb-card-media{display:block;aspect-ratio:16/9;background:var(--gray-100);overflow:hidden;position:relative}
+.pcb-card-media img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.pcb-card:hover .pcb-card-media img{transform:scale(1.04)}
+.pcb-card-media-fallback{width:100%;height:100%;position:relative;overflow:hidden;display:block}
+.pcb-card-media-fallback .pcb-cover-svg{width:100%;height:100%;display:block;transition:transform .5s var(--ease)}
+.pcb-card:hover .pcb-card-media-fallback .pcb-cover-svg{transform:scale(1.04)}
+
+.pcb-card-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column;gap:10px}
+.pcb-card-cat{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);padding:5px 10px;background:var(--teal-lt);border-radius:var(--r-full);transition:all .15s var(--ease)}
+.pcb-card-cat:hover{background:var(--teal);color:#fff}
+.pcb-card-title{font-size:19px;line-height:1.35;font-weight:700;letter-spacing:-.01em;color:var(--gray-900);margin:0}
+.pcb-card-title a{color:inherit;transition:color .15s var(--ease)}
+.pcb-card-title a:hover{color:var(--teal)}
+.pcb-card-excerpt{color:var(--gray-600);font-size:14px;line-height:1.6;margin:0;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pcb-card-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12.5px;color:var(--gray-500);margin-top:auto;padding-top:8px}
+.pcb-card-author{font-weight:600;color:var(--gray-700)}
+a.pcb-card-author:hover{color:var(--teal)}
+.pcb-card-dot{color:var(--gray-300)}
+.pcb-card--compact .pcb-card-body{padding:18px 18px 20px}
+.pcb-card--compact .pcb-card-title{font-size:17px}
+
+/* ══════════════════════════════════════════════════════════════
+   SIDEBAR
+   ══════════════════════════════════════════════════════════════ */
+.pcb-sidebar{display:flex;flex-direction:column;gap:28px;position:sticky;top:calc(var(--nav-h) + 24px);max-height:calc(100vh - var(--nav-h) - 48px);overflow-y:auto;scrollbar-width:thin}
+.pcb-sidebar::-webkit-scrollbar{width:6px}
+.pcb-sidebar::-webkit-scrollbar-thumb{background:var(--gray-200);border-radius:3px}
+@media (max-width:960px){.pcb-sidebar{position:static;max-height:none;overflow:visible}}
+
+.pcb-side-block{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 20px 22px}
+.pcb-side-title{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500);margin:0 0 14px;font-family:'Plus Jakarta Sans',sans-serif}
+
+/* Search in sidebar */
+.pcb-side-search{position:relative;display:flex;align-items:center}
+.pcb-side-search input[type="search"]{width:100%;padding:11px 44px 11px 14px;border:1px solid var(--gray-200);border-radius:var(--r-md);font-family:inherit;font-size:14px;color:var(--gray-900);background:#fff;transition:border-color .15s var(--ease),box-shadow .15s var(--ease)}
+.pcb-side-search input[type="search"]:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(23,157,151,.15)}
+.pcb-side-search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:var(--gray-500);border-radius:var(--r-sm);transition:color .15s var(--ease),background .15s var(--ease)}
+.pcb-side-search button:hover{color:var(--teal);background:var(--teal-lt)}
+.pcb-side-search button svg{width:16px;height:16px}
+
+/* Categories list */
+.pcb-side-cats{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.pcb-side-cats a{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:var(--r-sm);color:var(--gray-700);font-size:14px;font-weight:500;transition:all .15s var(--ease)}
+.pcb-side-cats a:hover{background:var(--teal-lt);color:var(--teal)}
+.pcb-cat-count{font-size:12px;color:var(--gray-400);font-weight:600;background:var(--gray-100);padding:2px 8px;border-radius:var(--r-full);min-width:24px;text-align:center}
+.pcb-side-cats a:hover .pcb-cat-count{background:#fff;color:var(--teal)}
+
+/* Recent posts */
+.pcb-side-recent{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.pcb-side-recent a{display:flex;gap:12px;align-items:flex-start;color:var(--gray-900);transition:opacity .15s var(--ease)}
+.pcb-side-recent a:hover{opacity:.75}
+.pcb-recent-thumb{flex-shrink:0;width:56px;height:56px;border-radius:var(--r-sm);overflow:hidden;background:var(--gray-100)}
+.pcb-recent-thumb img{width:100%;height:100%;object-fit:cover}
+.pcb-recent-thumb--fallback{display:flex;align-items:center;justify-content:center;color:var(--gray-400);background:var(--gray-100)}
+.pcb-recent-thumb--fallback svg{width:24px;height:24px}
+/* Category-tinted recent-post icon thumbs */
+.pcb-recent-thumb--icon{display:flex;align-items:center;justify-content:center;color:#fff}
+.pcb-recent-thumb--icon svg{width:26px;height:26px}
+.pcb-recent-thumb--policy-management-software{background:linear-gradient(135deg,#179D97,#4338CA)}
+.pcb-recent-thumb--hr-policy-management{background:linear-gradient(135deg,#7C3AED,#179D97)}
+.pcb-recent-thumb--corporate-updates{background:linear-gradient(135deg,#4338CA,#7C3AED)}
+.pcb-recent-thumb--product-information{background:linear-gradient(135deg,#059669,#179D97)}
+.pcb-recent-thumb--sops{background:linear-gradient(135deg,#D97706,#059669)}
+.pcb-recent-thumb--branch-circulars{background:linear-gradient(135deg,#E11D48,#7C3AED)}
+.pcb-recent-thumb--business-req-docs{background:linear-gradient(135deg,#179D97,#059669)}
+.pcb-recent-thumb--default{background:linear-gradient(135deg,#179D97,#4338CA)}
+.pcb-recent-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.pcb-recent-title{font-size:13.5px;font-weight:600;line-height:1.4;color:var(--gray-800)}
+.pcb-recent-date{font-size:12px;color:var(--gray-500)}
+
+/* Table of contents */
+.pcb-side-toc .pcb-toc-list{list-style:none;padding:0;margin:0;counter-reset:toc;display:flex;flex-direction:column;gap:2px}
+.pcb-side-toc .pcb-toc-list li{counter-increment:toc}
+.pcb-toc-link{display:block;padding:8px 12px 8px 38px;border-radius:var(--r-sm);font-size:13.5px;line-height:1.45;color:var(--gray-600);position:relative;transition:all .15s var(--ease);border-left:2px solid transparent}
+.pcb-toc-link::before{content:counter(toc,decimal-leading-zero);position:absolute;left:12px;top:8px;font-size:11px;font-weight:700;color:var(--gray-400);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.05em}
+.pcb-toc-link:hover{background:var(--teal-lt);color:var(--teal)}
+.pcb-toc-link:hover::before{color:var(--teal)}
+.pcb-toc-link.is-active{background:var(--teal-lt);color:var(--teal);border-left-color:var(--teal)}
+.pcb-toc-link.is-active::before{color:var(--teal)}
+
+/* ══════════════════════════════════════════════════════════════
+   PAGINATION
+   ══════════════════════════════════════════════════════════════ */
+.pcb-pagination{margin-top:48px;display:flex;justify-content:center}
+.pcb-pagination ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pcb-pagination .page-numbers{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:var(--r-md);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:14px;color:var(--gray-700);background:#fff;transition:all .15s var(--ease)}
+.pcb-pagination .page-numbers:hover{border-color:var(--teal);color:var(--teal)}
+.pcb-pagination .page-numbers.current{background:linear-gradient(135deg,#179D97,#05162A);color:#fff;border-color:transparent}
+.pcb-pagination .page-numbers.dots{border:0;background:transparent;padding:0 4px}
+
+/* ══════════════════════════════════════════════════════════════
+   SINGLE POST
+   ══════════════════════════════════════════════════════════════ */
+/* Hero */
+.pcb-post-hero{position:relative;padding:calc(var(--nav-h) + 48px) 0 56px;overflow:hidden}
+.pcb-post-hero.has-image{padding:0;min-height:420px;display:flex;align-items:flex-end;color:#fff}
+.pcb-post-hero.has-image .pcb-post-hero-media{position:absolute;inset:0;z-index:0}
+.pcb-post-hero.has-image .pcb-post-hero-media img{width:100%;height:100%;object-fit:cover}
+.pcb-post-hero.has-image .pcb-post-hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,22,42,0) 0%,rgba(5,22,42,.3) 40%,rgba(5,22,42,.85) 100%);z-index:1}
+.pcb-post-hero.has-image .pcb-post-hero-inner{position:relative;z-index:2;padding:60px 0 48px}
+.pcb-post-hero.has-image .pcb-breadcrumb{color:rgba(255,255,255,.75)}
+.pcb-post-hero.has-image .pcb-breadcrumb a{color:#fff}
+.pcb-post-hero.has-image .pcb-post-title{color:#fff}
+.pcb-post-hero.has-image .pcb-byline-meta{color:rgba(255,255,255,.8)}
+.pcb-post-hero.has-image .pcb-byline-name,.pcb-post-hero.has-image .pcb-byline-name a{color:#fff}
+
+/* Gradient fallback hero */
+.pcb-post-hero.has-gradient{background:linear-gradient(135deg,rgba(23,157,151,.08) 0%,rgba(67,56,202,.06) 50%,rgba(124,58,237,.05) 100%);border-bottom:1px solid var(--border)}
+.pcb-post-hero-gradient{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.pcb-post-hero-gradient-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35}
+.pcb-post-hero-gradient-orb--1{width:420px;height:420px;background:radial-gradient(circle,#179D97,transparent);top:-120px;left:-80px}
+.pcb-post-hero-gradient-orb--2{width:320px;height:320px;background:radial-gradient(circle,#7C3AED,transparent);top:-40px;right:-60px}
+.pcb-post-hero-gradient-orb--3{width:260px;height:260px;background:radial-gradient(circle,#4338CA,transparent);bottom:-80px;left:35%}
+.pcb-post-hero.has-gradient .pcb-post-hero-inner{position:relative;z-index:1}
+
+.pcb-post-hero-inner{max-width:860px;margin:0 auto}
+.pcb-post-title{margin:18px 0 28px;font-size:clamp(30px,3.8vw,48px);line-height:1.15;font-weight:800}
+.pcb-post-meta{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pcb-byline{display:flex;align-items:center;gap:14px}
+.pcb-byline-photo{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.3)}
+.pcb-post-hero.has-gradient .pcb-byline-photo{border-color:#fff;box-shadow:var(--shadow-sm)}
+.pcb-byline-info{display:flex;flex-direction:column;gap:2px}
+.pcb-byline-name{font-weight:700;font-size:15px;color:var(--gray-900);font-family:'Plus Jakarta Sans',sans-serif}
+.pcb-byline-name a{color:inherit;transition:color .15s var(--ease)}
+.pcb-byline-name a:hover{color:var(--teal)}
+.pcb-byline-meta{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--gray-500)}
+.pcb-byline-meta span[aria-hidden]{color:var(--gray-300)}
+
+/* ──────── Article body ──────── */
+.pcb-article{max-width:760px}
+.pcb-article-body{font-family:'Manrope',sans-serif;color:var(--gray-800);font-size:17px;line-height:1.75;margin:32px 0}
+.pcb-article-body > *+*{margin-top:1.15em}
+.pcb-article-body h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(24px,2.8vw,30px);font-weight:800;line-height:1.2;letter-spacing:-.015em;margin-top:56px;margin-bottom:18px;color:var(--gray-900);scroll-margin-top:calc(var(--nav-h) + 20px)}
+.pcb-article-body h2::before{content:'';display:block;width:48px;height:3px;background:var(--grad-primary);border-radius:2px;margin-bottom:16px}
+.pcb-article-body h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:700;line-height:1.3;margin-top:40px;margin-bottom:12px;color:var(--gray-900);scroll-margin-top:calc(var(--nav-h) + 20px)}
+.pcb-article-body h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;margin-top:32px;margin-bottom:10px;color:var(--gray-900)}
+.pcb-article-body p{margin:0}
+.pcb-article-body a{color:var(--teal);font-weight:600;border-bottom:1px solid rgba(23,157,151,.3);transition:border-color .15s var(--ease)}
+.pcb-article-body a:hover{border-bottom-color:var(--teal)}
+.pcb-article-body strong{color:var(--gray-900);font-weight:700}
+.pcb-article-body em{font-style:italic}
+.pcb-article-body ul,.pcb-article-body ol{padding-left:28px}
+.pcb-article-body ul li,.pcb-article-body ol li{margin:8px 0;line-height:1.7}
+.pcb-article-body ul li::marker{color:var(--teal)}
+.pcb-article-body ol li::marker{color:var(--teal);font-weight:700}
+.pcb-article-body blockquote{margin:28px 0;padding:20px 24px;border-left:4px solid var(--teal);background:var(--teal-lt);border-radius:0 var(--r-md) var(--r-md) 0;font-size:18px;font-style:italic;color:var(--gray-700)}
+.pcb-article-body blockquote p{margin:0}
+.pcb-article-body code{background:var(--gray-100);padding:2px 8px;border-radius:4px;font-family:ui-monospace,SFMono-Regular,monospace;font-size:.9em;color:var(--gray-900)}
+.pcb-article-body pre{background:var(--gray-900);color:#f3f4f6;padding:20px 24px;border-radius:var(--r-md);overflow-x:auto;font-family:ui-monospace,SFMono-Regular,monospace;font-size:14px;line-height:1.6}
+.pcb-article-body pre code{background:transparent;color:inherit;padding:0}
+.pcb-article-body img,.pcb-article-body figure{max-width:100%;height:auto;border-radius:var(--r-md);margin:28px 0}
+.pcb-article-body table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px}
+.pcb-article-body table th,.pcb-article-body table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.pcb-article-body table th{background:var(--gray-50);font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;color:var(--gray-900)}
+.pcb-article-body hr{border:0;height:1px;background:var(--border);margin:40px 0}
+
+/* ══════════════════════════════════════════════════════════════
+   MIDDLE CTA (auto-injected in content)
+   ══════════════════════════════════════════════════════════════ */
+.pcb-cta-mid{margin:48px 0;padding:2px;background:linear-gradient(135deg,#179D97 0%,#4338CA 50%,#7C3AED 100%);border-radius:var(--r-xl);box-shadow:0 12px 40px rgba(23,157,151,.18),0 4px 16px rgba(67,56,202,.1)}
+.pcb-cta-mid-inner{background:#fff;border-radius:calc(var(--r-xl) - 2px);padding:36px 40px;display:flex;gap:28px;align-items:center;position:relative;overflow:hidden}
+.pcb-cta-mid-inner::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(23,157,151,.08),transparent);border-radius:50%;pointer-events:none}
+.pcb-cta-mid-icon{flex-shrink:0;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#179D97,#4338CA);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 24px rgba(23,157,151,.32);position:relative;z-index:1}
+.pcb-cta-mid-icon svg{width:24px;height:24px;margin-left:3px}
+.pcb-cta-mid-body{flex:1;position:relative;z-index:1}
+.pcb-cta-mid-eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;font-family:'Plus Jakarta Sans',sans-serif}
+.pcb-cta-mid-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;line-height:1.25;margin:0 0 8px;color:var(--gray-900);letter-spacing:-.01em}
+.pcb-cta-mid-title::before{display:none !important}
+.pcb-cta-mid-sub{font-size:14.5px;color:var(--gray-600);line-height:1.55;margin:0 0 18px}
+.pcb-cta-mid-btn{font-size:13px !important;padding:11px 22px !important}
+@media (max-width:680px){
+  .pcb-cta-mid-inner{flex-direction:column;text-align:center;padding:28px 24px;gap:20px}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   END CTA
+   ══════════════════════════════════════════════════════════════ */
+.pcb-cta-end{margin:56px 0 0;border-radius:var(--r-xl);background:linear-gradient(135deg,#0F172A 0%,#1E293B 60%,#334155 100%);padding:48px 44px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+.pcb-cta-end::before{content:'';position:absolute;top:-100px;left:-100px;width:360px;height:360px;background:radial-gradient(circle,rgba(23,157,151,.35),transparent);border-radius:50%;pointer-events:none}
+.pcb-cta-end::after{content:'';position:absolute;bottom:-120px;right:-120px;width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.3),transparent);border-radius:50%;pointer-events:none}
+.pcb-cta-end-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative;z-index:1}
+.pcb-cta-end-left{}
+.pcb-cta-end-eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5EEAD4;margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif}
+.pcb-cta-end-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(24px,2.6vw,32px);font-weight:800;line-height:1.2;margin:0 0 12px;color:#fff;letter-spacing:-.015em}
+.pcb-cta-end-title::before{display:none !important}
+.pcb-cta-end-title .g-text{background:linear-gradient(135deg,#5EEAD4,#A78BFA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pcb-cta-end-sub{font-size:15.5px;color:rgba(255,255,255,.78);line-height:1.6;margin:0 0 20px;max-width:520px}
+.pcb-cta-end-actions{display:flex;gap:12px;flex-wrap:wrap}
+.pcb-cta-end-actions .btn-secondary{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);backdrop-filter:blur(8px)}
+.pcb-cta-end-actions .btn-secondary:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);color:#fff}
+.pcb-cta-end-right{width:140px;height:140px}
+.pcb-cta-end-orb{width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,rgba(94,234,212,.15),rgba(167,139,250,.12));display:flex;align-items:center;justify-content:center;color:#fff;border:1px solid rgba(255,255,255,.15);box-shadow:inset 0 0 40px rgba(255,255,255,.05)}
+.pcb-cta-end-orb svg{width:70px;height:70px;opacity:.85}
+@media (max-width:720px){
+  .pcb-cta-end{padding:36px 28px}
+  .pcb-cta-end-grid{grid-template-columns:1fr;gap:28px}
+  .pcb-cta-end-right{display:none}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SOCIAL SHARE
+   ══════════════════════════════════════════════════════════════ */
+.pcb-share{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:20px 0;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pcb-share-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;margin-right:6px}
+.pcb-share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--border);border-radius:var(--r-full);font-size:13px;font-weight:600;color:var(--gray-700);transition:all .15s var(--ease);background:#fff}
+.pcb-share-btn svg{width:14px;height:14px}
+.pcb-share-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.pcb-share-btn--linkedin:hover{color:#0A66C2;border-color:#0A66C2}
+.pcb-share-btn--twitter:hover{color:#000;border-color:#000}
+.pcb-share-btn--email:hover{color:var(--teal);border-color:var(--teal)}
+
+/* ══════════════════════════════════════════════════════════════
+   TAGS
+   ══════════════════════════════════════════════════════════════ */
+.pcb-tags{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:40px 0 0}
+.pcb-tags-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-500);font-family:'Plus Jakarta Sans',sans-serif;margin-right:4px}
+.pcb-tag{display:inline-flex;padding:5px 11px;background:var(--gray-100);color:var(--gray-700);border-radius:var(--r-full);font-size:12.5px;font-weight:500;transition:all .15s var(--ease)}
+.pcb-tag:hover{background:var(--teal-lt);color:var(--teal)}
+
+/* ══════════════════════════════════════════════════════════════
+   AUTHOR BOX
+   ══════════════════════════════════════════════════════════════ */
+.pcb-author-box{margin:40px 0 0;padding:28px 28px 26px;background:var(--gray-50);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;gap:22px;align-items:flex-start}
+.pcb-author-box--inline{padding:16px;background:transparent;border:0}
+.pcb-author-photo{flex-shrink:0}
+.pcb-author-photo-img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:var(--shadow-sm)}
+.pcb-author-box--inline .pcb-author-photo-img{width:48px;height:48px;border-width:2px}
+.pcb-author-photo-initials{display:flex;align-items:center;justify-content:center;width:96px;height:96px;border-radius:50%;background:var(--grad-primary);color:#fff;font-weight:800;font-size:28px;font-family:'Plus Jakarta Sans',sans-serif;box-shadow:var(--shadow-sm)}
+.pcb-author-info{flex:1;min-width:0}
+.pcb-author-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:800;color:var(--gray-900);margin-bottom:2px;letter-spacing:-.01em}
+.pcb-author-name a{color:inherit;transition:color .15s var(--ease)}
+.pcb-author-name a:hover{color:var(--teal)}
+.pcb-author-role{font-size:13.5px;color:var(--teal);font-weight:600;margin-bottom:10px}
+.pcb-author-bio{font-size:14.5px;line-height:1.6;color:var(--gray-600);margin-bottom:14px}
+.pcb-author-bio p{margin:0 0 8px}
+.pcb-author-bio p:last-child{margin:0}
+.pcb-author-socials{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pcb-author-socials a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:var(--gray-500);background:#fff;border:1px solid var(--border);transition:all .15s var(--ease)}
+.pcb-author-socials a svg{width:15px;height:15px}
+.pcb-author-socials a:hover{color:var(--teal);border-color:var(--teal);transform:translateY(-1px)}
+.pcb-author-archive-link{width:auto !important;height:auto !important;padding:6px 12px;border-radius:var(--r-full) !important;font-size:12.5px;font-weight:600;background:var(--teal-lt) !important;color:var(--teal) !important;border:0 !important}
+.pcb-author-archive-link:hover{background:var(--teal) !important;color:#fff !important}
+@media (max-width:600px){
+  .pcb-author-box{flex-direction:column;align-items:flex-start}
+  .pcb-author-photo-img,.pcb-author-photo-initials{width:72px;height:72px;font-size:22px}
+}
+
+/* Author archive page hero */
+.pcb-author-hero{padding:calc(var(--nav-h) + 48px) 0 40px;background:linear-gradient(180deg,rgba(23,157,151,.06),rgba(124,58,237,.03) 50%,#fff);border-bottom:1px solid var(--border)}
+.pcb-author-hero-inner{display:flex;gap:32px;align-items:center;margin-top:18px}
+.pcb-author-page-photo .pcb-author-page-photo-img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:var(--shadow-md)}
+.pcb-author-page-photo .pcb-author-photo-initials{width:140px;height:140px;font-size:40px}
+.pcb-author-hero-body{flex:1;min-width:0}
+.pcb-author-hero-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,3.2vw,40px);font-weight:800;letter-spacing:-.02em;margin:0 0 6px;line-height:1.15}
+.pcb-author-hero-role{font-size:15px;color:var(--teal);font-weight:700;margin-bottom:12px}
+.pcb-author-hero-bio{font-size:16px;line-height:1.65;color:var(--gray-600);max-width:680px;margin-bottom:16px}
+.pcb-section-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:var(--gray-900);margin:0 0 28px;letter-spacing:-.01em}
+@media (max-width:720px){
+  .pcb-author-hero-inner{flex-direction:column;text-align:center}
+  .pcb-author-hero-bio{margin-left:auto;margin-right:auto}
+  .pcb-author-socials{justify-content:center}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RELATED POSTS
+   ══════════════════════════════════════════════════════════════ */
+.pcb-related{margin:64px 0 0;padding-top:48px;border-top:1px solid var(--border)}
+.pcb-related-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--gray-900);margin:0 0 28px;letter-spacing:-.01em}
+
+/* ══════════════════════════════════════════════════════════════
+   EMPTY STATE
+   ══════════════════════════════════════════════════════════════ */
+.pcb-empty{padding:64px 24px;text-align:center;background:var(--gray-50);border-radius:var(--r-lg)}
+.pcb-empty h2{font-size:24px;margin:0 0 8px;color:var(--gray-900)}
+.pcb-empty p{color:var(--gray-600);font-size:15px}
+.pcb-empty a{color:var(--teal);font-weight:600}
+
+/* ══════════════════════════════════════════════════════════════
+   ARTICLE CALLOUTS (formula, example)
+   ══════════════════════════════════════════════════════════════ */
+.pcb-formula,.pcb-example{margin:28px 0;padding:22px 26px;border-radius:var(--r-md);position:relative}
+.pcb-formula{background:linear-gradient(135deg,rgba(23,157,151,.08),rgba(23,157,151,.04));border:1px solid rgba(23,157,151,.2)}
+.pcb-formula-label,.pcb-example-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.pcb-formula-body{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;color:var(--gray-900);letter-spacing:-.01em;line-height:1.45}
+.pcb-example{background:linear-gradient(135deg,rgba(67,56,202,.05),rgba(124,58,237,.05));border:1px solid rgba(67,56,202,.15)}
+.pcb-example-label{color:var(--indigo)}
+.pcb-example-body{font-size:16px;color:var(--gray-800);line-height:1.55}
+.pcb-example-body strong{color:var(--indigo);font-size:1.1em;font-weight:800}
+
+/* ══════════════════════════════════════════════════════════════
+   ARTICLE FIGURES (inline images with captions)
+   ══════════════════════════════════════════════════════════════ */
+.pcb-figure{margin:36px 0;padding:0;display:block}
+.pcb-figure img{width:100%;height:auto;display:block;border-radius:var(--r-md);border:1px solid var(--gray-200);box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.pcb-figure figcaption{margin-top:12px;text-align:center;font-size:13.5px;color:var(--gray-500);line-height:1.5;font-style:italic}
+@media (max-width:680px){
+  .pcb-figure{margin:28px 0}
+  .pcb-figure figcaption{font-size:12.5px}
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HOMEPAGE BLOG SECTION
+   ══════════════════════════════════════════════════════════════ */
+.pcb-home-blog{padding:96px 0;background:linear-gradient(180deg,#fff 0%,var(--gray-50) 100%);border-top:1px solid var(--border)}
+.pcb-home-blog-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px}
+.pcb-home-blog-heading h2{margin:10px 0 8px}
+.pcb-home-blog-heading p{color:var(--gray-600);font-size:16px;max-width:520px;line-height:1.6}
+.pcb-home-blog-cta{flex-shrink:0}
+
+/* ══════════════════════════════════════════════════════════════
+   FAQ ACCORDION (auto-transformed from content)
+   ══════════════════════════════════════════════════════════════ */
+.pcb-faq{margin:24px 0 40px;display:flex;flex-direction:column;gap:10px}
+.pcb-faq-item{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;transition:border-color .2s var(--ease),box-shadow .2s var(--ease)}
+.pcb-faq-item[open]{border-color:rgba(23,157,151,.35);box-shadow:0 6px 20px rgba(23,157,151,.06)}
+.pcb-faq-item:hover{border-color:rgba(23,157,151,.35)}
+.pcb-faq-q{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:'Plus Jakarta Sans',sans-serif;font-size:16.5px;font-weight:700;color:var(--gray-900);line-height:1.4;letter-spacing:-.005em;user-select:none;transition:background .15s var(--ease)}
+.pcb-faq-q::-webkit-details-marker{display:none}
+.pcb-faq-q:hover{background:rgba(23,157,151,.04)}
+.pcb-faq-q-text{flex:1}
+.pcb-faq-q-icon{flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--teal-lt);color:var(--teal);transition:transform .25s var(--ease),background .15s var(--ease)}
+.pcb-faq-q-icon svg{width:16px;height:16px}
+.pcb-faq-item[open] .pcb-faq-q-icon{transform:rotate(180deg);background:var(--teal);color:#fff}
+.pcb-faq-a{padding:0 22px 22px;font-size:16px;line-height:1.7;color:var(--gray-700)}
+.pcb-faq-a p{margin:0}
+.pcb-faq-a p+p{margin-top:12px}
+.pcb-faq-a strong{color:var(--gray-900)}
+.pcb-faq-a a{color:var(--teal);font-weight:600;border-bottom:1px solid rgba(23,157,151,.3)}
+.pcb-faq-a a:hover{border-bottom-color:var(--teal)}

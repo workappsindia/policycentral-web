@@ -1,0 +1,105 @@
+<svg width="100%" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg-njp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a33"/>
+      <stop offset="55%" stop-color="#1a1b4d"/>
+      <stop offset="100%" stop-color="#2d1a56"/>
+    </linearGradient>
+    <radialGradient id="orb-teal-njp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#179D97" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#179D97" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-violet-njp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-amber-njp" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-njp" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#5EEAD4" stroke-width="0.35" opacity="0.18"/>
+    </pattern>
+    <linearGradient id="col-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="100%" stop-color="#179D97"/>
+    </linearGradient>
+    <linearGradient id="col-2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="col-3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="prog-njp" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5EEAD4"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <marker id="arr-njp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-njp-2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="680" height="400" fill="url(#bg-njp)"/>
+  <rect width="680" height="400" fill="url(#grid-njp)"/>
+
+  <circle cx="90" cy="70" r="200" fill="url(#orb-teal-njp)"/>
+  <circle cx="620" cy="340" r="240" fill="url(#orb-violet-njp)"/>
+  <circle cx="540" cy="90" r="130" fill="url(#orb-amber-njp)"/>
+
+  <path d="M 56 40 L 56 56 L 72 56" fill="none" stroke="#5EEAD4" stroke-width="1.5" opacity="0.85"/>
+  <path d="M 624 360 L 624 344 L 608 344" fill="none" stroke="#A78BFA" stroke-width="1.5" opacity="0.85"/>
+  <path d="M 624 40 L 624 56 L 608 56" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.55"/>
+  <path d="M 56 360 L 56 344 L 72 344" fill="none" stroke="#5EEAD4" stroke-width="1.5" opacity="0.45"/>
+
+  <rect x="40" y="40" width="4" height="106" rx="2" fill="#5EEAD4"/>
+  <rect x="40" y="148" width="4" height="106" rx="2" fill="#A78BFA"/>
+  <rect x="40" y="256" width="4" height="104" rx="2" fill="#F59E0B"/>
+
+  <text x="80" y="57" font-family="'Courier New', monospace" font-size="10" fill="#5EEAD4" opacity="0.85" letter-spacing="2">POLICY ONBOARDING &#8212; NEW JOINERS</text>
+
+  <text x="80" y="120" font-family="'Courier New', monospace" font-size="32" font-weight="700" fill="#ffffff" letter-spacing="-0.5">DAY 1 <tspan fill="#F59E0B">&#8594;</tspan> DAY 30</text>
+  <text x="80" y="158" font-family="'Courier New', monospace" font-size="14" fill="#5EEAD4" letter-spacing="1">Every policy. Every employee. Acknowledged.</text>
+
+  <rect x="80" y="192" width="148" height="110" rx="6" fill="rgba(94,234,212,0.08)" stroke="#5EEAD4" stroke-width="1" opacity="0.95"/>
+  <rect x="80" y="192" width="148" height="6" rx="2" fill="url(#col-1)"/>
+  <text x="154" y="218" font-family="'Courier New', monospace" font-size="10" fill="#5EEAD4" text-anchor="middle" letter-spacing="1" font-weight="700">DAYS 1&#8211;3</text>
+  <text x="154" y="240" font-family="'Courier New', monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">Essentials</text>
+  <text x="154" y="260" font-family="'Courier New', monospace" font-size="10" fill="#d9f7f5" text-anchor="middle" opacity="0.9">Code of Conduct</text>
+  <text x="154" y="276" font-family="'Courier New', monospace" font-size="10" fill="#d9f7f5" text-anchor="middle" opacity="0.9">IT &amp; Data Policy</text>
+  <text x="154" y="292" font-family="'Courier New', monospace" font-size="10" fill="#d9f7f5" text-anchor="middle" opacity="0.9">H&amp;S Basics</text>
+
+  <line x1="232" y1="247" x2="254" y2="247" stroke="#A78BFA" stroke-width="1.8" marker-end="url(#arr-njp)"/>
+
+  <rect x="258" y="192" width="148" height="110" rx="6" fill="rgba(167,139,250,0.08)" stroke="#A78BFA" stroke-width="1" opacity="0.95"/>
+  <rect x="258" y="192" width="148" height="6" rx="2" fill="url(#col-2)"/>
+  <text x="332" y="218" font-family="'Courier New', monospace" font-size="10" fill="#A78BFA" text-anchor="middle" letter-spacing="1" font-weight="700">WEEK 1&#8211;2</text>
+  <text x="332" y="240" font-family="'Courier New', monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">Role Policies</text>
+  <text x="332" y="260" font-family="'Courier New', monospace" font-size="10" fill="#e2d7ff" text-anchor="middle" opacity="0.9">Client Data</text>
+  <text x="332" y="276" font-family="'Courier New', monospace" font-size="10" fill="#e2d7ff" text-anchor="middle" opacity="0.9">Expense &amp; Finance</text>
+  <text x="332" y="292" font-family="'Courier New', monospace" font-size="10" fill="#e2d7ff" text-anchor="middle" opacity="0.9">POSH Awareness</text>
+
+  <line x1="410" y1="247" x2="432" y2="247" stroke="#F59E0B" stroke-width="1.8" marker-end="url(#arr-njp-2)"/>
+
+  <rect x="436" y="192" width="164" height="110" rx="6" fill="rgba(245,158,11,0.08)" stroke="#F59E0B" stroke-width="1" opacity="0.95"/>
+  <rect x="436" y="192" width="164" height="6" rx="2" fill="url(#col-3)"/>
+  <text x="518" y="218" font-family="'Courier New', monospace" font-size="10" fill="#F59E0B" text-anchor="middle" letter-spacing="1" font-weight="700">WEEK 2&#8211;4</text>
+  <text x="518" y="240" font-family="'Courier New', monospace" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="700">Full Policy Set</text>
+  <text x="518" y="260" font-family="'Courier New', monospace" font-size="10" fill="#fde7b8" text-anchor="middle" opacity="0.9">Leave Policies</text>
+  <text x="518" y="276" font-family="'Courier New', monospace" font-size="10" fill="#fde7b8" text-anchor="middle" opacity="0.9">Grievance Procedure</text>
+  <text x="518" y="292" font-family="'Courier New', monospace" font-size="10" fill="#fde7b8" text-anchor="middle" opacity="0.9">Jurisdiction Rules</text>
+
+  <rect x="80" y="328" width="520" height="5" rx="2.5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="80" y="328" width="345" height="5" rx="2.5" fill="url(#prog-njp)"/>
+  <circle cx="425" cy="330.5" r="5" fill="#F59E0B" stroke="#0a1a33" stroke-width="1.5"/>
+
+  <text x="80" y="352" font-family="'Courier New', monospace" font-size="10" fill="#5EEAD4" opacity="0.9" letter-spacing="1" font-weight="700">ACKNOWLEDGED <tspan fill="#ffffff" opacity="0.6">&#183; 66%</tspan></text>
+  <text x="530" y="352" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.4" letter-spacing="1">PENDING</text>
+
+  <text x="600" y="378" font-family="'Courier New', monospace" font-size="9" fill="#5EEAD4" opacity="0.55" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
