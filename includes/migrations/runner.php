@@ -59,6 +59,7 @@ function pcgpt_get_migrations() {
         26 => 'pcgpt_migration_026_refresh_compliance_fail_thumbnail_v2',
         27 => 'pcgpt_migration_027_refresh_policy_lifecycle_thumbnail_v2',
         28 => 'pcgpt_migration_028_set_use_case_page_excerpts',
+        29 => 'pcgpt_migration_029_cleanup_wp_defaults',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
