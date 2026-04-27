@@ -41,8 +41,10 @@ if (hamburger && navLinks) {
 document.querySelectorAll('.nav-item .nav-link').forEach(link => {
   link.addEventListener('click', (e) => {
     if (window.innerWidth <= 1024) {
-      e.preventDefault();
       const item = link.closest('.nav-item');
+      // If this nav-item has no dropdown (e.g. Blogs), let the link navigate normally.
+      if (!item.querySelector('.dropdown')) return;
+      e.preventDefault();
       const wasOpen = item.classList.contains('mob-open');
       document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('mob-open'));
       if (!wasOpen) item.classList.add('mob-open');
