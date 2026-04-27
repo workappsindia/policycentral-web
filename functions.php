@@ -171,6 +171,19 @@ function pc_picture($path, $alt, $width = null, $height = null, $class = '') {
     $webp_path = preg_replace('/\.(png|jpg|jpeg)$/i', '.webp', $path);
     $has_webp = file_exists($theme_dir . '/' . $webp_path);
 
+    // Auto-derive intrinsic dimensions from the source file if not passed.
+    // This prevents CLS — browsers can reserve the right space before load.
+    if ($width === null || $height === null) {
+        $full = $theme_dir . '/' . $path;
+        if (file_exists($full)) {
+            $size = @getimagesize($full);
+            if ($size) {
+                if ($width  === null) $width  = $size[0];
+                if ($height === null) $height = $size[1];
+            }
+        }
+    }
+
     $attrs = 'alt="' . esc_attr($alt) . '" loading="lazy"';
     if ($width) $attrs .= ' width="' . intval($width) . '"';
     if ($height) $attrs .= ' height="' . intval($height) . '"';
