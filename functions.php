@@ -393,6 +393,48 @@ function pc_ensure_og_image() {
 }
 
 // ═══════════════════════════════════════════════
+// NOINDEX / NOFOLLOW + SITEMAP EXCLUSION
+// /explore/ and /explore1/ are internal landing pages we don't want
+// indexed or surfaced via the sitemap. Targeted by slug so the rule
+// works on dev/prod without caring about post IDs.
+// ═══════════════════════════════════════════════
+
+function pc_is_noindex_slug() {
+    return is_page(array('explore', 'explore1'));
+}
+
+// 1. Modern WP robots filter — overrides core defaults.
+add_filter('wp_robots', function($robots) {
+    if (pc_is_noindex_slug()) {
+        $robots['noindex']  = true;
+        $robots['nofollow'] = true;
+        unset($robots['index'], $robots['follow']);
+    }
+    return $robots;
+});
+
+// 2. Rank Math frontend robots filter — Rank Math overrides core, so we
+//    must override Rank Math too. Returning noindex here also causes Rank
+//    Math to drop the page from its sitemap automatically.
+add_filter('rank_math/frontend/robots', function($robots) {
+    if (pc_is_noindex_slug()) {
+        return array('index' => 'noindex', 'follow' => 'nofollow');
+    }
+    return $robots;
+});
+
+// 3. Belt-and-suspenders: explicitly exclude these page IDs from the
+//    Rank Math sitemap, so even if the robots filter is bypassed they
+//    won't surface in /sitemap_index.xml.
+add_filter('rank_math/sitemap/exclude_post_ids', function($ids) {
+    foreach (array('explore', 'explore1') as $slug) {
+        $page = get_page_by_path($slug);
+        if ($page) $ids[] = (int) $page->ID;
+    }
+    return $ids;
+});
+
+// ═══════════════════════════════════════════════
 // CONTACT FORM: AJAX Handler
 // ═══════════════════════════════════════════════
 
