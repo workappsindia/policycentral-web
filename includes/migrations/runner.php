@@ -62,6 +62,18 @@ function pcgpt_get_migrations() {
         29 => 'pcgpt_migration_029_cleanup_wp_defaults',
         30 => 'pcgpt_migration_030_create_explore1_page',
         31 => 'pcgpt_migration_031_noindex_explore_pages',
+        32 => 'pcgpt_migration_032_create_indian_labour_codes_category',
+        33 => 'pcgpt_migration_033_seed_labour_codes_overview_blog_post',
+        34 => 'pcgpt_migration_034_seed_50_percent_basic_salary_blog_post',
+        35 => 'pcgpt_migration_035_seed_fixed_term_employee_blog_post',
+        36 => 'pcgpt_migration_036_seed_gig_worker_policy_blog_post',
+        37 => 'pcgpt_migration_037_seed_new_joiner_onboarding_blog_post',
+        38 => 'pcgpt_migration_038_seed_posh_policy_blog_post',
+        39 => 'pcgpt_migration_039_refresh_labour_codes_blog_links',
+        40 => 'pcgpt_migration_040_refresh_existing_blog_outbound_links',
+        41 => 'pcgpt_migration_041_refresh_hr_policies_blog_source_urls',
+        42 => 'pcgpt_migration_042_refresh_blog_sources_batch_2',
+        43 => 'pcgpt_migration_043_refresh_dpdp_act_link',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
