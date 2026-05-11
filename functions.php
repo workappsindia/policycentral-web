@@ -39,7 +39,7 @@ function policycentral_scripts() {
         get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page()) {
         wp_enqueue_style('policycentral-blog',
             get_template_directory_uri() . '/blog-style.css',
-            array('policycentral-style'), '1.0.5'
+            array('policycentral-style'), '1.0.6'
         );
     }
 

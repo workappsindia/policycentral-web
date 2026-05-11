@@ -69,6 +69,12 @@ class PCB_Icons {
                 'label'   => 'BUSINESS REQUIREMENTS',
                 'motif'   => 'blueprint',
             ),
+            'indian-labour-codes' => array(
+                'accents' => array('#FB923C', '#EA580C', '#9A3412'),
+                'orbs'    => array('#EA580C', '#7C3AED', '#5EEAD4'),
+                'label'   => 'INDIAN LABOUR CODES',
+                'motif'   => 'codes-stack',
+            ),
             'default' => array(
                 'accents' => array('#5EEAD4', '#179D97', '#0F766E'),
                 'orbs'    => array('#179D97', '#7C3AED', '#F59E0B'),
@@ -90,6 +96,7 @@ class PCB_Icons {
             'sops'                       => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8l1.5 1.5L13 7"/><path d="M9 14l1.5 1.5L13 13"/><path d="M15.5 8.5h.01M15.5 14.5h.01"/></svg>',
             'branch-circulars'           => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>',
             'business-req-docs'          => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16M3 14h6M15 14h6"/></svg>',
+            'indian-labour-codes'        => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="14" height="3" rx="0.5"/><rect x="5" y="9" width="14" height="3" rx="0.5"/><rect x="6" y="14" width="14" height="3" rx="0.5"/><rect x="7" y="19" width="14" height="2" rx="0.5"/></svg>',
             'default'                    => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
         );
         return $svgs[$category_slug] ?? $svgs['default'];
@@ -397,6 +404,45 @@ SVG;
   <circle cx="125" cy="75"  r="5" fill="#34D399"/>
   <circle cx="75"  cy="125" r="5" fill="#A78BFA"/>
   <circle cx="175" cy="175" r="5" fill="#F59E0B"/>
+</g>
+SVG;
+
+            case 'codes-stack':
+                return <<<SVG
+<defs>
+  <linearGradient id="{$u}-ms" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="{$A0}"/>
+    <stop offset="100%" stop-color="#FCD34D"/>
+  </linearGradient>
+</defs>
+<g transform="translate(92, 96)">
+  <text x="0" y="40" font-family="'Courier New', monospace" font-size="34" font-weight="700" fill="#ffffff" letter-spacing="-0.5">FOUR CODES</text>
+  <text x="0" y="78" font-family="'Courier New', monospace" font-size="34" font-weight="700" fill="url(#{$u}-ms)" letter-spacing="-0.5">ONE FRAMEWORK</text>
+  <text x="0" y="108" font-family="'Courier New', monospace" font-size="11" fill="{$A0}" opacity=".85" letter-spacing="1">29 laws replaced. Effective November 21, 2025.</text>
+</g>
+<!-- Right: 4 stacked code tabs -->
+<g transform="translate(430, 80)">
+  <!-- Bottom tab: OSH&WC -->
+  <rect x="14" y="142" width="180" height="38" rx="4" fill="rgba(154,52,18,0.25)" stroke="{$A1}" stroke-width="1.5" opacity=".75"/>
+  <text x="28" y="166" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="{$A0}" opacity=".7" letter-spacing="2">04</text>
+  <text x="58" y="166" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#ffffff" opacity=".75" letter-spacing="1">OSH &amp; WC</text>
+  <!-- Tab 3: Industrial Relations -->
+  <rect x="10" y="100" width="184" height="38" rx="4" fill="rgba(234,88,12,0.30)" stroke="{$A1}" stroke-width="1.5" opacity=".85"/>
+  <text x="24" y="124" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="{$A0}" opacity=".8" letter-spacing="2">03</text>
+  <text x="54" y="124" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#ffffff" opacity=".85" letter-spacing="1">INDUSTRIAL RELATIONS</text>
+  <!-- Tab 2: Social Security -->
+  <rect x="6" y="58" width="188" height="38" rx="4" fill="rgba(251,146,60,0.32)" stroke="{$A0}" stroke-width="1.8"/>
+  <text x="20" y="82" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="{$A0}" letter-spacing="2">02</text>
+  <text x="50" y="82" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#ffffff" opacity=".95" letter-spacing="1">SOCIAL SECURITY</text>
+  <!-- Tab 1: Wages (top, brightest) -->
+  <rect x="0" y="14" width="200" height="40" rx="5" fill="{$A0}" stroke="#FCD34D" stroke-width="1.5"/>
+  <text x="16" y="40" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#0a1a33" letter-spacing="2">01</text>
+  <text x="46" y="40" font-family="'Courier New', monospace" font-size="13" font-weight="700" fill="#0a1a33" letter-spacing="1">WAGES</text>
+  <!-- Date stamp top-right -->
+  <g transform="translate(140, 0)">
+    <rect x="0" y="0" width="62" height="14" rx="2" fill="#FCD34D" opacity=".95"/>
+    <text x="31" y="10" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="700" fill="#0a1a33" letter-spacing="1.5">NOV 2025</text>
+  </g>
 </g>
 SVG;
 

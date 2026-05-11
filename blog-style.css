@@ -129,11 +129,15 @@ a.pcb-card-author:hover{color:var(--teal)}
    PAGINATION
    ══════════════════════════════════════════════════════════════ */
 .pcb-pagination{margin-top:48px;display:flex;justify-content:center}
-.pcb-pagination ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.pcb-pagination .page-numbers{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:var(--r-md);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:14px;color:var(--gray-700);background:#fff;transition:all .15s var(--ease)}
-.pcb-pagination .page-numbers:hover{border-color:var(--teal);color:var(--teal)}
-.pcb-pagination .page-numbers.current{background:linear-gradient(135deg,#179D97,#05162A);color:#fff;border-color:transparent}
-.pcb-pagination .page-numbers.dots{border:0;background:transparent;padding:0 4px}
+.pcb-pagination ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:0;background:transparent}
+.pcb-pagination li{list-style:none;margin:0;padding:0}
+/* Scope chip styling to inner items only — WP's paginate_links() adds the
+   class="page-numbers" to the wrapping <ul> as well, which would draw a
+   border around the entire row if unscoped. */
+.pcb-pagination li .page-numbers{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:var(--r-md);font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:14px;color:var(--gray-700);background:#fff;transition:all .15s var(--ease);text-decoration:none}
+.pcb-pagination li .page-numbers:hover{border-color:var(--teal);color:var(--teal)}
+.pcb-pagination li .page-numbers.current{background:linear-gradient(135deg,#179D97,#05162A);color:#fff;border-color:transparent}
+.pcb-pagination li .page-numbers.dots{border:0;background:transparent;padding:0 4px}
 
 /* ══════════════════════════════════════════════════════════════
    SINGLE POST

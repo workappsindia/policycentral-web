@@ -23,14 +23,32 @@ if (!defined('ABSPATH')) exit;
 class PCB_Rewrite {
 
     // Bump this when rewrite rules change — triggers a flush
-    const VERSION = '1.0.0';
+    const VERSION = '1.2.0';
 
     public static function register() {
         add_action('init', array(__CLASS__, 'add_rewrite_rules'), 20);
         add_filter('post_link', array(__CLASS__, 'filter_post_link'), 10, 2);
         add_filter('query_vars', array(__CLASS__, 'add_query_vars'));
         add_action('pre_get_posts', array(__CLASS__, 'handle_blog_queries'));
+        add_filter('pre_handle_404', array(__CLASS__, 'skip_404_for_blogs_pagination'), 10, 2);
         add_action('init', array(__CLASS__, 'maybe_flush_rules'), 99);
+    }
+
+    /**
+     * Static WP pages do not natively support paged > 1 on their main query,
+     * so WP's 404 handler fires for /blogs/page/N/ even though our template
+     * (page-blogs.php) runs its own paginated WP_Query. Short-circuit the
+     * 404 so the template renders.
+     */
+    public static function skip_404_for_blogs_pagination($preempt, $wp_query) {
+        if ($preempt) return $preempt;
+        if (!$wp_query->is_main_query()) return $preempt;
+        $pagename = $wp_query->get('pagename');
+        $paged    = (int) $wp_query->get('paged');
+        if ($pagename === 'blogs' && $paged > 1) {
+            return true; // Tell WP not to 404 — page-blogs.php handles the paged query itself
+        }
+        return $preempt;
     }
 
     /**
@@ -38,6 +56,17 @@ class PCB_Rewrite {
      * Order matters — more specific rules must come BEFORE less specific ones.
      */
     public static function add_rewrite_rules() {
+
+        // BLOGS INDEX PAGINATION: /blogs/page/N/
+        // MUST be registered first within the 'top' bucket because
+        // add_rewrite_rule with 'top' appends inside that bucket — first
+        // call wins. Without this priority, the single-post rule below
+        // would match /blogs/page/2/ as category="page", name="2" and 404.
+        add_rewrite_rule(
+            '^blogs/page/([0-9]+)/?$',
+            'index.php?pagename=blogs&paged=$matches[1]',
+            'top'
+        );
 
         // AUTHOR ARCHIVE: /blogs/author/{slug}/ and paginated
         add_rewrite_rule(
