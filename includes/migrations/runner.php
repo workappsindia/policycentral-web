@@ -74,6 +74,7 @@ function pcgpt_get_migrations() {
         41 => 'pcgpt_migration_041_refresh_hr_policies_blog_source_urls',
         42 => 'pcgpt_migration_042_refresh_blog_sources_batch_2',
         43 => 'pcgpt_migration_043_refresh_dpdp_act_link',
+        44 => 'pcgpt_migration_044_invalidate_sitemap_cache',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
