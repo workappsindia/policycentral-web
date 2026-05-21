@@ -75,6 +75,12 @@ class PCB_Icons {
                 'label'   => 'INDIAN LABOUR CODES',
                 'motif'   => 'codes-stack',
             ),
+            'compliance-audit' => array(
+                'accents' => array('#67E8F9', '#0891B2', '#0E7490'),
+                'orbs'    => array('#0891B2', '#7C3AED', '#F59E0B'),
+                'label'   => 'COMPLIANCE & AUDIT',
+                'motif'   => 'checklist',
+            ),
             'default' => array(
                 'accents' => array('#5EEAD4', '#179D97', '#0F766E'),
                 'orbs'    => array('#179D97', '#7C3AED', '#F59E0B'),
@@ -97,6 +103,7 @@ class PCB_Icons {
             'branch-circulars'           => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>',
             'business-req-docs'          => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 4v16M3 14h6M15 14h6"/></svg>',
             'indian-labour-codes'        => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="14" height="3" rx="0.5"/><rect x="5" y="9" width="14" height="3" rx="0.5"/><rect x="6" y="14" width="14" height="3" rx="0.5"/><rect x="7" y="19" width="14" height="2" rx="0.5"/></svg>',
+            'compliance-audit'           => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1h2a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2V4a1 1 0 0 1 1-1z"/><path d="M9 4h6"/><path d="M9 12l2 2 4-4"/><path d="M9 17h6"/></svg>',
             'default'                    => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
         );
         return $svgs[$category_slug] ?? $svgs['default'];

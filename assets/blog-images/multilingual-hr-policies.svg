@@ -1,0 +1,124 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Decorative oversized script glyph watermarks (very low opacity texture) -->
+  <text x="380" y="130" font-family="'Noto Sans Devanagari', serif" font-size="180" fill="#179d97" opacity="0.045" text-anchor="middle">अ</text>
+  <text x="280" y="370" font-family="serif" font-size="110" fill="#179d97" opacity="0.05">ব</text>
+  <text x="660" y="380" font-family="serif" font-size="130" fill="#179d97" opacity="0.045" text-anchor="end">த</text>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">LANGUAGE + COMPLIANCE</text>
+
+  <!-- Title English -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">POLICY</text>
+
+  <!-- Translation connector between English and Hindi titles -->
+  <g opacity="0.45">
+    <line x1="210" y1="170" x2="232" y2="170" stroke="#179d97" stroke-width="1"/>
+    <path d="M 228 166 L 234 170 L 228 174" fill="none" stroke="#179d97" stroke-width="1" stroke-linejoin="round"/>
+    <text x="221" y="160" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" opacity="0.7" text-anchor="middle" letter-spacing="1">x5</text>
+  </g>
+
+  <!-- Title Hindi (Devanagari) -->
+  <text x="68" y="200" font-family="'Noto Sans Devanagari', 'Mangal', 'Kohinoor Devanagari', sans-serif" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">नीति</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">Translation as a compliance necessity</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="380" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: Stacked translated document cards (offset diagonally) -->
+  <!-- Back layer 5: Bengali -->
+  <rect x="92" y="296" width="118" height="26" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.5" opacity="0.22"/>
+  <text x="100" y="313" font-family="'Courier New', 'Noto Sans Bengali', monospace" font-size="10" fill="#7ececa" opacity="0.35">bn  নীতি</text>
+
+  <!-- Layer 4: Tamil -->
+  <rect x="86" y="290" width="118" height="26" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.5" opacity="0.4"/>
+  <text x="94" y="307" font-family="'Courier New', 'Noto Sans Tamil', monospace" font-size="10" fill="#7ececa" opacity="0.55">ta  கொள்கை</text>
+
+  <!-- Layer 3: Marathi -->
+  <rect x="80" y="284" width="118" height="26" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.6" opacity="0.6"/>
+  <text x="88" y="301" font-family="'Courier New', 'Noto Sans Devanagari', monospace" font-size="10" fill="#7ececa" opacity="0.7">mr  धोरण</text>
+
+  <!-- Layer 2: Hindi -->
+  <rect x="74" y="278" width="118" height="26" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.7" opacity="0.8"/>
+  <text x="82" y="295" font-family="'Courier New', 'Noto Sans Devanagari', monospace" font-size="10" fill="#7ececa" opacity="0.85">hi  नीति</text>
+
+  <!-- Front layer 1: English source -->
+  <rect x="68" y="272" width="118" height="26" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="1.1"/>
+  <text x="76" y="289" font-family="'Courier New', monospace" font-size="10" fill="#ffffff">en  POLICY</text>
+  <!-- "source" indicator dot on front layer -->
+  <circle cx="178" cy="285" r="2.5" fill="#179d97"/>
+  <circle cx="178" cy="285" r="5" fill="none" stroke="#179d97" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Source label below stack -->
+  <text x="68" y="345" font-family="'Courier New', monospace" font-size="9" fill="#7ececa" opacity="0.5" letter-spacing="1.5">POSH · STATE ACTS · DPDP · ATTESTATION</text>
+
+  <!-- Right-side card: LANGUAGE MATRIX -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <!-- Card header -->
+  <text x="478" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">LANGUAGE MATRIX</text>
+
+  <!-- Coverage donut ring (top-right of card) -->
+  <g transform="translate(594, 110)">
+    <circle r="10" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.18"/>
+    <circle r="10" fill="none" stroke="#179d97" stroke-width="1.5"
+            stroke-dasharray="20 43" stroke-dashoffset="0"
+            transform="rotate(-90)" opacity="0.8"/>
+    <text x="0" y="3" font-family="'Courier New', monospace" font-size="7" fill="#7ececa" text-anchor="middle" opacity="0.7">6/22</text>
+  </g>
+
+  <line x1="450" y1="136" x2="598" y2="136" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Language rows: native script (large) + ISO + status dot -->
+  <!-- Row 1: Hindi -->
+  <text x="450" y="162" font-family="'Noto Sans Devanagari', 'Mangal', sans-serif" font-size="14" fill="#ffffff" opacity="0.95">हिन्दी</text>
+  <text x="540" y="162" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.7">hi-IN</text>
+  <circle cx="608" cy="158" r="2.8" fill="#179d97"/>
+
+  <!-- Row 2: Marathi -->
+  <text x="450" y="184" font-family="'Noto Sans Devanagari', 'Mangal', sans-serif" font-size="14" fill="#ffffff" opacity="0.85">मराठी</text>
+  <text x="540" y="184" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.6">mr-IN</text>
+  <circle cx="608" cy="180" r="2.8" fill="#179d97" opacity="0.9"/>
+
+  <!-- Row 3: Tamil -->
+  <text x="450" y="206" font-family="'Noto Sans Tamil', sans-serif" font-size="14" fill="#ffffff" opacity="0.75">தமிழ்</text>
+  <text x="540" y="206" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5">ta-IN</text>
+  <circle cx="608" cy="202" r="2.8" fill="#179d97" opacity="0.75"/>
+
+  <!-- Row 4: Telugu -->
+  <text x="450" y="228" font-family="'Noto Sans Telugu', sans-serif" font-size="14" fill="#ffffff" opacity="0.6">తెలుగు</text>
+  <text x="540" y="228" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.42">te-IN</text>
+  <circle cx="608" cy="224" r="2.8" fill="#179d97" opacity="0.55"/>
+
+  <!-- Row 5: Bengali (pending — hollow ring) -->
+  <text x="450" y="250" font-family="'Noto Sans Bengali', sans-serif" font-size="14" fill="#ffffff" opacity="0.45">বাংলা</text>
+  <text x="540" y="250" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.3">bn-IN</text>
+  <circle cx="608" cy="246" r="2.4" fill="none" stroke="#179d97" stroke-width="0.9" opacity="0.55"/>
+
+  <!-- Row 6: Gujarati (pending — hollow ring) -->
+  <text x="450" y="272" font-family="'Noto Sans Gujarati', sans-serif" font-size="14" fill="#ffffff" opacity="0.32">ગુજરાતી</text>
+  <text x="540" y="272" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.22">gu-IN</text>
+  <circle cx="608" cy="268" r="2.4" fill="none" stroke="#179d97" stroke-width="0.9" opacity="0.4"/>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
