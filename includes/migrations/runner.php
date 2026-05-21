@@ -75,6 +75,18 @@ function pcgpt_get_migrations() {
         42 => 'pcgpt_migration_042_refresh_blog_sources_batch_2',
         43 => 'pcgpt_migration_043_refresh_dpdp_act_link',
         44 => 'pcgpt_migration_044_invalidate_sitemap_cache',
+        45 => 'pcgpt_migration_045_seed_mansi_kumar_author',
+        46 => 'pcgpt_migration_046_create_compliance_audit_category',
+        47 => 'pcgpt_migration_047_seed_banks_nbfcs_blog_post',
+        48 => 'pcgpt_migration_048_seed_multilingual_policies_blog_post',
+        49 => 'pcgpt_migration_049_seed_policy_audit_checklist_blog_post',
+        50 => 'pcgpt_migration_050_seed_policy_version_control_blog_post',
+        51 => 'pcgpt_migration_051_invalidate_sitemap_cache_after_compliance_batch',
+        52 => 'pcgpt_migration_052_refresh_mansi_kumar_bio',
+        53 => 'pcgpt_migration_053_refresh_compliance_batch_faqs',
+        54 => 'pcgpt_migration_054_swap_version_control_thumbnail',
+        55 => 'pcgpt_migration_055_swap_multilingual_thumbnail',
+        56 => 'pcgpt_migration_056_enable_side_image_hero_policy_audit',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

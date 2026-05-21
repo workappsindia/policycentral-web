@@ -1,0 +1,81 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow tag -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">LEGAL + GOVERNANCE</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">POLICY</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">VERSIONS</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">How version control prevents legal risk</text>
+
+  <!-- Divider line -->
+  <line x1="68" y1="268" x2="320" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Commit graph (replaces fading squares) -->
+  <line x1="72" y1="290" x2="184" y2="290" stroke="#179d97" stroke-width="1" opacity="0.4"/>
+  <circle cx="72" cy="290" r="3.5" fill="#179d97" opacity="0.18"/>
+  <circle cx="100" cy="290" r="3.5" fill="#179d97" opacity="0.3"/>
+  <circle cx="128" cy="290" r="3.5" fill="#179d97" opacity="0.5"/>
+  <circle cx="156" cy="290" r="3.5" fill="#179d97" opacity="0.75"/>
+  <circle cx="184" cy="290" r="5" fill="#179d97" opacity="1"/>
+  <!-- Pulse ring on latest commit -->
+  <circle cx="184" cy="290" r="8" fill="none" stroke="#179d97" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Bottom keyword strip -->
+  <text x="68" y="318" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">AUDIT TRAIL · DIFF · ROLLBACK · ATTRIBUTION</text>
+
+  <!-- Right-side card: VERSION HISTORY -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <!-- Card header -->
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">VERSION HISTORY</text>
+
+  <line x1="450" y1="136" x2="598" y2="136" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Version entries: each row has a version tag (teal) + change note (white, fading) -->
+  <!-- Row 1: current -->
+  <text x="450" y="160" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="1">v3.2</text>
+  <text x="486" y="160" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.9">current</text>
+  <circle cx="608" cy="156" r="2.5" fill="#179d97" opacity="1"/>
+
+  <!-- Row 2 -->
+  <text x="450" y="182" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="0.85">v3.1</text>
+  <text x="486" y="182" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.75">DPDP update</text>
+
+  <!-- Row 3 -->
+  <text x="450" y="204" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="0.7">v3.0</text>
+  <text x="486" y="204" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.6">POSH amendment</text>
+
+  <!-- Row 4 -->
+  <text x="450" y="226" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="0.55">v2.4</text>
+  <text x="486" y="226" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.45">annual review</text>
+
+  <!-- Row 5 -->
+  <text x="450" y="248" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="0.4">v2.0</text>
+  <text x="486" y="248" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.3">structural rewrite</text>
+
+  <!-- Row 6 -->
+  <text x="450" y="270" font-family="'Courier New', monospace" font-size="11" fill="#179d97" opacity="0.25">v1.0</text>
+  <text x="486" y="270" font-family="'Courier New', monospace" font-size="11" fill="#ffffff" opacity="0.18">baseline</text>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
