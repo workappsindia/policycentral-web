@@ -20,12 +20,16 @@ jobs:
           source: "*.php,*.css,*.svg,*.png,*.ico,*.webmanifest,js/*,images/*,includes/*,assets/*,template-parts/*"
           target: /opt/bitnami/wordpress/wp-content/themes/policycentral/
 
-      - name: Fix permissions and clear cache
+      - name: Fix permissions, run migrations, clear cache
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.PROD_SERVER_HOST }}
           username: ${{ secrets.PROD_SERVER_USER }}
           key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
           script: |
+            set -e
             sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/themes/policycentral/
             sudo chmod -R 755 /opt/bitnami/wordpress/wp-content/themes/policycentral/
+            cd /opt/bitnami/wordpress
+            sudo wp eval 'pcgpt_run_migrations();' --allow-root
+            echo "pcgpt_migration_version=$(sudo wp option get pcgpt_migration_version --allow-root)"
