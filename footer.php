@@ -31,6 +31,10 @@
         <li><a href="<?php echo esc_url(home_url('/use-cases/sops/')); ?>">SOPs</a></li>
         <li><a href="<?php echo esc_url(home_url('/use-cases/branch-circulars/')); ?>">Branch Circulars</a></li>
         <li><a href="<?php echo esc_url(home_url('/use-cases/business-requirement-docs/')); ?>">Business Req. Docs</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/hr-employee-governance/')); ?>">HR &amp; Employee Governance</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/retail-operations/')); ?>">Retail Operations</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/compliance-legal/')); ?>">Compliance &amp; Legal</a></li>
+        <li><a href="<?php echo esc_url(home_url('/use-cases/it-security/')); ?>">IT &amp; Security</a></li>
       </ul>
     </div>
     <div class="foot-col">

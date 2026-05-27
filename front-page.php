@@ -1667,6 +1667,58 @@
         </ul>
       </div>
     </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/hr-employee-governance/')); ?>" class="uccard reveal rd1">
+      <div class="uc-bar" style="background:linear-gradient(90deg,#C026D3,#A21CAF)"></div>
+      <div class="uc-in">
+        <div class="uc-icon" style="background:rgba(192,38,211,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#C026D3" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>HR &amp; Employee Governance</h3>
+        <p>Employee handbooks, joining forms, POSH training and L&amp;D content, delivered to every employee, freelancer, and contractor with proof of acknowledgement.</p>
+        <ul class="uc-bullets">
+          <li><div class="ub-dot" style="background:#C026D3"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Mobile-native forms</li>
+          <li><div class="ub-dot" style="background:#C026D3"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Quiz-backed comprehension</li>
+          <li><div class="ub-dot" style="background:#C026D3"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Portable compliance record</li>
+        </ul>
+      </div>
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/retail-operations/')); ?>" class="uccard reveal rd2">
+      <div class="uc-bar" style="background:linear-gradient(90deg,#E11D48,#BE123C)"></div>
+      <div class="uc-in">
+        <div class="uc-icon" style="background:rgba(225,29,72,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Retail Operations</h3>
+        <p>Store-level circulars, pricing protocols, hallmarking SOPs and vendor advisories, targeted by region, store, and partner with acknowledgement on record.</p>
+        <ul class="uc-bullets">
+          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Store-level targeting</li>
+          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Vendor &amp; partner portal</li>
+          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Regional languages</li>
+        </ul>
+      </div>
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/compliance-legal/')); ?>" class="uccard reveal rd3">
+      <div class="uc-bar" style="background:linear-gradient(90deg,#1D4ED8,#1E40AF)"></div>
+      <div class="uc-in">
+        <div class="uc-icon" style="background:rgba(29,78,216,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/></svg></div>
+        <h3>Compliance &amp; Legal</h3>
+        <p>SEBI circulars, SID updates, KYC norms and suitability training, cascaded to distributors, RTAs and branch RMs with inspection-ready evidence.</p>
+        <ul class="uc-bullets">
+          <li><div class="ub-dot" style="background:#1D4ED8"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>ARN-aware distribution</li>
+          <li><div class="ub-dot" style="background:#1D4ED8"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>E-signed acknowledgement</li>
+          <li><div class="ub-dot" style="background:#1D4ED8"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Inspection-ready export</li>
+        </ul>
+      </div>
+    </a>
+    <a href="<?php echo esc_url(home_url('/use-cases/it-security/')); ?>" class="uccard reveal rd1">
+      <div class="uc-bar" style="background:linear-gradient(90deg,#6D28D9,#5B21B6)"></div>
+      <div class="uc-in">
+        <div class="uc-icon" style="background:rgba(109,40,217,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#6D28D9" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>IT &amp; Security</h3>
+        <p>Acceptable-use policies, source code, runbooks and restricted reports, with role-bounded access, screenshot protection and a tamper-evident audit trail.</p>
+        <ul class="uc-bullets">
+          <li><div class="ub-dot" style="background:#6D28D9"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Role-bounded access</li>
+          <li><div class="ub-dot" style="background:#6D28D9"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Time-bounded contractors</li>
+          <li><div class="ub-dot" style="background:#6D28D9"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Tamper-evident audit</li>
+        </ul>
+      </div>
+    </a>
   </div>
 </div>
 </section>

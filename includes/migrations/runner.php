@@ -87,6 +87,7 @@ function pcgpt_get_migrations() {
         54 => 'pcgpt_migration_054_swap_version_control_thumbnail',
         55 => 'pcgpt_migration_055_swap_multilingual_thumbnail',
         56 => 'pcgpt_migration_056_enable_side_image_hero_policy_audit',
+        57 => 'pcgpt_migration_057_create_new_use_case_pages',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
