@@ -101,7 +101,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </li>
     <li class="nav-item">
-      <a href="<?php echo esc_url(home_url('/blogs/')); ?>" class="nav-link">Blogs</a>
+      <a href="<?php echo esc_url(home_url('/blogs/')); ?>" class="nav-link">Resources<svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="4 6 8 10 12 6"/></svg></a>
+      <div class="dropdown dw">
+        <a href="<?php echo esc_url(home_url('/blogs/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><div class="di-title">Blogs</div><div class="di-sub">Guides &amp; insights on policy management</div></div></a>
+        <a href="<?php echo esc_url(home_url('/compliance/')); ?>" class="di"><div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/></svg></div><div><div class="di-title">Compliance Intelligence</div><div class="di-sub">Decoded RBI rules &amp; enforcement tracker</div></div></a>
+      </div>
     </li>
     <li class="mob-nav-cta">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary" style="width:100%;justify-content:center">Contact Us</a>

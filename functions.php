@@ -15,6 +15,9 @@ require_once get_template_directory() . '/includes/lead-intelligence/loader.php'
 // Blog Module (Guest Authors CPT, URL rewrites, content enhancements)
 require_once get_template_directory() . '/includes/blog/loader.php';
 
+// Compliance Intelligence (RBI rule decodes + enforcement tracker at /compliance)
+require_once get_template_directory() . '/includes/compliance/loader.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -41,6 +44,22 @@ function policycentral_scripts() {
             get_template_directory_uri() . '/blog-style.css',
             array('policycentral-style'), '1.0.7'
         );
+    }
+
+    // Compliance Intelligence stylesheet (section views + CPT singles)
+    if (function_exists('pcc_is_compliance_view') && pcc_is_compliance_view()) {
+        wp_enqueue_style('policycentral-compliance',
+            get_template_directory_uri() . '/includes/compliance/assets/compliance.css',
+            array('policycentral-style'), '1.0.3'
+        );
+
+        // Enforcement tracker filtering (tracker view only)
+        if (get_query_var('pcc_view') === 'tracker') {
+            wp_enqueue_script('policycentral-compliance-tracker',
+                get_template_directory_uri() . '/includes/compliance/assets/compliance-tracker.js',
+                array(), '1.0.0', true
+            );
+        }
     }
 
     // Blog JS (TOC scrollspy) — single posts only

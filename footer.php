@@ -58,6 +58,7 @@
         <li><a href="<?php echo esc_url(home_url('/team/')); ?>">Team</a></li>
         <li><a href="<?php echo esc_url(home_url('/culture/')); ?>">Our Culture</a></li>
         <li><a href="<?php echo esc_url(home_url('/blogs/')); ?>">Blog</a></li>
+        <li><a href="<?php echo esc_url(home_url('/compliance/')); ?>">Compliance Intelligence</a></li>
         <li><a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact Us</a></li>
       </ul>
     </div>
