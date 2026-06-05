@@ -329,7 +329,7 @@ get_header();
     </div>
     <div class="uc-vignette-content">
       <p>A production house in Mumbai or Hyderabad runs back-to-back projects through the year. Each new shoot pulls in 200 to 400 freelancers, actors, technicians, assistants, vendors, many of whom haven't worked with the company before. They start tomorrow. The handbook, the on-set conduct code, the wage compliance summary, the POSH policy with the IC member contacts, the per-diem and food-hygiene rules, all need to reach them before they clock in.</p>
-      <p><strong>Email lists from the line producer don't sync to HR. PDFs sent via WhatsApp aren't acknowledgements. The IC committee cannot prove a crew member received the POSH policy if the only record is a forward on someone's phone.</strong> What the show needs is a platform that the line producer can target by production, by department, by role, that auto-includes the next freelancer who signs on tomorrow morning, in the language they read.</p>
+      <p><strong>Email lists from the line producer don't sync to HR. PDFs sent via WhatsApp aren't acknowledgements. The IC committee cannot prove a crew member received the POSH policy if the only record is a forward on someone's phone.</strong> What the show needs is a platform that the line producer can target by production, by department, by role, by gender, that auto-includes the next freelancer who signs on tomorrow morning, in the language they read.</p>
       <p>That's what HR &amp; Employee Governance on PolicyCentral.ai looks like. The handbook, the POSH content, the joining forms, the L&amp;D modules, all hosted on one platform, all delivered, all acknowledged, all auditable per shoot.</p>
     </div>
   </div>
@@ -368,7 +368,7 @@ get_header();
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
       <h3>HR forms and templates, completed on the phone.</h3>
-      <p>Joining form, KYC, bank details, PAN/Aadhaar consent, NDA, equipment-issue receipt, every form rendered as a mobile-native short flow with e-signature. No paper, no scanned PDFs lost in WhatsApp, no follow-ups two weeks later asking for the missing form. The new joiner finishes the kit before they reach base camp.</p>
+      <p>Joining form, KYC, bank details, Aadhaar consent, NDA, equipment-issue receipt, every form rendered as a mobile-native short flow with e-signature. No paper, no scanned PDFs lost in WhatsApp, no follow-ups two weeks later asking for the missing form. The new joiner finishes the kit before they reach base camp.</p>
       <a href="<?php echo esc_url(home_url('/feature/employee-interaction/')); ?>" class="uc-cap-link">Explore Forms &amp; E-signatures <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">

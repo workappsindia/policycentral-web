@@ -266,7 +266,7 @@ get_header();
             <div class="ro-design-icon">&#x1F48E;</div>
             <div class="ro-design-body">
               <div class="ro-design-name">New release &middot; Anantha Bridal Collection</div>
-              <div class="ro-design-meta">Live for 78 stores &middot; Karigar spec pushed to bench &middot; pricing tiers attached</div>
+              <div class="ro-design-meta">Live for 78 stores &middot; Artisan spec pushed to bench &middot; pricing tiers attached</div>
             </div>
           </div>
         </div>
@@ -278,7 +278,7 @@ get_header();
           <h3>Bench team</h3>
         </div>
         <div class="ro-bench-row"><span>Hallmarking SOP v3.2</span><strong>41/42</strong></div>
-        <div class="ro-bench-row"><span>Karigar spec, new</span><strong>38/42</strong></div>
+        <div class="ro-bench-row"><span>Artisan spec, new</span><strong>38/42</strong></div>
         <div class="ro-bench-row"><span>BIS revision note</span><strong>42/42</strong></div>
       </div>
 
@@ -287,7 +287,7 @@ get_header();
           <div class="ro-float-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
           <h3>Vendor consortium</h3>
         </div>
-        <div class="ro-vendor-row"><span class="ro-vendor-dot"></span><span class="ro-vendor-name">Mysuru Karigar group</span><span class="ro-vendor-stat">12/14</span></div>
+        <div class="ro-vendor-row"><span class="ro-vendor-dot"></span><span class="ro-vendor-name">Mysuru Artisan group</span><span class="ro-vendor-stat">12/14</span></div>
         <div class="ro-vendor-row"><span class="ro-vendor-dot"></span><span class="ro-vendor-name">Coimbatore casting unit</span><span class="ro-vendor-stat">8/9</span></div>
         <div class="ro-vendor-row"><span class="ro-vendor-dot pending"></span><span class="ro-vendor-name">Gem supplier &middot; SJP</span><span class="ro-vendor-stat">2/3</span></div>
       </div>
@@ -300,7 +300,7 @@ get_header();
 <section class="uc-scene">
 <div class="container">
   <div class="uc-scene-inner reveal">
-    <h2>When 80 store managers and 40 karigars need <span class="g-text">the same story today.</span></h2>
+    <h2>When 80 store managers and 40 artisans need <span class="g-text">the same story today.</span></h2>
     <p>A new collection drops on Friday, but the hallmarking certificate format changed last week. A festival pricing rule applies to the Tamil Nadu stores but not Kerala. A regulatory advisory on high-value cash KYC needs to reach every store manager before opening today. And the manufacturing partners, the goldsmiths, the gem suppliers, the casting unit, have to align on the same design specs the merchandiser signed off last night.</p>
     <p>A jewellery business runs on trust, craft, and tight margins. Retail Operations on PolicyCentral.ai gives store managers, the bench, and partner suppliers one source of truth, one acknowledgement trail, one platform, without the WhatsApp chaos.</p>
   </div>
@@ -313,7 +313,7 @@ get_header();
   <div class="uc-vignette-card reveal">
     <div class="uc-vignette-side">
       <span class="uc-vignette-kicker">At a south India jewellery chain</span>
-      <h3>Eighty retail stores. Forty partner karigars. One source of truth.</h3>
+      <h3>Eighty retail stores. Forty partner artisans. One source of truth.</h3>
     </div>
     <div class="uc-vignette-content">
       <p>A jewellery business headquartered in Tamil Nadu or Karnataka with seventy to eighty showrooms across the four southern states, a central manufacturing plant, and a network of partner goldsmiths and gem houses. Every week, dozens of communications need to land precisely: a new design release with pricing, a regulatory KYC advisory for cash transactions over a defined threshold, a hallmarking SOP update from BIS, a festival promo limited to the Karnataka stores, a vendor circular to the casting unit about a quality issue.</p>
@@ -335,7 +335,7 @@ get_header();
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
       <h3>Store-level targeting, partner-level distribution.</h3>
-      <p>Push a circular to every Tamil Nadu store, or to the bridal showroom in Coimbatore, or to the fourteen partner karigars in the Mysuru consortium. AD- or HRMS-synced audience lists update automatically when a store opens, when a partner joins, when a manager transfers. The targeting stays accurate without manual upkeep.</p>
+      <p>Push a circular to every Tamil Nadu store, or to the bridal showroom in Coimbatore, or to the fourteen partner artisans in the Mysuru consortium. AD- or HRMS-synced audience lists update automatically when a store opens, when a partner joins, when a manager transfers. The targeting stays accurate without manual upkeep.</p>
       <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Distribution &amp; Targeting <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
@@ -371,16 +371,16 @@ get_header();
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
       <h3>Tamil, Malayalam, Kannada, Telugu, at the showroom counter.</h3>
-      <p>A new hallmarking SOP auto-translated into the regional language each store reads first. A festival pricing chart in Tamil for Chennai, in Kannada for Bengaluru. A vendor circular in the language the karigar uses. Comprehension up, mis-pricing down, the showroom staff stop translating in their head and start serving the customer in front of them.</p>
+      <p>A new hallmarking SOP auto-translated into the regional language each store reads first. A festival pricing chart in Tamil for Chennai, in Kannada for Bengaluru. A vendor circular in the language the artisan uses. Comprehension up, mis-pricing down, the showroom staff stop translating in their head and start serving the customer in front of them.</p>
       <a href="<?php echo esc_url(home_url('/feature/ai-intelligence/')); ?>" class="uc-cap-link">Explore Translation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
       <div class="fv-rolang">
         <div class="fv-rol-title">Languages auto-prepared <span class="fv-rol-badge">4 SOUTH</span></div>
-        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Tamil</div><div class="fv-rol-sample">அக்ஷய திருதியை விலை நிர்ணய நெறிமுறை</div></div><span class="fv-rol-done">READY</span></div>
-        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Malayalam</div><div class="fv-rol-sample">അക്ഷയ തൃതീയ വില സംബന്ധിച്ച പ്രോട്ടോക്കോൾ</div></div><span class="fv-rol-done">READY</span></div>
-        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Kannada</div><div class="fv-rol-sample">ಅಕ್ಷಯ ತೃತೀಯಾ ಬೆಲೆ ಪ್ರೋಟೋಕಾಲ್</div></div><span class="fv-rol-done">READY</span></div>
-        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Telugu</div><div class="fv-rol-sample">అక్షయ తృతీయ ధర ప్రోటోకాల్</div></div><span class="fv-rol-done">READY</span></div>
+        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Tamil</div></div><span class="fv-rol-done">READY</span></div>
+        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Malayalam</div></div><span class="fv-rol-done">READY</span></div>
+        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Kannada</div></div><span class="fv-rol-done">READY</span></div>
+        <div class="fv-rol-row"><span class="fv-rol-flag">&#x1F1EE;&#x1F1F3;</span><div class="fv-rol-body"><div class="fv-rol-name">Telugu</div></div><span class="fv-rol-done">READY</span></div>
       </div>
     </div>
   </div>
@@ -389,14 +389,14 @@ get_header();
     <div class="feat-hero-content">
       <div class="feat-hero-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
       <h3>Vendor and partner circulars, on the same platform.</h3>
-      <p>The karigar workshop, the gem supplier, the casting unit, the logistics partner, all onboarded as external groups with bounded access to just the documents that concern them. A vendor advisory on a quality issue, the karigar consortium's design brief, the supplier code of conduct, all delivered, all acknowledged, all logged, without giving anyone visibility into what they shouldn't see.</p>
+      <p>The artisan workshop, the gem supplier, the casting unit, the logistics partner, all onboarded as external groups with bounded access to just the documents that concern them. A vendor advisory on a quality issue, the artisan consortium's design brief, the supplier code of conduct, all delivered, all acknowledged, all logged, without giving anyone visibility into what they shouldn't see.</p>
       <a href="<?php echo esc_url(home_url('/feature/distribution-targeting/')); ?>" class="uc-cap-link">Explore Partner Distribution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="feat-hero-visual">
       <div class="fv-rovendor">
         <div class="fv-rv-title">External partner groups</div>
         <div class="fv-rv-group on">
-          <div class="fv-rv-head"><span class="fv-rv-name">Mysuru Karigar Consortium</span><span class="fv-rv-tag">14 members</span></div>
+          <div class="fv-rv-head"><span class="fv-rv-name">Mysuru Artisan Consortium</span><span class="fv-rv-tag">14 members</span></div>
           <div class="fv-rv-docs"><strong>Visible:</strong> Design briefs, hallmarking spec, payout schedule</div>
         </div>
         <div class="fv-rv-group">
@@ -512,7 +512,7 @@ get_header();
       <a href="<?php echo esc_url(home_url('/feature/tracking-reporting/')); ?>" class="uc-also-card reveal rd3">
         <div class="uc-also-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
         <h3>Per-partner activity report <svg class="uc-also-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
-        <p>For every karigar, every gem supplier, every casting unit, a clean trail of what they received, signed, and read. Useful at contract renewal time.</p>
+        <p>For every artisan, every gem supplier, every casting unit, a clean trail of what they received, signed, and read. Useful at contract renewal time.</p>
       </a>
     </div>
   </div>
@@ -536,7 +536,7 @@ get_header();
     <div class="uc-sc reveal rd2">
       <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3>BIS hallmarking rule change</h3>
-      <p>BIS notifies a revised standard on Friday. The bench team needs the new spec on Monday. Compliance publishes v3.2; the karigar consortium and the in-house bench acknowledge by the end of the weekend, with quiz scores backing the read.</p>
+      <p>BIS notifies a revised standard on Friday. The bench team needs the new spec on Monday. Compliance publishes v3.2; the artisan consortium and the in-house bench acknowledge by the end of the weekend, with quiz scores backing the read.</p>
       <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Version control &rarr; Partner distribution &rarr; Quiz</div>
     </div>
     <div class="uc-sc reveal rd3">
@@ -547,7 +547,7 @@ get_header();
     </div>
     <div class="uc-sc reveal rd4">
       <div class="uc-sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-      <h3>A karigar partner quality issue</h3>
+      <h3>An artisan partner quality issue</h3>
       <p>A repeat defect surfaces from one casting unit. The vendor-management lead publishes a quality advisory only to that consortium, with the affected SKUs, the corrective action, and an acknowledgement deadline. No naming-and-shaming on a shared group; a clean record on file.</p>
       <div class="uc-sc-answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bounded vendor portal &rarr; Acknowledgement &rarr; Trail</div>
     </div>
@@ -609,7 +609,7 @@ get_header();
 <div class="container">
   <div class="cta-inner reveal" style="text-align:center;max-width:720px;margin:0 auto">
     <h2>Ready to bring your showroom floor <span class="g-text">on to one platform?</span></h2>
-    <p style="font-size:16px;color:var(--gray-500);margin:14px 0 28px;line-height:1.7">Bring your hallmarking SOP, a festival pricing chart, and a vendor circular. In 20 minutes we'll show you what the store manager sees, what the karigar consortium sees, and what the next BIS report looks like.</p>
+    <p style="font-size:16px;color:var(--gray-500);margin:14px 0 28px;line-height:1.7">Bring your hallmarking SOP, a festival pricing chart, and a vendor circular. In 20 minutes we'll show you what the store manager sees, what the artisan consortium sees, and what the next BIS report looks like.</p>
     <div class="cta-buttons" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="<?php echo esc_url(home_url('/use-cases/')); ?>" class="btn btn-outline">Explore other use cases <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
