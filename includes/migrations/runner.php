@@ -97,6 +97,7 @@ function pcgpt_get_migrations() {
         64 => 'pcgpt_migration_064_compliance_sitemap_and_cache',
         65 => 'pcgpt_migration_065_invalidate_sitemap_cache_kyc_hub',
         66 => 'pcgpt_migration_066_remove_enforcement_singles_from_sitemap',
+        67 => 'pcgpt_migration_067_invalidate_sitemap_cache_kyc_hub_ship',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
