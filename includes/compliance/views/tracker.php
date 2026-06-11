@@ -121,7 +121,7 @@ get_header();
           </div>
           <span class="trk-date"><?php echo esc_html($date); ?></span>
         </div>
-        <div class="trk-name"><?php if (!empty($r['permalink'])) : ?><a href="<?php echo esc_url($r['permalink']); ?>"><?php echo esc_html($r['entity_name'] ?? ''); ?></a><?php else : echo esc_html($r['entity_name'] ?? ''); endif; ?></div>
+        <div class="trk-name"><?php echo esc_html($r['entity_name'] ?? ''); ?></div>
         <div class="trk-amt">
           <?php if ($nonmon) : ?>
             <span class="v nonmon"><?php echo esc_html($r['penalty_amount_display'] ?? 'Non-monetary'); ?></span>
