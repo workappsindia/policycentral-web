@@ -32,6 +32,15 @@ PCC_CPT::register();
 // Register /compliance URL routing + view templates.
 PCC_Rewrite::register();
 
+// Expose the virtual /compliance views to Rank Math's XML sitemap.
+// Required lazily so the class (which implements a RankMath interface) is
+// only parsed when Rank Math is active and generating a sitemap.
+add_filter('rank_math/sitemap/providers', function ($providers) {
+    require_once PCC_DIR . '/class-pcc-sitemap.php';
+    $providers[] = new PCC_Sitemap();
+    return $providers;
+});
+
 /**
  * Is the current request a Compliance Intelligence page?
  * True for the virtual views (section/hub/tracker/rule index) and the
