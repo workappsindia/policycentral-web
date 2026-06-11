@@ -121,7 +121,7 @@ $track    = home_url('/compliance/enforcement-tracker/');
       <p>If your framework was built on the 2023 Master Direction, these are the moves that matter:</p>
       <ul class="applies">
         <li><span class="chk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></span><span>The single 2023 Master Direction was <b>repealed</b> and split into <b>six entity-class Directions</b>; this is the commercial-banks one. Existing IO appointments continue under it.</span></li>
-        <li><span class="chk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></span><span>Applicability is now anchored to outlets <b>as on 31 March 2025</b>, with SFBs, Payments Banks and LABs explicitly carved out into their own directions.</span></li>
+        <li><span class="chk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></span><span>Applicability is now anchored to branches <b>as on 31 March 2025</b>, with SFBs, Payments Banks and LABs explicitly carved out into their own directions.</span></li>
         <li><span class="chk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></span><span>The quarterly return due date moved from the 10th to the <b>15th</b> of the following month.</span></li>
         <li><span class="chk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2 6 5 9 10 3"/></svg></span><span>Certain provisions are given a transition runway to <b>30 June 2026</b>.</span></li>
       </ul>
