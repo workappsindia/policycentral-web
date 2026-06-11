@@ -130,7 +130,6 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
         $type    = str_replace('-', ' · ', $rec['re_type'] ?? ($rec['re_group'] ?? ''));
         $date    = !empty($rec['action_date']) ? date('d M Y', strtotime($rec['action_date'])) : '';
         $multi   = !empty($rec['multi_reason']);
-        $entry   = !empty($rec['permalink']) ? $rec['permalink'] : home_url('/compliance/enforcement/' . ($rec['id'] ?? '') . '/');
         // The IO-related cited reason (fall back to the first cited reason).
         $reason = '';
         foreach ((array) ($rec['cited_reasons'] ?? array()) as $c) {
@@ -149,12 +148,11 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
         <div class="enf-body">
           <div class="enf-label">Cited reason (IO-related)</div>
           <div class="enf-reason"><?php echo esc_html($reason); ?></div>
+          <?php if ($multi) : ?>
           <div class="enf-foot">
-            <?php if ($multi) : ?>
             <span class="enf-multi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Multiple reasons</span>
-            <?php endif; ?>
-            <a href="<?php echo esc_url($entry); ?>" class="enf-src"<?php echo $multi ? '' : ' style="margin-left:auto"'; ?>>View action <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     <?php endforeach; ?>

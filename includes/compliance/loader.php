@@ -101,9 +101,8 @@ function pcc_render_penalised_for_rule($rule_slug) {
             continue;
         }
         $multi = !empty($rec['multi_reason']);
-        $entry = !empty($rec['permalink'])
-            ? $rec['permalink']
-            : home_url('/compliance/enforcement/' . ($rec['id'] ?? '') . '/');
+        // No public single pages per record (client call) — cards lead to the tracker.
+        $entry = home_url('/compliance/enforcement-tracker/');
 
         // Prefer the Internal-Ombudsman-themed cited reason; else the first.
         $reason = '';

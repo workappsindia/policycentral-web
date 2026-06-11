@@ -42,15 +42,20 @@ class PCC_CPT {
             'show_in_nav_menus' => false,
         ));
 
+        // Data store only — records render inside the tracker, hubs and decode
+        // pages; there are deliberately NO public single pages per record
+        // (client call, 2026-06-12: per-penalty pages naming entities could
+        // read as negative PR). Admin UI stays for the ingestion pipeline.
         register_post_type('rbi_enforcement', array(
             'labels'            => self::labels('Enforcement Action', 'Enforcement Actions'),
-            'public'            => true,
+            'public'            => false,
+            'show_ui'           => true,
             'show_in_rest'      => true,
             'menu_icon'         => 'dashicons-shield',
             'menu_position'     => 32,
             'supports'          => array('title', 'editor', 'custom-fields', 'revisions'),
             'has_archive'       => false,
-            'rewrite'           => array('slug' => 'compliance/enforcement', 'with_front' => false),
+            'rewrite'           => false,
             'show_in_nav_menus' => false,
         ));
     }

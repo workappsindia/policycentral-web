@@ -7,18 +7,25 @@ defined('ABSPATH') || exit;
 
 get_header();
 
-// Theme grid. Only Internal Ombudsman is live in this phase; the rest are
-// signposted as coming soon. Slugs map 1:1 to the 'theme' taxonomy + hub URLs.
+// Theme grid. A theme is live when its hub partial exists in views/hubs/
+// (the same check theme-hub.php routes on and PCC_Sitemap lists on), so new
+// hubs flip to "Live" here automatically. Slugs map 1:1 to the 'theme'
+// taxonomy + hub URLs.
 $pcc_themes = array(
-    array('slug' => 'internal-ombudsman', 'label' => 'Internal Ombudsman & Grievance Redress', 'desc' => 'The 2026 entity-class Directions, who they bind, and what RBI has penalised.', 'live' => true),
-    array('slug' => 'kyc-ckycr',          'label' => 'KYC & CKYCR Compliance',                 'desc' => 'Periodic updation, risk re-categorisation, and timely CKYCR uploads.', 'live' => false),
-    array('slug' => 'customer-protection','label' => 'Customer Protection & Conduct',           'desc' => 'Unauthorised-transaction reversals, charges transparency, BSBD, DEA Fund.', 'live' => false),
-    array('slug' => 'prudential-governance','label' => 'Prudential, Governance & Reporting',    'desc' => 'Exposure norms, approvals, disclosures and regulatory returns.', 'live' => false),
-    array('slug' => 'fair-practices',     'label' => 'Fair Practices Code (NBFC)',              'desc' => 'Loan transparency, charges, and periodic FPC compliance review.', 'live' => false),
-    array('slug' => 'change-of-control',  'label' => 'Prior Approval for Change of Control',     'desc' => 'The NBFC obligation behind a large cluster of FY25-26 penalties.', 'live' => false),
-    array('slug' => 'credit-reporting',   'label' => 'Credit Information Reporting',             'desc' => 'Accurate, timely reporting to CICs and CRILC.', 'live' => false),
-    array('slug' => 'outsourcing',        'label' => 'Outsourcing of Financial Services',        'desc' => 'What can and cannot be outsourced, and governance of providers.', 'live' => false),
+    array('slug' => 'internal-ombudsman', 'label' => 'Internal Ombudsman & Grievance Redress', 'desc' => 'The 2026 entity-class Directions, who they bind, and what RBI has penalised.'),
+    array('slug' => 'kyc-ckycr',          'label' => 'KYC & CKYCR Compliance',                 'desc' => 'Periodic updation, risk re-categorisation, and timely CKYCR uploads.'),
+    array('slug' => 'customer-protection','label' => 'Customer Protection & Conduct',           'desc' => 'Unauthorised-transaction reversals, charges transparency, BSBD, DEA Fund.'),
+    array('slug' => 'prudential-governance','label' => 'Prudential, Governance & Reporting',    'desc' => 'Exposure norms, approvals, disclosures and regulatory returns.'),
+    array('slug' => 'fair-practices',     'label' => 'Fair Practices Code (NBFC)',              'desc' => 'Loan transparency, charges, and periodic FPC compliance review.'),
+    array('slug' => 'change-of-control',  'label' => 'Prior Approval for Change of Control',     'desc' => 'The NBFC obligation behind a large cluster of FY25-26 penalties.'),
+    array('slug' => 'credit-reporting',   'label' => 'Credit Information Reporting',             'desc' => 'Accurate, timely reporting to CICs and CRILC.'),
+    array('slug' => 'outsourcing',        'label' => 'Outsourcing of Financial Services',        'desc' => 'What can and cannot be outsourced, and governance of providers.'),
 );
+foreach ($pcc_themes as &$pcc_t) {
+    $pcc_t['live'] = file_exists(PCC_DIR . '/views/hubs/' . $pcc_t['slug'] . '.php');
+}
+unset($pcc_t);
+$pcc_live_count = count(array_filter(array_column($pcc_themes, 'live')));
 ?>
 
 <!-- HERO -->
@@ -45,7 +52,7 @@ $pcc_themes = array(
         <div class="snap-head">At a glance</div>
         <div class="snap-body">
           <div class="snap-row"><span class="snap-k">Compliance themes</span><span class="snap-v">8<small>theme hubs</small></span></div>
-          <div class="snap-row"><span class="snap-k">Live now</span><span class="snap-v">Internal Ombudsman<small>2026 Directions</small></span></div>
+          <div class="snap-row"><span class="snap-k">Live now</span><span class="snap-v"><?php echo (int) $pcc_live_count; ?> of <?php echo count($pcc_themes); ?><small>theme hubs</small></span></div>
           <div class="snap-row"><span class="snap-k">Enforcement actions tracked</span><span class="snap-v">16<small>FY25-26 (seed set)</small></span></div>
           <div class="snap-row"><span class="snap-k">Source</span><span class="snap-v">RBI &middot; FACE<small>press releases &amp; instruments</small></span></div>
         </div>

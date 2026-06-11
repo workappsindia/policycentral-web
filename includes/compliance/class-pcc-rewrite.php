@@ -27,7 +27,7 @@ defined('ABSPATH') || exit;
 class PCC_Rewrite {
 
     // Bump when the rules below change — triggers a one-time flush.
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.0';
 
     /** Reserved first-segments that are NOT theme hubs. */
     const RESERVED = array('rules', 'enforcement', 'enforcement-tracker');
@@ -38,6 +38,13 @@ class PCC_Rewrite {
         add_action('template_redirect',   array(__CLASS__, 'force_http_200'));
         add_filter('template_include',    array(__CLASS__, 'route_template'));
         add_action('init',               array(__CLASS__, 'maybe_flush_rules'), 99);
+
+        // SEO title + meta description for the virtual views. They have no
+        // post object, so WP and Rank Math would otherwise emit the bare site
+        // name and no description. Both filters return the FULL title.
+        add_filter('pre_get_document_title',        array(__CLASS__, 'document_title'));
+        add_filter('rank_math/frontend/title',       array(__CLASS__, 'document_title'));
+        add_filter('rank_math/frontend/description', array(__CLASS__, 'meta_description'));
     }
 
     public static function add_rewrite_rules() {
@@ -45,6 +52,12 @@ class PCC_Rewrite {
         add_rewrite_rule('^compliance/?$',                     'index.php?pcc_view=section',     'top');
         add_rewrite_rule('^compliance/enforcement-tracker/?$', 'index.php?pcc_view=tracker',     'top');
         add_rewrite_rule('^compliance/rules/?$',               'index.php?pcc_view=rules_index', 'top');
+
+        // The per-record enforcement singles were public for a few hours on
+        // 2026-06-12 (and briefly sitemapped) before the client pulled them.
+        // 301 every /compliance/enforcement/{slug} to the tracker so crawlers
+        // and any shared links land somewhere sensible.
+        add_rewrite_rule('^compliance/enforcement(/.*)?$', 'index.php?pcc_view=enf_gone', 'top');
 
         // Generic theme hub LAST — only matches a single non-reserved segment.
         add_rewrite_rule('^compliance/([^/]+)/?$',
@@ -65,6 +78,12 @@ class PCC_Rewrite {
     public static function force_http_200() {
         $view = get_query_var('pcc_view');
         if (!$view) return;
+
+        // Retired enforcement-single URLs → permanent redirect to the tracker.
+        if ($view === 'enf_gone') {
+            wp_safe_redirect(home_url('/compliance/enforcement-tracker/'), 301);
+            exit;
+        }
 
         // Validate theme hubs against the 'theme' taxonomy; unknown → real 404.
         if ($view === 'hub') {
@@ -112,6 +131,56 @@ class PCC_Rewrite {
             }
         }
         return $template;
+    }
+
+    /**
+     * Title for the current virtual view, or '' when not on one (callers pass
+     * the filtered value through unchanged in that case).
+     */
+    private static function view_title() {
+        $view = get_query_var('pcc_view');
+        if (!$view) return '';
+
+        $site = get_bloginfo('name');
+        switch ($view) {
+            case 'section':
+                return 'Compliance Intelligence for Indian BFSI - ' . $site;
+            case 'tracker':
+                return 'RBI Enforcement Tracker, FY25-26 Penalties on Banks & NBFCs - ' . $site;
+            case 'rules_index':
+                return 'Decoded RBI Rules, the Plain-Language Library - ' . $site;
+            case 'hub':
+                $term = get_term_by('slug', get_query_var('pcc_theme'), 'theme');
+                if ($term) {
+                    return $term->name . ', RBI Rules & Enforcement - ' . $site;
+                }
+        }
+        return '';
+    }
+
+    public static function document_title($title) {
+        $ours = self::view_title();
+        return $ours !== '' ? $ours : $title;
+    }
+
+    public static function meta_description($desc) {
+        $view = get_query_var('pcc_view');
+        if (!$view) return $desc;
+
+        switch ($view) {
+            case 'section':
+                return 'Plain-language decodes of the RBI rules that matter, wired to a tracker of FY25-26 enforcement actions against banks and NBFCs. Linked to the source, honest about scope.';
+            case 'tracker':
+                return 'Filter FY25-26 RBI penalties on banks and NBFCs by cited reason, entity type and compliance theme. Facts drawn from RBI press releases, linked to the source.';
+            case 'rules_index':
+                return 'A growing library of RBI instruments decoded into plain language: who each rule applies to, what it requires, and what RBI has actually penalised.';
+            case 'hub':
+                $term = get_term_by('slug', get_query_var('pcc_theme'), 'theme');
+                if ($term) {
+                    return $term->name . ': what the RBI rules require, who they apply to, and what RBI has penalised banks and NBFCs for, in plain language, linked to the source.';
+                }
+        }
+        return $desc;
     }
 
     public static function maybe_flush_rules() {

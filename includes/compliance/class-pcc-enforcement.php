@@ -5,8 +5,8 @@
  * Records are stored as rbi_enforcement CPT posts (loaded by migration 061), with
  * the full normalised record cached as JSON in the `_pcc_record` post meta and the
  * filterable dimensions also set as taxonomy terms. get_all()/get_by_slug() return
- * the record in the same shape as the seed dataset (plus a `permalink`), so the
- * tracker and entry pages are true views over the CPT.
+ * the record in the same shape as the seed dataset, so the tracker and hub cards
+ * are true views over the CPT. Records have NO public single pages by design.
  *
  * Fallback: before migration 061 has run (no posts yet), get_all() reads the seed
  * JSON so the tracker is never empty.
@@ -37,7 +37,6 @@ class PCC_Enforcement {
         foreach ($posts as $p) {
             $rec = json_decode((string) get_post_meta($p->ID, '_pcc_record', true), true);
             if (!is_array($rec)) continue;
-            $rec['permalink'] = get_permalink($p->ID);
             $out[] = $rec;
         }
         return $out;
@@ -49,7 +48,6 @@ class PCC_Enforcement {
         if (!$post) return null;
         $rec = json_decode((string) get_post_meta($post->ID, '_pcc_record', true), true);
         if (!is_array($rec)) return null;
-        $rec['permalink'] = get_permalink($post->ID);
         return $rec;
     }
 
