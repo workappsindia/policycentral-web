@@ -87,6 +87,13 @@ function pcgpt_get_migrations() {
         54 => 'pcgpt_migration_054_swap_version_control_thumbnail',
         55 => 'pcgpt_migration_055_swap_multilingual_thumbnail',
         56 => 'pcgpt_migration_056_enable_side_image_hero_policy_audit',
+        57 => 'pcgpt_migration_057_create_new_use_case_pages',
+        58 => 'pcgpt_migration_058_compliance_foundation',
+        59 => 'pcgpt_migration_059_seed_compliance_theme_terms',
+        60 => 'pcgpt_migration_060_seed_io_2026_rule_decodes',
+        61 => 'pcgpt_migration_061_load_enforcement_records',
+        62 => 'pcgpt_migration_062_fix_enforcement_record_encoding',
+        63 => 'pcgpt_migration_063_normalise_compliance_dashes',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
