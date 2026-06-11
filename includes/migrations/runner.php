@@ -94,6 +94,7 @@ function pcgpt_get_migrations() {
         61 => 'pcgpt_migration_061_load_enforcement_records',
         62 => 'pcgpt_migration_062_fix_enforcement_record_encoding',
         63 => 'pcgpt_migration_063_normalise_compliance_dashes',
+        64 => 'pcgpt_migration_064_compliance_sitemap_and_cache',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
