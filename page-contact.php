@@ -35,12 +35,31 @@ get_header();
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Your email <span class="req">*</span></label>
+            <label>Your work email <span class="req">*</span></label>
             <input type="email" name="email" class="form-input" placeholder="you@company.com" required>
+            <small class="form-hint">Please use your corporate email — personal addresses (Gmail, Yahoo, etc.) aren't accepted.</small>
           </div>
           <div class="form-group">
-            <label>Contact number</label>
-            <input type="tel" name="phone" class="form-input" placeholder="Enter phone number with country code">
+            <label>Contact number <span class="req">*</span></label>
+            <input type="tel" name="phone" class="form-input" placeholder="Enter phone number with country code" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Company size</label>
+            <select name="people_strength" class="form-input">
+              <option value="">Select number of employees</option>
+              <option value="1-10">1&ndash;10</option>
+              <option value="11-50">11&ndash;50</option>
+              <option value="51-200">51&ndash;200</option>
+              <option value="201-500">201&ndash;500</option>
+              <option value="501-1000">501&ndash;1000</option>
+              <option value="1000+">1000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" name="city" class="form-input" placeholder="Enter your city">
           </div>
         </div>
         <div class="form-group">
@@ -118,11 +137,34 @@ get_header();
   var form = document.getElementById('pc-contact-form');
   var btn  = document.getElementById('btn-submit');
   var status = document.getElementById('form-status');
+  var emailInput = form.querySelector('input[name="email"]');
+
+  // Personal/free email domains — kept in sync with pc_personal_email_domains() in functions.php.
+  var personalDomains = <?php echo wp_json_encode(array_values(pc_personal_email_domains())); ?>;
+
+  function isPersonalEmail(value) {
+    var at = (value || '').toLowerCase().trim().lastIndexOf('@');
+    if (at === -1) return false;
+    var domain = value.toLowerCase().trim().slice(at + 1);
+    return personalDomains.indexOf(domain) !== -1;
+  }
+
+  // Live corporate-email check using the browser's native validity bubble.
+  function validateCorporateEmail() {
+    if (isPersonalEmail(emailInput.value)) {
+      emailInput.setCustomValidity('Please use your corporate email address. Personal providers like Gmail, Yahoo or Outlook are not accepted.');
+    } else {
+      emailInput.setCustomValidity('');
+    }
+  }
+  emailInput.addEventListener('input', validateCorporateEmail);
+  emailInput.addEventListener('blur', validateCorporateEmail);
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     // Client-side validation
+    validateCorporateEmail();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;

@@ -99,6 +99,7 @@ function pcgpt_get_migrations() {
         66 => 'pcgpt_migration_066_remove_enforcement_singles_from_sitemap',
         67 => 'pcgpt_migration_067_invalidate_sitemap_cache_kyc_hub_ship',
         68 => 'pcgpt_migration_068_seed_remaining_io_2026_decodes',
+        69 => 'pcgpt_migration_069_add_lead_people_strength_city',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

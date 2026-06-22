@@ -470,6 +470,56 @@ add_filter('rank_math/sitemap/exclude_post_ids', function($ids) {
 // CONTACT FORM: AJAX Handler
 // ═══════════════════════════════════════════════
 
+/**
+ * Free / personal email providers we reject on the contact form.
+ *
+ * The contact form is for corporate enquiries, so we block well-known consumer
+ * mailbox domains to cut down on dummy/test leads. Any custom-domain address —
+ * including businesses on Google Workspace or Zoho with their own domain — still
+ * passes, because only the literal free-provider domains are listed here.
+ *
+ * Single source of truth: the same list is echoed into the page JS so the
+ * client-side hint matches the server's decision exactly.
+ */
+function pc_personal_email_domains() {
+    return array(
+        // Google
+        'gmail.com', 'googlemail.com',
+        // Yahoo
+        'yahoo.com', 'yahoo.in', 'yahoo.co.in', 'yahoo.co.uk', 'ymail.com', 'rocketmail.com',
+        // Microsoft
+        'hotmail.com', 'hotmail.co.uk', 'outlook.com', 'outlook.in', 'live.com', 'live.in', 'msn.com',
+        // Apple
+        'icloud.com', 'me.com', 'mac.com',
+        // AOL
+        'aol.com', 'aim.com',
+        // Proton
+        'protonmail.com', 'proton.me', 'pm.me',
+        // Other global free providers
+        'gmx.com', 'gmx.us', 'mail.com', 'yandex.com', 'yandex.ru', 'zoho.com', 'zohomail.com',
+        'inbox.com', 'fastmail.com', 'tutanota.com',
+        // India-specific free providers
+        'rediffmail.com', 'rediff.com',
+    );
+}
+
+/**
+ * True when $email is a syntactically valid, non-personal (corporate) address.
+ * Returns false for empty/invalid input and for any free-provider domain.
+ */
+function pc_is_corporate_email($email) {
+    $email = strtolower(trim((string) $email));
+    if (!is_email($email)) {
+        return false;
+    }
+    $at = strrpos($email, '@');
+    if ($at === false) {
+        return false;
+    }
+    $domain = substr($email, $at + 1);
+    return !in_array($domain, pc_personal_email_domains(), true);
+}
+
 add_action('wp_ajax_pc_contact_submit', 'pc_handle_contact_form');
 add_action('wp_ajax_nopriv_pc_contact_submit', 'pc_handle_contact_form');
 
@@ -480,18 +530,25 @@ function pc_handle_contact_form() {
     }
 
     // ── Sanitize inputs ───────────────────────────────────────────────
-    $full_name = isset($_POST['full_name']) ? sanitize_text_field(trim($_POST['full_name'])) : '';
-    $company   = isset($_POST['company'])   ? sanitize_text_field(trim($_POST['company']))   : '';
-    $email     = isset($_POST['email'])     ? sanitize_email(trim($_POST['email']))           : '';
-    $phone     = isset($_POST['phone'])     ? sanitize_text_field(trim($_POST['phone']))     : '';
-    $message   = isset($_POST['message'])   ? sanitize_textarea_field(trim($_POST['message'])): '';
+    $full_name = isset($_POST['full_name'])       ? sanitize_text_field(trim($_POST['full_name']))       : '';
+    $company   = isset($_POST['company'])         ? sanitize_text_field(trim($_POST['company']))         : '';
+    $email     = isset($_POST['email'])           ? sanitize_email(trim($_POST['email']))                : '';
+    $phone     = isset($_POST['phone'])           ? sanitize_text_field(trim($_POST['phone']))           : '';
+    $people    = isset($_POST['people_strength']) ? sanitize_text_field(trim($_POST['people_strength'])) : '';
+    $city      = isset($_POST['city'])            ? sanitize_text_field(trim($_POST['city']))            : '';
+    $message   = isset($_POST['message'])         ? sanitize_textarea_field(trim($_POST['message']))     : '';
 
     // ── Validate required fields ──────────────────────────────────────
-    if (empty($full_name) || empty($company) || empty($email)) {
+    // Phone is now mandatory (alongside name, company, email).
+    if (empty($full_name) || empty($company) || empty($email) || empty($phone)) {
         wp_send_json_error('Please fill in all required fields.');
     }
     if (!is_email($email)) {
         wp_send_json_error('Please enter a valid email address.');
+    }
+    // Corporate email only — reject free/personal mailbox domains.
+    if (!pc_is_corporate_email($email)) {
+        wp_send_json_error('Please use your corporate email address. Personal email providers (Gmail, Yahoo, Outlook, etc.) are not accepted.');
     }
 
     // ── Rate limiting: max 10 submissions per IP per hour ─────────────
@@ -526,6 +583,8 @@ function pc_handle_contact_form() {
         'company'      => $company,
         'email'        => $email,
         'phone'        => $phone,
+        'people_strength' => $people,
+        'contact_city'    => $city,
         'message'      => $message,
         'ip_address'   => $ip,
         'user_agent'   => $user_agent,

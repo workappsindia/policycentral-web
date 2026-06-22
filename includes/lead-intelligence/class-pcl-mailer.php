@@ -78,6 +78,9 @@ class PCL_Mailer {
         $co     = esc_html($lead->company ?: '—');
         $email  = esc_html($lead->email ?: '');
         $phone  = esc_html($lead->phone ?: '');
+        $people = esc_html($lead->people_strength ?? '');
+        $city   = esc_html($lead->contact_city ?? '');
+        $people_line = $people ? $people . ' employees' : '';
         $msg    = esc_html($lead->message ?: '');
         $ip     = esc_html($lead->ip_address ?: '');
         $ua     = esc_html($lead->user_agent ?: '');
@@ -150,11 +153,13 @@ class PCL_Mailer {
           <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:800;color:#111827;line-height:1.3;">{$name}</div>
           <div style="font-size:12px;color:#6B7280;margin-top:2px;">{$email}</div>
           <div style="font-size:12px;color:#6B7280;">{$phone}</div>
+          <div style="font-size:12px;color:#6B7280;">{$city}</div>
         </td>
         <td width="50%" style="background:#F9FAFB;padding:14px 18px;vertical-align:top;">
           <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:4px;">Company</div>
           <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:800;color:#0694A2;line-height:1.3;">{$co}</div>
-          <div style="font-size:12px;color:#6B7280;margin-top:2px;">{$geo}</div>
+          <div style="font-size:12px;color:#6B7280;margin-top:2px;">{$people_line}</div>
+          <div style="font-size:12px;color:#6B7280;">{$geo}</div>
         </td>
       </tr>
     </table>
