@@ -1,0 +1,77 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">RISK + COST</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">HIDDEN</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">COSTS</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">The real price of shared drives &amp; email</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: conflicting file copies (version chaos), stacked & readable -->
+  <!-- Copy 1: the "current" one (highlighted) -->
+  <rect x="72" y="280" width="172" height="18" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="1.1"/>
+  <text x="80" y="292" font-family="'Courier New', monospace" font-size="9" fill="#ffffff">leave-policy.pdf</text>
+  <circle cx="236" cy="289" r="2.4" fill="#179d97"/>
+  <circle cx="236" cy="289" r="5" fill="none" stroke="#179d97" stroke-width="0.5" opacity="0.5"/>
+  <!-- Copy 2 -->
+  <rect x="72" y="301" width="172" height="18" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.6" opacity="0.6"/>
+  <text x="80" y="313" font-family="'Courier New', monospace" font-size="9" fill="#7ececa" opacity="0.6">leave-policy-FINAL.pdf</text>
+  <!-- Copy 3 -->
+  <rect x="72" y="322" width="172" height="18" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.5" opacity="0.35"/>
+  <text x="80" y="334" font-family="'Courier New', monospace" font-size="9" fill="#7ececa" opacity="0.4">leave-policy-FINAL-v2.pdf</text>
+
+  <!-- Bottom keyword strip -->
+  <text x="68" y="348" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">VERSION CHAOS · NO TRACKING · AUDIT GAPS · LOST TIME</text>
+
+  <!-- Right-side card: COST LEAKAGE -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <!-- Card header -->
+  <text x="478" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">COST LEAKAGE</text>
+
+  <line x1="450" y1="136" x2="598" y2="136" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Cost rows: leakage point + value, fading down -->
+  <text x="450" y="162" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.9">Admin time / yr</text>
+  <text x="600" y="162" font-family="'Courier New', monospace" font-size="11" fill="#179d97" text-anchor="end" opacity="1">150h</text>
+
+  <text x="450" y="186" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.78">Version conflicts</text>
+  <text x="600" y="186" font-family="'Courier New', monospace" font-size="11" fill="#179d97" text-anchor="end" opacity="0.85">HIGH</text>
+
+  <text x="450" y="210" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.66">Unacked updates</text>
+  <text x="600" y="210" font-family="'Courier New', monospace" font-size="11" fill="#179d97" text-anchor="end" opacity="0.7">40+</text>
+
+  <text x="450" y="234" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.54">Audit evidence</text>
+  <text x="600" y="234" font-family="'Courier New', monospace" font-size="11" fill="#179d97" text-anchor="end" opacity="0.55">NONE</text>
+
+  <text x="450" y="258" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.42">Legal exposure</text>
+  <text x="600" y="258" font-family="'Courier New', monospace" font-size="11" fill="#179d97" text-anchor="end" opacity="0.45">RISING</text>
+
+  <line x1="450" y1="276" x2="598" y2="276" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+  <text x="450" y="292" font-family="'Courier New', monospace" font-size="9" fill="#7ececa" opacity="0.6">untracked &amp; invisible</text>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
