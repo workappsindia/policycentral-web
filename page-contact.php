@@ -37,13 +37,13 @@ get_header();
           <div class="form-group">
             <label>Your work email <span class="req">*</span></label>
             <input type="email" name="email" class="form-input" placeholder="you@company.com" required>
-            <small class="form-hint">Please use your corporate email — personal addresses (Gmail, Yahoo, etc.) aren't accepted.</small>
           </div>
           <div class="form-group">
             <label>Contact number <span class="req">*</span></label>
             <input type="tel" name="phone" class="form-input" placeholder="Enter phone number with country code" required>
           </div>
         </div>
+        <small class="form-hint">Please use your corporate email id. Personal addresses (Gmail, Yahoo, etc.) aren't accepted.</small>
         <div class="form-row">
           <div class="form-group">
             <label>Company size</label>
