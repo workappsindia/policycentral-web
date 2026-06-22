@@ -100,6 +100,13 @@ function pcgpt_get_migrations() {
         67 => 'pcgpt_migration_067_invalidate_sitemap_cache_kyc_hub_ship',
         68 => 'pcgpt_migration_068_seed_remaining_io_2026_decodes',
         69 => 'pcgpt_migration_069_add_lead_people_strength_city',
+        70 => 'pcgpt_migration_070_powerdms_vs_policycentral_vs_convergepoint',
+        71 => 'pcgpt_migration_071_hidden_cost_hr_policies_shared_drives',
+        72 => 'pcgpt_migration_072_ai_hr_policies_drafting_compliance_management',
+        73 => 'pcgpt_migration_073_maternity_benefit_act_policy_beyond_26_weeks',
+        74 => 'pcgpt_migration_074_policy_vs_process_vs_procedure',
+        75 => 'pcgpt_migration_075_policy_analytics_dashboard_kpis_compliance',
+        76 => 'pcgpt_migration_076_invalidate_sitemap_cache_blog_batch_2026_06',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
