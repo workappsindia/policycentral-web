@@ -248,6 +248,8 @@ class PCL_Admin {
                             <?php $this->dl_row('Email', $lead->email, 'mailto:' . $lead->email); ?>
                             <?php $this->dl_row('Phone', $lead->phone, 'tel:' . preg_replace('/\D/', '', $lead->phone)); ?>
                             <?php $this->dl_row('Company', $lead->company); ?>
+                            <?php $this->dl_row('Company Size', !empty($lead->people_strength) ? $lead->people_strength . ' employees' : ''); ?>
+                            <?php $this->dl_row('City', $lead->contact_city ?? ''); ?>
                             <?php $this->dl_row('Location (IP)', trim(implode(', ', array_filter(array($lead->geo_city, $lead->geo_region, $lead->geo_country))))); ?>
                         </div>
                     </div>
@@ -528,7 +530,8 @@ class PCL_Admin {
         $out = fopen('php://output', 'w');
         fputcsv($out, array(
             'Reference', 'Submitted', 'Name', 'Email', 'Phone', 'Company',
-            'City', 'Region', 'Country', 'Status', 'Confidence', 'Industry',
+            'Company Size (Entered)', 'City (Entered)',
+            'City (IP)', 'Region', 'Country', 'Status', 'Confidence', 'Industry',
             'Size', 'Funding', 'Round', 'Amount', 'Message', 'IP', 'Page URL'
         ));
 
@@ -540,6 +543,8 @@ class PCL_Admin {
                 $l->email,
                 $l->phone,
                 $l->company,
+                $l->people_strength ?? '',
+                $l->contact_city ?? '',
                 $l->geo_city,
                 $l->geo_region,
                 $l->geo_country,
