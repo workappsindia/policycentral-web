@@ -108,6 +108,7 @@ function pcgpt_get_migrations() {
         75 => 'pcgpt_migration_075_policy_analytics_dashboard_kpis_compliance',
         76 => 'pcgpt_migration_076_invalidate_sitemap_cache_blog_batch_2026_06',
         77 => 'pcgpt_migration_077_seed_rbc_ufs_2026_conduct_decodes',
+        78 => 'pcgpt_migration_078_strip_dashes_rbc_ufs_conduct_decodes',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
