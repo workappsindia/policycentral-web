@@ -359,6 +359,8 @@ get_header();
 .explore-wrap .cta-form-wrap .exp-form-row{display:grid;gap:12px;margin-bottom:12px}
 .explore-wrap .cta-form-wrap .exp-form-row.row-3{grid-template-columns:1fr 1fr 1fr}
 .explore-wrap .cta-form-wrap .exp-form-row.row-btn{grid-template-columns:1fr 2fr auto;align-items:end}
+.explore-wrap .cta-form-wrap .exp-form-row.row-msg{grid-template-columns:1fr auto;align-items:end}
+.explore-wrap .cta-form-wrap .exp-form-hint{display:block;margin:-4px 0 14px;font-size:11.5px;line-height:1.4;color:var(--g500,#6B7280);font-family:'Manrope',sans-serif}
 .explore-wrap .cta-form-wrap .exp-form-group{margin-bottom:0}
 .explore-wrap .cta-form-wrap label{display:block;font-size:12px;font-weight:700;color:var(--g600);margin-bottom:5px;font-family:'Plus Jakarta Sans',sans-serif}
 .explore-wrap .cta-form-wrap label .req{color:var(--rose);margin-left:2px}
@@ -407,6 +409,7 @@ get_header();
   .explore-wrap .step{flex:1 1 calc(50% - 1px)}
   .explore-wrap .cta-form-wrap .exp-form-row.row-3{grid-template-columns:1fr}
   .explore-wrap .cta-form-wrap .exp-form-row.row-btn{grid-template-columns:1fr}
+  .explore-wrap .cta-form-wrap .exp-form-row.row-msg{grid-template-columns:1fr}
   .explore-wrap .cta-form-wrap{padding:20px}
 }
 </style>
@@ -729,15 +732,34 @@ get_header();
             <input type="text" name="company" class="exp-form-input" placeholder="Company name" required>
           </div>
           <div class="exp-form-group">
-            <label>Your email <span class="req">*</span></label>
+            <label>Your work email <span class="req">*</span></label>
             <input type="email" name="email" class="exp-form-input" placeholder="you@company.com" required>
           </div>
         </div>
-        <div class="exp-form-row row-btn">
+        <small class="exp-form-hint">Please use your corporate email id. Personal addresses (Gmail, Yahoo, etc.) aren't accepted.</small>
+        <div class="exp-form-row row-3">
           <div class="exp-form-group">
-            <label>Contact number</label>
-            <input type="tel" name="phone" class="exp-form-input" placeholder="Phone number">
+            <label>Contact number <span class="req">*</span></label>
+            <input type="tel" name="phone" class="exp-form-input" placeholder="Enter phone number with country code" required>
           </div>
+          <div class="exp-form-group">
+            <label>Company size</label>
+            <select name="people_strength" class="exp-form-input">
+              <option value="">Select number of employees</option>
+              <option value="1-10">1&ndash;10</option>
+              <option value="11-50">11&ndash;50</option>
+              <option value="51-200">51&ndash;200</option>
+              <option value="201-500">201&ndash;500</option>
+              <option value="501-1000">501&ndash;1000</option>
+              <option value="1000+">1000+</option>
+            </select>
+          </div>
+          <div class="exp-form-group">
+            <label>City</label>
+            <input type="text" name="city" class="exp-form-input" placeholder="Enter your city">
+          </div>
+        </div>
+        <div class="exp-form-row row-msg">
           <div class="exp-form-group">
             <label>Your message</label>
             <input type="text" name="message" class="exp-form-input" placeholder="How can we help?">
@@ -815,8 +837,29 @@ get_header();
   var expStatus = document.getElementById('exp-form-status');
 
   if (expForm) {
+    // Corporate-email validation — kept in sync with pc_personal_email_domains() in functions.php.
+    var expEmail = expForm.querySelector('input[name="email"]');
+    var personalDomains = <?php echo wp_json_encode(array_values(pc_personal_email_domains())); ?>;
+
+    function isPersonalEmail(value) {
+      var at = (value || '').toLowerCase().trim().lastIndexOf('@');
+      if (at === -1) return false;
+      return personalDomains.indexOf(value.toLowerCase().trim().slice(at + 1)) !== -1;
+    }
+
+    function validateCorporateEmail() {
+      if (isPersonalEmail(expEmail.value)) {
+        expEmail.setCustomValidity('Please use your corporate email address. Personal providers like Gmail, Yahoo or Outlook are not accepted.');
+      } else {
+        expEmail.setCustomValidity('');
+      }
+    }
+    expEmail.addEventListener('input', validateCorporateEmail);
+    expEmail.addEventListener('blur', validateCorporateEmail);
+
     expForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      validateCorporateEmail();
       if (!expForm.checkValidity()) { expForm.reportValidity(); return; }
 
       expBtn.disabled = true;
