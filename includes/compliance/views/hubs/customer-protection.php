@@ -161,11 +161,11 @@ $ufs_url     = home_url('/compliance/rules/ufs-agency-referral-2026/');
   <div class="section-header">
     <span class="eyebrow">Where the failures actually happen</span>
     <h2>Knowing the rule is step one.<br>Operationalising it across every seller is where it breaks.</h2>
-    <p>A consent SOP, an agent Code of Conduct and a dark-patterns checklist only protect you if every branch, agent and sub-agent has received them, read them, and can be shown to have done so. Here's an honest split of what a policy distribution-and-attestation layer like PolicyCentral does and does not address.</p>
+    <p>A consent SOP, an agent Code of Conduct and a dark-patterns checklist only protect you if every branch, agent and sub-agent has received them, read them, and can be shown to have done so. Here's an honest split of what a policy distribution-and-attestation layer like PolicyCentral.ai does and does not address.</p>
   </div>
   <div class="scope-grid">
     <div class="scope in reveal">
-      <div class="scope-head"><span class="scope-pill">PolicyCentral helps here</span></div>
+      <div class="scope-head"><span class="scope-pill">PolicyCentral.ai helps here</span></div>
       <h3>Distribute · attest · prove</h3>
       <p>The "did everyone get it, read it, and can you show an auditor" layer around the conduct package.</p>
       <ul>
@@ -177,7 +177,7 @@ $ufs_url     = home_url('/compliance/rules/ufs-agency-referral-2026/');
     </div>
     <div class="scope out reveal rd1">
       <div class="scope-head"><span class="scope-pill">A different system handles this</span></div>
-      <h3>What PolicyCentral is not</h3>
+      <h3>What PolicyCentral.ai is not</h3>
       <p>We're explicit about scope: these are jobs for product, CRM and grievance tooling, not a policy platform.</p>
       <ul>
         <li><span class="mk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="2" y1="6" x2="10" y2="6"/></svg></span><span>The <b>consent-capture and disclosure UI</b> inside your app or onboarding journey.</span></li>
@@ -218,7 +218,7 @@ $ufs_url     = home_url('/compliance/rules/ufs-agency-referral-2026/');
       <div class="ib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <div class="cv-kicker">For CCOs, HR &amp; InfoSec leaders</div>
       <h3>See policy attestation tracked across every branch &amp; agent</h3>
-      <p>PolicyCentral shows you, live and branch-by-branch, exactly who has read and acknowledged each policy and SOP, with a tamper-evident trail you can export for an RBI review. Walk through it on your own data.</p>
+      <p>PolicyCentral.ai shows you, live and branch-by-branch, exactly who has read and acknowledged each policy and SOP, with a tamper-evident trail you can export for an RBI review. Walk through it on your own data.</p>
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>
