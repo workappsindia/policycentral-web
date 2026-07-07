@@ -220,6 +220,25 @@ a.pcb-card-author:hover{color:var(--teal)}
 .pcb-article-body table th{background:var(--gray-50);font-weight:700;font-family:'Plus Jakarta Sans',sans-serif;color:var(--gray-900)}
 .pcb-article-body hr{border:0;height:1px;background:var(--border);margin:40px 0}
 
+/* ──────── Opt-in readability utilities (used per-post; inert until applied) ──────── */
+/* Lead paragraph: slightly larger, lighter intro line */
+.pcb-article-body p.pcb-lead{font-size:19px;line-height:1.7;color:var(--gray-600)}
+/* Highlighter-pen emphasis for a key phrase */
+.pcb-article-body .pcb-hl{background:linear-gradient(180deg,transparent 58%,var(--teal-lt) 58%);padding:0 .12em;font-weight:600;color:var(--gray-900)}
+/* Colored emphasis for standout stats/numbers */
+.pcb-article-body .pcb-stat{color:var(--teal);font-weight:700}
+/* Key-takeaway callout box (distinct from the italic blockquote) */
+.pcb-article-body .pcb-callout{background:var(--teal-lt);border-left:4px solid var(--teal);border-radius:0 var(--r-md) var(--r-md) 0;padding:18px 22px;color:var(--gray-800);font-size:16.5px;line-height:1.65}
+.pcb-article-body .pcb-callout-label{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+/* External-link affordance: subtle arrow on opt-in outbound links */
+.pcb-article-body a.pcb-ext::after{content:'\2197';font-size:.82em;margin-left:2px;opacity:.75;border-bottom:0;vertical-align:baseline}
+/* Roomier paragraph rhythm (opt-in per post via .pcb-readable wrapper).
+   Beats the theme's `.pcb-article-body p{margin:0}` so consecutive paragraphs
+   get a clear blank-line gap instead of running together as one slab. */
+.pcb-article-body .pcb-readable p{margin:0 0 .9em}
+.pcb-article-body .pcb-readable p:last-child{margin-bottom:0}
+.pcb-article-body .pcb-readable .pcb-callout{margin:1.5em 0}
+
 /* ══════════════════════════════════════════════════════════════
    MIDDLE CTA (auto-injected in content)
    ══════════════════════════════════════════════════════════════ */
