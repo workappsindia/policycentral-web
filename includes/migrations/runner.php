@@ -109,6 +109,12 @@ function pcgpt_get_migrations() {
         76 => 'pcgpt_migration_076_invalidate_sitemap_cache_blog_batch_2026_06',
         77 => 'pcgpt_migration_077_seed_rbc_ufs_2026_conduct_decodes',
         78 => 'pcgpt_migration_078_strip_dashes_rbc_ufs_conduct_decodes',
+        79 => 'pcgpt_migration_079_policy_acknowledgment_tracking_legal_requirements',
+        80 => 'pcgpt_migration_080_policy_intelligence_tools_ai_gap_detection',
+        81 => 'pcgpt_migration_081_enterprise_policy_workflow_automation',
+        82 => 'pcgpt_migration_082_mobile_policy_management_apps',
+        83 => 'pcgpt_migration_083_policy_intelligence_platform_7_features',
+        84 => 'pcgpt_migration_084_invalidate_sitemap_cache_blog_batch_2026_07',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

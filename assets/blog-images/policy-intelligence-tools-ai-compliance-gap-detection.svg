@@ -1,0 +1,79 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">AI + GAP DETECTION</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">POLICY</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">INTELLIGENCE</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">How AI finds gaps before the auditor</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: radar sweep scanning for a flagged gap -->
+  <g transform="translate(130, 306)">
+    <circle r="26" fill="none" stroke="#179d97" stroke-width="0.5" opacity="0.25"/>
+    <circle r="17" fill="none" stroke="#179d97" stroke-width="0.5" opacity="0.2"/>
+    <circle r="8" fill="none" stroke="#179d97" stroke-width="0.5" opacity="0.15"/>
+    <line x1="-26" y1="0" x2="26" y2="0" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+    <line x1="0" y1="-26" x2="0" y2="26" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+    <path d="M 0 0 L 22 -14 A 26 26 0 0 1 26 0 Z" fill="#179d97" opacity="0.18"/>
+    <circle cx="14" cy="-10" r="2.5" fill="#7ececa"/>
+    <circle cx="-11" cy="9" r="2" fill="#179d97" opacity="0.6"/>
+    <circle cx="14" cy="-10" r="6" fill="none" stroke="#7ececa" stroke-width="0.6" opacity="0.4"/>
+  </g>
+
+  <!-- Bottom keyword strip -->
+  <text x="68" y="348" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">NLP MAPPING · DRIFT ALERTS · CONTINUOUS EVIDENCE</text>
+
+  <!-- Right-side card: GAP SCAN -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <!-- Card header -->
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">FRAMEWORK GAP SCAN</text>
+
+  <line x1="450" y1="136" x2="598" y2="136" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Framework rows: label + status dot -->
+  <text x="450" y="162" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.9">RBI DL 2025</text>
+  <circle cx="596" cy="158" r="4" fill="#179d97" opacity="0.9"/>
+  <text x="586" y="162" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="end" opacity="0.7">OK</text>
+
+  <text x="450" y="190" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.8">GDPR Art.5</text>
+  <circle cx="596" cy="186" r="4" fill="#e0a43b" opacity="0.9"/>
+  <text x="586" y="190" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="end" opacity="0.7">GAP</text>
+
+  <text x="450" y="218" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.7">ISO 27001</text>
+  <circle cx="596" cy="214" r="4" fill="#179d97" opacity="0.75"/>
+  <text x="586" y="218" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="end" opacity="0.6">OK</text>
+
+  <text x="450" y="246" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.6">SOX 302</text>
+  <circle cx="596" cy="242" r="4" fill="#179d97" opacity="0.6"/>
+  <text x="586" y="246" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="end" opacity="0.55">OK</text>
+
+  <text x="450" y="274" font-family="'Courier New', monospace" font-size="10" fill="#ffffff" opacity="0.5">HIPAA</text>
+  <circle cx="596" cy="270" r="4" fill="#e0a43b" opacity="0.7"/>
+  <text x="586" y="274" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="end" opacity="0.5">GAP</text>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
