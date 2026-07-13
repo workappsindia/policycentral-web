@@ -1,0 +1,69 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">PLATFORM LIMITS + 2026</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">BEYOND</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">SHAREPOINT</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">Where a document library falls short as a policy system</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: a folder and a workforce, separated by a gap -->
+  <g transform="translate(72, 300)">
+    <!-- folder (store) -->
+    <path d="M 0 8 L 18 8 L 22 2 L 44 2 L 44 40 L 0 40 Z" fill="none" stroke="#179d97" stroke-width="0.9" opacity="0.5"/>
+    <!-- dashed gap -->
+    <line x1="52" y1="22" x2="104" y2="22" stroke="#7ececa" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+    <text x="78" y="16" font-family="'Courier New', monospace" font-size="8" fill="#7ececa" text-anchor="middle" opacity="0.6">GAP</text>
+    <!-- workforce nodes -->
+    <circle cx="118" cy="10" r="3.5" fill="#179d97" opacity="0.8"/>
+    <circle cx="118" cy="22" r="3.5" fill="#179d97" opacity="0.6"/>
+    <circle cx="118" cy="34" r="3.5" fill="#179d97" opacity="0.45"/>
+    <circle cx="132" cy="16" r="3.5" fill="#7ececa" opacity="0.7"/>
+    <circle cx="132" cy="28" r="3.5" fill="#7ececa" opacity="0.5"/>
+  </g>
+
+  <!-- Bottom keyword strip -->
+  <text x="240" y="348" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">STORE · vs · MANAGE</text>
+
+  <!-- Right-side card -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">WHERE IT FALLS SHORT</text>
+
+  <line x1="450" y1="130" x2="598" y2="130" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <g font-family="'Courier New', monospace" font-size="9.5" fill="#ffffff">
+    <text x="450" y="150" fill="#179d97" opacity="0.8">01</text><text x="472" y="150" opacity="0.9">Acknowledgment</text>
+    <text x="450" y="171" fill="#179d97" opacity="0.75">02</text><text x="472" y="171" opacity="0.82">Distribution</text>
+    <text x="450" y="192" fill="#179d97" opacity="0.7">03</text><text x="472" y="192" opacity="0.76">Review cycle</text>
+    <text x="450" y="213" fill="#179d97" opacity="0.65">04</text><text x="472" y="213" opacity="0.7">Analytics</text>
+    <text x="450" y="234" fill="#179d97" opacity="0.6">05</text><text x="472" y="234" opacity="0.64">Audit trail</text>
+    <text x="450" y="255" fill="#179d97" opacity="0.55">06</text><text x="472" y="255" opacity="0.58">Multilingual</text>
+    <text x="450" y="276" fill="#179d97" opacity="0.5">07</text><text x="472" y="276" opacity="0.52">Employee AI</text>
+  </g>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>

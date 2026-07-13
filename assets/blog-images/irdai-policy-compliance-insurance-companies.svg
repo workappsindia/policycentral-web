@@ -1,0 +1,80 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">IRDAI COMPLIANCE + INSURANCE</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">INSURER</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">GOVERNANCE</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">Board-approved policies, from approval to the field force</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: cascade from board to branches to agents -->
+  <g transform="translate(96, 300)">
+    <!-- board node -->
+    <circle cx="0" cy="0" r="7" fill="#179d97" opacity="0.9"/>
+    <g stroke="#179d97" stroke-width="0.6" opacity="0.35">
+      <line x1="0" y1="0" x2="-34" y2="26"/>
+      <line x1="0" y1="0" x2="0" y2="30"/>
+      <line x1="0" y1="0" x2="34" y2="26"/>
+    </g>
+    <!-- branch nodes -->
+    <circle cx="-34" cy="26" r="4" fill="#7ececa" opacity="0.8"/>
+    <circle cx="0" cy="30" r="4" fill="#7ececa" opacity="0.7"/>
+    <circle cx="34" cy="26" r="4" fill="#7ececa" opacity="0.8"/>
+    <!-- agent leaves -->
+    <g stroke="#179d97" stroke-width="0.5" opacity="0.25">
+      <line x1="-34" y1="26" x2="-46" y2="42"/>
+      <line x1="-34" y1="26" x2="-26" y2="44"/>
+      <line x1="34" y1="26" x2="26" y2="44"/>
+      <line x1="34" y1="26" x2="46" y2="42"/>
+    </g>
+    <circle cx="-46" cy="42" r="2.5" fill="#179d97" opacity="0.5"/>
+    <circle cx="-26" cy="44" r="2.5" fill="#179d97" opacity="0.5"/>
+    <circle cx="26" cy="44" r="2.5" fill="#179d97" opacity="0.5"/>
+    <circle cx="46" cy="42" r="2.5" fill="#179d97" opacity="0.5"/>
+  </g>
+
+  <!-- Bottom keyword strip -->
+  <text x="188" y="356" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">APPROVE · CASCADE · ACKNOWLEDGE · PROVE</text>
+
+  <!-- Right-side card -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">THE POLICY STACK</text>
+
+  <line x1="450" y1="130" x2="598" y2="130" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <g font-family="'Courier New', monospace" font-size="9.5" fill="#ffffff">
+    <text x="450" y="150" fill="#179d97" opacity="0.8">01</text><text x="472" y="150" opacity="0.9">Remuneration</text>
+    <text x="450" y="171" fill="#179d97" opacity="0.75">02</text><text x="472" y="171" opacity="0.82">Stewardship</text>
+    <text x="450" y="192" fill="#179d97" opacity="0.7">03</text><text x="472" y="192" opacity="0.76">ESG + climate</text>
+    <text x="450" y="213" fill="#179d97" opacity="0.65">04</text><text x="472" y="213" opacity="0.7">Cyber security</text>
+    <text x="450" y="234" fill="#179d97" opacity="0.6">05</text><text x="472" y="234" opacity="0.64">Data (DPDP)</text>
+    <text x="450" y="255" fill="#179d97" opacity="0.55">06</text><text x="472" y="255" opacity="0.58">Policyholder</text>
+    <text x="450" y="276" fill="#179d97" opacity="0.5">07</text><text x="472" y="276" opacity="0.52">Conduct</text>
+  </g>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
