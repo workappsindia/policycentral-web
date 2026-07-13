@@ -115,6 +115,11 @@ function pcgpt_get_migrations() {
         82 => 'pcgpt_migration_082_mobile_policy_management_apps',
         83 => 'pcgpt_migration_083_policy_intelligence_platform_7_features',
         84 => 'pcgpt_migration_084_invalidate_sitemap_cache_blog_batch_2026_07',
+        85 => 'pcgpt_migration_085_best_policy_management_software_india_2026',
+        86 => 'pcgpt_migration_086_how_to_write_a_policy_document',
+        87 => 'pcgpt_migration_087_sharepoint_policy_management_limitations',
+        88 => 'pcgpt_migration_088_irdai_policy_compliance_insurance_companies',
+        89 => 'pcgpt_migration_089_invalidate_sitemap_cache_blog_batch_2026_07_v2',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
