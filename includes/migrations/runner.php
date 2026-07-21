@@ -123,6 +123,7 @@ function pcgpt_get_migrations() {
         90 => 'pcgpt_migration_090_create_policygpt_page',
         91 => 'pcgpt_migration_091_ai_policy_search_employee_questions',
         92 => 'pcgpt_migration_092_invalidate_sitemap_cache_policygpt_blog',
+        93 => 'pcgpt_migration_093_refresh_best_software_india_onpremise_edit',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
