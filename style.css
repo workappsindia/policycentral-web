@@ -196,8 +196,16 @@ body.admin-bar #nav{top:44px}
    HOME: HERO SLIDER
    ══════════════════════════════════════════════════════════════ */
 .hero-slider{position:relative;border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow-lg);max-width:420px;margin-left:auto}
-.hero-slider-track{display:flex;width:500%;transition:transform .6s var(--ease)}
-.hero-slide{width:20%;flex-shrink:0}
+.hero-slider-track{display:flex;width:600%;transition:transform .6s var(--ease)}
+.hero-slide{width:16.6667%;flex-shrink:0}
+/* PolicyGPT hero slide */
+.hs-pg-bar{display:flex;align-items:center;gap:9px;border:1.5px solid var(--gray-200);border-radius:9999px;padding:10px 14px;margin-top:16px;font-size:12.5px;color:var(--gray-500)}
+.hs-pg-ans{margin-top:14px;background:var(--gray-50);border:1px solid var(--gray-100);border-radius:14px;padding:14px}
+.hs-pg-ans-head{display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:12.5px;color:var(--gray-900);margin-bottom:8px}
+.hs-pg-av{width:22px;height:22px;border-radius:6px;background:var(--grad-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hs-pg-text{font-size:13px;line-height:1.6;color:var(--gray-700);margin:0 0 10px}
+.hs-pg-text strong{color:var(--gray-900)}
+.hs-pg-src{display:inline-flex;align-items:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10.5px;font-weight:700;color:var(--teal);background:var(--teal-lt);border:1px solid rgba(23,157,151,.25);border-radius:9999px;padding:4px 10px}
 .hero-slider-nav{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:16px}
 .hero-slider-dots{display:flex;gap:8px}
 .hs-dot-btn{width:10px;height:10px;border-radius:50%;background:var(--gray-300);border:none;cursor:pointer;transition:all .25s var(--ease);padding:0}

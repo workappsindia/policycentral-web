@@ -8,6 +8,8 @@
     <h1>An AI-driven policy <br>management and access <br>platform for large <br>organizations</h1>
     <div class="hero-btns">
       <a href="<?php echo esc_url(home_url("/download/presentation/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
+      <a href="<?php echo esc_url(home_url("/policygpt/")); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>PolicyGPT Demo</a>
+      <div class="hero-btns-break" style="flex-basis:100%;height:0"></div>
       <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
     </div>
@@ -18,7 +20,29 @@
     <div class="hero-slider" id="heroSlider">
       <div class="hero-slider-track" id="heroSliderTrack">
 
-        <!-- Slide 1: Policy Library -->
+        <!-- Slide 1: PolicyGPT (default banner) -->
+        <div class="hero-slide">
+          <div class="hs-card hs-pg">
+            <div class="hs-ai-header">
+              <div class="hs-ai-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6" stroke-width="2.2"/></svg></div>
+              <div><h2 class="hs-ai-title">PolicyGPT</h2><span class="hs-ai-sub">Ask any policy, get an instant answer</span></div>
+            </div>
+            <div class="hs-pg-bar">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>How many casual leaves do I get?</span>
+            </div>
+            <div class="hs-pg-ans">
+              <div class="hs-pg-ans-head">
+                <span class="hs-pg-av"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                PolicyGPT
+              </div>
+              <p class="hs-pg-text">You get <strong>12 casual leaves a year</strong>, one per month. They cannot be carried forward, and up to 3 can be taken at a time.</p>
+              <span class="hs-pg-src">Source: Leave &amp; Attendance Policy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Policy Library -->
         <div class="hero-slide">
           <div class="hs-card hs-library">
             <div class="hs-browser-bar"><span class="hs-dot red"></span><span class="hs-dot yellow"></span><span class="hs-dot green"></span><span class="hs-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#179D97" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> PolicyCentral.ai</span></div>
@@ -160,7 +184,7 @@
           </div>
         </div>
 
-        <!-- Slide 5: Use Cases -->
+        <!-- Slide 6: Use Cases -->
         <div class="hero-slide">
           <div class="hs-card hs-usecases">
             <div class="hs-uc-header">
@@ -192,6 +216,22 @@
                 <div class="hs-uc-icon" style="background:linear-gradient(135deg,rgba(67,56,202,.1),rgba(124,58,237,.1))"><svg viewBox="0 0 24 24" fill="none" stroke="#4338CA" stroke-width="2" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
                 <strong>Business Req. Docs</strong>
               </div>
+              <div class="hs-uc-item">
+                <div class="hs-uc-icon" style="background:var(--teal-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#0694A2" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <strong>HR &amp; Employee Governance</strong>
+              </div>
+              <div class="hs-uc-item">
+                <div class="hs-uc-icon" style="background:var(--em-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <strong>Retail Operations</strong>
+              </div>
+              <div class="hs-uc-item">
+                <div class="hs-uc-icon" style="background:var(--amber-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" width="18" height="18"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/></svg></div>
+                <strong>Compliance &amp; Legal</strong>
+              </div>
+              <div class="hs-uc-item">
+                <div class="hs-uc-icon" style="background:var(--rose-lt)"><svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <strong>IT &amp; Security</strong>
+              </div>
             </div>
           </div>
         </div>
@@ -205,8 +245,9 @@
           <button class="hs-dot-btn" data-slide="2"></button>
           <button class="hs-dot-btn" data-slide="3"></button>
           <button class="hs-dot-btn" data-slide="4"></button>
+          <button class="hs-dot-btn" data-slide="5"></button>
         </div>
-        <div class="hero-slider-label" id="heroSliderLabel">Policy Library</div>
+        <div class="hero-slider-label" id="heroSliderLabel">PolicyGPT</div>
       </div>
     </div>
   </div>

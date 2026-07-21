@@ -8,12 +8,12 @@
   const dots = document.querySelectorAll('#heroSliderDots .hs-dot-btn');
   const label = document.getElementById('heroSliderLabel');
   const slider = document.getElementById('heroSlider');
-  const labels = ['Policy Library', 'Policy Document', 'Compliance Tracking', 'Gen AI Intelligence', 'Use Cases'];
-  let cur = 0, total = 5, timer = null, paused = false;
+  const labels = ['PolicyGPT', 'Policy Library', 'Policy Document', 'Compliance Tracking', 'Gen AI Intelligence', 'Use Cases'];
+  let cur = 0, total = 6, timer = null, paused = false;
 
   function go(i) {
     cur = ((i % total) + total) % total;
-    track.style.transform = 'translateX(-' + cur * 20 + '%)';
+    track.style.transform = 'translateX(-' + (cur * 100 / total) + '%)';
     dots.forEach((d, idx) => d.classList.toggle('active', idx === cur));
     label.textContent = labels[cur];
   }
