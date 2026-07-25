@@ -104,12 +104,12 @@ function pcgpt_migration_005_blogs_setup() {
                 'post_name'    => $tony_slug,
                 'post_status'  => 'publish',
                 'post_type'    => 'pc_author',
-                'post_content' => 'My role is to oversee & drive growth for PolicyCentral & VideoCX. Responsible for developing and implementing strategies to maximise the profitability and growth for both the products.',
+                'post_content' => 'My role is to oversee & drive growth for PolicyCentral.ai & VideoCX.io. Responsible for developing and implementing strategies to maximise the profitability and growth for both the products.',
                 'post_author'  => 1,
             ));
 
             if (!is_wp_error($author_id) && $author_id > 0) {
-                update_post_meta($author_id, '_pcb_designation', 'Lead – PolicyCentral & VideoCX');
+                update_post_meta($author_id, '_pcb_designation', 'Lead – PolicyCentral.ai & VideoCX.io');
                 update_post_meta($author_id, '_pcb_linkedin',    'https://www.linkedin.com/in/tonythomasn/');
                 update_post_meta($author_id, '_pcb_twitter',     '');
                 update_post_meta($author_id, '_pcb_email',       '');
