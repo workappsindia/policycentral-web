@@ -264,7 +264,7 @@ get_header();
 <!-- ══════════════ HERO ══════════════ -->
 <section class="pcgpt-hero">
   <h1 class="fu d1">Ask any workplace policy question.<br>Get a straight answer<br>with <span class="g-text">PolicyGPT</span>.</h1>
-  <p class="pcgpt-hero-sub fu d2">PolicyGPT reads real company policies and answers in plain English. No scrolling through PDFs. No digging through Google Drive. Try it below on a live library of 28 sample HR policies from Meridian Finance, a fictional company we created for this demo.</p>
+  <p class="pcgpt-hero-sub fu d2">PolicyGPT reads real company policies and answers in plain English. No scrolling through PDFs. No digging through Google Drive. Try it below on a live library of 65 sample policies from Meridian Finance, a fictional company we created for this demo.</p>
 
   <div class="pcgpt-search fu d3">
     <div class="pcgpt-bar">
@@ -401,11 +401,11 @@ get_header();
     <div class="stack-left" id="stackLeft">
       <div class="sl-num" id="slNum">01</div>
       <div class="sl-title" id="slTitle">Gen AI-Powered Policy Intelligence</div>
-      <div class="sl-desc" id="slDesc">AWS Bedrock, Polly and Translate to summarise, translate, and converse with every policy in your library.</div>
+      <div class="sl-desc" id="slDesc">AI summaries, auto FAQs, quizzes, translation and conversational answers for every policy in your library.</div>
       <div class="sl-pills" id="slPills">
-        <span class="sl-pill">AWS Bedrock</span>
-        <span class="sl-pill">Amazon Polly</span>
-        <span class="sl-pill">AWS Translate</span>
+        <span class="sl-pill">PolicyGPT</span>
+        <span class="sl-pill">Auto FAQ's</span>
+        <span class="sl-pill">Quiz Creation</span>
       </div>
       <div class="sl-progress">
         <div class="sl-prog-row">
@@ -679,7 +679,7 @@ get_header();
   document.querySelectorAll('.explore-wrap .exp-reveal').forEach(function(el){ observer.observe(el); });
 
   var leftData = [
-    { num:'01', title:'Gen AI-Powered Policy Intelligence',    desc:'AWS Bedrock, Polly and Translate — summaries, translation, audio and PolicyGPT chatbot.',   pills:['AWS Bedrock','Amazon Polly','AWS Translate'] },
+    { num:'01', title:'Gen AI-Powered Policy Intelligence',    desc:'AI summaries, auto FAQs, quizzes, audio and the PolicyGPT chatbot for every policy in your library.',   pills:['PolicyGPT','Auto FAQ\'s','Quiz Creation'] },
     { num:'02', title:'Policy Creation & Content Management',  desc:'Word-style editor, rich media, PDF viewer and secure video hosting. No size limits.',          pills:['Word Editor','PDF Viewer','Rich Media'] },
     { num:'03', title:'Publisher Controls & Workflow',         desc:'Maker-checker approval, version control and full lifecycle management in one place.',             pills:['Maker-Checker','Version Control','Workflow'] },
     { num:'04', title:'Policy Distribution & Targeting',       desc:'Precision targeting by department, location, grade — with evergreen mode for new joiners.',       pills:['AD/HRMS Sync','Evergreen Mode','Mail Merge'] },
