@@ -111,7 +111,7 @@ get_header();
 @media(max-width:520px){
   .pcgpt-go .lbl{display:none}
   .pcgpt-go{padding:13px 15px}
-  .pcgpt-chips .pcgpt-chip:nth-child(n+6){display:none}
+  .pcgpt-chips .pcgpt-chip:nth-child(n+8){display:none}
 }
 </style>
 
@@ -278,15 +278,20 @@ get_header();
     <div class="pcgpt-chips" id="pcgptChips">
       <span class="pcgpt-chip-label">Popular questions</span>
       <button class="pcgpt-chip">What is sandwich leave?</button>
+      <button class="pcgpt-chip">What is KYC?</button>
+      <button class="pcgpt-chip">Anti-money laundering rules</button>
+      <button class="pcgpt-chip">How do I report fraud?</button>
+      <button class="pcgpt-chip">Can I accept a client gift?</button>
+      <button class="pcgpt-chip">How is my personal data protected?</button>
       <button class="pcgpt-chip">Notice period &amp; full-and-final</button>
-      <button class="pcgpt-chip">Casual vs earned leave</button>
-      <button class="pcgpt-chip">What is POSH?</button>
-      <button class="pcgpt-chip">Reimbursement rules</button>
-      <button class="pcgpt-chip">Comp off policy</button>
       <button class="pcgpt-chip">Maternity &amp; paternity leave</button>
-      <button class="pcgpt-chip">Travel &amp; per diem</button>
-      <button class="pcgpt-chip">Dress code policy</button>
-      <button class="pcgpt-chip">Employee referral bonus</button>
+      <button class="pcgpt-chip">What is POSH?</button>
+      <button class="pcgpt-chip">Conflict of interest disclosure</button>
+      <button class="pcgpt-chip">Whistleblower protection</button>
+      <button class="pcgpt-chip">Password &amp; MFA rules</button>
+      <button class="pcgpt-chip">Work from home rules</button>
+      <button class="pcgpt-chip">Code of conduct basics</button>
+      <button class="pcgpt-chip">Variable pay &amp; bonus</button>
     </div>
   </div>
 
