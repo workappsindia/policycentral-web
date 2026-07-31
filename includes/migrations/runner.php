@@ -126,6 +126,7 @@ function pcgpt_get_migrations() {
         93 => 'pcgpt_migration_093_refresh_best_software_india_onpremise_edit',
         94 => 'pcgpt_migration_094_refresh_ai_policy_search_blog_65_policies',
         95 => 'pcgpt_migration_095_refresh_tony_thomas_full_domains',
+        96 => 'pcgpt_migration_096_create_policy_template_showcase_page',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

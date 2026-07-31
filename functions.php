@@ -41,7 +41,7 @@ function policycentral_scripts() {
     wp_enqueue_style('policycentral-style', get_stylesheet_uri(), array('policycentral-fonts'), '1.0.18');
 
     // Blog stylesheet (only on blog views + homepage for the "Latest from our blog" section)
-    if (is_singular('post') || is_page_template('page-blogs.php') || is_category() || is_tag() || is_search() ||
+    if (is_singular('post') || is_page_template('page-blogs.php') || is_page_template('page-policy-template-showcase.php') || is_category() || is_tag() || is_search() ||
         get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page()) {
         wp_enqueue_style('policycentral-blog',
             get_template_directory_uri() . '/blog-style.css',
