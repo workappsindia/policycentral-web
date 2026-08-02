@@ -1,0 +1,34 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Finance, tax and reporting illustration">
+  <defs>
+    <linearGradient id="fn-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#B45309"/></linearGradient>
+    <linearGradient id="fn-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <filter id="fn-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#B45309" flood-opacity="0.16"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#FEF3C7"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#fn-a)" opacity="0.95"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#B45309"/>
+
+  <!-- financial dashboard -->
+  <g filter="url(#fn-s)" transform="translate(150 150)">
+    <rect x="0" y="0" width="300" height="204" rx="18" fill="#fff"/>
+    <rect x="0" y="0" width="300" height="40" rx="18" fill="url(#fn-t)"/><rect x="0" y="24" width="300" height="16" fill="url(#fn-t)"/>
+    <rect x="20" y="14" width="90" height="12" rx="6" fill="#fff" opacity="0.9"/>
+    <!-- donut -->
+    <g transform="translate(66 122)"><circle r="42" fill="none" stroke="#FDE68A" stroke-width="18"/><circle r="42" fill="none" stroke="url(#fn-a)" stroke-width="18" stroke-dasharray="150 400" stroke-linecap="round" transform="rotate(-90)"/><circle r="42" fill="none" stroke="#0F766E" stroke-width="18" stroke-dasharray="70 400" stroke-linecap="round" transform="rotate(60)"/></g>
+    <!-- bars -->
+    <g transform="translate(150 60)">
+      <rect x="0" y="74" width="22" height="40" rx="4" fill="#FDE68A"/>
+      <rect x="34" y="54" width="22" height="60" rx="4" fill="#FCD34D"/>
+      <rect x="68" y="34" width="22" height="80" rx="4" fill="#F59E0B"/>
+      <rect x="102" y="14" width="22" height="100" rx="4" fill="#B45309"/>
+    </g>
+  </g>
+
+  <!-- rupee coin badge -->
+  <g filter="url(#fn-s)" transform="translate(398 268)">
+    <circle cx="40" cy="40" r="40" fill="url(#fn-a)"/>
+    <circle cx="40" cy="40" r="40" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="4 5" opacity="0.6"/>
+    <text x="40" y="55" font-family="Plus Jakarta Sans,sans-serif" font-size="40" font-weight="800" fill="#fff" text-anchor="middle">&#8377;</text>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#B45309" opacity="0.5"/>
+</svg>

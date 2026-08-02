@@ -1,0 +1,32 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Email and communication security illustration">
+  <defs>
+    <linearGradient id="em-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="em-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="em-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="em-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#6D28D9" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#em-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#6D28D9"/>
+
+  <!-- big envelope -->
+  <g filter="url(#em-s)" transform="translate(158 176)">
+    <rect x="0" y="0" width="264" height="176" rx="16" fill="#fff"/>
+    <path d="M0 16 L132 108 L264 16" fill="none" stroke="url(#em-p)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0 160 L96 84" stroke="#EDE9FE" stroke-width="6"/><path d="M264 160 L168 84" stroke="#EDE9FE" stroke-width="6"/>
+  </g>
+
+  <!-- security shield-check badge over envelope -->
+  <g filter="url(#em-s)" transform="translate(360 262)">
+    <path d="M52 4l46 17v36c0 33-21 51-46 62C27 108 6 90 6 57V21z" fill="url(#em-t)"/>
+    <path d="M52 4l46 17v36c0 33-21 51-46 62z" fill="#000" opacity="0.06"/>
+    <path d="M30 56l14 14 26-30" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- phishing hook being caught -->
+  <g filter="url(#em-s)" transform="translate(120 300)">
+    <path d="M28 0v40a18 18 0 0 1-36 0" fill="none" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="28" cy="0" r="7" fill="#F59E0B"/>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#6D28D9" opacity="0.5"/>
+</svg>

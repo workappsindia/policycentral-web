@@ -1,0 +1,33 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tax compliance illustration">
+  <defs>
+    <linearGradient id="tx-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#B45309"/></linearGradient>
+    <linearGradient id="tx-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <filter id="tx-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#B45309" flood-opacity="0.18"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#FEF3C7"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#tx-a)" opacity="0.95"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#B45309"/>
+
+  <!-- tax form -->
+  <g filter="url(#tx-s)" transform="translate(158 152)">
+    <rect x="0" y="0" width="210" height="204" rx="16" fill="#fff"/>
+    <rect x="0" y="0" width="210" height="46" rx="16" fill="url(#tx-t)"/>
+    <rect x="24" y="17" width="120" height="12" rx="6" fill="#fff" opacity="0.9"/>
+    <g fill="#E5E7EB"><rect x="24" y="70" width="120" height="9" rx="4.5"/><rect x="24" y="92" width="150" height="9" rx="4.5"/><rect x="24" y="114" width="100" height="9" rx="4.5"/></g>
+    <!-- total row -->
+    <rect x="24" y="150" width="80" height="10" rx="5" fill="#B45309"/>
+    <g transform="translate(150 138)"><circle cx="24" cy="24" r="24" fill="url(#tx-a)"/><text x="24" y="33" font-family="Plus Jakarta Sans,sans-serif" font-size="26" font-weight="800" fill="#fff" text-anchor="middle">&#8377;</text></g>
+  </g>
+
+  <!-- calculator -->
+  <g filter="url(#tx-s)" transform="translate(360 200)">
+    <rect x="0" y="0" width="130" height="160" rx="16" fill="#fff"/>
+    <rect x="16" y="16" width="98" height="34" rx="8" fill="#0F172A"/>
+    <rect x="24" y="28" width="60" height="10" rx="5" fill="#5EEAD4"/>
+    <g fill="#E0F7F6"><rect x="16" y="62" width="26" height="24" rx="5"/><rect x="52" y="62" width="26" height="24" rx="5"/><rect x="88" y="62" width="26" height="24" rx="5"/><rect x="16" y="94" width="26" height="24" rx="5"/><rect x="52" y="94" width="26" height="24" rx="5"/><rect x="88" y="94" width="26" height="24" rx="5"/><rect x="16" y="126" width="62" height="24" rx="5"/></g>
+    <rect x="88" y="126" width="26" height="24" rx="5" fill="url(#tx-t)"/>
+  </g>
+  <!-- check chip -->
+  <g filter="url(#tx-s)" transform="translate(120 316)"><circle cx="26" cy="26" r="26" fill="url(#tx-t)"/><path d="M16 26l7 7 14-15" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  <circle cx="300" cy="118" r="6" fill="#B45309" opacity="0.5"/>
+</svg>

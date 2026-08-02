@@ -21,6 +21,9 @@ require_once get_template_directory() . '/includes/blog/loader.php';
 // Compliance Intelligence (RBI rule decodes + enforcement tracker at /compliance)
 require_once get_template_directory() . '/includes/compliance/loader.php';
 
+// Policy Library (/resources/policies/ Policy Templates)
+require_once get_template_directory() . '/includes/policy-library/loader.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -42,7 +45,8 @@ function policycentral_scripts() {
 
     // Blog stylesheet (only on blog views + homepage for the "Latest from our blog" section)
     if (is_singular('post') || is_page_template('page-blogs.php') || is_page_template('page-policy-template-showcase.php') || is_category() || is_tag() || is_search() ||
-        get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page()) {
+        get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page() ||
+        (function_exists('pcpl_is_policy_view') && pcpl_is_policy_view())) {
         wp_enqueue_style('policycentral-blog',
             get_template_directory_uri() . '/blog-style.css',
             array('policycentral-style'), '1.0.7'
@@ -63,6 +67,14 @@ function policycentral_scripts() {
                 array(), '1.0.0', true
             );
         }
+    }
+
+    // Policy Library stylesheet (singles + archive + category views)
+    if (function_exists('pcpl_is_policy_view') && pcpl_is_policy_view()) {
+        wp_enqueue_style('policycentral-policy-library',
+            get_template_directory_uri() . '/includes/policy-library/assets/policy-library.css',
+            array('policycentral-style', 'policycentral-blog'), '1.0.0'
+        );
     }
 
     // Blog JS (TOC scrollspy) — single posts only

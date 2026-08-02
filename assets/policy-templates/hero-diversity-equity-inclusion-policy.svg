@@ -1,0 +1,28 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diversity, equity and inclusion illustration">
+  <defs>
+    <linearGradient id="dei-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#047857"/></linearGradient>
+    <linearGradient id="dei-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="dei-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#047857" flood-opacity="0.18"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#D1FAE5"/><circle cx="522" cy="378" r="106" fill="#EDE9FE"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#dei-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#7C3AED" opacity="0.4"/><circle cx="556" cy="150" r="7" fill="#047857"/>
+
+  <!-- inclusive ring of diverse people -->
+  <g filter="url(#dei-s)" transform="translate(210 156)">
+    <circle cx="110" cy="110" r="96" fill="#fff"/>
+    <circle cx="110" cy="110" r="96" fill="none" stroke="#D1FAE5" stroke-width="6"/>
+    <!-- 6 people, varied colors -->
+    <g>
+      <g transform="translate(110 20)"><circle r="20" fill="#22C1B6"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+      <g transform="translate(188 66)"><circle r="20" fill="#F59E0B"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+      <g transform="translate(188 154)"><circle r="20" fill="#6D28D9"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+      <g transform="translate(110 200)"><circle r="20" fill="#047857"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+      <g transform="translate(32 154)"><circle r="20" fill="#4338CA"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+      <g transform="translate(32 66)"><circle r="20" fill="#E11D48"/><circle cy="-4" r="8" fill="#fff"/><path d="M-12 12a12 11 0 0 1 24 0z" fill="#fff"/></g>
+    </g>
+    <!-- heart center -->
+    <path d="M110 138 C86 118 85 96 102 88 C112 83 110 96 110 96 C110 96 108 83 118 88 C135 96 134 118 110 138z" fill="url(#dei-g)"/>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#047857" opacity="0.5"/>
+</svg>

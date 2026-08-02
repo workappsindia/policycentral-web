@@ -1,0 +1,31 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dress code illustration">
+  <defs>
+    <linearGradient id="dc-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="dc-i" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="dc-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="dc-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#0F766E" flood-opacity="0.18"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#E0F7F6"/><circle cx="522" cy="378" r="106" fill="#EDE9FE"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#dc-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#7C3AED" opacity="0.4"/><circle cx="556" cy="150" r="7" fill="#0F766E"/>
+
+  <!-- formal shirt + blazer -->
+  <g filter="url(#dc-s)" transform="translate(190 158)">
+    <!-- blazer -->
+    <path d="M40 40 L110 12 L180 40 L200 200 A10 10 0 0 1 190 212 L30 212 A10 10 0 0 1 20 200 Z" fill="url(#dc-i)"/>
+    <!-- shirt -->
+    <path d="M78 26 L110 12 L142 26 L138 130 A6 6 0 0 1 132 136 L88 136 A6 6 0 0 1 82 130 Z" fill="#fff"/>
+    <!-- collar -->
+    <path d="M110 12 L92 42 L110 56 L128 42 Z" fill="#F3F4F6"/>
+    <!-- tie -->
+    <path d="M110 56 L102 70 L110 132 L118 70 Z" fill="url(#dc-t)"/>
+    <path d="M110 56 L98 44 L122 44 Z" fill="url(#dc-t)"/>
+    <!-- buttons -->
+    <circle cx="110" cy="90" r="3.5" fill="#E5E7EB"/><circle cx="110" cy="110" r="3.5" fill="#E5E7EB"/>
+    <!-- pocket square -->
+    <rect x="150" y="90" width="26" height="14" rx="3" fill="#fff" opacity="0.9"/>
+  </g>
+  <!-- approved check -->
+  <g filter="url(#dc-s)" transform="translate(372 300)"><circle cx="30" cy="30" r="30" fill="url(#dc-t)"/><path d="M18 30l8 8 16-18" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  <circle cx="300" cy="118" r="6" fill="#0F766E" opacity="0.5"/>
+</svg>

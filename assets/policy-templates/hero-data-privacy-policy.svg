@@ -1,0 +1,33 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Data privacy illustration">
+  <defs>
+    <linearGradient id="dp-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="dp-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="dp-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="dp-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#6D28D9" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#dp-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#6D28D9"/>
+
+  <!-- personal profile card being protected -->
+  <g filter="url(#dp-s)" transform="translate(160 158)">
+    <rect x="0" y="0" width="260" height="196" rx="18" fill="#fff"/>
+    <circle cx="60" cy="60" r="30" fill="#EDE9FE"/><circle cx="60" cy="50" r="12" fill="#6D28D9"/><path d="M38 78a22 20 0 0 1 44 0z" fill="#6D28D9"/>
+    <rect x="108" y="40" width="120" height="10" rx="5" fill="#E5E7EB"/>
+    <rect x="108" y="60" width="90" height="8" rx="4" fill="#EEF0FA"/>
+    <!-- redacted personal fields -->
+    <rect x="24" y="118" width="150" height="10" rx="5" fill="#DDD6FE"/>
+    <rect x="24" y="140" width="120" height="10" rx="5" fill="#DDD6FE"/>
+    <rect x="24" y="162" width="140" height="10" rx="5" fill="#EEF0FA"/>
+  </g>
+
+  <!-- big padlock guarding -->
+  <g filter="url(#dp-s)" transform="translate(360 236)">
+    <rect x="14" y="52" width="108" height="90" rx="16" fill="url(#dp-p)"/>
+    <path d="M34 52v-16a34 34 0 0 1 68 0v16" fill="none" stroke="url(#dp-p)" stroke-width="14"/>
+    <circle cx="68" cy="92" r="13" fill="#fff"/><rect x="63" y="96" width="10" height="24" rx="5" fill="#fff"/>
+  </g>
+  <!-- consent check -->
+  <g filter="url(#dp-s)" transform="translate(120 300)"><circle cx="30" cy="30" r="30" fill="url(#dp-t)"/><path d="M18 30l8 8 16-18" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  <circle cx="300" cy="118" r="6" fill="#6D28D9" opacity="0.5"/>
+</svg>

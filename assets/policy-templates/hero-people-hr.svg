@@ -1,0 +1,30 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="People and HR illustration">
+  <defs>
+    <linearGradient id="ph-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="ph-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="ph-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#0F766E" flood-opacity="0.18"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#E0F7F6"/><circle cx="522" cy="378" r="106" fill="#EDE9FE"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#ph-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#7C3AED" opacity="0.4"/><circle cx="556" cy="150" r="7" fill="#0F766E"/>
+
+  <!-- employee ID badge on lanyard -->
+  <g filter="url(#ph-s)" transform="translate(150 150)">
+    <path d="M70 0 l16 40 h-32z" fill="url(#ph-t)"/>
+    <rect x="14" y="34" width="112" height="150" rx="16" fill="#fff"/>
+    <rect x="52" y="26" width="36" height="16" rx="4" fill="#0F766E"/>
+    <circle cx="70" cy="82" r="26" fill="#E0F7F6"/><circle cx="70" cy="72" r="10" fill="#0F766E"/><path d="M50 100a20 18 0 0 1 40 0z" fill="#0F766E"/>
+    <rect x="36" y="128" width="68" height="9" rx="4.5" fill="#E5E7EB"/>
+    <rect x="46" y="146" width="48" height="7" rx="3.5" fill="#EEF1F4"/>
+  </g>
+
+  <!-- team trio -->
+  <g filter="url(#ph-s)" transform="translate(330 214)">
+    <g transform="translate(0 20)"><circle cx="34" cy="34" r="34" fill="#fff"/><circle cx="34" cy="26" r="12" fill="#F59E0B"/><path d="M12 54a22 20 0 0 1 44 0z" fill="#F59E0B"/></g>
+    <g transform="translate(56 0)"><circle cx="40" cy="40" r="40" fill="#fff"/><circle cx="40" cy="30" r="14" fill="#22C1B6"/><path d="M14 64a26 24 0 0 1 52 0z" fill="#22C1B6"/></g>
+    <g transform="translate(120 20)"><circle cx="34" cy="34" r="34" fill="#fff"/><circle cx="34" cy="26" r="12" fill="#6D28D9"/><path d="M12 54a22 20 0 0 1 44 0z" fill="#6D28D9"/></g>
+  </g>
+  <!-- care check -->
+  <g filter="url(#ph-s)" transform="translate(300 320)"><circle cx="26" cy="26" r="26" fill="url(#ph-t)"/><path d="M16 26l7 7 14-15" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  <circle cx="300" cy="118" r="6" fill="#0F766E" opacity="0.5"/>
+</svg>

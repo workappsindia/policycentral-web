@@ -1,0 +1,45 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bw-i" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="bw-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="bw-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="bw-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#4338CA" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="130" r="94" fill="#EDE9FE"/><circle cx="520" cy="380" r="108" fill="#E0F7F6"/>
+  <path d="M486 86 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#bw-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#6D28D9"/>
+
+  <!-- sound waves emanating -->
+  <g stroke="url(#bw-i)" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M400 150a70 70 0 0 1 0 120"/>
+    <path d="M430 128a112 112 0 0 1 0 164"/>
+    <path d="M460 106a154 154 0 0 1 0 208"/>
+  </g>
+
+  <!-- megaphone -->
+  <g filter="url(#bw-s)" transform="translate(150 176)">
+    <path d="M20 44 L150 8 A10 10 0 0 1 164 18 L164 122 A10 10 0 0 1 150 132 L20 96 Z" fill="url(#bw-i)"/>
+    <path d="M150 8 A10 10 0 0 1 164 18 L164 122 A10 10 0 0 1 150 132 Z" fill="#000" opacity="0.08"/>
+    <rect x="-16" y="44" width="40" height="52" rx="10" fill="#4338CA"/>
+    <path d="M40 98 l10 46 a12 12 0 0 0 22 -4 l-6 -34 Z" fill="url(#bw-i)"/>
+    <!-- highlight lines -->
+    <rect x="46" y="52" width="80" height="7" rx="3.5" fill="#fff" opacity="0.75"/>
+    <rect x="46" y="70" width="58" height="7" rx="3.5" fill="#fff" opacity="0.5"/>
+  </g>
+
+  <!-- protected disclosure doc with shield-check -->
+  <g filter="url(#bw-s)" transform="translate(348 236)">
+    <rect x="0" y="0" width="150" height="184" rx="16" fill="#fff"/>
+    <rect x="22" y="26" width="80" height="9" rx="4.5" fill="#E4E4F5"/>
+    <rect x="22" y="46" width="106" height="7" rx="3.5" fill="#EEF0FA"/>
+    <rect x="22" y="62" width="94" height="7" rx="3.5" fill="#EEF0FA"/>
+    <rect x="22" y="78" width="106" height="7" rx="3.5" fill="#EEF0FA"/>
+    <g transform="translate(78 96)">
+      <path d="M32 4l30 11v30c0 21-13 33-30 39-17-6-30-18-30-39V15z" fill="url(#bw-t)"/>
+      <path d="M18 34l10 10 18-20" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+  <!-- anonymity dots -->
+  <circle cx="300" cy="120" r="6" fill="#4338CA" opacity="0.6"/>
+  <circle cx="520" cy="250" r="5" fill="#22C1B6"/>
+</svg>

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KYC and customer due diligence illustration">
+  <defs>
+    <linearGradient id="kyc-teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="kyc-indigo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="kyc-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#F5FAFF"/></linearGradient>
+    <linearGradient id="kyc-amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <radialGradient id="kyc-glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#22C1B6" stop-opacity="0.20"/><stop offset="1" stop-color="#22C1B6" stop-opacity="0"/></radialGradient>
+    <filter id="kyc-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0F766E" flood-opacity="0.18"/></filter>
+    <filter id="kyc-sh2" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#4338CA" flood-opacity="0.22"/></filter>
+  </defs>
+
+  <!-- lively backdrop -->
+  <circle cx="330" cy="250" r="230" fill="url(#kyc-glow)"/>
+  <circle cx="150" cy="120" r="88" fill="#E0F7F6"/>
+  <circle cx="520" cy="380" r="104" fill="#EDE9FE"/>
+  <path d="M470 96 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#kyc-amber)" opacity="0.9"/>
+  <circle cx="120" cy="360" r="10" fill="#7C3AED" opacity="0.45"/>
+  <circle cx="540" cy="150" r="7" fill="#22C1B6"/>
+  <circle cx="86" cy="230" r="6" fill="#F59E0B" opacity="0.7"/>
+
+  <!-- back accent card (indigo) -->
+  <g transform="rotate(-9 330 250)" filter="url(#kyc-sh2)">
+    <rect x="196" y="150" width="286" height="196" rx="22" fill="url(#kyc-indigo)"/>
+    <rect x="220" y="176" width="150" height="12" rx="6" fill="#fff" opacity="0.85"/>
+    <rect x="220" y="200" width="240" height="8" rx="4" fill="#fff" opacity="0.4"/>
+    <rect x="220" y="218" width="210" height="8" rx="4" fill="#fff" opacity="0.4"/>
+  </g>
+
+  <!-- main ID / KYC card -->
+  <g transform="rotate(5 330 260)" filter="url(#kyc-sh)">
+    <rect x="176" y="150" width="308" height="212" rx="22" fill="url(#kyc-card)"/>
+    <!-- teal header -->
+    <path d="M176 172 a22 22 0 0 1 22-22 h264 a22 22 0 0 1 22 22 v34 h-308z" fill="url(#kyc-teal)"/>
+    <rect x="200" y="166" width="120" height="9" rx="4.5" fill="#fff"/>
+    <rect x="200" y="182" width="72" height="7" rx="3.5" fill="#fff" opacity="0.65"/>
+    <text x="452" y="188" font-family="Plus Jakarta Sans, sans-serif" font-size="13" font-weight="800" fill="#fff" text-anchor="end" opacity="0.9">KYC</text>
+
+    <!-- avatar / person -->
+    <circle cx="234" cy="268" r="34" fill="#E0F7F6"/>
+    <circle cx="234" cy="256" r="13" fill="#0F766E"/>
+    <path d="M210 294 a24 22 0 0 1 48 0z" fill="#0F766E"/>
+
+    <!-- detail lines -->
+    <g fill="#D7DEE8">
+      <rect x="286" y="238" width="150" height="9" rx="4.5"/>
+      <rect x="286" y="258" width="128" height="9" rx="4.5"/>
+      <rect x="286" y="278" width="140" height="9" rx="4.5"/>
+    </g>
+    <!-- verified row -->
+    <circle cx="292" cy="316" r="9" fill="#10B981"/><path d="M288 316l2.6 2.6 4.6-5.2" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="308" y="311" width="96" height="9" rx="4.5" fill="#B9F0DD"/>
+  </g>
+
+  <!-- verified badge (floating) -->
+  <g filter="url(#kyc-sh)" transform="translate(430 128)">
+    <circle cx="40" cy="40" r="42" fill="url(#kyc-teal)"/>
+    <path d="M40 15l19 7.5v19c0 13.5-8.5 21-19 24.7C29.5 62.5 21 55 21 41.5v-19z" fill="#fff" opacity="0.18"/>
+    <path d="M28 40l9 9 16-18" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- magnifying glass (due diligence) -->
+  <g filter="url(#kyc-sh2)" transform="translate(352 300)">
+    <circle cx="52" cy="52" r="50" fill="#fff" opacity="0.55"/>
+    <circle cx="52" cy="52" r="50" fill="none" stroke="url(#kyc-indigo)" stroke-width="12"/>
+    <circle cx="52" cy="52" r="36" fill="none" stroke="#C7D2FE" stroke-width="3"/>
+    <rect x="88" y="88" width="52" height="20" rx="10" transform="rotate(45 88 88)" fill="url(#kyc-amber)"/>
+    <path d="M40 52l9 9 17-19" stroke="#6D28D9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
