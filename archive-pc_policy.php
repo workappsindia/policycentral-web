@@ -1,6 +1,6 @@
 <?php
 /**
- * Archive template — pc_policy  →  /resources/policies/  (Policy Templates landing)
+ * Archive template — pc_policy  →  /policies/  (Policy Templates landing)
  * Hero + the 6 category cards. Card counts come from the taxonomy.
  */
 defined('ABSPATH') || exit;

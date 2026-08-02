@@ -2,7 +2,7 @@
 /**
  * Policy Library, Bootstrap Loader
  *
- * The /resources/policies/ "Policy Templates" library: sanitized, genericized
+ * The /policies/ "Policy Templates" library: sanitized, genericized
  * sample policies presented as adaptable templates, grouped into categories,
  * each with a lead-capture "mail me the personalized PDF" flow.
  *

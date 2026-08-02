@@ -14,7 +14,7 @@ while (have_posts()) : the_post();
     $pid      = get_the_ID();
     $category = pcpl_primary_category($pid);
     $cat_name = $category ? $category->name : 'Policy Templates';
-    $cat_url  = $category ? get_term_link($category) : home_url('/resources/policies/');
+    $cat_url  = $category ? get_term_link($category) : home_url('/policies/');
     $hero     = pcpl_policy_hero($pid);
     $byline   = get_the_excerpt();
     $covers   = pcpl_meta_list($pid, '_pcpl_covers');
@@ -60,7 +60,7 @@ while (have_posts()) : the_post();
     <div class="pcb-post-hero-inner">
       <div class="pcb-post-hero-text">
         <nav class="pcb-breadcrumb" aria-label="Breadcrumb">
-          <a href="<?php echo esc_url(home_url('/resources/policies/')); ?>">Policy Templates</a>
+          <a href="<?php echo esc_url(home_url('/policies/')); ?>">Policy Templates</a>
           <span aria-hidden="true">/</span>
           <a href="<?php echo esc_url($cat_url); ?>"><?php echo esc_html($cat_name); ?></a>
           <span aria-hidden="true">/</span>

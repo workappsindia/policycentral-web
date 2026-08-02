@@ -3,7 +3,7 @@
  * Migration 096: Create the Policy Template showcase (prototype) page.
  *
  * Creates /policy-template-showcase/ using page-policy-template-showcase.php,
- * a design prototype for the upcoming /resources/policies/ Policy Templates
+ * a design prototype for the upcoming /policies/ Policy Templates
  * library. Marked noindex (Rank Math) and kept out of the sitemap since it is
  * a review-only page that the real CPT section will replace.
  *

@@ -21,7 +21,7 @@ require_once get_template_directory() . '/includes/blog/loader.php';
 // Compliance Intelligence (RBI rule decodes + enforcement tracker at /compliance)
 require_once get_template_directory() . '/includes/compliance/loader.php';
 
-// Policy Library (/resources/policies/ Policy Templates)
+// Policy Library (/policies/ Policy Templates)
 require_once get_template_directory() . '/includes/policy-library/loader.php';
 
 // Theme setup

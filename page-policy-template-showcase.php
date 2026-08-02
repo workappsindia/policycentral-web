@@ -3,7 +3,7 @@
  * Template Name: Policy Template Showcase
  *
  * PROTOTYPE — a single "PolicyCentral.ai Policy Template" page (KYC & CDD)
- * to review the design before building the full /resources/policies/ library.
+ * to review the design before building the full /policies/ library.
  * Reuses the blog hero + CTA components (blog-style.css) for a native look.
  * Body + FAQ HTML are bundled under assets/policy-templates/kyc-cdd-policy/.
  */

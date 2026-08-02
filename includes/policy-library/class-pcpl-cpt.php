@@ -3,8 +3,8 @@
  * Policy Library, CPT + taxonomy registration.
  *
  * pc_policy          — a "PolicyCentral.ai Policy Template" page.
- *                      Archive: /resources/policies/  Single: /resources/policies/{slug}/
- * pc_policy_category — the category hubs. /resources/policies/category/{cat}/
+ *                      Archive: /policies/  Single: /policies/{slug}/
+ * pc_policy_category — the category hubs. /policies/category/{cat}/
  */
 defined('ABSPATH') || exit;
 
@@ -14,8 +14,8 @@ class PCPL_CPT {
 
     public static function register() {
         add_action('init', array(__CLASS__, 'register_all'), 10);
-        // The CPT's attachment catch-all (resources/policies/[^/]+/([^/]+)) would
-        // otherwise shadow the category hub rule (resources/policies/category/...).
+        // The CPT's attachment catch-all (policies/[^/]+/([^/]+)) would
+        // otherwise shadow the category hub rule (policies/category/...).
         // Float the taxonomy rules to the top so hubs resolve before singles.
         add_filter('rewrite_rules_array', array(__CLASS__, 'prioritize_category_rules'));
     }
@@ -24,7 +24,7 @@ class PCPL_CPT {
         $tax = array();
         $rest = array();
         foreach ($rules as $regex => $query) {
-            if (strpos($regex, 'resources/policies/category/') === 0) {
+            if (strpos($regex, 'policies/category/') === 0) {
                 $tax[$regex] = $query;
             } else {
                 $rest[$regex] = $query;
@@ -51,8 +51,8 @@ class PCPL_CPT {
             'menu_icon'         => 'dashicons-media-document',
             'menu_position'     => 33,
             'supports'          => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'revisions'),
-            'has_archive'       => 'resources/policies',
-            'rewrite'           => array('slug' => 'resources/policies', 'with_front' => false),
+            'has_archive'       => 'policies',
+            'rewrite'           => array('slug' => 'policies', 'with_front' => false),
             'show_in_nav_menus' => false,
         ));
 
@@ -69,7 +69,7 @@ class PCPL_CPT {
             'hierarchical'      => true,
             'show_in_rest'      => true,
             'show_admin_column' => true,
-            'rewrite'           => array('slug' => 'resources/policies/category', 'with_front' => false),
+            'rewrite'           => array('slug' => 'policies/category', 'with_front' => false),
         ));
     }
 }

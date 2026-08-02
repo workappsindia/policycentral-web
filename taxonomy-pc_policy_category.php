@@ -1,6 +1,6 @@
 <?php
 /**
- * Taxonomy template — pc_policy_category  →  /resources/policies/category/{slug}/
+ * Taxonomy template — pc_policy_category  →  /policies/category/{slug}/
  * Category hub: hero (category art) + grid of that category's policy templates.
  */
 defined('ABSPATH') || exit;
@@ -25,7 +25,7 @@ $hero = pcpl_category_hero($slug);
     <div class="pcb-post-hero-inner">
       <div class="pcb-post-hero-text">
         <nav class="pcb-breadcrumb" aria-label="Breadcrumb">
-          <a href="<?php echo esc_url(home_url('/resources/policies/')); ?>">Policy Templates</a>
+          <a href="<?php echo esc_url(home_url('/policies/')); ?>">Policy Templates</a>
           <span aria-hidden="true">/</span>
           <span aria-current="page"><?php echo esc_html($name); ?></span>
         </nav>

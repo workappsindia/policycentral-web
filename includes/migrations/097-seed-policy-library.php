@@ -1,6 +1,6 @@
 <?php
 /**
- * Migration 097: Seed the Policy Library (/resources/policies/).
+ * Migration 097: Seed the Policy Library (/policies/).
  *
  * Creates the 6 pc_policy_category terms (from pcpl_categories()) and the
  * curated policy templates from includes/policy-library/data/policies.json:
