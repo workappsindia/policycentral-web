@@ -6,6 +6,10 @@
  * corporate-email only), generates a personalized PDF, emails it to the
  * requester, notifies the webmaster, and stores the lead in the shared
  * wp_pc_leads table (so it appears in the existing Lead Intelligence admin).
+ *
+ * Note: a template download is NOT a sales lead — the webmaster gets a plain
+ * "downloaded" notice with the PDF attached, never the PCL_Mailer lead report,
+ * and enrichment is never triggered. (rev 2)
  */
 defined('ABSPATH') || exit;
 
