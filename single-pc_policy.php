@@ -140,7 +140,7 @@ while (have_posts()) : the_post();
         <div class="pt-fc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
         <h4>Get your personalized copy</h4>
         <p>Add your details and we'll insert your company name, then email you a ready-to-use PDF of this policy.</p>
-        <form class="pt-lead-form" data-policy="<?php echo esc_attr(get_post_field('post_name', $pid)); ?>">
+        <form class="pt-lead-form" data-policy="<?php echo esc_attr(get_post_field('post_name', $pid)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('pcpl_lead')); ?>" data-ajax="<?php echo esc_url(admin_url('admin-ajax.php')); ?>">
           <input type="text" name="name" placeholder="Full name" autocomplete="name" required>
           <input type="text" name="company" placeholder="Company name (optional)" autocomplete="organization">
           <input type="email" name="email" placeholder="Work email" autocomplete="email" required>
@@ -183,13 +183,25 @@ while (have_posts()) : the_post();
     var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-15% 0px -75% 0px'});
     secs.forEach(function(s){spy.observe(s);});
   }
-  // Lead form — personalized-PDF delivery is being finalised; graceful stub for now.
+  // Lead form — mail-me-PDF endpoint.
   var f=document.querySelector('.pt-lead-form');
   if(f){f.addEventListener('submit',function(e){
     e.preventDefault();
-    var m=f.parentNode.querySelector('.pt-fc-msg');
-    m.className='pt-fc-msg show';
-    m.textContent='Thanks! Personalized PDF delivery is launching shortly, we will have this ready for you very soon.';
+    var m=f.parentNode.querySelector('.pt-fc-msg'), btn=f.querySelector('button');
+    m.className='pt-fc-msg show'; m.textContent='Generating your personalized PDF...';
+    btn.disabled=true;
+    var fd=new FormData(f);
+    fd.append('action','pcpl_lead');
+    fd.append('nonce',f.getAttribute('data-nonce'));
+    fd.append('policy',f.getAttribute('data-policy'));
+    fetch(f.getAttribute('data-ajax'),{method:'POST',body:fd,credentials:'same-origin'})
+      .then(function(r){return r.json();})
+      .then(function(res){
+        btn.disabled=false;
+        if(res && res.success){ m.className='pt-fc-msg show'; m.textContent=res.data.message; f.reset(); }
+        else { m.className='pt-fc-msg show pt-fc-err'; m.textContent=(res&&res.data)?res.data:'Something went wrong. Please try again.'; }
+      })
+      .catch(function(){ btn.disabled=false; m.className='pt-fc-msg show pt-fc-err'; m.textContent='Network error. Please try again.'; });
   });}
 })();
 </script>
