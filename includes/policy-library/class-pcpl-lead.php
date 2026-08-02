@@ -67,8 +67,7 @@ class PCPL_Lead {
         file_put_contents($path, $pdf);
 
         $sent = self::mail_user($email, $name, $policy['title'], $path);
-        self::notify_webmaster($name, $company, $email, $mobile, $policy['title']);
-        self::store_lead($name, $company, $email, $mobile, $policy['title'], $ip);
+        self::store_and_notify($name, $company, $email, $mobile, $policy['title'], $ip);
 
         @unlink($path);
 
@@ -85,27 +84,23 @@ class PCPL_Lead {
         $body .= "This template is a starting point, please review and adapt it with your compliance/legal team before use.\n\n";
         $body .= "Want these policies to live inside your organisation, versioned, translated, acknowledged, and answerable by AI? Reply to this email or visit " . home_url('/') . "\n\n";
         $body .= "PolicyCentral.ai";
-        $headers = array('Content-Type: text/plain; charset=UTF-8');
+        $headers = array(
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: PolicyCentral.ai <marketing@policycentral.ai>',
+        );
         return wp_mail($email, $subject, $body, $headers, array($path));
     }
 
-    private static function notify_webmaster($name, $company, $email, $mobile, $title) {
-        $to = function_exists('pc_lead_recipient') ? pc_lead_recipient() : get_option('admin_email');
-        $subject = 'New Policy Template lead: ' . $title;
-        $body  = "A new policy-template PDF was requested.\n\n";
-        $body .= "Policy:  " . $title . "\n";
-        $body .= "Name:    " . $name . "\n";
-        $body .= "Company: " . ($company !== '' ? $company : '(not provided)') . "\n";
-        $body .= "Email:   " . $email . "\n";
-        $body .= "Mobile:  " . ($mobile !== '' ? $mobile : '(not provided)') . "\n";
-        $body .= "Time:    " . current_time('mysql') . "\n";
-        wp_mail($to, $subject, $body);
-    }
-
-    private static function store_lead($name, $company, $email, $mobile, $title, $ip) {
+    /**
+     * Store the lead in wp_pc_leads and notify the webmaster through the SAME
+     * proven path as contact-form leads (PCL_Mailer::send_admin_notification,
+     * which sends with an authenticated From + resolves the env recipient).
+     */
+    private static function store_and_notify($name, $company, $email, $mobile, $title, $ip) {
         global $wpdb;
         $table = $wpdb->prefix . 'pc_leads';
         if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table)) !== $table) return;
+
         $wpdb->insert($table, array(
             'full_name'         => $name,
             'company'           => $company,
@@ -121,5 +116,28 @@ class PCPL_Lead {
             'enrichment_status' => 'new',
             'submitted_at'      => current_time('mysql'),
         ));
+        $lead_id = (int) $wpdb->insert_id;
+        if (!$lead_id) return;
+
+        // Set reference_id/first_name like the contact form does.
+        if (class_exists('PCL_DB') && method_exists('PCL_DB', 'finalize_lead')) {
+            PCL_DB::finalize_lead($lead_id, $name);
+        }
+
+        $lead = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$table} WHERE id = %d", $lead_id));
+
+        if ($lead && class_exists('PCL_Mailer') && method_exists('PCL_Mailer', 'send_admin_notification')) {
+            PCL_Mailer::send_admin_notification($lead);
+        } else {
+            // Fallback: still send with a proper authenticated From header.
+            $to = function_exists('pc_get_admin_lead_email') ? pc_get_admin_lead_email() : get_option('admin_email');
+            $headers = array(
+                'From: PolicyCentral.ai <marketing@policycentral.ai>',
+                'Reply-To: ' . $name . ' <' . $email . '>',
+            );
+            $body = "New Policy Template lead\n\nPolicy:  $title\nName:    $name\nCompany: " . ($company ?: '(not provided)')
+                  . "\nEmail:   $email\nMobile:  " . ($mobile ?: '(not provided)') . "\n";
+            wp_mail($to, 'New Policy Template lead: ' . $title, $body, $headers);
+        }
     }
 }
