@@ -104,17 +104,22 @@ class PCPL_Lead {
      * Otherwise we fall back to a scheduled cron event; the reaper backs both up.
      */
     private static function respond_and_drain($job_id, $message) {
-        status_header(200);
-        header('Content-Type: application/json; charset=' . get_option('blog_charset'));
-        echo wp_json_encode(array('success' => true, 'data' => array('message' => $message)));
-
         if (function_exists('fastcgi_finish_request')) {
+            // PHP-FPM: return the response to the client, then process in the same
+            // worker. No cron loopback needed (works even behind Basic Auth on dev).
+            status_header(200);
+            header('Content-Type: application/json; charset=' . get_option('blog_charset'));
+            echo wp_json_encode(array('success' => true, 'data' => array('message' => $message)));
             fastcgi_finish_request();
             PCPL_Queue::process_job($job_id);
-        } else {
-            PCPL_Queue::kick($job_id);
+            exit;
         }
-        exit;
+
+        // No in-request async available: process inline before responding, so
+        // delivery never depends on the WP-Cron loopback (which Basic Auth blocks
+        // on dev). Costs the requester a short wait on a policy's first-ever lead.
+        PCPL_Queue::process_job($job_id);
+        wp_send_json_success(array('message' => $message));
     }
 
     /**
