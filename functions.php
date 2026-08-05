@@ -71,9 +71,11 @@ function policycentral_scripts() {
 
     // Policy Library stylesheet (singles + archive + category views)
     if (function_exists('pcpl_is_policy_view') && pcpl_is_policy_view()) {
+        $pcpl_css = get_template_directory() . '/includes/policy-library/assets/policy-library.css';
         wp_enqueue_style('policycentral-policy-library',
             get_template_directory_uri() . '/includes/policy-library/assets/policy-library.css',
-            array('policycentral-style', 'policycentral-blog'), '1.0.0'
+            array('policycentral-style', 'policycentral-blog'),
+            file_exists($pcpl_css) ? filemtime($pcpl_css) : '1.0.1'
         );
     }
 
