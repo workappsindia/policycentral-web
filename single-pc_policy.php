@@ -89,12 +89,14 @@ while (have_posts()) : the_post();
       <div class="pt-doc"><?php echo $body; // trusted seeded HTML ?></div>
 
       <?php
-      // Related — same category, exclude current.
+      // Related — same category first, then top up from other categories to 3
+      // so a small category never shows a lonely single card.
+      $need    = 3;
       $related = array();
       if ($category) {
           $rq = new WP_Query(array(
               'post_type'      => PCPL_CPT::POST_TYPE,
-              'posts_per_page' => 3,
+              'posts_per_page' => $need,
               'post__not_in'   => array($pid),
               'orderby'        => 'rand',
               'tax_query'      => array(array(
@@ -104,6 +106,17 @@ while (have_posts()) : the_post();
               )),
           ));
           $related = $rq->posts;
+          wp_reset_postdata();
+      }
+      if (count($related) < $need) {
+          $exclude = array_merge(array($pid), wp_list_pluck($related, 'ID'));
+          $fill = new WP_Query(array(
+              'post_type'      => PCPL_CPT::POST_TYPE,
+              'posts_per_page' => $need - count($related),
+              'post__not_in'   => $exclude,
+              'orderby'        => 'rand',
+          ));
+          $related = array_merge($related, $fill->posts);
           wp_reset_postdata();
       }
       if ($related) : ?>
@@ -116,6 +129,28 @@ while (have_posts()) : the_post();
               <div class="k"><?php echo esc_html($rcat ? $rcat->name : 'Policy Template'); ?></div>
               <div class="t"><?php echo esc_html(get_the_title($r->ID)); ?></div>
               <div class="d"><?php echo esc_html(wp_trim_words(get_the_excerpt($r->ID), 18)); ?></div>
+            </a>
+          <?php endforeach; ?>
+        </div>
+      </section>
+      <?php endif; ?>
+
+      <?php
+      // Browse all categories — quick jump to any other category hub.
+      $all_cats     = function_exists('pcpl_categories') ? pcpl_categories() : array();
+      $cur_cat_slug = $category ? $category->slug : '';
+      if ($all_cats) : ?>
+      <section class="pt-cats">
+        <h2>Browse all policy categories</h2>
+        <div class="pt-cats-grid">
+          <?php foreach ($all_cats as $cslug => $c) :
+              $cterm = get_term_by('slug', $cslug, PCPL_CPT::TAXONOMY);
+              $curl  = $cterm ? get_term_link($cterm) : home_url('/policies/category/' . $cslug . '/');
+              if (is_wp_error($curl)) $curl = home_url('/policies/category/' . $cslug . '/');
+              $is_cur = ($cslug === $cur_cat_slug); ?>
+            <a class="pt-cat-pill<?php echo $is_cur ? ' is-current' : ''; ?>" href="<?php echo esc_url($curl); ?>" style="--cat-accent:<?php echo esc_attr($c['accent']); ?>"<?php echo $is_cur ? ' aria-current="true"' : ''; ?>>
+              <span class="pt-cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><?php echo $c['icon']; ?></svg></span>
+              <span class="pt-cat-name"><?php echo esc_html($c['name']); ?></span>
             </a>
           <?php endforeach; ?>
         </div>
@@ -167,11 +202,8 @@ while (have_posts()) : the_post();
     <h2>Stop emailing policy PDFs nobody reads</h2>
     <p>PolicyCentral.ai turns templates like this into living policies, versioned, translated, acknowledged, and answerable by AI.</p>
     <div class="hero-btns">
-      <a href="<?php echo esc_url(home_url('/download/presentation/')); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Presentation</a>
-      <a href="<?php echo esc_url(home_url('/policygpt/')); ?>" target="_blank" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>PolicyGPT Demo</a>
-      <div class="hero-btns-break" style="flex-basis:100%;height:0"></div>
-      <a href="https://demo.policycentral.ai/" target="_blank" class="btn btn-secondary">Web Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a href="https://demo.policycentral.ai/mobile.html" target="_blank" class="btn btn-ghost">Mobile Demo</a>
+      <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book a walkthrough</a>
+      <a href="<?php echo esc_url(home_url('/policies/')); ?>" class="btn btn-secondary">Explore other policies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>
 </div>

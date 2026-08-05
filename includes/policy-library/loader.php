@@ -23,9 +23,11 @@ define('PCPL_ASSETS', get_template_directory() . '/assets/policy-templates');
 
 require_once PCPL_DIR . '/class-pcpl-cpt.php';
 require_once PCPL_DIR . '/class-pcpl-lead.php';
+require_once PCPL_DIR . '/class-pcpl-queue.php';
 
 PCPL_CPT::register();
 PCPL_Lead::register();
+PCPL_Queue::register();
 
 /**
  * Is the current request a Policy Library view (single / archive / category)?
@@ -52,11 +54,11 @@ function pcpl_categories() {
             'hero'   => 'hero-people-hr.svg',
             'icon'   => '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
         ),
-        'financial-crime' => array(
-            'name'   => 'Financial Crime & KYC/AML',
+        'fraud-risk' => array(
+            'name'   => 'Fraud Risk & KYC/AML',
             'desc'   => 'KYC, anti-money-laundering, sanctions and fraud policies aligned to RBI Master Directions and the PMLA.',
             'accent' => '#0F766E',
-            'hero'   => 'hero-financial-crime.svg',
+            'hero'   => 'hero-fraud-risk.svg',
             'icon'   => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
         ),
         'governance-ethics' => array(

@@ -1,19 +1,23 @@
 <?php
 /**
- * Policy Library — lead capture + personalized-PDF delivery.
+ * Policy Library — lead capture + personalized-PDF delivery (async).
  *
  * AJAX (priv + nopriv) action `pcpl_lead`: validates (name + email required,
- * corporate-email only), generates a personalized PDF, emails it to the
- * requester, notifies the webmaster, and stores the lead in the shared
- * wp_pc_leads table (so it appears in the existing Lead Intelligence admin).
+ * corporate-email only), stores the lead in wp_pc_leads, then ENQUEUES a PDF job
+ * (PCPL_Queue) and returns immediately. The heavy work — generate the PDF, email
+ * it to the requester, notify the webmaster — runs asynchronously via the queue
+ * drains (fastcgi_finish_request in-request, cron, and the reaper). This keeps
+ * the request instant and lets later AI enhancements run without a spinner.
  *
  * Note: a template download is NOT a sales lead — the webmaster gets a plain
  * "downloaded" notice with the PDF attached, never the PCL_Mailer lead report,
- * and enrichment is never triggered. (rev 2)
+ * and enrichment is never triggered. (rev 3 — async queue)
  */
 defined('ABSPATH') || exit;
 
 class PCPL_Lead {
+
+    const DONE_MSG = "Thanks! We're preparing your personalized PDF now, it will land in your inbox in a minute or two.";
 
     public static function register() {
         add_action('wp_ajax_pcpl_lead',       array(__CLASS__, 'handle'));
@@ -47,7 +51,83 @@ class PCPL_Lead {
 
         $posts = get_posts(array('name' => $slug, 'post_type' => PCPL_CPT::POST_TYPE, 'post_status' => 'publish', 'numberposts' => 1));
         if (empty($posts)) wp_send_json_error('Sorry, that policy could not be found.');
+        $title = html_entity_decode(get_the_title($posts[0]), ENT_QUOTES, 'UTF-8');
+
+        // ── Capture the session/tracking snapshot now (the async worker won't have $_SERVER) ──
+        $ua       = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])) : '';
+        $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw(wp_unslash($_SERVER['HTTP_REFERER'])) : '';
+        $os       = function_exists('pc_detect_os') ? pc_detect_os() : '';
+        $browser  = function_exists('pc_detect_browser') ? pc_detect_browser() : '';
+        $device   = wp_is_mobile() ? 'Mobile' : 'Desktop';
+        $geo      = function_exists('pc_lead_lookup_geo') ? pc_lead_lookup_geo($ip) : array();
+        $geo_str  = trim(implode(', ', array_filter(array($geo['geo_city'] ?? '', $geo['geo_region'] ?? '', $geo['geo_country'] ?? ''))));
+        $ts       = current_time('mysql');
+
+        // ── Store the lead immediately (survives even if PDF delivery later fails) ──
+        list($lead_id, $ref) = self::store_lead(array(
+            'name' => $name, 'company' => $company, 'email' => $email, 'mobile' => $mobile,
+            'title' => $title, 'ip' => $ip, 'ua' => $ua, 'referrer' => $referrer,
+            'os' => $os, 'browser' => $browser, 'device' => $device,
+            'geo_city' => $geo['geo_city'] ?? '', 'geo_region' => $geo['geo_region'] ?? '', 'geo_country' => $geo['geo_country'] ?? '',
+            'page_url' => $referrer, 'ts' => $ts,
+        ));
+
+        // ── Build the job payload (everything the async worker needs) ──
+        $payload = array(
+            'name' => $name, 'company' => $company, 'email' => $email, 'mobile' => $mobile,
+            'title' => $title, 'ref' => $ref,
+            'ip' => $ip, 'ua' => $ua, 'os' => $os, 'browser' => $browser, 'device' => $device,
+            'geo_str' => $geo_str, 'referrer' => $referrer, 'page_url' => $referrer, 'ts' => $ts,
+        );
+
+        require_once PCPL_DIR . '/class-pcpl-queue.php';
+        $job_id = PCPL_Queue::enqueue($lead_id, $slug, $payload);
+
+        if (!$job_id) {
+            // Queue insert failed — deliver synchronously so the request isn't lost.
+            try {
+                self::fulfill_job($slug, $payload);
+            } catch (\Throwable $e) {
+                error_log('PCPL_Lead sync fallback failed: ' . $e->getMessage());
+                wp_send_json_error('We captured your request but could not generate the PDF just now. Our team will follow up.');
+            }
+            wp_send_json_success(array('message' => self::DONE_MSG));
+        }
+
+        self::respond_and_drain($job_id, self::DONE_MSG);
+    }
+
+    /**
+     * Flush the success response to the client, then drain the job. When
+     * fastcgi_finish_request is available (PHP-FPM) the job runs in this same
+     * worker after the client already has its response — no cron loopback needed.
+     * Otherwise we fall back to a scheduled cron event; the reaper backs both up.
+     */
+    private static function respond_and_drain($job_id, $message) {
+        status_header(200);
+        header('Content-Type: application/json; charset=' . get_option('blog_charset'));
+        echo wp_json_encode(array('success' => true, 'data' => array('message' => $message)));
+
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+            PCPL_Queue::process_job($job_id);
+        } else {
+            PCPL_Queue::kick($job_id);
+        }
+        exit;
+    }
+
+    /**
+     * Job worker: build the personalized PDF and deliver it (requester email +
+     * webmaster notification). Throws on any hard failure so the queue retries.
+     */
+    public static function fulfill_job($slug, array $p) {
+        @set_time_limit(180); // this worker may make 2 Claude calls on a policy's first run
+
+        $posts = get_posts(array('name' => $slug, 'post_type' => PCPL_CPT::POST_TYPE, 'post_status' => 'publish', 'numberposts' => 1));
+        if (empty($posts)) throw new \RuntimeException('policy not found: ' . $slug);
         $post = $posts[0];
+
         $policy = array(
             'title'  => html_entity_decode(get_the_title($post), ENT_QUOTES, 'UTF-8'),
             'byline' => $post->post_excerpt,
@@ -55,30 +135,65 @@ class PCPL_Lead {
             'faqs'   => pcpl_meta_list($post->ID, '_pcpl_faqs'),
         );
 
+        // PolicyCentral AI enhancements — cached per policy, fail soft (never block delivery).
+        require_once PCPL_DIR . '/class-pcpl-ai.php';
+        $qr = PCPL_ASSETS . '/qr/' . $slug . '.png';
+        $enh = array(
+            'summary'    => PCPL_AI::get_summary($post->ID, $policy),
+            'ai_faqs'    => PCPL_AI::get_faqs_topup($post->ID, $policy),
+            'policy_url' => home_url('/policies/' . $slug . '/'),
+            'qr_path'    => file_exists($qr) ? $qr : '',
+        );
+
         require_once PCPL_DIR . '/class-pcpl-pdf.php';
-        try {
-            $pdf = PCPL_PDF::build($policy, $company);
-        } catch (\Throwable $e) {
-            error_log('PCPL_Lead PDF error: ' . $e->getMessage());
-            wp_send_json_error('We could not generate the PDF just now. Please try again.');
-        }
+        $pdf = PCPL_PDF::build($policy, isset($p['company']) ? $p['company'] : '', $enh);
 
         $updir = wp_upload_dir();
         $dir   = trailingslashit($updir['basedir']) . 'pcpl-tmp';
         if (!file_exists($dir)) wp_mkdir_p($dir);
-        $fname = 'PolicyCentral-' . $slug . '-' . wp_generate_password(6, false) . '.pdf';
-        $path  = trailingslashit($dir) . $fname;
+        $path  = trailingslashit($dir) . 'PolicyCentral-' . $slug . '-' . wp_generate_password(6, false) . '.pdf';
         file_put_contents($path, $pdf);
 
-        $sent = self::mail_user($email, $name, $policy['title'], $path);
-        self::store_and_notify($name, $company, $email, $mobile, $policy['title'], $ip, $path);
+        $sent = self::mail_user($p['email'], $p['name'], $policy['title'], $path);
+        self::notify_admin($p, $path);
 
         @unlink($path);
 
-        if (!$sent) {
-            wp_send_json_error('We captured your request but the email could not be sent. Our team will follow up.');
+        if (!$sent) throw new \RuntimeException('mail_user failed for ' . $p['email']);
+    }
+
+    /** Store the download in wp_pc_leads; returns [lead_id, ref]. */
+    private static function store_lead(array $p) {
+        global $wpdb;
+        $ref = ''; $lead_id = 0;
+        $table = $wpdb->prefix . 'pc_leads';
+        if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table)) === $table) {
+            $wpdb->insert($table, array(
+                'full_name'         => $p['name'],
+                'company'           => $p['company'],
+                'email'             => $p['email'],
+                'phone'             => $p['mobile'],
+                'message'           => 'Downloaded policy template: ' . $p['title'],
+                'ip_address'        => $p['ip'],
+                'user_agent'        => $p['ua'],
+                'referrer'          => $p['referrer'],
+                'os'                => $p['os'],
+                'browser'           => $p['browser'],
+                'device_type'       => $p['device'],
+                'geo_city'          => $p['geo_city'],
+                'geo_region'        => $p['geo_region'],
+                'geo_country'       => $p['geo_country'],
+                'page_source'       => 'Policy Template: ' . $p['title'],
+                'page_url'          => $p['page_url'],
+                'enrichment_status' => 'new',
+                'submitted_at'      => $p['ts'],
+            ));
+            $lead_id = (int) $wpdb->insert_id;
+            if ($lead_id && class_exists('PCL_DB') && method_exists('PCL_DB', 'finalize_lead')) {
+                $ref = PCL_DB::finalize_lead($lead_id, $p['name']);
+            }
         }
-        wp_send_json_success(array('message' => 'Done! Check your inbox, we have emailed you the personalized policy PDF.'));
+        return array($lead_id, $ref);
     }
 
     private static function mail_user($email, $name, $title, $path) {
@@ -96,65 +211,38 @@ class PCPL_Lead {
     }
 
     /**
-     * Record the download in wp_pc_leads (admin log) and send the webmaster a
-     * rich "Policy Template Downloaded" HTML notification (same design language
-     * as the lead admin email, incl. the Session & Tracking table) with the
-     * personalized PDF attached. It is a download, NOT a sales lead — no
-     * lead-intelligence report and no Claude enrichment is triggered.
+     * Send the webmaster a rich "Policy Template Downloaded" HTML notification
+     * (same design language as the lead admin email, incl. Session & Tracking)
+     * with the personalized PDF attached. It is a download, NOT a sales lead —
+     * no lead-intelligence report and no Claude enrichment is triggered.
      */
-    private static function store_and_notify($name, $company, $email, $mobile, $title, $ip, $pdf_path) {
-        // ── Capture session/tracking data ──
-        $ua       = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])) : '';
-        $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw(wp_unslash($_SERVER['HTTP_REFERER'])) : '';
-        $os       = function_exists('pc_detect_os') ? pc_detect_os() : '';
-        $browser  = function_exists('pc_detect_browser') ? pc_detect_browser() : '';
-        $device   = wp_is_mobile() ? 'Mobile' : 'Desktop';
-        $geo      = function_exists('pc_lead_lookup_geo') ? pc_lead_lookup_geo($ip) : array();
-        $geo_str  = trim(implode(', ', array_filter(array($geo['geo_city'] ?? '', $geo['geo_region'] ?? '', $geo['geo_country'] ?? ''))));
-        $page_url = $referrer;
-        $ts       = current_time('mysql');
-
-        // ── Store the record ──
-        $ref = '';
-        global $wpdb;
-        $table = $wpdb->prefix . 'pc_leads';
-        if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table)) === $table) {
-            $wpdb->insert($table, array(
-                'full_name'         => $name,
-                'company'           => $company,
-                'email'             => $email,
-                'phone'             => $mobile,
-                'message'           => 'Downloaded policy template: ' . $title,
-                'ip_address'        => $ip,
-                'user_agent'        => $ua,
-                'referrer'          => $referrer,
-                'os'                => $os,
-                'browser'           => $browser,
-                'device_type'       => $device,
-                'geo_city'          => $geo['geo_city']    ?? '',
-                'geo_region'        => $geo['geo_region']  ?? '',
-                'geo_country'       => $geo['geo_country'] ?? '',
-                'page_source'       => 'Policy Template: ' . $title,
-                'page_url'          => $page_url,
-                'enrichment_status' => 'new',
-                'submitted_at'      => $ts,
-            ));
-            $lead_id = (int) $wpdb->insert_id;
-            if ($lead_id && class_exists('PCL_DB') && method_exists('PCL_DB', 'finalize_lead')) {
-                $ref = PCL_DB::finalize_lead($lead_id, $name);
-            }
-        }
-
-        // ── Rich HTML notification + PDF attached ──
+    private static function notify_admin(array $p, $pdf_path) {
         $to   = function_exists('pc_get_admin_lead_email') ? pc_get_admin_lead_email() : get_option('admin_email');
-        $html = self::build_download_html(compact('name', 'company', 'email', 'mobile', 'title', 'ref', 'ip', 'ua', 'os', 'browser', 'device', 'geo_str', 'referrer', 'page_url', 'ts'));
+        $html = self::build_download_html($p);
         $headers = array(
             'Content-Type: text/html; charset=UTF-8',
             'From: PolicyCentral.ai <marketing@policycentral.ai>',
-            'Reply-To: ' . $name . ' <' . $email . '>',
+            'Reply-To: ' . $p['name'] . ' <' . $p['email'] . '>',
         );
         $attachments = ($pdf_path && file_exists($pdf_path)) ? array($pdf_path) : array();
-        wp_mail($to, 'Policy Template downloaded: ' . $title, $html, $headers, $attachments);
+        wp_mail($to, 'Policy Template downloaded: ' . $p['title'], $html, $headers, $attachments);
+    }
+
+    /** After MAX_ATTEMPTS the webmaster is told a delivery failed, with the error. */
+    public static function notify_job_failed($slug, array $p, $err) {
+        $to = function_exists('pc_get_admin_lead_email') ? pc_get_admin_lead_email() : get_option('admin_email');
+        $subject = 'Policy PDF delivery FAILED: ' . $slug;
+        $body  = "A personalized policy PDF job failed after repeated attempts and has been given up.\n\n";
+        $body .= "Policy: " . $slug . "\n";
+        $body .= "Requester: " . ($p['name'] ?? '') . " <" . ($p['email'] ?? '') . ">\n";
+        $body .= "Company: " . ($p['company'] ?? '') . "\n\n";
+        $body .= "Error: " . $err . "\n\n";
+        $body .= "The lead is stored in Lead Intelligence; please follow up manually.";
+        $headers = array(
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: PolicyCentral.ai <marketing@policycentral.ai>',
+        );
+        wp_mail($to, $subject, $body, $headers);
     }
 
     /** Rich HTML for the webmaster download notification (Session & Tracking table retained). */

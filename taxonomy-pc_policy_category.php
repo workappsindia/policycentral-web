@@ -64,6 +64,28 @@ $hero = pcpl_category_hero($slug);
     <?php else : ?>
       <p class="ptl-empty">Templates for this category are being added. In the meantime, <a href="<?php echo esc_url(home_url('/policygpt/')); ?>">ask PolicyGPT</a> a question it covers.</p>
     <?php endif; ?>
+
+    <?php
+    // Other categories — so a visitor is never dead-ended in one hub.
+    $all_cats = function_exists('pcpl_categories') ? pcpl_categories() : array();
+    $others   = array();
+    foreach ($all_cats as $cslug => $c) { if ($cslug !== $slug) $others[$cslug] = $c; }
+    if ($others) : ?>
+    <section class="pt-cats pt-cats--hub">
+      <h2>Explore other policy categories</h2>
+      <div class="pt-cats-grid">
+        <?php foreach ($others as $cslug => $c) :
+            $cterm = get_term_by('slug', $cslug, PCPL_CPT::TAXONOMY);
+            $curl  = $cterm ? get_term_link($cterm) : home_url('/policies/category/' . $cslug . '/');
+            if (is_wp_error($curl)) $curl = home_url('/policies/category/' . $cslug . '/'); ?>
+          <a class="pt-cat-pill" href="<?php echo esc_url($curl); ?>" style="--cat-accent:<?php echo esc_attr($c['accent']); ?>">
+            <span class="pt-cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><?php echo $c['icon']; ?></svg></span>
+            <span class="pt-cat-name"><?php echo esc_html($c['name']); ?></span>
+          </a>
+        <?php endforeach; ?>
+      </div>
+    </section>
+    <?php endif; ?>
   </div>
 
   <div class="pt-band">

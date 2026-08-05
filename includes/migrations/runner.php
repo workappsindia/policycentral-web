@@ -129,6 +129,10 @@ function pcgpt_get_migrations() {
         96 => 'pcgpt_migration_096_create_policy_template_showcase_page',
         97 => 'pcgpt_migration_097_seed_policy_library',
         98 => 'pcgpt_migration_098_flush_policies_rewrite',
+        99 => 'pcgpt_migration_099_rename_financial_crime_to_fraud_risk',
+        100 => 'pcgpt_migration_100_refresh_policy_library_content',
+        101 => 'pcgpt_migration_101_strip_markdown_bold_policy_content',
+        102 => 'pcgpt_migration_102_create_pcpl_pdf_jobs_table',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
