@@ -103,6 +103,17 @@
   var igCard = igPanel ? igPanel.querySelector('.pt-ig-card') : null;
   var igLoaded = false;
 
+  // Close (x) on every AI panel — hide it and de-activate its toolbar button.
+  Array.prototype.forEach.call(document.querySelectorAll('.pt-panel-close'), function (x) {
+    x.addEventListener('click', function () {
+      var panel = x.closest('.pt-panel');
+      if (!panel) return;
+      panel.setAttribute('hidden', '');
+      var b = tb.querySelector('.pt-tb-btn[data-act="' + panel.getAttribute('data-panel') + '"]');
+      if (b) b.classList.remove('on');
+    });
+  });
+
   function addFaqItem(f, aiTag) {
     var d = document.createElement('details'); d.className = 'pt-faq-item';
     var s = document.createElement('summary');
@@ -196,9 +207,11 @@
 
   /* ---- Listen (Web Speech API) ---- */
   var speaking = false;
+  var intentionalStop = false;
   var synth = window.speechSynthesis;
 
   function stopSpeech() {
+    intentionalStop = true;
     if (synth && speaking) { synth.cancel(); }
     speaking = false;
     updateListenBtns(false);
@@ -227,7 +240,7 @@
     var text = doc.textContent || '';
     if (!text.trim()) return;
     var chunks = chunkText(text);
-    speaking = true; updateListenBtns(true);
+    speaking = true; intentionalStop = false; updateListenBtns(true);
     setStatus('Reading aloud… press Stop to end.', 'busy');
     var i = 0;
     (function next() {
@@ -235,7 +248,12 @@
       var u = new SpeechSynthesisUtterance(chunks[i++]);
       u.lang = currentBcp47;
       u.onend = next;
-      u.onerror = function () { stopSpeech(); setStatus('Audio playback stopped.', 'err'); };
+      u.onerror = function (e) {
+        // 'canceled'/'interrupted' fire on an intentional Stop — not real errors.
+        var err = e && e.error;
+        if (intentionalStop || err === 'canceled' || err === 'interrupted') return;
+        stopSpeech(); setStatus('Audio playback stopped.', 'err');
+      };
       synth.speak(u);
     })();
   }

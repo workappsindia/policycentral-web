@@ -111,12 +111,14 @@ while (have_posts()) : the_post();
         <div class="pt-tb-status" role="status" aria-live="polite"></div>
       </div>
 
-      <div class="pt-panel pt-summary" hidden>
+      <div class="pt-panel pt-summary" data-panel="summary" hidden>
+        <button type="button" class="pt-panel-close" aria-label="Close summary">&times;</button>
         <div class="pt-panel-eyebrow">PolicyCentral AI &#183; Summary</div>
         <div class="pt-summary-body"></div>
       </div>
 
-      <div class="pt-panel pt-ask" hidden>
+      <div class="pt-panel pt-ask" data-panel="ask" hidden>
+        <button type="button" class="pt-panel-close" aria-label="Close">&times;</button>
         <div class="pt-panel-eyebrow">Ask PolicyGPT about this policy</div>
         <div class="pt-ask-log" aria-live="polite"></div>
         <form class="pt-ask-form">
@@ -126,12 +128,14 @@ while (have_posts()) : the_post();
         <div class="pt-ask-note">Answers are generated from this policy only. Not legal advice.</div>
       </div>
 
-      <div class="pt-panel pt-faq-panel" hidden>
+      <div class="pt-panel pt-faq-panel" data-panel="faq" hidden>
+        <button type="button" class="pt-panel-close" aria-label="Close FAQs">&times;</button>
         <div class="pt-panel-eyebrow">Frequently asked questions</div>
         <div class="pt-faq-list"></div>
       </div>
 
-      <div class="pt-panel pt-infographic" hidden>
+      <div class="pt-panel pt-infographic" data-panel="infographic" hidden>
+        <button type="button" class="pt-panel-close" aria-label="Close infographic">&times;</button>
         <div class="pt-panel-eyebrow">PolicyCentral AI &#183; Policy at a glance</div>
         <div class="pt-ig-card"></div>
       </div>
