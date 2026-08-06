@@ -70,6 +70,98 @@ class PCPL_AI {
         return $faqs;
     }
 
+    /**
+     * Translate the policy body HTML into $lang_name, preserving markup.
+     * Cached per policy+language in meta (_pcpl_tr_{code}). Returns '' on failure.
+     */
+    public static function translate($post_id, array $policy, $lang_code, $lang_name) {
+        $meta_key = '_pcpl_tr_' . preg_replace('/[^a-z]/', '', strtolower($lang_code));
+        $cached = get_post_meta($post_id, $meta_key, true);
+        if (is_string($cached) && $cached !== '') return $cached;
+
+        $system = "You are a professional translator specializing in corporate policy documents. "
+            . "Translate the visible text of the given HTML into {$lang_name}. "
+            . "CRITICAL RULES: (1) Preserve every HTML tag and attribute exactly as-is; translate ONLY the human-readable text between tags. "
+            . "(2) Keep the placeholder [Company Name] unchanged (do not translate the brackets or the words inside). "
+            . "(3) Keep any email addresses, URLs, and legal section numbers unchanged. "
+            . "(4) Use natural, professional {$lang_name} appropriate for an official HR/compliance policy. "
+            . "Output ONLY the translated HTML, with no preamble, notes, or code fences.";
+        $user = (string) ($policy['body'] ?? '');
+        if ($user === '') return '';
+
+        $text = self::call($system, $user, 8000);
+        if ($text === '') return '';
+        $text = trim($text);
+        if (preg_match('/```(?:html)?\s*(.+?)```/is', $text, $m)) $text = trim($m[1]);
+        update_post_meta($post_id, $meta_key, $text);
+        return $text;
+    }
+
+    /**
+     * Structured "policy at a glance" infographic content, cached per policy in
+     * _pcpl_ai_infographic. Returns [] on failure. The visual layout is rendered
+     * client-side from this data (templated), so the model only supplies content.
+     */
+    public static function infographic($post_id, array $policy) {
+        $cached = get_post_meta($post_id, '_pcpl_ai_infographic', true);
+        if (is_array($cached) && $cached) return $cached;
+
+        $system = "You are a content designer creating a one-glance visual summary (infographic) of a corporate policy for PolicyCentral.ai. "
+            . "Output ONLY a JSON object with these keys: "
+            . "\"headline\" (a punchy title, max 8 words), "
+            . "\"summary\" (one sentence, max 20 words), "
+            . "\"takeaways\" (an array of 4 to 6 objects, each {\"title\": 2-4 words, \"text\": one sentence}), "
+            . "\"stats\" (an array of 0 to 3 objects {\"value\": short e.g. \"2 days\", \"label\": what it measures}; include ONLY if the policy states concrete numbers or timeframes, otherwise []). "
+            . "Ground everything in the policy. Use [Company Name] for the organization. Plain text, American spelling, no markdown. "
+            . "Write numeric ranges as \"X to Y\" (e.g. \"7 to 15 days\"); never use a hyphen or dash for a range. JSON only.";
+        $user = "Policy title: " . $policy['title'] . "\n\nPolicy content:\n" . self::plain_body($policy);
+
+        $text = self::call($system, $user, 1200);
+        if ($text === '') return array();
+        if (preg_match('/```(?:json)?\s*(.+?)```/is', $text, $m)) $text = trim($m[1]);
+        if (preg_match('/\{.*\}/s', $text, $m)) $text = $m[0];
+        $data = json_decode($text, true);
+        if (!is_array($data) || empty($data['takeaways']) || !is_array($data['takeaways'])) return array();
+
+        // Normalize.
+        $clean = array(
+            'headline'  => isset($data['headline']) ? trim((string) $data['headline']) : $policy['title'],
+            'summary'   => isset($data['summary']) ? trim((string) $data['summary']) : '',
+            'takeaways' => array(),
+            'stats'     => array(),
+        );
+        foreach ($data['takeaways'] as $t) {
+            $title = isset($t['title']) ? trim((string) $t['title']) : '';
+            $txt   = isset($t['text'])  ? trim((string) $t['text'])  : '';
+            if ($title !== '' && $txt !== '') $clean['takeaways'][] = array('title' => $title, 'text' => $txt);
+        }
+        if (!empty($data['stats']) && is_array($data['stats'])) {
+            foreach ($data['stats'] as $s) {
+                $v = isset($s['value']) ? trim((string) $s['value']) : '';
+                $l = isset($s['label']) ? trim((string) $s['label']) : '';
+                if ($v !== '' && $l !== '') $clean['stats'][] = array('value' => $v, 'label' => $l);
+            }
+        }
+        if (!$clean['takeaways']) return array();
+        update_post_meta($post_id, '_pcpl_ai_infographic', $clean);
+        return $clean;
+    }
+
+    /** Answer a question grounded ONLY in the given policy (scoped Q&A). '' on failure. */
+    public static function ask(array $policy, $question) {
+        $question = trim((string) $question);
+        if ($question === '') return '';
+        $system = "You are PolicyGPT, PolicyCentral.ai's policy assistant. Answer the user's question using ONLY the policy provided below. "
+            . "If the answer is not in the policy, say so briefly and suggest they contact their HR/compliance team. "
+            . "Be concise (2 to 5 sentences), plain text, American spelling, no markdown. Refer to the organization as [Company Name].\n\n"
+            . "POLICY: " . $policy['title'] . "\n\n" . self::plain_body($policy);
+        $answer = self::call($system, $question, 600);
+        // Belt-and-suspenders: strip any markdown the model slips in (rendered as plain text).
+        $answer = preg_replace('/\*\*(.+?)\*\*/s', '$1', $answer);
+        $answer = preg_replace('/(?<!\*)\*(?!\*)([^*]+)\*(?!\*)/', '$1', $answer);
+        return trim($answer);
+    }
+
     /** Strip the HTML body to plain text and cap length for the prompt. */
     private static function plain_body(array $policy) {
         $txt = html_entity_decode(wp_strip_all_tags((string) ($policy['body'] ?? '')), ENT_QUOTES, 'UTF-8');

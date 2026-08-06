@@ -24,10 +24,12 @@ define('PCPL_ASSETS', get_template_directory() . '/assets/policy-templates');
 require_once PCPL_DIR . '/class-pcpl-cpt.php';
 require_once PCPL_DIR . '/class-pcpl-lead.php';
 require_once PCPL_DIR . '/class-pcpl-queue.php';
+require_once PCPL_DIR . '/class-pcpl-interactive.php';
 
 PCPL_CPT::register();
 PCPL_Lead::register();
 PCPL_Queue::register();
+PCPL_Interactive::register();
 
 /**
  * Is the current request a Policy Library view (single / archive / category)?

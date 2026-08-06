@@ -79,6 +79,15 @@ function policycentral_scripts() {
         );
     }
 
+    // Policy Library interactive toolbar (single policy pages only)
+    if (is_singular('pc_policy')) {
+        $pcpl_js = get_template_directory() . '/includes/policy-library/assets/policy-interactive.js';
+        wp_enqueue_script('policycentral-policy-interactive',
+            get_template_directory_uri() . '/includes/policy-library/assets/policy-interactive.js',
+            array(), file_exists($pcpl_js) ? filemtime($pcpl_js) : '1.0.0', true
+        );
+    }
+
     // Blog JS (TOC scrollspy) — single posts only
     if (is_singular('post')) {
         wp_enqueue_script('policycentral-blog',

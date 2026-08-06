@@ -86,7 +86,57 @@ while (have_posts()) : the_post();
 <div class="pt-wrap">
   <div class="pt-body">
     <main class="pt-main">
-      <div class="pt-doc"><?php echo $body; // trusted seeded HTML ?></div>
+      <?php $pcpl_langs = class_exists('PCPL_Interactive') ? PCPL_Interactive::languages() : array(); ?>
+      <div class="pt-toolbar" data-slug="<?php echo esc_attr(get_post_field('post_name', $pid)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('pcpl_interactive')); ?>" data-ajax="<?php echo esc_url(admin_url('admin-ajax.php')); ?>">
+        <div class="pt-tb-eyebrow"><span class="pt-tb-spark" aria-hidden="true">&#10024;</span> Experience this policy live <span class="pt-tb-tag">PolicyCentral AI</span></div>
+        <div class="pt-tb-controls">
+          <?php if ($pcpl_langs) : ?>
+          <label class="pt-tb-lang">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="pt-tb-lang-txt">Translate</span>
+            <select class="pt-tb-select" aria-label="Translate this policy into another language">
+              <?php foreach ($pcpl_langs as $code => $l) :
+                  $label = ($l['native'] !== $l['name']) ? $l['native'] . '  ' . $l['name'] : $l['name']; ?>
+                <option value="<?php echo esc_attr($code); ?>"<?php echo $code === 'en' ? ' selected' : ''; ?>><?php echo esc_html($label); ?></option>
+              <?php endforeach; ?>
+            </select>
+          </label>
+          <?php endif; ?>
+          <button type="button" class="pt-tb-btn" data-act="summary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l1.9 5.1L19 9l-5.1 1.9L12 16l-1.9-5.1L5 9z"/></svg>AI Summary</button>
+          <button type="button" class="pt-tb-btn" data-act="listen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg><span class="pt-listen-txt">Listen</span></button>
+          <button type="button" class="pt-tb-btn" data-act="ask"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Ask AI</button>
+          <button type="button" class="pt-tb-btn" data-act="faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>FAQs</button>
+          <button type="button" class="pt-tb-btn" data-act="infographic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Infographic</button>
+        </div>
+        <div class="pt-tb-status" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="pt-panel pt-summary" hidden>
+        <div class="pt-panel-eyebrow">PolicyCentral AI &#183; Summary</div>
+        <div class="pt-summary-body"></div>
+      </div>
+
+      <div class="pt-panel pt-ask" hidden>
+        <div class="pt-panel-eyebrow">Ask PolicyGPT about this policy</div>
+        <div class="pt-ask-log" aria-live="polite"></div>
+        <form class="pt-ask-form">
+          <input type="text" class="pt-ask-q" placeholder="e.g. What happens if the policy is breached?" maxlength="500" autocomplete="off">
+          <button type="submit" class="btn btn-primary">Ask</button>
+        </form>
+        <div class="pt-ask-note">Answers are generated from this policy only. Not legal advice.</div>
+      </div>
+
+      <div class="pt-panel pt-faq-panel" hidden>
+        <div class="pt-panel-eyebrow">Frequently asked questions</div>
+        <div class="pt-faq-list"></div>
+      </div>
+
+      <div class="pt-panel pt-infographic" hidden>
+        <div class="pt-panel-eyebrow">PolicyCentral AI &#183; Policy at a glance</div>
+        <div class="pt-ig-card"></div>
+      </div>
+
+      <div class="pt-doc" id="pt-doc"><?php echo $body; // trusted seeded HTML ?></div>
 
       <?php
       // Related — same category first, then top up from other categories to 3

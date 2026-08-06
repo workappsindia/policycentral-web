@@ -45,6 +45,72 @@
 @media(max-width:900px){.pt-cats-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.pt-cats-grid{grid-template-columns:1fr}}
 
+/* ---- Live-policy toolbar (translate / summary / listen / ask) ---- */
+.pt-toolbar{background:linear-gradient(180deg,var(--teal-lt) 0%,#fff 100%);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:16px 18px;margin:0 0 22px}
+.pt-tb-eyebrow{display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--gray-700);margin-bottom:12px}
+.pt-tb-spark{font-size:14px}
+.pt-tb-tag{margin-left:auto;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);border:1px solid var(--tealline);padding:3px 8px;border-radius:20px;font-weight:800}
+.pt-tb-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pt-tb-lang{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--r-sm);padding:7px 10px}
+.pt-tb-lang:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px var(--tealfaint)}
+.pt-tb-lang svg{width:17px;height:17px;color:var(--teal);flex:none}
+.pt-tb-lang-txt{font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--gray-700)}
+.pt-tb-select{border:0;background:transparent;font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;color:var(--gray-800);cursor:pointer;max-width:190px}
+.pt-tb-select:focus{outline:none}
+.pt-tb-btn{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--r-sm);padding:8px 13px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--gray-700);cursor:pointer;transition:all .18s}
+.pt-tb-btn svg{width:16px;height:16px;color:var(--teal)}
+.pt-tb-btn:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-1px)}
+.pt-tb-btn.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.pt-tb-btn.on svg{color:#fff}
+.pt-tb-status{display:none;margin-top:11px;font-size:13px;line-height:1.5;padding:9px 12px;border-radius:var(--r-sm)}
+.pt-tb-status.show{display:block}
+.pt-tb-status.pt-tb-busy{color:var(--teal);background:var(--teal-lt)}
+.pt-tb-status.pt-tb-ok{color:#0F766E;background:#E0F7F6}
+.pt-tb-status.pt-tb-err{color:#B91C1C;background:#FEF2F2}
+
+/* Panels (summary / ask) */
+.pt-panel{background:#fff;border:1px solid var(--tealline);border-left:3px solid var(--teal);border-radius:0 var(--r-md) var(--r-md) 0;padding:16px 18px;margin:0 0 22px}
+.pt-panel-eyebrow{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:9px}
+.pt-summary-body{font-size:15px;line-height:1.7;color:var(--gray-700)}
+.pt-loading{color:var(--gray-400);font-style:italic}
+.pt-err-txt{color:#B91C1C}
+.pt-ask-log{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.pt-ask-log:empty{display:none}
+.pt-ask-q-row{align-self:flex-end;max-width:85%;background:var(--teal);color:#fff;font-size:14px;line-height:1.5;padding:9px 13px;border-radius:12px 12px 2px 12px}
+.pt-ask-a-row{align-self:flex-start;max-width:90%;background:var(--gray-50);color:var(--gray-800);font-size:14px;line-height:1.6;padding:9px 13px;border-radius:12px 12px 12px 2px}
+.pt-ask-form{display:flex;gap:8px}
+.pt-ask-q{flex:1;padding:10px 13px;border:1.5px solid var(--gray-200);border-radius:var(--r-sm);font-family:'Manrope',sans-serif;font-size:14px;color:var(--gray-800)}
+.pt-ask-q:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--tealfaint)}
+.pt-ask-form .btn{flex:none}
+.pt-ask-note{font-size:11.5px;color:var(--gray-400);margin-top:9px}
+.pt-doc[dir="rtl"]{text-align:right}
+
+/* Toolbar FAQ panel */
+.pt-faq-list{display:flex;flex-direction:column;gap:8px}
+.pt-faq-item{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--r-sm);overflow:hidden}
+.pt-faq-item summary{list-style:none;cursor:pointer;padding:12px 15px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:14px;color:var(--gray-800);display:flex;align-items:center;gap:10px}
+.pt-faq-item summary::-webkit-details-marker{display:none}
+.pt-faq-item summary::after{content:'+';margin-left:auto;font-size:18px;color:var(--teal);font-weight:400}
+.pt-faq-item[open] summary::after{content:'\2013'}
+.pt-faq-ai{font-size:9px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--teal);padding:2px 6px;border-radius:4px}
+.pt-faq-ans{padding:0 15px 13px;font-size:13.5px;line-height:1.6;color:var(--gray-600)}
+
+/* Toolbar infographic card */
+.pt-ig-head{border-bottom:2px solid var(--tealline);padding-bottom:12px;margin-bottom:14px}
+.pt-ig-headline{font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--gray-900);line-height:1.2}
+.pt-ig-sub{font-size:14px;color:var(--gray-500);margin-top:6px;line-height:1.5}
+.pt-ig-stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.pt-ig-stat{flex:1;min-width:120px;background:var(--teal-lt);border:1px solid var(--tealline);border-radius:var(--r-md);padding:12px 14px}
+.pt-ig-stat-v{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:900;color:var(--teal)}
+.pt-ig-stat-l{font-size:11.5px;color:var(--gray-600);margin-top:3px;line-height:1.35}
+.pt-ig-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pt-ig-cell{display:flex;gap:11px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-md);padding:13px 14px}
+.pt-ig-num{flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pt-ig-cell-t{font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:800;color:var(--gray-900);line-height:1.25;margin-bottom:3px}
+.pt-ig-cell-x{font-size:12.5px;line-height:1.5;color:var(--gray-600)}
+.pt-ig-foot{margin-top:14px;text-align:right;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-400);font-weight:700}
+@media(max-width:560px){.pt-ig-grid{grid-template-columns:1fr}}
+
 /* FAQ (below related) */
 .pt-faqs{margin-top:48px}
 .pt-faqs>h2{font-size:22px;font-weight:800;color:var(--gray-900);margin-bottom:18px;font-family:'Plus Jakarta Sans',sans-serif}
