@@ -47,9 +47,8 @@
 
 /* ---- Live-policy toolbar (translate / summary / listen / ask) ---- */
 .pt-toolbar{background:linear-gradient(180deg,var(--teal-lt) 0%,#fff 100%);border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:16px 18px;margin:0 0 22px}
-.pt-tb-eyebrow{display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--gray-700);margin-bottom:12px}
-.pt-tb-spark{font-size:14px}
-.pt-tb-tag{margin-left:auto;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);border:1px solid var(--tealline);padding:3px 8px;border-radius:20px;font-weight:800}
+.pt-tb-eyebrow{display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;font-weight:700;color:var(--gray-700);margin-bottom:12px;line-height:1.4}
+.pt-tb-spark{font-size:15px;flex:none}
 .pt-tb-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .pt-tb-lang{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--r-sm);padding:7px 10px}
 .pt-tb-lang:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px var(--tealfaint)}
