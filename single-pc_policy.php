@@ -88,7 +88,7 @@ while (have_posts()) : the_post();
     <main class="pt-main">
       <?php $pcpl_langs = class_exists('PCPL_Interactive') ? PCPL_Interactive::languages() : array(); ?>
       <div class="pt-toolbar" data-slug="<?php echo esc_attr(get_post_field('post_name', $pid)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('pcpl_interactive')); ?>" data-ajax="<?php echo esc_url(admin_url('admin-ajax.php')); ?>">
-        <div class="pt-tb-eyebrow"><span class="pt-tb-spark" aria-hidden="true">&#10024;</span> View this policy the way a PolicyCentral.ai user would on the platform</div>
+        <div class="pt-tb-eyebrow"><span class="pt-tb-spark" aria-hidden="true">&#10024;</span> Experience PolicyCentral.ai platform features right here</div>
         <div class="pt-tb-controls">
           <?php if ($pcpl_langs) : ?>
           <label class="pt-tb-lang">

@@ -134,6 +134,7 @@ function pcgpt_get_migrations() {
         101 => 'pcgpt_migration_101_strip_markdown_bold_policy_content',
         102 => 'pcgpt_migration_102_create_pcpl_pdf_jobs_table',
         103 => 'pcgpt_migration_103_strip_faq_company_alias',
+        104 => 'pcgpt_migration_104_drop_purpose_faq',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
