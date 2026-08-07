@@ -3,7 +3,7 @@
  "policies": [
   {
    "slug": "laptop-policy",
-   "title": "Laptop Policy Template",
+   "title": "Laptop Policy",
    "category": "people-hr",
    "byline": "A company laptop and device-allocation policy covering eligibility, usage, care, insurance and return.",
    "covers": [
@@ -28,7 +28,7 @@
   },
   {
    "slug": "dress-code-policy",
-   "title": "Dress Code Policy Template",
+   "title": "Dress Code Policy",
    "category": "people-hr",
    "byline": "A workplace dress code policy covering business, business-casual and client-facing attire expectations.",
    "covers": [
@@ -53,7 +53,7 @@
   },
   {
    "slug": "kyc-cdd-policy",
-   "title": "KYC & Customer Due Diligence (CDD) Policy Template",
+   "title": "KYC & Customer Due Diligence (CDD) Policy",
    "category": "fraud-risk",
    "byline": "A ready-to-adapt KYC & CDD policy aligned to the RBI Master Directions and the PMLA, 2002.",
    "covers": [
@@ -141,7 +141,7 @@
   },
   {
    "slug": "anti-money-laundering-policy",
-   "title": "Anti-Money Laundering (AML) Policy Template",
+   "title": "Anti-Money Laundering (AML) Policy",
    "category": "fraud-risk",
    "byline": "An Anti-Money Laundering (AML) policy aligned to the PMLA and RBI directions, covering monitoring, STR reporting and controls.",
    "covers": [
@@ -178,7 +178,7 @@
   },
   {
    "slug": "counter-terrorist-financing-policy",
-   "title": "Counter-Terrorist Financing (CTF) Policy Template",
+   "title": "Counter-Terrorist Financing (CTF) Policy",
    "category": "fraud-risk",
    "byline": "A Counter-Terrorist Financing (CTF) policy covering UAPA obligations, UNSC lists, and suspicious-activity controls.",
    "covers": [
@@ -214,7 +214,7 @@
   },
   {
    "slug": "sanctions-screening-compliance-policy",
-   "title": "Sanctions Screening & Compliance Policy Template",
+   "title": "Sanctions Screening & Compliance Policy",
    "category": "fraud-risk",
    "byline": "A sanctions screening policy covering UNSC/OFAC watchlists, name screening, and handling of designated persons.",
    "covers": [
@@ -251,7 +251,7 @@
   },
   {
    "slug": "fraud-risk-management-policy",
-   "title": "Fraud Risk Management Policy Template",
+   "title": "Fraud Risk Management Policy",
    "category": "fraud-risk",
    "byline": "A fraud risk management policy covering prevention, detection, red flags, investigation and reporting.",
    "covers": [
@@ -288,7 +288,7 @@
   },
   {
    "slug": "code-of-conduct-ethics-policy",
-   "title": "Code of Conduct & Ethics Policy Template",
+   "title": "Code of Conduct & Ethics Policy",
    "category": "governance-ethics",
    "byline": "A code of conduct and ethics policy setting the standards of behaviour, integrity and professional conduct expected of everyone.",
    "covers": [
@@ -325,7 +325,7 @@
   },
   {
    "slug": "anti-bribery-anti-corruption-policy",
-   "title": "Anti-Bribery & Anti-Corruption (ABAC) Policy Template",
+   "title": "Anti-Bribery & Anti-Corruption (ABAC) Policy",
    "category": "governance-ethics",
    "byline": "An Anti-Bribery & Anti-Corruption (ABAC) policy covering bribes, facilitation payments, gifts and public-official dealings.",
    "covers": [
@@ -362,7 +362,7 @@
   },
   {
    "slug": "whistleblower-ethics-policy",
-   "title": "Whistleblower & Ethics Policy Template",
+   "title": "Whistleblower & Ethics Policy",
    "category": "governance-ethics",
    "byline": "A whistleblower policy establishing a protected-disclosure channel, a vigil mechanism, and anti-retaliation safeguards.",
    "covers": [
@@ -395,7 +395,7 @@
   },
   {
    "slug": "conflict-of-interest-policy",
-   "title": "Conflict of Interest Policy Template",
+   "title": "Conflict of Interest Policy",
    "category": "governance-ethics",
    "byline": "A conflict of interest policy covering disclosure, related-party dealings, outside employment and recusal.",
    "covers": [
@@ -423,7 +423,7 @@
   },
   {
    "slug": "gifts-entertainment-policy",
-   "title": "Gifts & Entertainment Policy Template",
+   "title": "Gifts & Entertainment Policy",
    "category": "governance-ethics",
    "byline": "A gifts and entertainment policy covering acceptance limits, disclosure, the gift register and prohibited situations.",
    "covers": [
@@ -456,7 +456,7 @@
   },
   {
    "slug": "vendor-third-party-compliance-policy",
-   "title": "Vendor & Third-Party Compliance Policy Template",
+   "title": "Vendor & Third-Party Compliance Policy",
    "category": "governance-ethics",
    "byline": "A vendor and third-party compliance policy covering due diligence, onboarding, risk assessment and monitoring.",
    "covers": [
@@ -489,7 +489,7 @@
   },
   {
    "slug": "corporate-governance-compliance-oversight-policy",
-   "title": "Corporate Governance & Compliance Oversight Policy Template",
+   "title": "Corporate Governance & Compliance Oversight Policy",
    "category": "governance-ethics",
    "byline": "A corporate governance policy covering board oversight, committees, accountability and the compliance framework.",
    "covers": [
@@ -522,7 +522,7 @@
   },
   {
    "slug": "data-privacy-policy",
-   "title": "Data Privacy Policy Template",
+   "title": "Data Privacy Policy",
    "category": "infosec-data",
    "byline": "A data privacy policy covering personal-data handling, consent, data-subject rights and breach response, aligned to the DPDP Act.",
    "covers": [
@@ -559,7 +559,7 @@
   },
   {
    "slug": "information-security-policy",
-   "title": "Information Security Policy Template",
+   "title": "Information Security Policy",
    "category": "infosec-data",
    "byline": "An information security policy covering confidentiality, integrity and availability, classification and access controls.",
    "covers": [
@@ -596,7 +596,7 @@
   },
   {
    "slug": "cybersecurity-policy",
-   "title": "Cybersecurity Policy Template",
+   "title": "Cybersecurity Policy",
    "category": "infosec-data",
    "byline": "A cybersecurity policy covering threat protection, incident response, and controls against phishing, malware and ransomware.",
    "covers": [
@@ -629,7 +629,7 @@
   },
   {
    "slug": "access-control-policy",
-   "title": "Access Control Policy Template",
+   "title": "Access Control Policy",
    "category": "infosec-data",
    "byline": "An access control policy covering least-privilege, role-based access, provisioning and periodic access reviews.",
    "covers": [
@@ -654,7 +654,7 @@
   },
   {
    "slug": "password-authentication-policy",
-   "title": "Password & Authentication Policy Template",
+   "title": "Password & Authentication Policy",
    "category": "infosec-data",
    "byline": "A password and authentication policy covering complexity, MFA, credential handling and reset procedures.",
    "covers": [
@@ -691,7 +691,7 @@
   },
   {
    "slug": "data-retention-disposal-policy",
-   "title": "Data Retention and Disposal Policy Template",
+   "title": "Data Retention and Disposal Policy",
    "category": "infosec-data",
    "byline": "A data retention and disposal policy covering retention schedules, archival and secure destruction.",
    "covers": [
@@ -728,7 +728,7 @@
   },
   {
    "slug": "remote-work-device-use-policy",
-   "title": "Remote Work & Device Use Policy Template",
+   "title": "Remote Work & Device Use Policy",
    "category": "infosec-data",
    "byline": "A remote work and device-use policy covering work-from-home, BYOD, VPN access and device security.",
    "covers": [
@@ -761,7 +761,7 @@
   },
   {
    "slug": "email-communication-security-policy",
-   "title": "Email & Communication Security Policy Template",
+   "title": "Email & Communication Security Policy",
    "category": "infosec-data",
    "byline": "An email and communication security policy covering acceptable use, phishing, encryption and official communication.",
    "covers": [
@@ -798,7 +798,7 @@
   },
   {
    "slug": "tax-compliance-policy",
-   "title": "Tax Compliance Policy Template",
+   "title": "Tax Compliance Policy",
    "category": "finance-tax-reporting",
    "byline": "A tax compliance policy covering direct and indirect tax obligations, TDS, GST, filings and deadlines.",
    "covers": [
@@ -835,7 +835,7 @@
   },
   {
    "slug": "fatca-crs-policy",
-   "title": "FATCA & CRS Policy Template",
+   "title": "FATCA & CRS Policy",
    "category": "finance-tax-reporting",
    "byline": "A FATCA & CRS policy covering tax residency, self-certification, reportable accounts and CBDT reporting.",
    "covers": [
@@ -872,7 +872,7 @@
   },
   {
    "slug": "business-continuity-disaster-recovery-policy",
-   "title": "Business Continuity & Disaster Recovery (BCDR) Policy Template",
+   "title": "Business Continuity & Disaster Recovery (BCDR) Policy",
    "category": "finance-tax-reporting",
    "byline": "A Business Continuity & Disaster Recovery (BCDR) policy covering BIA, RTO/RPO, backups and crisis response.",
    "covers": [
@@ -905,7 +905,7 @@
   },
   {
    "slug": "corporate-social-responsibility-policy",
-   "title": "Corporate Social Responsibility (CSR) Policy Template",
+   "title": "Corporate Social Responsibility (CSR) Policy",
    "category": "esg-dei-customer",
    "byline": "A CSR policy covering focus areas, governance, Section 135 spend and impact measurement.",
    "covers": [
@@ -938,7 +938,7 @@
   },
   {
    "slug": "environmental-social-governance-policy",
-   "title": "Environmental, Social & Governance (ESG) Policy Template",
+   "title": "Environmental, Social & Governance (ESG) Policy",
    "category": "esg-dei-customer",
    "byline": "An ESG policy covering environmental, social and governance commitments, reporting and responsible business.",
    "covers": [
@@ -971,7 +971,7 @@
   },
   {
    "slug": "customer-complaint-grievance-policy",
-   "title": "Customer Complaint Redressal & Grievance Handling Policy Template",
+   "title": "Customer Complaint Redressal & Grievance Handling Policy",
    "category": "esg-dei-customer",
    "byline": "A customer complaint and grievance-handling policy covering channels, turnaround times, escalation and the ombudsman.",
    "covers": [
@@ -1004,7 +1004,7 @@
   },
   {
    "slug": "diversity-equity-inclusion-policy",
-   "title": "Diversity, Equity, and Inclusion (DEI) Policy Template",
+   "title": "Diversity, Equity, and Inclusion (DEI) Policy",
    "category": "esg-dei-customer",
    "byline": "A Diversity, Equity & Inclusion (DEI) policy covering inclusive hiring, belonging, accessibility and representation.",
    "covers": [
