@@ -1,0 +1,34 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Customer complaint and grievance illustration">
+  <defs>
+    <linearGradient id="cx-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#047857"/></linearGradient>
+    <linearGradient id="cx-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="cx-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="cx-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#047857" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#D1FAE5"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#cx-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#047857"/>
+
+  <!-- complaint bubble (incoming) -->
+  <g filter="url(#cx-s)" transform="translate(140 176)">
+    <path d="M0 20 a20 20 0 0 1 20-20 h130 a20 20 0 0 1 20 20 v70 a20 20 0 0 1 -20 20 h-96 l-30 26 v-26 h-4 a20 20 0 0 1 -20 -20z" fill="#fff"/>
+    <rect x="24" y="30" width="120" height="9" rx="4.5" fill="#E5E7EB"/>
+    <rect x="24" y="50" width="96" height="8" rx="4" fill="#EEF1F4"/>
+    <rect x="24" y="68" width="110" height="8" rx="4" fill="#EEF1F4"/>
+  </g>
+
+  <!-- resolved reply bubble (check) -->
+  <g filter="url(#cx-s)" transform="translate(330 236)">
+    <path d="M180 20 a20 20 0 0 0 -20-20 h-130 a20 20 0 0 0 -20 20 v66 a20 20 0 0 0 20 20 h30 l0 26 30 -26 h70 a20 20 0 0 0 20 -20z" fill="url(#cx-g)"/>
+    <path d="M70 54l16 16 30-34" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- support headset agent -->
+  <g filter="url(#cx-s)" transform="translate(120 300)">
+    <circle cx="34" cy="34" r="34" fill="url(#cx-t)"/>
+    <path d="M18 38v-4a16 16 0 0 1 32 0v4" fill="none" stroke="#fff" stroke-width="4"/>
+    <rect x="14" y="36" width="10" height="16" rx="5" fill="#fff"/><rect x="44" y="36" width="10" height="16" rx="5" fill="#fff"/>
+    <path d="M34 52v6a8 6 0 0 0 10 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#047857" opacity="0.5"/>
+</svg>

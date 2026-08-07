@@ -1,0 +1,25 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corporate social responsibility illustration">
+  <defs>
+    <linearGradient id="csr-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#047857"/></linearGradient>
+    <linearGradient id="csr-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="csr-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="csr-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#047857" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#D1FAE5"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#csr-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#047857"/>
+
+  <!-- cupped hands -->
+  <g filter="url(#csr-s)" transform="translate(180 260)">
+    <path d="M20 20 C10 60 40 96 100 96 C160 96 190 60 180 20 C176 44 150 60 100 60 C50 60 24 44 20 20z" fill="url(#csr-t)"/>
+  </g>
+  <!-- heart held above -->
+  <g filter="url(#csr-s)" transform="translate(232 176)">
+    <path d="M68 118 C10 82 8 40 40 24 C58 14 68 30 68 30 C68 30 78 14 96 24 C128 40 126 82 68 118z" fill="url(#csr-g)"/>
+    <path d="M52 60l12 12 22-24" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <!-- little people around -->
+  <g filter="url(#csr-s)"><g transform="translate(120 210)"><circle cx="0" cy="0" r="14" fill="#fff"/><circle cx="0" cy="-3" r="5" fill="#047857"/><path d="M-8 8a8 7 0 0 1 16 0z" fill="#047857"/></g>
+  <g transform="translate(506 214)"><circle cx="0" cy="0" r="14" fill="#fff"/><circle cx="0" cy="-3" r="5" fill="#F59E0B"/><path d="M-8 8a8 7 0 0 1 16 0z" fill="#F59E0B"/></g></g>
+  <circle cx="300" cy="118" r="6" fill="#047857" opacity="0.5"/>
+</svg>

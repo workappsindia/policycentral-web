@@ -21,6 +21,9 @@ require_once get_template_directory() . '/includes/blog/loader.php';
 // Compliance Intelligence (RBI rule decodes + enforcement tracker at /compliance)
 require_once get_template_directory() . '/includes/compliance/loader.php';
 
+// Policy Library (/policies/ Policy Templates)
+require_once get_template_directory() . '/includes/policy-library/loader.php';
+
 // Theme setup
 function policycentral_setup() {
     add_theme_support('title-tag');
@@ -41,8 +44,9 @@ function policycentral_scripts() {
     wp_enqueue_style('policycentral-style', get_stylesheet_uri(), array('policycentral-fonts'), '1.0.18');
 
     // Blog stylesheet (only on blog views + homepage for the "Latest from our blog" section)
-    if (is_singular('post') || is_page_template('page-blogs.php') || is_category() || is_tag() || is_search() ||
-        get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page()) {
+    if (is_singular('post') || is_page_template('page-blogs.php') || is_page_template('page-policy-template-showcase.php') || is_category() || is_tag() || is_search() ||
+        get_query_var('pcb_author') || get_query_var('pcb_category') || is_front_page() ||
+        (function_exists('pcpl_is_policy_view') && pcpl_is_policy_view())) {
         wp_enqueue_style('policycentral-blog',
             get_template_directory_uri() . '/blog-style.css',
             array('policycentral-style'), '1.0.7'
@@ -63,6 +67,25 @@ function policycentral_scripts() {
                 array(), '1.0.0', true
             );
         }
+    }
+
+    // Policy Library stylesheet (singles + archive + category views)
+    if (function_exists('pcpl_is_policy_view') && pcpl_is_policy_view()) {
+        $pcpl_css = get_template_directory() . '/includes/policy-library/assets/policy-library.css';
+        wp_enqueue_style('policycentral-policy-library',
+            get_template_directory_uri() . '/includes/policy-library/assets/policy-library.css',
+            array('policycentral-style', 'policycentral-blog'),
+            file_exists($pcpl_css) ? filemtime($pcpl_css) : '1.0.1'
+        );
+    }
+
+    // Policy Library interactive toolbar (single policy pages only)
+    if (is_singular('pc_policy')) {
+        $pcpl_js = get_template_directory() . '/includes/policy-library/assets/policy-interactive.js';
+        wp_enqueue_script('policycentral-policy-interactive',
+            get_template_directory_uri() . '/includes/policy-library/assets/policy-interactive.js',
+            array(), file_exists($pcpl_js) ? filemtime($pcpl_js) : '1.0.0', true
+        );
     }
 
     // Blog JS (TOC scrollspy) — single posts only

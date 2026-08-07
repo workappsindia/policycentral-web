@@ -1,0 +1,35 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ESG illustration">
+  <defs>
+    <linearGradient id="esg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#047857"/></linearGradient>
+    <linearGradient id="esg-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="esg-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="esg-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#047857" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#D1FAE5"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#esg-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#047857"/>
+
+  <!-- card with growth chart -->
+  <g filter="url(#esg-s)" transform="translate(150 168)">
+    <rect x="0" y="0" width="250" height="196" rx="18" fill="#fff"/>
+    <rect x="24" y="24" width="120" height="9" rx="4.5" fill="#E5E7EB"/>
+    <!-- rising bars turning green -->
+    <g transform="translate(24 60)">
+      <rect x="0" y="70" width="24" height="40" rx="5" fill="#CFF3EF"/>
+      <rect x="38" y="52" width="24" height="58" rx="5" fill="#A7F3D0"/>
+      <rect x="76" y="34" width="24" height="76" rx="5" fill="#6EE7B7"/>
+      <rect x="114" y="14" width="24" height="96" rx="5" fill="url(#esg-g)"/>
+      <polyline points="12,74 50,56 88,38 126,18" fill="none" stroke="#047857" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- globe with leaf -->
+  <g filter="url(#esg-s)" transform="translate(340 200)">
+    <circle cx="66" cy="66" r="66" fill="url(#esg-g)"/>
+    <ellipse cx="66" cy="66" rx="28" ry="66" fill="none" stroke="#fff" stroke-width="3" opacity="0.5"/>
+    <line x1="0" y1="66" x2="132" y2="66" stroke="#fff" stroke-width="3" opacity="0.5"/>
+    <path d="M66 66c0-24 18-42 46-44-2 26-20 42-46 44z" fill="#fff" opacity="0.9"/>
+    <path d="M66 66c16-12 34-12 46-10" stroke="#047857" stroke-width="3" fill="none"/>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#047857" opacity="0.5"/>
+</svg>

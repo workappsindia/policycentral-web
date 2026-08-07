@@ -1,0 +1,35 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Governance and ethics illustration">
+  <defs>
+    <linearGradient id="gv-i" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="gv-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="gv-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="gv-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#4338CA" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#gv-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#4338CA"/>
+
+  <!-- institution building with pillars -->
+  <g filter="url(#gv-s)" transform="translate(160 150)">
+    <!-- pediment -->
+    <path d="M110 0 L216 56 H4 Z" fill="url(#gv-i)"/>
+    <rect x="4" y="56" width="212" height="16" rx="4" fill="#4338CA"/>
+    <!-- pillars -->
+    <g fill="#fff"><rect x="24" y="80" width="26" height="120" rx="4"/><rect x="72" y="80" width="26" height="120" rx="4"/><rect x="122" y="80" width="26" height="120" rx="4"/><rect x="170" y="80" width="26" height="120" rx="4"/></g>
+    <!-- base steps -->
+    <rect x="-6" y="200" width="232" height="16" rx="4" fill="#C7D2FE"/>
+    <rect x="-16" y="216" width="252" height="16" rx="4" fill="#A5B4FC"/>
+  </g>
+
+  <!-- balance/ethics badge -->
+  <g filter="url(#gv-s)" transform="translate(370 250)">
+    <circle cx="46" cy="46" r="46" fill="url(#gv-t)"/>
+    <g stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M46 22v52"/><path d="M26 34h40"/>
+      <path d="M26 34l-10 20a12 12 0 0 0 20 0z"/>
+      <path d="M66 34l-10 20a12 12 0 0 0 20 0z"/>
+      <path d="M34 78h24"/>
+    </g>
+  </g>
+  <circle cx="300" cy="120" r="6" fill="#4338CA" opacity="0.5"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Counter-terrorist financing illustration">
+  <defs>
+    <linearGradient id="ctf-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="ctf-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <linearGradient id="ctf-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FB7185"/><stop offset="1" stop-color="#E11D48"/></linearGradient>
+    <filter id="ctf-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#0F766E" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="130" r="92" fill="#E0F7F6"/><circle cx="520" cy="378" r="106" fill="#EDE9FE"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#ctf-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#7C3AED" opacity="0.4"/><circle cx="556" cy="150" r="7" fill="#22C1B6"/>
+
+  <!-- coins flowing, then blocked -->
+  <g filter="url(#ctf-s)">
+    <g transform="translate(120 236)"><circle cx="0" cy="0" r="24" fill="url(#ctf-a)"/><text x="0" y="8" font-family="Plus Jakarta Sans,sans-serif" font-size="24" font-weight="800" fill="#fff" text-anchor="middle">&#8377;</text></g>
+    <g transform="translate(184 246)"><circle cx="0" cy="0" r="20" fill="url(#ctf-a)" opacity="0.85"/></g>
+    <g transform="translate(240 254)"><circle cx="0" cy="0" r="16" fill="url(#ctf-a)" opacity="0.65"/></g>
+  </g>
+  <!-- flow arrow -->
+  <path d="M150 300 q80 26 150 6" stroke="#0F766E" stroke-width="5" stroke-linecap="round" fill="none" stroke-dasharray="2 12" opacity="0.5"/>
+
+  <!-- big STOP shield blocking -->
+  <g filter="url(#ctf-s)" transform="translate(330 150)">
+    <path d="M92 6l86 32v66c0 60-38 94-86 112C46 198 8 164 8 104V38z" fill="url(#ctf-t)"/>
+    <path d="M92 6l86 32v66c0 60-38 94-86 112z" fill="#000" opacity="0.06"/>
+    <!-- no-entry bar -->
+    <circle cx="92" cy="112" r="42" fill="none" stroke="#fff" stroke-width="10"/>
+    <path d="M62 112h60" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <circle cx="300" cy="120" r="6" fill="#0F766E" opacity="0.5"/>
+</svg>

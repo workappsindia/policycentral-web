@@ -126,6 +126,17 @@ function pcgpt_get_migrations() {
         93 => 'pcgpt_migration_093_refresh_best_software_india_onpremise_edit',
         94 => 'pcgpt_migration_094_refresh_ai_policy_search_blog_65_policies',
         95 => 'pcgpt_migration_095_refresh_tony_thomas_full_domains',
+        96 => 'pcgpt_migration_096_create_policy_template_showcase_page',
+        97 => 'pcgpt_migration_097_seed_policy_library',
+        98 => 'pcgpt_migration_098_flush_policies_rewrite',
+        99 => 'pcgpt_migration_099_rename_financial_crime_to_fraud_risk',
+        100 => 'pcgpt_migration_100_refresh_policy_library_content',
+        101 => 'pcgpt_migration_101_strip_markdown_bold_policy_content',
+        102 => 'pcgpt_migration_102_create_pcpl_pdf_jobs_table',
+        103 => 'pcgpt_migration_103_strip_faq_company_alias',
+        104 => 'pcgpt_migration_104_drop_purpose_faq',
+        105 => 'pcgpt_migration_105_strip_template_suffix_from_titles',
+        106 => 'pcgpt_migration_106_policy_library_sitemap',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

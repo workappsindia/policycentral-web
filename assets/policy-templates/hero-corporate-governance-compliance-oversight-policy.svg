@@ -1,0 +1,36 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corporate governance illustration">
+  <defs>
+    <linearGradient id="cg-i" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4338CA"/></linearGradient>
+    <linearGradient id="cg-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="cg-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="cg-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#4338CA" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#cg-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#4338CA"/>
+
+  <!-- board / org chart -->
+  <g filter="url(#cg-s)" transform="translate(150 168)">
+    <!-- connectors -->
+    <path d="M70 54v22M70 76H24v22M70 76h92v22M162 76h46v22" stroke="#C7D2FE" stroke-width="4" fill="none"/>
+    <!-- top node (board) -->
+    <g transform="translate(40 6)"><rect x="0" y="0" width="60" height="48" rx="10" fill="url(#cg-i)"/><circle cx="30" cy="20" r="9" fill="#fff"/><rect x="16" y="34" width="28" height="6" rx="3" fill="#fff" opacity="0.7"/></g>
+    <!-- child nodes -->
+    <g transform="translate(0 98)"><rect x="0" y="0" width="52" height="44" rx="9" fill="#fff"/><circle cx="26" cy="18" r="8" fill="#A78BFA"/><rect x="14" y="30" width="24" height="6" rx="3" fill="#E5E7EB"/></g>
+    <g transform="translate(136 98)"><rect x="0" y="0" width="52" height="44" rx="9" fill="#fff"/><circle cx="26" cy="18" r="8" fill="#22C1B6"/><rect x="14" y="30" width="24" height="6" rx="3" fill="#E5E7EB"/></g>
+    <g transform="translate(184 98)"><rect x="0" y="0" width="52" height="44" rx="9" fill="#fff" opacity="0"/></g>
+  </g>
+
+  <!-- oversight shield with gavel -->
+  <g filter="url(#cg-s)" transform="translate(360 210)">
+    <path d="M66 4l58 22v46c0 40-25 62-58 74C33 134 8 112 8 72V26z" fill="url(#cg-t)"/>
+    <path d="M66 4l58 22v46c0 40-25 62-58 74z" fill="#000" opacity="0.06"/>
+    <!-- gavel -->
+    <g transform="translate(38 40)" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <rect x="20" y="2" width="34" height="18" rx="4" transform="rotate(45 20 2)" fill="#fff" stroke="none"/>
+      <path d="M30 26l22 22"/>
+      <path d="M20 60h36"/>
+    </g>
+  </g>
+  <circle cx="300" cy="120" r="6" fill="#4338CA" opacity="0.5"/>
+</svg>

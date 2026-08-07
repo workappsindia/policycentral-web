@@ -1,0 +1,28 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information security illustration">
+  <defs>
+    <linearGradient id="isp-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="isp-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="isp-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="isp-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#6D28D9" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#isp-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#6D28D9"/>
+
+  <!-- server / data stack -->
+  <g filter="url(#isp-s)" transform="translate(150 176)">
+    <rect x="0" y="0" width="150" height="46" rx="10" fill="#fff"/><circle cx="26" cy="23" r="8" fill="#DDD6FE"/><rect x="46" y="19" width="80" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="0" y="56" width="150" height="46" rx="10" fill="#fff"/><circle cx="26" cy="79" r="8" fill="#C4F0EB"/><rect x="46" y="75" width="80" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="0" y="112" width="150" height="46" rx="10" fill="#fff"/><circle cx="26" cy="135" r="8" fill="#FDE68A"/><rect x="46" y="131" width="80" height="8" rx="4" fill="#E5E7EB"/>
+  </g>
+
+  <!-- big shield with keyhole (CIA) -->
+  <g filter="url(#isp-s)" transform="translate(320 150)">
+    <path d="M96 6l90 34v68c0 62-40 98-90 116C46 206 6 170 6 108V40z" fill="url(#isp-p)"/>
+    <path d="M96 6l90 34v68c0 62-40 98-90 116z" fill="#000" opacity="0.06"/>
+    <circle cx="96" cy="96" r="20" fill="#fff"/><rect x="90" y="104" width="12" height="30" rx="6" fill="#fff"/>
+    <!-- CIA dots -->
+    <g fill="#fff" opacity="0.85"><circle cx="66" cy="150" r="5"/><circle cx="96" cy="158" r="5"/><circle cx="126" cy="150" r="5"/></g>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#6D28D9" opacity="0.5"/>
+</svg>

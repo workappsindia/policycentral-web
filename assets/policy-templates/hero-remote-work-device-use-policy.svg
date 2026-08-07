@@ -1,0 +1,32 @@
+<svg viewBox="0 0 640 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Remote work and device use illustration">
+  <defs>
+    <linearGradient id="rw-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="rw-t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22C1B6"/><stop offset="1" stop-color="#0F766E"/></linearGradient>
+    <linearGradient id="rw-a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBBF24"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <filter id="rw-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#6D28D9" flood-opacity="0.20"/></filter>
+  </defs>
+  <circle cx="150" cy="128" r="92" fill="#EDE9FE"/><circle cx="522" cy="378" r="106" fill="#E0F7F6"/>
+  <path d="M486 84 l10 22 22 10 -22 10 -10 22 -10-22 -22-10 22-10z" fill="url(#rw-a)" opacity="0.9"/>
+  <circle cx="112" cy="356" r="10" fill="#22C1B6" opacity="0.5"/><circle cx="556" cy="150" r="7" fill="#6D28D9"/>
+
+  <!-- house -->
+  <g filter="url(#rw-s)" transform="translate(150 176)">
+    <path d="M80 0L160 60H0z" fill="url(#rw-p)"/>
+    <rect x="16" y="58" width="128" height="104" rx="8" fill="#fff"/>
+    <!-- laptop inside -->
+    <rect x="44" y="88" width="72" height="44" rx="5" fill="#EDE9FE"/><rect x="38" y="132" width="84" height="8" rx="4" fill="#C4B5FD"/>
+    <rect x="54" y="98" width="52" height="7" rx="3.5" fill="#A78BFA"/><rect x="54" y="112" width="38" height="7" rx="3.5" fill="#C4B5FD"/>
+  </g>
+
+  <!-- secure VPN connection -->
+  <path d="M312 250 q60 -30 120 0" stroke="#6D28D9" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+  <!-- VPN shield + wifi -->
+  <g filter="url(#rw-s)" transform="translate(372 214)">
+    <path d="M60 4l56 20v42c0 38-24 60-56 72C28 126 4 104 4 66V24z" fill="url(#rw-t)"/>
+    <path d="M60 4l56 20v42c0 38-24 60-56 72z" fill="#000" opacity="0.06"/>
+    <g stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"><path d="M40 58a28 28 0 0 1 40 0"/><path d="M48 68a16 16 0 0 1 24 0"/></g>
+    <circle cx="60" cy="80" r="5" fill="#fff"/>
+  </g>
+  <circle cx="300" cy="118" r="6" fill="#6D28D9" opacity="0.5"/>
+</svg>
