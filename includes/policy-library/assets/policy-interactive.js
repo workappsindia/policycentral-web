@@ -51,7 +51,7 @@
         return;
       }
       var label = langLabels[lang] || lang;
-      setStatus('Translating into ' + label + '… the first time can take up to a minute. It is cached after, so it will be instant next time.', 'busy');
+      setStatus('Translating into ' + label + '…', 'busy');
       select.disabled = true;
       var polls = 0, MAX = 40;
       (function attempt() {
