@@ -142,7 +142,12 @@ class PCPL_Lead {
 
         // PolicyCentral AI enhancements — cached per policy, fail soft (never block delivery).
         require_once PCPL_DIR . '/class-pcpl-ai.php';
-        $qr = PCPL_ASSETS . '/qr/' . $slug . '.png';
+        // Environment-matched QR: point it at the same host that generated this PDF
+        // (so it matches the clickable link and actually resolves). dev.* uses the
+        // dev set, everything else the prod set; both are pre-generated + verified.
+        $host   = (string) wp_parse_url(home_url(), PHP_URL_HOST);
+        $qr_dir = (strpos($host, 'dev.') === 0) ? 'qr/dev/' : 'qr/';
+        $qr     = PCPL_ASSETS . '/' . $qr_dir . $slug . '.png';
         $enh = array(
             'summary'    => PCPL_AI::get_summary($post->ID, $policy),
             'ai_faqs'    => PCPL_AI::get_faqs_topup($post->ID, $policy),
