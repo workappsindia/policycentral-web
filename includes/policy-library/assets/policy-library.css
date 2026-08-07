@@ -169,6 +169,9 @@
   /* Single column: let the sidebar (personalize form + TOC) fall BELOW the
      policy instead of hoisting it above. Desktop 2-col layout is unaffected. */
   .pt-side{position:static}
+  /* The TOC is a jump-nav that only makes sense beside the scrolling doc on
+     desktop; hide it on mobile (it stays in the HTML for larger screens). */
+  .pt-toc{display:none}
   .pt-rel-grid{grid-template-columns:1fr}
 }
 
