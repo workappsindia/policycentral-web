@@ -20,6 +20,7 @@ while (have_posts()) : the_post();
     $covers   = pcpl_meta_list($pid, '_pcpl_covers');
     $faqs     = pcpl_meta_list($pid, '_pcpl_faqs');
     $body     = get_post_field('post_content', $pid); // trusted, seeded HTML
+    $body     = function_exists('pcpl_display_text') ? pcpl_display_text($body) : $body; // hide [Company Name] marker on screen
 
     // Build TOC from the body's <section class="pt-sec" id="..."><h2>Label</h2>
     preg_match_all('#<section[^>]*class="pt-sec"[^>]*id="([^"]+)"[^>]*>\s*<h2[^>]*>(.*?)</h2>#is', $body, $m);
@@ -232,7 +233,7 @@ while (have_posts()) : the_post();
         <p>Add your details and we'll insert your company name, then email you a ready-to-use PDF of this policy.</p>
         <form class="pt-lead-form" data-policy="<?php echo esc_attr(get_post_field('post_name', $pid)); ?>" data-nonce="<?php echo esc_attr(wp_create_nonce('pcpl_lead')); ?>" data-ajax="<?php echo esc_url(admin_url('admin-ajax.php')); ?>">
           <input type="text" name="name" placeholder="Full name" autocomplete="name" required>
-          <input type="text" name="company" placeholder="Company name (optional)" autocomplete="organization">
+          <input type="text" name="company" placeholder="Company name" autocomplete="organization" required>
           <input type="email" name="email" placeholder="Work email" autocomplete="email" required>
           <input type="tel" name="mobile" placeholder="Mobile number (optional)" autocomplete="tel">
           <button type="submit" class="btn btn-primary">Mail me the personalized PDF</button>

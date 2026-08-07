@@ -82,9 +82,10 @@ class PCPL_AI {
         $system = "You are a professional translator specializing in corporate policy documents. "
             . "Translate the visible text of the given HTML into {$lang_name}. "
             . "CRITICAL RULES: (1) Preserve every HTML tag and attribute exactly as-is; translate ONLY the human-readable text between tags. "
-            . "(2) Keep the placeholder [Company Name] unchanged (do not translate the brackets or the words inside). "
-            . "(3) Keep any email addresses, URLs, and legal section numbers unchanged. "
-            . "(4) Use natural, professional {$lang_name} appropriate for an official HR/compliance policy. "
+            . "(2) Wherever the source refers to the organization as [Company Name], or as [Company Name] (\"the Company\"), render it in prose simply as the natural {$lang_name} equivalent of \"the Company\". Do NOT output any bracketed placeholder like [Company Name], and do NOT add an alias in parentheses. "
+            . "(3) In email addresses or domains such as [Company Name].com, replace [Company Name] with the literal text yourcompany so the address stays valid (e.g. support@yourcompany.com). "
+            . "(4) Keep other URLs and legal section numbers unchanged. "
+            . "(5) Use natural, professional {$lang_name} appropriate for an official HR/compliance policy. "
             . "Output ONLY the translated HTML, with no preamble, notes, or code fences.";
         $user = (string) ($policy['body'] ?? '');
         if ($user === '') return '';
