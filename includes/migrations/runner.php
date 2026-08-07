@@ -136,6 +136,7 @@ function pcgpt_get_migrations() {
         103 => 'pcgpt_migration_103_strip_faq_company_alias',
         104 => 'pcgpt_migration_104_drop_purpose_faq',
         105 => 'pcgpt_migration_105_strip_template_suffix_from_titles',
+        106 => 'pcgpt_migration_106_policy_library_sitemap',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
