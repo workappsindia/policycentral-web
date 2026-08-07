@@ -166,7 +166,9 @@
 
 @media(max-width:900px){
   .pt-body{grid-template-columns:1fr;gap:28px}
-  .pt-side{position:static;order:-1}
+  /* Single column: let the sidebar (personalize form + TOC) fall BELOW the
+     policy instead of hoisting it above. Desktop 2-col layout is unaffected. */
+  .pt-side{position:static}
   .pt-rel-grid{grid-template-columns:1fr}
 }
 
