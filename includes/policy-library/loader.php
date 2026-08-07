@@ -133,6 +133,29 @@ function pcpl_primary_category($post_id) {
     return (!empty($terms) && !is_wp_error($terms)) ? $terms[0] : null;
 }
 
+/**
+ * Clean the [Company Name] fill-in marker for ON-SCREEN (unpersonalized) display.
+ * A reader should see the organization referenced once as "the Company", not the
+ * raw marker plus its ("the Company") alias declaration. The PDF path does NOT
+ * use this — it keeps the marker and swaps in the requester's real company name.
+ */
+function pcpl_display_text($html) {
+    $html = (string) $html;
+    // Domain / email placeholders: [Company Name].com -> yourcompany.com
+    $html = preg_replace('/\[Company Name\](?=\.[a-z]{2,})/u', 'yourcompany', $html);
+    // Drop the redundant alias declaration; the marker becomes the readable name.
+    $html = str_replace(
+        array('[Company Name] (&quot;the Company&quot;)', '[Company Name] ("the Company")', '[Company Name] (“the Company”)'),
+        'the Company',
+        $html
+    );
+    // Any remaining marker.
+    $html = str_replace('[Company Name]', 'the Company', $html);
+    // Capitalize "the Company" at the start of a sentence / block.
+    $html = preg_replace('/(^|>\s*|[.!?]\s+)the Company/u', '$1The Company', $html);
+    return $html;
+}
+
 /** Decode a JSON meta list ([] on empty/invalid). */
 function pcpl_meta_list($post_id, $key) {
     $raw = get_post_meta($post_id, $key, true);

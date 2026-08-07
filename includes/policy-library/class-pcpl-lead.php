@@ -33,8 +33,8 @@ class PCPL_Lead {
         $mobile  = isset($_POST['mobile'])  ? sanitize_text_field(wp_unslash($_POST['mobile']))  : '';
         $slug    = isset($_POST['policy'])  ? sanitize_title(wp_unslash($_POST['policy']))        : '';
 
-        if ($name === '' || $email === '') {
-            wp_send_json_error('Please enter your name and work email.');
+        if ($name === '' || $company === '' || $email === '') {
+            wp_send_json_error('Please enter your name, company, and work email.');
         }
         if (!is_email($email)) {
             wp_send_json_error('Please enter a valid email address.');

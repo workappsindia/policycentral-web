@@ -83,7 +83,7 @@ class PCPL_Interactive {
         $meta_key = '_pcpl_tr_' . $lang;
         $cached = get_post_meta($pid, $meta_key, true);
         if (is_string($cached) && $cached !== '') {
-            wp_send_json_success(array('done' => true, 'html' => $cached, 'lang' => $lang, 'bcp47' => $langs[$lang]['bcp47']));
+            wp_send_json_success(array('done' => true, 'html' => pcpl_display_text($cached), 'lang' => $lang, 'bcp47' => $langs[$lang]['bcp47']));
         }
 
         $lock = 'pcpl_trlock_' . $pid . '_' . $lang;
@@ -115,7 +115,7 @@ class PCPL_Interactive {
         $generate();
         $html = get_post_meta($pid, $meta_key, true);
         if (!is_string($html) || $html === '') wp_send_json_error('Translation is unavailable right now. Please try again.');
-        wp_send_json_success(array('done' => true, 'html' => $html, 'lang' => $lang, 'bcp47' => $langs[$lang]['bcp47']));
+        wp_send_json_success(array('done' => true, 'html' => pcpl_display_text($html), 'lang' => $lang, 'bcp47' => $langs[$lang]['bcp47']));
     }
 
     public static function handle_ai_summary() {
@@ -128,7 +128,7 @@ class PCPL_Interactive {
         @set_time_limit(120);
         $summary = PCPL_AI::get_summary($pid, $policy);
         if ($summary === '') wp_send_json_error('Summary is unavailable right now. Please try again.');
-        wp_send_json_success(array('summary' => $summary));
+        wp_send_json_success(array('summary' => pcpl_display_text($summary)));
     }
 
     public static function handle_faqs() {
@@ -140,12 +140,16 @@ class PCPL_Interactive {
         list($pid, $policy) = self::resolve_policy($slug);
         @set_time_limit(120);
 
+        $clean = function ($f) {
+            return array('q' => pcpl_display_text($f['q']), 'a' => pcpl_display_text($f['a']));
+        };
         $curated = array();
         foreach (($policy['faqs'] ?? array()) as $f) {
-            if (!empty($f['q']) && !empty($f['a'])) $curated[] = array('q' => $f['q'], 'a' => $f['a']);
+            if (!empty($f['q']) && !empty($f['a'])) $curated[] = $clean($f);
         }
         $ai = PCPL_AI::get_faqs_topup($pid, $policy); // cached per policy
-        wp_send_json_success(array('curated' => $curated, 'ai' => is_array($ai) ? $ai : array()));
+        $ai = is_array($ai) ? array_map($clean, $ai) : array();
+        wp_send_json_success(array('curated' => $curated, 'ai' => $ai));
     }
 
     public static function handle_infographic() {
@@ -158,6 +162,17 @@ class PCPL_Interactive {
         @set_time_limit(120);
         $data = PCPL_AI::infographic($pid, $policy);
         if (empty($data)) wp_send_json_error('The infographic is unavailable right now. Please try again.');
+        // Hide the [Company Name] marker for on-screen display.
+        if (isset($data['headline'])) $data['headline'] = pcpl_display_text($data['headline']);
+        if (isset($data['summary']))  $data['summary']  = pcpl_display_text($data['summary']);
+        foreach (array('takeaways', 'stats') as $k) {
+            if (!empty($data[$k]) && is_array($data[$k])) {
+                foreach ($data[$k] as &$item) {
+                    foreach ($item as $ik => $iv) { if (is_string($iv)) $item[$ik] = pcpl_display_text($iv); }
+                }
+                unset($item);
+            }
+        }
         wp_send_json_success($data);
     }
 
@@ -174,6 +189,6 @@ class PCPL_Interactive {
         @set_time_limit(120);
         $answer = PCPL_AI::ask($policy, $q);
         if ($answer === '') wp_send_json_error('Could not answer right now. Please try again.');
-        wp_send_json_success(array('answer' => $answer));
+        wp_send_json_success(array('answer' => pcpl_display_text($answer)));
     }
 }
