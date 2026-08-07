@@ -217,8 +217,8 @@ while (have_posts()) : the_post();
       <div class="pt-faqs">
         <h2>Frequently asked questions</h2>
         <?php foreach ($faqs as $f) :
-            $q = isset($f['q']) ? $f['q'] : '';
-            $a = isset($f['a']) ? $f['a'] : '';
+            $q = isset($f['q']) ? pcpl_display_text($f['q']) : '';
+            $a = isset($f['a']) ? pcpl_display_text($f['a']) : '';
             if (!$q) continue; ?>
           <details class="pt-faq"><summary><?php echo esc_html($q); ?></summary><div class="pt-faq-a"><p><?php echo esc_html($a); ?></p></div></details>
         <?php endforeach; ?>
