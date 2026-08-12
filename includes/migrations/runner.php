@@ -138,6 +138,8 @@ function pcgpt_get_migrations() {
         105 => 'pcgpt_migration_105_strip_template_suffix_from_titles',
         106 => 'pcgpt_migration_106_policy_library_sitemap',
         107 => 'pcgpt_migration_107_clear_cached_translations',
+        108 => 'pcgpt_migration_108_create_industries_section',
+        109 => 'pcgpt_migration_109_create_education_industry_page',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }

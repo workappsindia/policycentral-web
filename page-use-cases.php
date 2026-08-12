@@ -133,19 +133,6 @@ get_header();
         </ul>
       </div>
     </a>
-    <a href="<?php echo esc_url(home_url('/use-cases/retail-operations/')); ?>" class="uccard reveal rd2">
-      <div class="uc-bar" style="background:linear-gradient(90deg,#E11D48,#BE123C)"></div>
-      <div class="uc-in">
-        <div class="uc-icon" style="background:rgba(225,29,72,.1)"><svg viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Retail Operations</h3>
-        <p>Store-level circulars, pricing protocols, hallmarking SOPs and vendor advisories, targeted by region, store, and partner with acknowledgement on record.</p>
-        <ul class="uc-bullets">
-          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Store-level targeting</li>
-          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Vendor &amp; partner portal</li>
-          <li><div class="ub-dot" style="background:#E11D48"><svg viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 3 6 7 2"/></svg></div>Regional languages</li>
-        </ul>
-      </div>
-    </a>
     <a href="<?php echo esc_url(home_url('/use-cases/compliance-legal/')); ?>" class="uccard reveal rd3">
       <div class="uc-bar" style="background:linear-gradient(90deg,#1D4ED8,#1E40AF)"></div>
       <div class="uc-in">
