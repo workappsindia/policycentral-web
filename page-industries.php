@@ -8,7 +8,7 @@ get_header();
 <section class="faq-hero">
 <div class="container">
   <h1>Built for the way <em>your industry</em> works.<br>Not a template with your logo on it.</h1>
-  <p style="max-width:940px">The controlled-document problem looks different in a pharma quality suite, a two-hundred-store retail chain, a university admissions desk, and a government department. PolicyCentral.ai is the same trusted engine underneath, host, publish, target, translate, acknowledge, track, shaped to the language, the regulator, and the workflow each industry actually lives with.</p>
+  <p style="max-width:940px">Getting the right document to the right people looks different in a pharma quality suite, a retail chain running hundreds of stores, and a university admissions desk. PolicyCentral.ai is the same trusted engine underneath. We shape it to the language, the regulator, and the workflow each industry actually lives with.</p>
 </div>
 </section>
 
