@@ -345,7 +345,7 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>The controls a regulated<br>quality system <span class="g-text">expects.</span></h2>
+    <h2>The controls a regulated <br>quality system <span class="g-text">expects.</span></h2>
   </div>
 
   <!-- 1. Controlled document lifecycle -->

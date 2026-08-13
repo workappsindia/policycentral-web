@@ -331,7 +331,7 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>Capabilities that play a critical role<br>in <span class="g-text">retail operations.</span></h2>
+    <h2>Capabilities that play a critical role <br>in <span class="g-text">retail operations.</span></h2>
   </div>
 
   <div class="feat-hero feat-hero-uc reveal">

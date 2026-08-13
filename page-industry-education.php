@@ -332,7 +332,7 @@ get_header();
 <section class="uc-caps">
 <div class="container">
   <div class="section-header reveal">
-    <h2>From a dead document pile<br>to a <span class="g-text">living knowledge base.</span></h2>
+    <h2>From a dead document pile <br>to a <span class="g-text">living knowledge base.</span></h2>
   </div>
 
   <!-- 1. One living library -->
