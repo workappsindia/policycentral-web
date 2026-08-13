@@ -164,6 +164,24 @@ function pc_fix_thankyou_status() {
 }
 
 // ═══════════════════════════════════════════════
+// INDUSTRIES: 301 moved use-case URLs to their industry home
+// ═══════════════════════════════════════════════
+
+add_action('template_redirect', 'pc_industries_legacy_redirects', 1);
+function pc_industries_legacy_redirects() {
+    // Retail moved out of Use Cases into Industries. Preserve its ranking.
+    $map = array(
+        '/use-cases/retail-operations/' => '/industries/retail/',
+    );
+    $path = strtok($_SERVER['REQUEST_URI'], '?');            // strip query string
+    $path = '/' . trim($path, '/') . '/';                     // normalise to a trailing-slash path
+    if (isset($map[$path])) {
+        wp_safe_redirect(home_url($map[$path]), 301);
+        exit;
+    }
+}
+
+// ═══════════════════════════════════════════════
 // GTM: Push conversion event on thank-you page
 // ═══════════════════════════════════════════════
 
