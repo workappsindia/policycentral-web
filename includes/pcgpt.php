@@ -408,7 +408,7 @@ function pcgpt_handle_search() {
 
     // Prepare API request
     $api_body = json_encode(array(
-        'model'      => 'claude-sonnet-4-20250514',
+        'model'      => 'claude-sonnet-4-5',
         'max_tokens' => 1024,
         'stream'     => true,
         'system'     => $system_prompt,
