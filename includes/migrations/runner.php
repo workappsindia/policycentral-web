@@ -142,6 +142,9 @@ function pcgpt_get_migrations() {
         109 => 'pcgpt_migration_109_create_education_industry_page',
         110 => 'pcgpt_migration_110_industries_seo_meta',
         111 => 'pcgpt_migration_111_load_enforcement_fy26_27',
+        112 => 'pcgpt_migration_112_prudential_hub_sitemap_bust',
+        113 => 'pcgpt_migration_113_fair_practices_hub',
+        114 => 'pcgpt_migration_114_change_of_control_hub_sitemap_bust',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
