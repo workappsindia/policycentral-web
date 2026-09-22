@@ -146,7 +146,7 @@ class PCC_Rewrite {
             case 'section':
                 return 'Compliance Intelligence for Indian BFSI - ' . $site;
             case 'tracker':
-                return 'RBI Enforcement Tracker, FY25-26 Penalties on Banks & NBFCs - ' . $site;
+                return 'RBI Enforcement Tracker, FY25-26 and FY26-27 Penalties on Banks & NBFCs - ' . $site;
             case 'rules_index':
                 return 'Decoded RBI Rules, the Plain-Language Library - ' . $site;
             case 'hub':
@@ -169,9 +169,9 @@ class PCC_Rewrite {
 
         switch ($view) {
             case 'section':
-                return 'Plain-language decodes of the RBI rules that matter, wired to a tracker of FY25-26 enforcement actions against banks and NBFCs. Linked to the source, honest about scope.';
+                return 'Plain-language decodes of the RBI rules that matter, wired to a tracker of FY25-26 and FY26-27 enforcement actions against banks and NBFCs. Linked to the source, honest about scope.';
             case 'tracker':
-                return 'Filter FY25-26 RBI penalties on banks and NBFCs by cited reason, entity type and compliance theme. Facts drawn from RBI press releases, linked to the source.';
+                return 'Filter FY25-26 and FY26-27 RBI penalties on banks and NBFCs by cited reason, entity type and compliance theme. Facts drawn from RBI press releases, linked to the source.';
             case 'rules_index':
                 return 'A growing library of RBI instruments decoded into plain language: who each rule applies to, what it requires, and what RBI has actually penalised.';
             case 'hub':

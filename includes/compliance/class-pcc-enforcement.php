@@ -76,6 +76,62 @@ class PCC_Enforcement {
         return wp_slash(wp_json_encode($rec, JSON_UNESCAPED_UNICODE));
     }
 
+    /** Records from any tracker JSON file in the seed shape ({_meta, records}). */
+    public static function records_from_file($path) {
+        if (!file_exists($path)) return array();
+        $d = json_decode((string) file_get_contents($path), true);
+        return isset($d['records']) && is_array($d['records']) ? $d['records'] : array();
+    }
+
+    /**
+     * Insert one record as an rbi_enforcement post (taxonomies + cached meta).
+     * Idempotent on the record id (post_name). Returns the post ID, or 0 when
+     * skipped/failed. Mirrors migration 061 so later batches load identically.
+     */
+    public static function insert_record($rec) {
+        $slug = $rec['id'] ?? '';
+        if (!$slug || get_page_by_path($slug, OBJECT, 'rbi_enforcement')) {
+            return 0;
+        }
+        $rec   = self::remap_related_rules($rec);
+        $title = ($rec['entity_name'] ?? 'RBI action') . ', ' . date('d M Y', strtotime($rec['action_date'] ?? 'now'));
+
+        $post_id = wp_insert_post(array(
+            'post_type'    => 'rbi_enforcement',
+            'post_status'  => 'publish',
+            'post_name'    => $slug,
+            'post_title'   => $title,
+            'post_content' => '',
+        ));
+        if (!$post_id || is_wp_error($post_id)) {
+            return 0;
+        }
+
+        wp_set_object_terms($post_id, $rec['re_type'],     're_type',     false);
+        wp_set_object_terms($post_id, $rec['re_group'],    're_group',    false);
+        wp_set_object_terms($post_id, $rec['action_type'], 'action_type', false);
+        wp_set_object_terms($post_id, $rec['fiscal_year'], 'fiscal_year', false);
+        wp_set_object_terms($post_id, $rec['scope_fit'],   'scope_fit',   false);
+        wp_set_object_terms($post_id, (array) $rec['reason_categories'], 'reason_category', false);
+
+        $theme_ids = array();
+        foreach ((array) ($rec['themes'] ?? array()) as $th_slug) {
+            $t = get_term_by('slug', $th_slug, 'theme');
+            if ($t) $theme_ids[] = (int) $t->term_id;
+        }
+        if ($theme_ids) {
+            wp_set_object_terms($post_id, $theme_ids, 'theme', false);
+        }
+
+        update_post_meta($post_id, '_pcc_record', self::encode($rec));
+        update_post_meta($post_id, '_pcc_action_date', $rec['action_date'] ?? '');
+        update_post_meta($post_id, '_pcc_entity_slug', $rec['entity_slug'] ?? '');
+        if (array_key_exists('penalty_amount_lakhs', $rec) && $rec['penalty_amount_lakhs'] !== null) {
+            update_post_meta($post_id, '_pcc_penalty_lakhs', $rec['penalty_amount_lakhs']);
+        }
+        return (int) $post_id;
+    }
+
     /** Raw seed records from the bundled JSON (fallback / source of truth for the load). */
     public static function seed_records() {
         $path = PCC_DIR . '/data/enforcement-seed-data.json';

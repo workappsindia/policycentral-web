@@ -24,6 +24,7 @@ if (class_exists('PCC_Enforcement')) {
         }
     }
 }
+$io_total    = count($io_records);
 $io_records  = array_slice($io_records, 0, 3);
 $tracker_url = home_url('/compliance/enforcement-tracker/');
 ?>
@@ -34,7 +35,7 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
 <div class="container">
   <div class="hub-hero-grid">
     <div class="hub-hero-l">
-      <h1>Internal Ombudsman &amp;<br><span class="g-text">Grievance Redress</span></h1>
+      <h1>Internal Ombudsman &amp; <br><span class="g-text">Grievance Redress</span></h1>
       <p>What the RBI Internal Ombudsman Directions, 2026 require, who they apply to, and what RBI has actually penalised banks and NBFCs for under their internal grievance-redress mechanisms, in plain language, linked to the source.</p>
       <div class="hub-hero-btns">
         <a href="#prevention" class="btn btn-primary">How institutions stay audit-ready <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
@@ -56,7 +57,7 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
           <div class="snap-row"><span class="snap-k">Replaces</span><span class="snap-v">2023 Master Direction<small>repealed</small></span></div>
           <div class="snap-row"><span class="snap-k">Escalation to IO</span><span class="snap-v">20 days<small>≥10 days where prescribed</small></span></div>
           <div class="snap-row"><span class="snap-k">Final decision</span><span class="snap-v">30 days<small>to the complainant</small></span></div>
-          <div class="snap-row"><span class="snap-k">FY25-26 actions here</span><span class="snap-v">3<small>banks &amp; NBFCs (illustrative)</small></span></div>
+          <div class="snap-row"><span class="snap-k">Actions in tracker</span><span class="snap-v"><?php echo (int) $io_total; ?><small>banks &amp; NBFCs</small></span></div>
         </div>
       </div>
     </div>
@@ -118,9 +119,9 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
 <div class="container">
   <div class="section-header">
     <span class="eyebrow">What RBI has penalised</span>
-    <h2>The pattern across FY25-26</h2>
+    <h2>The pattern across FY25-26 and FY26-27</h2>
   </div>
-  <p class="pat-lead">Across both banks and NBFCs, a recurring FY25-26 theme was shortcomings in how internal grievance-redress mechanisms connected to the Internal Ombudsman, complaints not escalated in time, or no system in place to escalate them at all. The actions below are drawn from the FACE compilation of RBI press releases.</p>
+  <p class="pat-lead">Across both banks and NBFCs, a recurring theme since FY25-26 has been shortcomings in how internal grievance-redress mechanisms connected to the Internal Ombudsman, complaints not escalated in time, or no system in place to escalate them at all. The actions below are drawn from RBI press releases.</p>
   <p class="pat-note">Each entry states only the reason cited in the RBI press release. Where a penalty covered more than one issue, the amount shown is the total and is not attributable to any single reason.</p>
 
   <div class="enf-grid">
@@ -166,11 +167,11 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
   <div class="section-header">
     <span class="eyebrow">Where the failures actually happen</span>
     <h2>Understanding the rule is step one.<br>Operationalising it is where penalties occur.</h2>
-    <p>Most of these aren't comprehension gaps, the obligation was known. The breakdown is downstream: the procedure didn't reach every relevant person, wasn't acknowledged, or wasn't reviewed on cadence. Here's an honest split of what a policy distribution-and-attestation layer like PolicyCentral does and does not address.</p>
+    <p>Most of these aren't comprehension gaps, the obligation was known. The breakdown is downstream: the procedure didn't reach every relevant person, wasn't acknowledged, or wasn't reviewed on cadence. Here's an honest split of what a policy distribution-and-attestation layer like PolicyCentral.ai does and does not address.</p>
   </div>
   <div class="scope-grid">
     <div class="scope in reveal">
-      <div class="scope-head"><span class="scope-pill">PolicyCentral helps here</span></div>
+      <div class="scope-head"><span class="scope-pill">PolicyCentral.ai helps here</span></div>
       <h3>Distribute · attest · prove</h3>
       <p>The "did everyone get it, read it, and can you show an auditor" layer around the IO framework.</p>
       <ul>
@@ -182,7 +183,7 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
     </div>
     <div class="scope out reveal rd1">
       <div class="scope-head"><span class="scope-pill">A different system handles this</span></div>
-      <h3>What PolicyCentral is not</h3>
+      <h3>What PolicyCentral.ai is not</h3>
       <p>We're explicit about scope, these are jobs for grievance-workflow and case-management tooling, not a policy platform.</p>
       <ul>
         <li><span class="mk"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="2" y1="6" x2="10" y2="6"/></svg></span><span>The <b>automated complaints-management software</b> that routes and auto-escalates rejected complaints to the IO.</span></li>
@@ -227,7 +228,7 @@ $tracker_url = home_url('/compliance/enforcement-tracker/');
       <div class="ib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <div class="cv-kicker">For CCOs, HR &amp; InfoSec leaders</div>
       <h3>See SOP attestation tracked across every branch</h3>
-      <p>PolicyCentral shows you, live and branch-by-branch, exactly who has read and acknowledged each policy and SOP, with a tamper-evident trail you can export for an RBI review. Walk through it on your own data.</p>
+      <p>PolicyCentral.ai shows you, live and branch-by-branch, exactly who has read and acknowledged each policy and SOP, with a tamper-evident trail you can export for an RBI review. Walk through it on your own data.</p>
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>

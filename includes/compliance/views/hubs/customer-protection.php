@@ -36,7 +36,7 @@ $ufs_url     = home_url('/compliance/rules/ufs-agency-referral-2026/');
 <div class="container">
   <div class="hub-hero-grid">
     <div class="hub-hero-l">
-      <h1>Customer Protection &amp;<br><span class="g-text">Responsible Business Conduct</span></h1>
+      <h1>Customer Protection &amp; <br><span class="g-text">Responsible Business Conduct</span></h1>
       <p>What RBI's 15 June 2026 conduct package requires of regulated entities when they advertise, market and sell financial products (their own and third-party), who it applies to, and the eleven dark patterns it bans. In plain language, linked to the source, live from 1 January 2027.</p>
       <div class="hub-hero-btns">
         <a href="#prevention" class="btn btn-primary">How institutions stay audit-ready <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>

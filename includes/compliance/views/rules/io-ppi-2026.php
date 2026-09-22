@@ -132,7 +132,7 @@ $track    = home_url('/compliance/enforcement-tracker/');
       <p>Each entry states only the reason cited in the RBI press release; where a penalty covered several issues, the amount is the total and isn't attributable to any single reason.</p>
       <div class="pen-grid"><?php echo $pen; ?></div>
       <?php else : ?>
-      <p>No FY25-26 action in our tracker cites a PPI issuer's Internal Ombudsman framework so far, the IO-related penalties this year landed on commercial banks and NBFCs. The obligation set is the same, which makes their cited failures the playbook of what supervisors check.</p>
+      <p>No action in our tracker cites a PPI issuer's Internal Ombudsman framework so far, the IO-related penalties this year landed on commercial banks and NBFCs. The obligation set is the same, which makes their cited failures the playbook of what supervisors check.</p>
       <?php endif; ?>
       <div style="margin-top:18px"><a href="<?php echo esc_url($track . '?theme=internal-ombudsman'); ?>" class="btn btn-secondary">See all in the enforcement tracker <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
     </section>
