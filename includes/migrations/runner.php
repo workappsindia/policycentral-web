@@ -145,6 +145,11 @@ function pcgpt_get_migrations() {
         112 => 'pcgpt_migration_112_prudential_hub_sitemap_bust',
         113 => 'pcgpt_migration_113_fair_practices_hub',
         114 => 'pcgpt_migration_114_change_of_control_hub_sitemap_bust',
+        115 => 'pcgpt_migration_115_dpdp_rules_2025_policies_to_update',
+        116 => 'pcgpt_migration_116_mandatory_policies_listed_companies_sebi_lodr',
+        117 => 'pcgpt_migration_117_rbi_board_approved_policies_nbfc_checklist',
+        118 => 'pcgpt_migration_118_free_compliance_governance_policy_templates_india',
+        119 => 'pcgpt_migration_119_invalidate_sitemap_cache_blog_batch_2026_09',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
