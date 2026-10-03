@@ -20,7 +20,7 @@ $theme_labels = array(
     'kyc-ckycr'             => 'KYC & CKYCR',
     'customer-protection'   => 'Customer Protection',
     'prudential-governance' => 'Prudential & Governance',
-    'fair-practices'        => 'Fair Practices (NBFC)',
+    'fair-practices'        => 'Fair Practices Code',
     'change-of-control'     => 'Change of Control',
     'credit-reporting'      => 'Credit Reporting',
     'outsourcing'           => 'Outsourcing',
@@ -44,6 +44,8 @@ foreach ($records as $r) {
 }
 ksort($opt_group); ksort($opt_scope); ksort($opt_fy); ksort($opt_reason);
 $total_cr = $total_lakhs / 100.0;
+$fy_keys  = array_keys($opt_fy);
+$fy_span  = $fy_keys ? (count($fy_keys) > 1 ? reset($fy_keys) . ' to ' . end($fy_keys) : reset($fy_keys)) : '';
 
 get_header();
 ?>
@@ -91,7 +93,7 @@ get_header();
   <div class="trk-summary">
     Showing <b id="trk-count"><?php echo count($records); ?></b> of <?php echo count($records); ?> actions
     &middot; ₹<?php echo number_format($total_cr, 2); ?> cr across <?php echo $monetary; ?> monetary penalties
-    &middot; FY25-26 (seed set)
+    <?php if ($fy_span) : ?>&middot; <?php echo esc_html($fy_span); ?><?php endif; ?>
   </div>
 
   <!-- RECORDS -->

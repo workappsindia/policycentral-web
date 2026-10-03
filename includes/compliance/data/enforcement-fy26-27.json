@@ -1,0 +1,1773 @@
+{
+  "_meta": {
+    "dataset": "PolicyCentral RBI Enforcement Tracker, FY26-27 records",
+    "conforms_to": "enforcement-tracker-schema.json v1.0",
+    "generated": "2026-09-21",
+    "source": "RBI press releases on rbi.org.in (BS_PressReleaseDisplay.aspx), 1 April to 18 September 2026, read directly from the source pages",
+    "record_count": 47,
+    "coverage": "Scheduled commercial banks (including one regional rural bank), payments banks, NBFCs, HFCs, ARCs, payment system operators, PPI issuers and credit information companies. Co-operative banks and district central co-operative banks are out of scope. Bulk NBFC certificate-of-registration cancellations are not itemised.",
+    "note": "cited_reasons are plain-language restatements of the charges RBI stated as sustained in the press release (facts only, no commentary). action_date is the date of the RBI order. penalty_amount_display uses the rupee sign. rbi_directions_cited lists the direction names as RBI quoted them."
+  },
+  "records": [
+    {
+      "id": "exclusive-capital-2026-03-27",
+      "entity_name": "Exclusive Capital Limited",
+      "entity_slug": "exclusive-capital",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-03-27",
+      "fiscal_year": "FY25-26",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 10.3,
+      "penalty_amount_display": "₹10.3 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Breached the permissible leverage ratio limit.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Did not submit certain supervisory returns to RBI at the prescribed frequency and within the stipulated timelines.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Did not furnish its balance sheet to RBI within the stipulated period.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Return-filing calendars and deadline ownership are a policy and process matter; the leverage breach is not.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62483",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Leverage Ratio",
+        "Filing of Supervisory returns",
+        "Submission of the balance sheet"
+      ],
+      "source": "RBI press release 2026-2027/5",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "ebix-payment-services-2026-04-17",
+      "entity_name": "Ebix Payment Services Private Limited",
+      "entity_slug": "ebix-payment-services",
+      "re_type": "PSO",
+      "re_group": "Payment",
+      "action_date": "2026-04-17",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 0.8,
+      "penalty_amount_display": "₹0.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not carry out risk categorisation of its customers.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Risk categorisation is a KYC policy obligation that staff must know and apply.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62608",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer"
+      ],
+      "source": "RBI press release 2026-2027/130",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "muthoot-housing-finance-2026-04-21",
+      "entity_name": "Muthoot Housing Finance Company Limited",
+      "entity_slug": "muthoot-housing-finance",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-04-21",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 0.8,
+      "penalty_amount_display": "₹0.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Fair practices"
+      ],
+      "themes": [
+        "fair-practices"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not disclose in application forms and sanction letters the approach for gradation of risk and the rationale for charging different interest rates to different categories of borrowers.",
+          "theme": "fair-practices"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "A disclosure that lives in the loan application form and sanction letter template; a policy-distribution failure.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62617",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Fair Practice Code"
+      ],
+      "source": "RBI press release 2026-2027/139",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "bandhan-bank-2026-04-21",
+      "entity_name": "Bandhan Bank Limited",
+      "entity_slug": "bandhan-bank",
+      "re_type": "Bank-Private",
+      "re_group": "Bank",
+      "action_date": "2026-04-21",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 41.8,
+      "penalty_amount_display": "₹41.8 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC",
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "kyc-ckycr",
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not carry out periodic review of the risk categorisation of certain categories of accounts.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Sanctioned director-related loans, in contravention of section 20(1)(b)(iii) of the Banking Regulation Act.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The KYC review cycle is policy-driven; director-related lending is a credit-governance control.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62618",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer"
+      ],
+      "source": "RBI press release 2026-2027/140",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "paytm-payments-bank-2026-04-24",
+      "entity_name": "Paytm Payments Bank Limited",
+      "entity_slug": "paytm-payments-bank",
+      "re_type": "Bank-Payment",
+      "re_group": "Bank",
+      "action_date": "2026-04-24",
+      "fiscal_year": "FY26-27",
+      "action_type": "Licence cancelled",
+      "penalty_amount_lakhs": null,
+      "penalty_amount_display": "Licence cancelled",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "RBI cancelled its banking licence under section 22(4) of the Banking Regulation Act, effective from close of business on 24 April 2026, finding that its affairs were conducted in a manner detrimental to the interest of the bank and its depositors, that the general character of its management was prejudicial to the interest of depositors and the public, that no useful purpose would be served by allowing it to continue, and that it had failed to comply with the conditions of its payments bank licence. RBI stated that the bank has enough liquidity to repay its entire deposit liability and that it will apply to the High Court for winding up.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A supervisory finding on the conduct of the bank as a whole, not a single policy control.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62621",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Banking Regulation Act, 1949, section 22"
+      ],
+      "source": "RBI press release 2026-2027/143",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "yes-bank-2026-04-27",
+      "entity_name": "Yes Bank Limited",
+      "entity_slug": "yes-bank",
+      "re_type": "Bank-Private",
+      "re_group": "Bank",
+      "action_date": "2026-04-27",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 31.8,
+      "penalty_amount_display": "₹31.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place a system for using the KYC Identifier assigned by the Central KYC Records Registry when establishing account-based relationships with customers.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A CKYCR integration gap in onboarding systems.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62707",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer"
+      ],
+      "source": "RBI press release 2026-2027/229",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "hinduja-housing-finance-2026-04-27",
+      "entity_name": "Hinduja Housing Finance Limited",
+      "entity_slug": "hinduja-housing-finance",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-04-27",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 1.8,
+      "penalty_amount_display": "₹1.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Change of control"
+      ],
+      "themes": [
+        "change-of-control"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not take prior written permission of RBI before a change in management arising from a change of more than 30 per cent of its directors, excluding independent directors.",
+          "theme": "change-of-control"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "The prior-approval trigger is a rule the board and secretarial team must know before every appointment.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62712",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Governance"
+      ],
+      "source": "RBI press release 2026-2027/234",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "himachal-pradesh-gramin-bank-2026-05-04",
+      "entity_name": "Himachal Pradesh Gramin Bank",
+      "entity_slug": "himachal-pradesh-gramin-bank",
+      "re_type": "Bank-RRB",
+      "re_group": "Bank",
+      "action_date": "2026-05-04",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 5.0,
+      "penalty_amount_display": "₹5 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Customer protection"
+      ],
+      "themes": [
+        "customer-protection"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not transfer eligible unclaimed amounts to the Depositor Education and Awareness Fund within the prescribed time.",
+          "theme": "customer-protection"
+        },
+        {
+          "text": "Did not pay interest on certain term deposits from the date of maturity until the date of repayment.",
+          "theme": "customer-protection"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Both obligations sit in the deposit policy; execution depends on core-banking configuration.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62697",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Interest Rate on Deposits"
+      ],
+      "source": "RBI press release 2026-2027/219",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "iifl-finance-2026-05-11",
+      "entity_name": "IIFL Finance Limited",
+      "entity_slug": "iifl-finance",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-05-11",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Customer protection"
+      ],
+      "themes": [
+        "customer-protection"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not pay certain borrowers the surplus realised from auctioning pledged gold articles over and above the loan outstanding.",
+          "theme": "customer-protection"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Gold-auction surplus refund is a branch procedure that staff must know and follow.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62745",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Master Direction, Reserve Bank of India (Non-Banking Financial Company, Scale Based Regulation) Directions, 2023"
+      ],
+      "source": "RBI press release 2026-2027/267",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "appnit-technologies-2026-05-11",
+      "entity_name": "Appnit Technologies Private Limited",
+      "entity_slug": "appnit-technologies",
+      "re_type": "PPI",
+      "re_group": "Payment",
+      "action_date": "2026-05-11",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 5.8,
+      "penalty_amount_display": "₹5.8 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Allowed PPI accounts opened using Aadhaar OTP-based e-KYC to continue for more than one year without carrying out identification as required by the KYC Directions.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Both are KYC lifecycle rules that a distributed policy and a review calendar make visible.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62746",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer (KYC)",
+        "Prepaid Payment Instruments (PPI)"
+      ],
+      "source": "RBI press release 2026-2027/268",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "mintifi-finserve-2026-05-15",
+      "entity_name": "Mintifi Finserve Private Limited",
+      "entity_slug": "mintifi-finserve",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-05-15",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not upload KYC records of certain customers onto the Central KYC Records Registry within the prescribed timeline.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "CKYCR upload timelines are a policy obligation executed by systems.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62792",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer (KYC)"
+      ],
+      "source": "RBI press release 2026-2027/314",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "newa-investments-2026-05-15",
+      "entity_name": "Newa Investments Private Limited",
+      "entity_slug": "newa-investments",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-05-15",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Change of control"
+      ],
+      "themes": [
+        "change-of-control"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not take prior written permission of RBI while appointing directors, which changed more than 30 per cent of its directors, excluding independent directors, and so amounted to a change in management.",
+          "theme": "change-of-control"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "The prior-approval trigger is a rule the board and secretarial team must know before every appointment.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62795",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Governance"
+      ],
+      "source": "RBI press release 2026-2027/317",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "akg-infin-2026-05-18",
+      "entity_name": "AKG Infin Private Limited",
+      "entity_slug": "akg-infin",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-05-18",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 1.8,
+      "penalty_amount_display": "₹1.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Change of control"
+      ],
+      "themes": [
+        "change-of-control"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not obtain prior written permission of RBI for a change in shareholding exceeding 26 per cent of its paid-up equity capital.",
+          "theme": "change-of-control"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "A threshold rule that must be known before any share transfer is approved.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62782",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Prior approval for change in shareholding"
+      ],
+      "source": "RBI press release 2026-2027/304",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "city-union-bank-2026-05-20",
+      "entity_name": "City Union Bank Limited",
+      "entity_slug": "city-union-bank",
+      "re_type": "Bank-Private",
+      "re_group": "Bank",
+      "action_date": "2026-05-20",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 10.1,
+      "penalty_amount_display": "₹10.1 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Customer protection",
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "customer-protection",
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Levied loan-related charges on certain agriculture priority sector loans of up to ₹25,000.",
+          "theme": "customer-protection"
+        },
+        {
+          "text": "Did not report Self Help Group member-level data to Credit Information Companies.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The no-charges rule for small agriculture loans is a branch-level policy point; SHG reporting is a data pipeline.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62793",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Priority Sector Loan accounts",
+        "Reporting of Self Help Group (SHG) member level data to Credit Information Companies (CICs)"
+      ],
+      "source": "RBI press release 2026-2027/315",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "creditaccess-grameen-2026-05-25",
+      "entity_name": "CreditAccess Grameen Limited",
+      "entity_slug": "creditaccess-grameen",
+      "re_type": "NBFC-MFI",
+      "re_group": "NBFC",
+      "action_date": "2026-05-25",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have robust software that throws alerts when transactions are inconsistent with a customer's risk category and updated profile, as part of identifying and reporting suspicious transactions.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A transaction-monitoring software gap.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62831",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/353",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "puran-associates-2026-05-27",
+      "entity_name": "Puran Associates Private Limited",
+      "entity_slug": "puran-associates",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-05-27",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not reclassify certain accounts as non-performing assets upon restructuring.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "An asset-classification control in the loan system.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62875",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Asset Classification"
+      ],
+      "source": "RBI press release 2026-2027/397",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "canara-bank-2026-06-05",
+      "entity_name": "Canara Bank",
+      "entity_slug": "canara-bank",
+      "re_type": "Bank-Public",
+      "re_group": "Bank",
+      "action_date": "2026-06-05",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 41.8,
+      "penalty_amount_display": "₹41.8 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC",
+        "Customer protection"
+      ],
+      "themes": [
+        "kyc-ckycr",
+        "customer-protection"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not upload KYC records of certain customers onto the Central KYC Records Registry within the prescribed timeline.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Classified certain accounts as inoperative even though the last customer-induced transaction in those accounts was less than one year old.",
+          "theme": "customer-protection"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Inoperative-account rules are a policy definition that core-banking logic must mirror.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62876",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Know Your Customer (KYC)",
+        "Unclaimed Deposits / Inoperative Accounts in banks"
+      ],
+      "source": "RBI press release 2026-2027/398",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "iifl-samasta-finance-2026-06-05",
+      "entity_name": "IIFL Samasta Finance Limited",
+      "entity_slug": "iifl-samasta-finance",
+      "re_type": "NBFC-MFI",
+      "re_group": "NBFC",
+      "action_date": "2026-06-05",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.9,
+      "penalty_amount_display": "₹3.9 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC",
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "kyc-ckycr",
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place robust software for effective identification and reporting of suspicious transactions.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not disclose correct details of frauds reported for FY2024-25 in the notes to accounts of its financial statements.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Fraud disclosure in the notes to accounts is a reporting obligation owned by finance and compliance.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62922",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions",
+        "Reserve Bank of India (Fraud Risk Management in NBFCs) Directions"
+      ],
+      "source": "RBI press release 2026-2027/444",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "true-credits-2026-06-05",
+      "entity_name": "True Credits Private Limited",
+      "entity_slug": "true-credits",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-06-05",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not undertake Enhanced Due Diligence for certain customers onboarded through non-face-to-face modes.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "EDD for non-face-to-face onboarding is a KYC policy rule staff must apply at onboarding.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62923",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/445",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "repco-home-finance-2026-06-05",
+      "entity_name": "Repco Home Finance Limited",
+      "entity_slug": "repco-home-finance",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-06-05",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 0.7,
+      "penalty_amount_display": "₹0.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Fair practices"
+      ],
+      "themes": [
+        "fair-practices"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not disclose in application forms and sanction letters the approach for gradation of risk and the rationale for charging different interest rates to different categories of borrowers.",
+          "theme": "fair-practices"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "A disclosure that lives in the loan application form and sanction letter template; a policy-distribution failure.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62924",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Fair Practice Code"
+      ],
+      "source": "RBI press release 2026-2027/446",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "pahal-financial-services-2026-06-18",
+      "entity_name": "Pahal Financial Services Private Limited",
+      "entity_slug": "pahal-financial-services",
+      "re_type": "NBFC-MFI",
+      "re_group": "NBFC",
+      "action_date": "2026-06-18",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place robust software for effective identification and reporting of suspicious transactions.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A transaction-monitoring software gap.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62976",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/498",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "can-fin-homes-2026-06-18",
+      "entity_name": "Can Fin Homes Limited",
+      "entity_slug": "can-fin-homes",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-06-18",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Fair practices"
+      ],
+      "themes": [
+        "fair-practices"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not clearly indicate the split between interest and principal in the loan instalments collected from borrowers.",
+          "theme": "fair-practices"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "A borrower-communication template requirement under the Fair Practices Code.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62977",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Fair Practices Code"
+      ],
+      "source": "RBI press release 2026-2027/499",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "five-star-business-finance-2026-06-18",
+      "entity_name": "Five Star Business Finance Limited",
+      "entity_slug": "five-star-business-finance",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-06-18",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 6.2,
+      "penalty_amount_display": "₹6.2 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC",
+        "Fair practices"
+      ],
+      "themes": [
+        "kyc-ckycr",
+        "fair-practices"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place robust software for effective identification and reporting of suspicious transactions.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not disclose in application forms and sanction letters the approach for gradation of risk and the rationale for charging different interest rates to different categories of borrowers.",
+          "theme": "fair-practices"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The FPC disclosure is a template matter; the monitoring software is not.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62979",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions",
+        "Fair Practice Code"
+      ],
+      "source": "RBI press release 2026-2027/501",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "gic-housing-finance-2026-06-24",
+      "entity_name": "GIC Housing Finance Limited",
+      "entity_slug": "gic-housing-finance",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-06-24",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "A six-monthly review cycle that a distributed KYC policy and a review calendar make visible.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63083",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/605",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "bank-of-baroda-2026-06-30",
+      "entity_name": "Bank of Baroda",
+      "entity_slug": "bank-of-baroda",
+      "re_type": "Bank-Public",
+      "re_group": "Bank",
+      "action_date": "2026-06-30",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 63.6,
+      "penalty_amount_display": "₹63.6 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Fair practices",
+        "KYC"
+      ],
+      "themes": [
+        "fair-practices",
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Collected interest higher than the contracted rate in certain loan accounts.",
+          "theme": "fair-practices"
+        },
+        {
+          "text": "Did not upload KYC records of certain customers onto the Central KYC Records Registry within the prescribed timeline.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Contracted-rate discipline is a lending-system control; CKYCR upload timelines are a policy obligation executed by systems.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63082",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Fair Practices Code for Lenders",
+        "Know Your Customer (KYC)"
+      ],
+      "source": "RBI press release 2026-2027/604",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "muthoot-finance-2026-07-10",
+      "entity_name": "Muthoot Finance Limited",
+      "entity_slug": "muthoot-finance",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-07-10",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 5.8,
+      "penalty_amount_display": "₹5.8 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not have robust software that throws alerts when transactions are inconsistent with a customer's risk category and updated profile, as part of identifying and reporting suspicious transactions.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The review cycle is policy-driven; the alerting software is not.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63176",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India Know Your Customer (KYC) Directions"
+      ],
+      "source": "RBI press release 2026-2027/698",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "avail-financial-services-2026-07-10",
+      "entity_name": "Avail Financial Services Limited",
+      "entity_slug": "avail-financial-services",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-07-10",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 6.2,
+      "penalty_amount_display": "₹6.2 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Its Managing Director held directorships in two other Middle Layer NBFCs.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Breached the regulatory single-party exposure limit.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The cross-directorship bar is a governance rule the board must know; the exposure limit is a credit control.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63177",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Governance",
+        "Credit/Investment Concentration Norms"
+      ],
+      "source": "RBI press release 2026-2027/703",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "muthoot-vehicle-and-asset-finance-2026-07-13",
+      "entity_name": "Muthoot Vehicle and Asset Finance Limited",
+      "entity_slug": "muthoot-vehicle-and-asset-finance",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-07-13",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "A six-monthly review cycle that a distributed KYC policy and a review calendar make visible.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63178",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/702",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "pan-emami-cosmed-2026-07-13",
+      "entity_name": "PAN Emami Cosmed Limited",
+      "entity_slug": "pan-emami-cosmed",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-07-13",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Breached the prescribed regulatory limit for credit exposure to a single group of parties.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A credit-concentration control.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63180",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Credit / investment concentration Norms"
+      ],
+      "source": "RBI press release 2026-2027/700",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "satya-microcapital-2026-07-13",
+      "entity_name": "Satya MicroCapital Limited",
+      "entity_slug": "satya-microcapital",
+      "re_type": "NBFC-MFI",
+      "re_group": "NBFC",
+      "action_date": "2026-07-13",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not reclassify certain accounts as non-performing assets upon restructuring.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "An asset-classification control in the loan system.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63181",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Asset Classification"
+      ],
+      "source": "RBI press release 2026-2027/699",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "dhani-loans-and-services-2026-07-15",
+      "entity_name": "Dhani Loans and Services Limited",
+      "entity_slug": "dhani-loans-and-services",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-07-15",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not classify certain loan accounts as non-performing assets.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "An asset-classification control in the loan system.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63179",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Asset Classification"
+      ],
+      "source": "RBI press release 2026-2027/701",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "utsav-securities-2026-08-03",
+      "entity_name": "Utsav Securities Limited",
+      "entity_slug": "utsav-securities",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-03",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.9,
+      "penalty_amount_display": "₹3.9 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Prudential/Governance/Reporting",
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "prudential-governance",
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Its Key Management Personnel held office, including directorships, in other Middle Layer NBFCs.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Did not submit credit information of certain loan accounts to the Credit Information Companies.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The cross-office bar is a governance rule the board must know; CIC submission is a data pipeline.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63317",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Governance",
+        "Submission of data to Credit Information Companies (CICs)"
+      ],
+      "source": "RBI press release 2026-2027/839",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "namdev-finvest-2026-08-03",
+      "entity_name": "Namdev Finvest Limited",
+      "entity_slug": "namdev-finvest",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-03",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place robust software for effective identification and reporting of suspicious transactions.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A transaction-monitoring software gap.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63318",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/840",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "infinity-fincorp-solutions-2026-08-03",
+      "entity_name": "Infinity Fincorp Solutions Private Limited",
+      "entity_slug": "infinity-fincorp-solutions",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-03",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 5.4,
+      "penalty_amount_display": "₹5.4 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "KYC",
+        "Fair practices"
+      ],
+      "themes": [
+        "kyc-ckycr",
+        "fair-practices"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not disclose in application forms and sanction letters the approach for gradation of risk and the rationale for charging different interest rates to different categories of borrowers.",
+          "theme": "fair-practices"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "Both are policy and template obligations rather than system failures.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63319",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions",
+        "Fair Practice Code"
+      ],
+      "source": "RBI press release 2026-2027/841",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "valuefin-india-credit-services-2026-08-11",
+      "entity_name": "Valuefin India Credit Services Private Limited",
+      "entity_slug": "valuefin-india-credit-services",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-11",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 1.8,
+      "penalty_amount_display": "₹1.8 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Change of control"
+      ],
+      "themes": [
+        "change-of-control"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not obtain prior written permission of RBI for a change in shareholding exceeding 26 per cent of its paid-up equity capital.",
+          "theme": "change-of-control"
+        }
+      ],
+      "scope_fit": "in-scope",
+      "scope_note": "A threshold rule that must be known before any share transfer is approved.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63362",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Prior approval for change in shareholding"
+      ],
+      "source": "RBI press release 2026-2027/883",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "muthoot-mcred-2026-08-14",
+      "entity_name": "Muthoot MCred Limited",
+      "entity_slug": "muthoot-mcred",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-14",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 3.1,
+      "penalty_amount_display": "₹3.1 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Upgraded certain non-performing loan accounts to standard without the entire arrears of interest and principal across all credit facilities being repaid.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "An NPA upgrade control in the loan system.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63372",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Asset Classification"
+      ],
+      "source": "RBI press release 2026-2027/895",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "indusind-bank-2026-08-14",
+      "entity_name": "IndusInd Bank Limited",
+      "entity_slug": "indusind-bank",
+      "re_type": "Bank-Private",
+      "re_group": "Bank",
+      "action_date": "2026-08-14",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 59.2,
+      "penalty_amount_display": "₹59.2 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Paid interest on deposits held in certain current accounts.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Undertook activities in the nature of synthetic securitisation, which the Securitisation of Standard Assets directions do not permit.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "Product-configuration and treasury-structuring matters.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63374",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Interest Rate on Deposits",
+        "Securitisation of Standard Assets"
+      ],
+      "source": "RBI press release 2026-2027/897",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "northern-arc-capital-2026-08-14",
+      "entity_name": "Northern Arc Capital Limited",
+      "entity_slug": "northern-arc-capital",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-14",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 6.2,
+      "penalty_amount_display": "₹6.2 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Prudential/Governance/Reporting",
+        "Internal Ombudsman"
+      ],
+      "themes": [
+        "prudential-governance",
+        "internal-ombudsman"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not disclose correct and complete information about customer complaints in its annual financial statements for FY2024-25.",
+          "theme": "prudential-governance"
+        },
+        {
+          "text": "Did not ensure auto-escalation to its Internal Ombudsman of certain complaints that its internal grievance redress mechanism had partly or wholly rejected.",
+          "theme": "internal-ombudsman"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "Auto-escalation is a rule the complaints team must know and a workflow must enforce; the disclosure is a reporting control.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63375",
+      "related_rules": [
+        "io-nbfc-2026"
+      ],
+      "rbi_directions_cited": [
+        "Disclosures in Financial Statements, Notes to Accounts",
+        "Internal Ombudsman for Regulated Entities"
+      ],
+      "source": "RBI press release 2026-2027/896",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "fusion-finance-2026-08-14",
+      "entity_name": "Fusion Finance Limited",
+      "entity_slug": "fusion-finance",
+      "re_type": "NBFC-MFI",
+      "re_group": "NBFC",
+      "action_date": "2026-08-14",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "A six-monthly review cycle that a distributed KYC policy and a review calendar make visible.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63376",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/898",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "progfin-2026-08-19",
+      "entity_name": "Progfin Private Limited",
+      "entity_slug": "progfin",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-19",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 2.7,
+      "penalty_amount_display": "₹2.7 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "KYC"
+      ],
+      "themes": [
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not have a system for periodic review of the risk categorisation of accounts, which must happen at least once in six months.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "A six-monthly review cycle that a distributed KYC policy and a review calendar make visible.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63421",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/944",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "shri-ram-finance-corporation-2026-08-19",
+      "entity_name": "Shri Ram Finance Corporation Private Limited",
+      "entity_slug": "shri-ram-finance-corporation",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-19",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 8.1,
+      "penalty_amount_display": "₹8.1 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Change of control",
+        "KYC"
+      ],
+      "themes": [
+        "change-of-control",
+        "kyc-ckycr"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not take prior written permission of RBI while appointing a director, which changed more than 30 per cent of its directors, excluding independent directors, and so amounted to a change in management.",
+          "theme": "change-of-control"
+        },
+        {
+          "text": "Did not have a system to categorise its customers as low, medium or high risk.",
+          "theme": "kyc-ckycr"
+        },
+        {
+          "text": "Did not upload KYC records of certain customers onto the Central KYC Records Registry within the prescribed timeline.",
+          "theme": "kyc-ckycr"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The prior-approval trigger and risk categorisation are policy rules; CKYCR uploads depend on systems.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63422",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Governance",
+        "Reserve Bank of India (Know Your Customer (KYC)) Directions"
+      ],
+      "source": "RBI press release 2026-2027/943",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "transunion-cibil-2026-08-31",
+      "entity_name": "TransUnion CIBIL Limited",
+      "entity_slug": "transunion-cibil",
+      "re_type": "CIC",
+      "re_group": "CIC",
+      "action_date": "2026-08-31",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 26.83,
+      "penalty_amount_display": "₹26.83 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not credit the compensation amount to the bank accounts of certain eligible complainants within the prescribed period.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The compensation clock is a rule the complaints team must know; payment execution is a process.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63520",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Framework for compensation to customers for delayed updation/rectification of credit information"
+      ],
+      "source": "RBI press release 2026-2027/1042",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "crif-high-mark-2026-08-31",
+      "entity_name": "CRIF High Mark Credit Information Services Private Limited",
+      "entity_slug": "crif-high-mark",
+      "re_type": "CIC",
+      "re_group": "CIC",
+      "action_date": "2026-08-31",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 6.9,
+      "penalty_amount_display": "₹6.9 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not credit the compensation amount to the bank accounts of certain eligible complainants within the prescribed period.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The compensation clock is a rule the complaints team must know; payment execution is a process.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63521",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Framework for compensation to customers for delayed updation/rectification of credit information"
+      ],
+      "source": "RBI press release 2026-2027/1043",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "sammaan-finserve-2026-08-31",
+      "entity_name": "Sammaan Finserve Limited",
+      "entity_slug": "sammaan-finserve",
+      "re_type": "NBFC-HFC",
+      "re_group": "NBFC",
+      "action_date": "2026-08-31",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 4.2,
+      "penalty_amount_display": "₹4.2 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not report credit information of a borrower to the Central Repository of Information on Large Credits.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A CRILC reporting pipeline gap.",
+      "root_cause_type": "System/technology",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63522",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Early Recognition of Stress and Reporting to Central Repository of Information on Large Credits (CRILC)"
+      ],
+      "source": "RBI press release 2026-2027/1044",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "equifax-credit-information-services-2026-08-31",
+      "entity_name": "Equifax Credit Information Services Private Limited",
+      "entity_slug": "equifax-credit-information-services",
+      "re_type": "CIC",
+      "re_group": "CIC",
+      "action_date": "2026-08-31",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 1.19,
+      "penalty_amount_display": "₹1.19 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Reporting to CICs/CRILC"
+      ],
+      "themes": [
+        "credit-reporting"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not credit the compensation amount to the bank accounts of certain eligible complainants within the prescribed period.",
+          "theme": "credit-reporting"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "The compensation clock is a rule the complaints team must know; payment execution is a process.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63523",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Framework for compensation to customers for delayed updation / rectification of credit information"
+      ],
+      "source": "RBI press release 2026-2027/1045",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "hinduja-leyland-finance-2026-09-02",
+      "entity_name": "Hinduja Leyland Finance Limited",
+      "entity_slug": "hinduja-leyland-finance",
+      "re_type": "NBFC-ICC",
+      "re_group": "NBFC",
+      "action_date": "2026-09-02",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 6.2,
+      "penalty_amount_display": "₹6.2 L",
+      "multi_reason": true,
+      "reason_categories": [
+        "Fair practices",
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "fair-practices",
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Did not put in place a board-approved policy on the pricing of microfinance loans.",
+          "theme": "fair-practices"
+        },
+        {
+          "text": "Undertook activities in the nature of synthetic securitisation, which the Securitisation of Standard Assets directions do not permit.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "partial",
+      "scope_note": "A missing board-approved pricing policy is squarely a policy-governance gap; the securitisation charge is not.",
+      "root_cause_type": "Knowledge/awareness",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63527",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Pricing of Microfinance Loans",
+        "Securitisation of Standard Assets"
+      ],
+      "source": "RBI press release 2026-2027/1049",
+      "last_reviewed": "2026-09-21"
+    },
+    {
+      "id": "asset-care-and-reconstruction-enterprise-2026-09-08",
+      "entity_name": "Asset Care & Reconstruction Enterprise Limited",
+      "entity_slug": "asset-care-and-reconstruction-enterprise",
+      "re_type": "ARC",
+      "re_group": "ARC",
+      "action_date": "2026-09-08",
+      "fiscal_year": "FY26-27",
+      "action_type": "Monetary penalty",
+      "penalty_amount_lakhs": 27.3,
+      "penalty_amount_display": "₹27.3 L",
+      "multi_reason": false,
+      "reason_categories": [
+        "Prudential/Governance/Reporting"
+      ],
+      "themes": [
+        "prudential-governance"
+      ],
+      "cited_reasons": [
+        {
+          "text": "Violated the regulatory requirement on the charging of management fees.",
+          "theme": "prudential-governance"
+        }
+      ],
+      "scope_fit": "out-of-scope",
+      "scope_note": "A fee-recognition control under the ARC framework.",
+      "root_cause_type": "Process/execution",
+      "rbi_press_release_url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63583",
+      "related_rules": [],
+      "rbi_directions_cited": [
+        "Income Recognition"
+      ],
+      "source": "RBI press release 2026-2027/1105",
+      "last_reviewed": "2026-09-21"
+    }
+  ]
+}

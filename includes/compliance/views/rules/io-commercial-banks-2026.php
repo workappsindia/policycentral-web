@@ -130,7 +130,7 @@ $track    = home_url('/compliance/enforcement-tracker/');
     <section class="sec" id="penalised">
       <div class="sec-eyebrow"><span>Enforcement</span></div>
       <h2>What RBI has penalised under the IO framework</h2>
-      <p>A recurring FY25-26 theme: rejected complaints not escalated to the IO in time. Each entry states only the reason cited in the RBI press release; where a penalty covered several issues, the amount is the total and isn't attributable to any single reason.</p>
+      <p>A recurring theme since FY25-26: rejected complaints not escalated to the IO in time. Each entry states only the reason cited in the RBI press release; where a penalty covered several issues, the amount is the total and isn't attributable to any single reason.</p>
       <div class="pen-grid">
         <?php echo pcc_render_penalised_for_rule('io-commercial-banks-2026'); ?>
       </div>

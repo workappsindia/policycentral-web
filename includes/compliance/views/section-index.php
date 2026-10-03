@@ -16,8 +16,8 @@ $pcc_themes = array(
     array('slug' => 'kyc-ckycr',          'label' => 'KYC & CKYCR Compliance',                 'desc' => 'Periodic updation, risk re-categorisation, and timely CKYCR uploads.'),
     array('slug' => 'customer-protection','label' => 'Customer Protection & Conduct',           'desc' => 'Unauthorised-transaction reversals, charges transparency, BSBD, DEA Fund.'),
     array('slug' => 'prudential-governance','label' => 'Prudential, Governance & Reporting',    'desc' => 'Exposure norms, approvals, disclosures and regulatory returns.'),
-    array('slug' => 'fair-practices',     'label' => 'Fair Practices Code (NBFC)',              'desc' => 'Loan transparency, charges, and periodic FPC compliance review.'),
-    array('slug' => 'change-of-control',  'label' => 'Prior Approval for Change of Control',     'desc' => 'The NBFC obligation behind a large cluster of FY25-26 penalties.'),
+    array('slug' => 'fair-practices',     'label' => 'Fair Practices Code',                     'desc' => 'Rate disclosure, sanction letters, charges, and the Board review of FPC compliance.'),
+    array('slug' => 'change-of-control',  'label' => 'Prior Approval for Change of Control',     'desc' => 'The 26 per cent shareholding and 30 per cent board thresholds, and the approval that must come first.'),
     array('slug' => 'credit-reporting',   'label' => 'Credit Information Reporting',             'desc' => 'Accurate, timely reporting to CICs and CRILC.'),
     array('slug' => 'outsourcing',        'label' => 'Outsourcing of Financial Services',        'desc' => 'What can and cannot be outsourced, and governance of providers.'),
 );
@@ -26,6 +26,7 @@ foreach ($pcc_themes as &$pcc_t) {
 }
 unset($pcc_t);
 $pcc_live_count = count(array_filter(array_column($pcc_themes, 'live')));
+$pcc_enf_count  = class_exists('PCC_Enforcement') ? count(PCC_Enforcement::get_all()) : 0;
 ?>
 
 <!-- HERO -->
@@ -53,8 +54,8 @@ $pcc_live_count = count(array_filter(array_column($pcc_themes, 'live')));
         <div class="snap-body">
           <div class="snap-row"><span class="snap-k">Compliance themes</span><span class="snap-v">8<small>theme hubs</small></span></div>
           <div class="snap-row"><span class="snap-k">Live now</span><span class="snap-v"><?php echo (int) $pcc_live_count; ?> of <?php echo count($pcc_themes); ?><small>theme hubs</small></span></div>
-          <div class="snap-row"><span class="snap-k">Enforcement actions tracked</span><span class="snap-v">16<small>FY25-26 (seed set)</small></span></div>
-          <div class="snap-row"><span class="snap-k">Source</span><span class="snap-v">RBI &middot; FACE<small>press releases &amp; instruments</small></span></div>
+          <div class="snap-row"><span class="snap-k">Enforcement actions tracked</span><span class="snap-v"><?php echo (int) $pcc_enf_count; ?><small>FY25-26 to date</small></span></div>
+          <div class="snap-row"><span class="snap-k">Source</span><span class="snap-v">RBI<small>press releases &amp; instruments</small></span></div>
         </div>
       </div>
     </div>
@@ -106,14 +107,14 @@ $pcc_live_count = count(array_filter(array_column($pcc_themes, 'live')));
       <div class="ib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
       <div class="cv-kicker">For compliance &amp; risk teams</div>
       <h3>Track what RBI is penalising, by theme and entity</h3>
-      <p>The enforcement tracker lets you filter FY25-26 actions by reason, entity type, theme and how preventable they were with a policy-distribution layer. Start with the patterns most relevant to your institution.</p>
+      <p>The enforcement tracker lets you filter RBI actions from FY25-26 onward by reason, entity type, theme and how preventable they were with a policy-distribution layer. Start with the patterns most relevant to your institution.</p>
       <a href="<?php echo esc_url(home_url('/compliance/enforcement-tracker/')); ?>" class="btn">Explore the tracker <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
     <div class="cv-card buyer reveal rd1">
       <div class="ib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <div class="cv-kicker">For CCOs, HR &amp; InfoSec leaders</div>
       <h3>See policy attestation tracked across every branch</h3>
-      <p>Most penalties are last-mile execution failures: a rule known at HQ but not distributed, acknowledged, or reviewed on cadence down to the branch. See how PolicyCentral closes that gap, on your own data.</p>
+      <p>Most penalties are last-mile execution failures: a rule known at HQ but not distributed, acknowledged, or reviewed on cadence down to the branch. See how PolicyCentral.ai closes that gap, on your own data.</p>
       <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Book a walkthrough <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
   </div>

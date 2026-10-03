@@ -1,0 +1,67 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">SEBI LODR + COMPANIES ACT</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">LISTED</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">MANDATES</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">15 board-approved policies, one checklist</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: checklist ticks -->
+  <g transform="translate(70, 296)" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#179d97" stroke-width="0.8" opacity="0.5">
+      <rect x="0" y="0" width="16" height="16" rx="2"/><rect x="26" y="0" width="16" height="16" rx="2"/><rect x="52" y="0" width="16" height="16" rx="2"/><rect x="78" y="0" width="16" height="16" rx="2"/>
+      <rect x="0" y="26" width="16" height="16" rx="2"/><rect x="26" y="26" width="16" height="16" rx="2"/><rect x="52" y="26" width="16" height="16" rx="2"/><rect x="78" y="26" width="16" height="16" rx="2" opacity="0.4"/>
+    </g>
+    <g fill="none" stroke="#7ececa" stroke-width="1.6" opacity="0.85">
+      <path d="M4 8 L7 12 L13 4"/><path d="M30 8 L33 12 L39 4"/><path d="M56 8 L59 12 L65 4"/><path d="M82 8 L85 12 L91 4"/>
+      <path d="M4 34 L7 38 L13 30"/><path d="M30 34 L33 38 L39 30"/><path d="M56 34 L59 38 L65 30"/>
+    </g>
+  </g>
+
+  <!-- Right-side card -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">THE CHECKLIST</text>
+
+  <line x1="450" y1="130" x2="598" y2="130" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <g font-family="'Courier New', monospace" font-size="9.5" fill="#ffffff">
+    <text x="450" y="150.0" fill="#179d97" opacity="0.8">01</text><text x="472" y="150.0" opacity="0.9">Code of conduct</text>
+    <text x="450" y="168.5" fill="#179d97" opacity="0.76">02</text><text x="472" y="168.5" opacity="0.84">Whistleblower</text>
+    <text x="450" y="187.0" fill="#179d97" opacity="0.72">03</text><text x="472" y="187.0" opacity="0.79">Related party</text>
+    <text x="450" y="205.5" fill="#179d97" opacity="0.68">04</text><text x="472" y="205.5" opacity="0.73">Materiality</text>
+    <text x="450" y="224.0" fill="#179d97" opacity="0.64">05</text><text x="472" y="224.0" opacity="0.68">Archival</text>
+    <text x="450" y="242.5" fill="#179d97" opacity="0.6">06</text><text x="472" y="242.5" opacity="0.62">Remuneration</text>
+    <text x="450" y="261.0" fill="#179d97" opacity="0.56">07</text><text x="472" y="261.0" opacity="0.57">Dividend</text>
+    <text x="450" y="279.5" fill="#179d97" opacity="0.52">08</text><text x="472" y="279.5" opacity="0.52">Insider trading</text>
+  </g>
+
+  <!-- Bottom keyword strip -->
+  <text x="188" y="356" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">APPROVE · PUBLISH · REVIEW · DISCLOSE</text>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>

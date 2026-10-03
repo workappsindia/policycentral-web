@@ -1,0 +1,68 @@
+<svg width="100%" viewBox="0 0 680 390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#179d97" stroke-width="0.25" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="680" height="380" fill="#0a203a"/>
+  <rect width="680" height="380" fill="url(#grid)"/>
+
+  <!-- Corner brackets -->
+  <path d="M 48 36 L 48 48 L 60 48" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+  <path d="M 632 344 L 632 332 L 620 332" fill="none" stroke="#179d97" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Left vertical accent -->
+  <rect x="48" y="48" width="3" height="284" rx="1.5" fill="#179d97" opacity="0.5"/>
+
+  <!-- Eyebrow -->
+  <text x="68" y="100" font-family="'Courier New', monospace" font-size="11" fill="#179d97" letter-spacing="3" opacity="0.7">FREE TEMPLATES + POLICY LIBRARY</text>
+
+  <!-- Title -->
+  <text x="68" y="152" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">29 FREE</text>
+  <text x="68" y="200" font-family="'Courier New', monospace" font-size="42" font-weight="700" fill="#179d97" letter-spacing="-1">TEMPLATES</text>
+
+  <!-- Tagline -->
+  <text x="68" y="240" font-family="'Courier New', monospace" font-size="12" fill="#7ececa" opacity="0.7" letter-spacing="1">Download, personalize, adapt, approve</text>
+
+  <!-- Divider -->
+  <line x1="68" y1="268" x2="360" y2="268" stroke="#179d97" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- HERO ELEMENT: fanned policy documents -->
+  <g transform="translate(78, 290)">
+    <rect x="0" y="6" width="34" height="44" rx="2" fill="none" stroke="#179d97" stroke-width="0.7" opacity="0.35" transform="rotate(-10 17 28)"/>
+    <rect x="26" y="2" width="34" height="44" rx="2" fill="none" stroke="#179d97" stroke-width="0.7" opacity="0.55"/>
+    <rect x="52" y="6" width="34" height="44" rx="2" fill="#0a203a" stroke="#179d97" stroke-width="0.9" opacity="0.95" transform="rotate(10 69 28)"/>
+    <g stroke="#7ececa" stroke-width="0.8" opacity="0.6" transform="rotate(10 69 28)">
+      <line x1="58" y1="16" x2="80" y2="16"/><line x1="58" y1="23" x2="80" y2="23"/><line x1="58" y1="30" x2="74" y2="30"/>
+    </g>
+    <g stroke="#7ececa" stroke-width="0.7" opacity="0.4">
+      <line x1="32" y1="12" x2="54" y2="12"/><line x1="32" y1="19" x2="54" y2="19"/><line x1="32" y1="26" x2="48" y2="26"/>
+    </g>
+    <circle cx="84" cy="48" r="7" fill="#179d97" opacity="0.95"/>
+    <path d="M84 44 L84 51 M81 48.5 L84 51.5 L87 48.5" fill="none" stroke="#0a203a" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right-side card -->
+  <rect x="430" y="80" width="188" height="220" rx="4" fill="none" stroke="#179d97" stroke-width="0.75" opacity="0.25"/>
+  <rect x="430" y="80" width="188" height="3" rx="1.5" fill="#179d97" opacity="0.4"/>
+
+  <text x="524" y="116" font-family="'Courier New', monospace" font-size="9" fill="#179d97" text-anchor="middle" letter-spacing="2" opacity="0.6">THE LIBRARY</text>
+
+  <line x1="450" y1="130" x2="598" y2="130" stroke="#179d97" stroke-width="0.4" opacity="0.2"/>
+
+  <g font-family="'Courier New', monospace" font-size="9.5" fill="#ffffff">
+    <text x="450" y="150" fill="#179d97" opacity="0.8">07</text><text x="472" y="150" opacity="0.9">Governance</text>
+    <text x="450" y="171" fill="#179d97" opacity="0.76">05</text><text x="472" y="171" opacity="0.84">Fraud + KYC</text>
+    <text x="450" y="192" fill="#179d97" opacity="0.72">08</text><text x="472" y="192" opacity="0.79">Infosec + data</text>
+    <text x="450" y="213" fill="#179d97" opacity="0.68">03</text><text x="472" y="213" opacity="0.73">Finance + tax</text>
+    <text x="450" y="234" fill="#179d97" opacity="0.64">04</text><text x="472" y="234" opacity="0.68">ESG + customer</text>
+    <text x="450" y="255" fill="#179d97" opacity="0.6">02</text><text x="472" y="255" opacity="0.62">People + HR</text>
+  </g>
+
+  <!-- Bottom keyword strip -->
+  <text x="188" y="356" font-family="'Courier New', monospace" font-size="10" fill="#7ececa" opacity="0.5" letter-spacing="1">DOWNLOAD · ADAPT · APPROVE · PUBLISH</text>
+
+  <!-- Brand mark -->
+  <text x="614" y="358" font-family="'Courier New', monospace" font-size="9" fill="#179d97" opacity="0.35" text-anchor="end" letter-spacing="2">POLICYCENTRAL.AI</text>
+</svg>
