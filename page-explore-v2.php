@@ -440,12 +440,12 @@ get_header();
     <div class="exp-hero-trust exp-reveal exp-rd2">
       <div class="exp-trust-label">Live Customers</div>
       <div class="exp-logo-strip">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo.png" alt="HDFC Life">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo.png" alt="Kotak Mahindra Bank">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan.png" alt="Arohan Financial Services">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance.png" alt="SBI Life Insurance">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS.png" alt="L&amp;T Financial Services">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo.png" alt="Reliance Nippon Life Insurance">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/HDFC-Life-Logo-2x.png" alt="HDFC Life">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/Kotak Mahindra Bank logo-2x.png" alt="Kotak Mahindra Bank">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/arohan-2x.png" alt="Arohan Financial Services">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/SBI Life Insurance-2x.png" alt="SBI Life Insurance">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/LTFS-2x.png" alt="L&amp;T Financial Services">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/client-logos/reliance-nippon-life-insurance-logo-2x.png" alt="Reliance Nippon Life Insurance">
       </div>
     </div>
   </div>
