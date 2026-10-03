@@ -150,6 +150,7 @@ function pcgpt_get_migrations() {
         117 => 'pcgpt_migration_117_rbi_board_approved_policies_nbfc_checklist',
         118 => 'pcgpt_migration_118_free_compliance_governance_policy_templates_india',
         119 => 'pcgpt_migration_119_invalidate_sitemap_cache_blog_batch_2026_09',
+        120 => 'pcgpt_migration_120_refresh_dpdp_and_sebi_lodr_blog_edits',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
