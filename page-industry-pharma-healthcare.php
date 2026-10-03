@@ -629,12 +629,12 @@ get_header();
   <div class="cust-inner">
     <span class="cust-label">Live Customers</span>
     <div class="cust-logos">
-      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo.png', 'HDFC Life'); ?></div>
-      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo.png', 'Kotak Mahindra Bank'); ?></div>
-      <div class="cchip"><?php pc_picture('images/client-logos/arohan.png', 'Arohan Financial Services'); ?></div>
-      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance.png', 'SBI Life Insurance'); ?></div>
-      <div class="cchip"><?php pc_picture('images/client-logos/LTFS.png', 'L&T Financial Services'); ?></div>
-      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo.png', 'Reliance Nippon Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/HDFC-Life-Logo-2x.png', 'HDFC Life'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/Kotak Mahindra Bank logo-2x.png', 'Kotak Mahindra Bank'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/arohan-2x.png', 'Arohan Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/SBI Life Insurance-2x.png', 'SBI Life Insurance'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/LTFS-2x.png', 'L&T Financial Services'); ?></div>
+      <div class="cchip"><?php pc_picture('images/client-logos/reliance-nippon-life-insurance-logo-2x.png', 'Reliance Nippon Life Insurance'); ?></div>
     </div>
   </div>
 </div>
