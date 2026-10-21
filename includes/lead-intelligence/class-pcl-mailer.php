@@ -92,6 +92,11 @@ class PCL_Mailer {
         )))));
         $referrer = esc_html($lead->referrer ?: '');
         $page_url = esc_html($lead->page_url ?: '');
+        $src_source   = esc_html(($lead->utm_source ?? '') !== '' ? $lead->utm_source . (($lead->utm_medium ?? '') !== '' ? ' / ' . $lead->utm_medium : '') : '');
+        $src_campaign = esc_html($lead->utm_campaign ?? '');
+        $src_ad       = esc_html($lead->utm_content ?? '');
+        $src_landing  = esc_html($lead->landing_page ?? '');
+        $src_extref   = esc_html($lead->ext_referrer ?? '');
         $ts = esc_html($lead->submitted_at ?: current_time('mysql'));
 
         $phone_raw = preg_replace('/\D/', '', (string) $lead->phone);
@@ -198,6 +203,26 @@ class PCL_Mailer {
       <tr>
         <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Device</td>
         <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;">{$browser} · {$os} · {$device}</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Source</td>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;word-break:break-all;">{$src_source}</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Campaign</td>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;word-break:break-all;">{$src_campaign}</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Ad (utm_content)</td>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;word-break:break-all;">{$src_ad}</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Landing page</td>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;word-break:break-all;">{$src_landing}</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;">Original referrer</td>
+        <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4B5563;word-break:break-all;">{$src_extref}</td>
       </tr>
       <tr>
         <td style="padding:10px 16px;border-bottom:1px solid #E5E7EB;font-family:'JetBrains Mono',monospace;font-size:11px;color:#9CA3AF;vertical-align:top;">Page URL</td>

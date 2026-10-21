@@ -271,6 +271,9 @@ class PCL_Admin {
                             <?php if (!empty($lead->utm_source)) : ?>
                                 <?php $this->dl_row('UTM', "source={$lead->utm_source} · medium={$lead->utm_medium} · campaign={$lead->utm_campaign}"); ?>
                             <?php endif; ?>
+                            <?php $this->dl_row('Ad (utm_content)', $lead->utm_content ?? ''); ?>
+                            <?php $this->dl_row('Landing page', $lead->landing_page ?? ''); ?>
+                            <?php $this->dl_row('Original referrer', $lead->ext_referrer ?? ''); ?>
                         </div>
                     </div>
                 </div>

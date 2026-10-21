@@ -564,6 +564,23 @@ function pc_is_corporate_email($email) {
     return !in_array($domain, pc_personal_email_domains(), true);
 }
 
+/**
+ * First-party ad attribution for a lead. Prefers values POSTed by the form's JS
+ * (sessionStorage, first-touch), falls back to the 30-day pc_utm_* cookies.
+ * Every value is sanitized and capped at 200 chars.
+ */
+function pc_lead_attribution() {
+    $out = array();
+    foreach (array('utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term') as $k) {
+        $v = isset($_POST[$k]) ? $_POST[$k] : (isset($_COOKIE['pc_' . $k]) ? $_COOKIE['pc_' . $k] : '');
+        $out[$k] = mb_substr(sanitize_text_field(wp_unslash($v)), 0, 200);
+    }
+    $out['gclid']        = isset($_POST['gclid'])        ? mb_substr(sanitize_text_field(wp_unslash($_POST['gclid'])), 0, 200) : '';
+    $out['landing_page'] = isset($_POST['landing_page']) ? mb_substr(sanitize_text_field(wp_unslash($_POST['landing_page'])), 0, 200) : '';
+    $out['ext_referrer'] = isset($_POST['referrer'])     ? mb_substr(sanitize_text_field(wp_unslash($_POST['referrer'])), 0, 200) : '';
+    return $out;
+}
+
 add_action('wp_ajax_pc_contact_submit', 'pc_handle_contact_form');
 add_action('wp_ajax_nopriv_pc_contact_submit', 'pc_handle_contact_form');
 
@@ -612,6 +629,8 @@ function pc_handle_contact_form() {
     $page_url   = $referrer ?: ($host ? "{$proto}://{$host}" . ($_SERVER['REQUEST_URI'] ?? '') : '');
     $page_source = isset($_POST['page_source']) ? sanitize_text_field($_POST['page_source']) : '';
 
+    $attr = pc_lead_attribution();
+
     // Geo lookup (1s timeout, never blocks long)
     $geo = function_exists('pc_lead_lookup_geo') ? pc_lead_lookup_geo($ip) : array(
         'geo_city' => '', 'geo_region' => '', 'geo_country' => ''
@@ -639,9 +658,14 @@ function pc_handle_contact_form() {
         'geo_city'     => $geo['geo_city']    ?? '',
         'geo_region'   => $geo['geo_region']  ?? '',
         'geo_country'  => $geo['geo_country'] ?? '',
-        'utm_source'   => isset($_COOKIE['pc_utm_source'])   ? sanitize_text_field($_COOKIE['pc_utm_source'])   : '',
-        'utm_medium'   => isset($_COOKIE['pc_utm_medium'])   ? sanitize_text_field($_COOKIE['pc_utm_medium'])   : '',
-        'utm_campaign' => isset($_COOKIE['pc_utm_campaign']) ? sanitize_text_field($_COOKIE['pc_utm_campaign']) : '',
+        'utm_source'   => $attr['utm_source'],
+        'utm_medium'   => $attr['utm_medium'],
+        'utm_campaign' => $attr['utm_campaign'],
+        'utm_content'  => $attr['utm_content'],
+        'utm_term'     => $attr['utm_term'],
+        'gclid'        => $attr['gclid'],
+        'landing_page' => $attr['landing_page'],
+        'ext_referrer' => $attr['ext_referrer'],
         'page_source'  => $page_source,
         'page_url'     => $page_url,
         'enrichment_status' => 'new',
