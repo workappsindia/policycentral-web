@@ -831,6 +831,29 @@ get_header();
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // First-party ad attribution: capture UTMs/gclid on landing, keep first-touch for the session.
+  var ATTR_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid'];
+  var attr = {};
+  (function captureAttribution() {
+    var stored = {};
+    try { stored = JSON.parse(sessionStorage.getItem('pc_attr') || '{}') || {}; } catch (err) { stored = {}; }
+    var params = new URLSearchParams(window.location.search);
+    var fresh = {};
+    ATTR_KEYS.forEach(function(k) {
+      var v = (params.get(k) || '').trim();
+      if (v) fresh[k] = v.slice(0, 200);
+    });
+    var hasStored = ATTR_KEYS.some(function(k) { return stored[k]; });
+    if (!hasStored) {
+      // First touch wins: only record this visit's params (and landing context) if nothing is stored yet.
+      stored = fresh;
+      stored.landing_page = window.location.pathname;
+      stored.referrer = (document.referrer || '').slice(0, 200);
+      try { sessionStorage.setItem('pc_attr', JSON.stringify(stored)); } catch (err) {}
+    }
+    attr = stored;
+  })();
+
   // CTA form submission — same logic as homepage
   var expForm = document.getElementById('exp-contact-form');
   var expBtn  = document.getElementById('exp-btn-submit');
@@ -868,13 +891,23 @@ get_header();
 
       var data = new FormData(expForm);
       data.append('action', 'pc_contact_submit');
+      ATTR_KEYS.forEach(function(k) { data.append(k, attr[k] || ''); });
+      data.append('landing_page', attr.landing_page || window.location.pathname);
+      data.append('referrer', attr.referrer !== undefined ? attr.referrer : (document.referrer || ''));
 
       fetch('<?php echo admin_url("admin-ajax.php"); ?>', { method: 'POST', body: data })
       .then(function(r){ return r.json(); })
       .then(function(res){
         if (res.success) {
           window.dataLayer = window.dataLayer || [];
-          dataLayer.push({ event: 'form_submit', form_name: 'contact_form' });
+          dataLayer.push({
+            event: 'form_submit',
+            form_name: 'contact_form',
+            utm_source: attr.utm_source || '',
+            utm_medium: attr.utm_medium || '',
+            utm_campaign: attr.utm_campaign || '',
+            utm_content: attr.utm_content || ''
+          });
           var expires = new Date(Date.now() + 5 * 60 * 1000).toUTCString();
           document.cookie = 'pc_ty_name=' + encodeURIComponent(data.get('full_name')) + ';expires=' + expires + ';path=/;SameSite=Lax';
           document.cookie = 'pc_ty_company=' + encodeURIComponent(data.get('company')) + ';expires=' + expires + ';path=/;SameSite=Lax';

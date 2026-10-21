@@ -151,6 +151,7 @@ function pcgpt_get_migrations() {
         118 => 'pcgpt_migration_118_free_compliance_governance_policy_templates_india',
         119 => 'pcgpt_migration_119_invalidate_sitemap_cache_blog_batch_2026_09',
         120 => 'pcgpt_migration_120_refresh_dpdp_and_sebi_lodr_blog_edits',
+        121 => 'pcgpt_migration_121_lead_attribution_columns',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
