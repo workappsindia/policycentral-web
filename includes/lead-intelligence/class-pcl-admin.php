@@ -535,7 +535,8 @@ class PCL_Admin {
             'Reference', 'Submitted', 'Name', 'Email', 'Phone', 'Company',
             'Company Size (Entered)', 'City (Entered)',
             'City (IP)', 'Region', 'Country', 'Status', 'Confidence', 'Industry',
-            'Size', 'Funding', 'Round', 'Amount', 'Message', 'IP', 'Page URL'
+            'Size', 'Funding', 'Round', 'Amount', 'Message', 'IP', 'Page URL',
+            'UTM Source', 'UTM Medium', 'UTM Campaign', 'Ad (utm_content)', 'UTM Term', 'GCLID', 'Landing Page', 'Original Referrer'
         ));
 
         foreach ($leads as $l) {
@@ -561,6 +562,14 @@ class PCL_Admin {
                 $l->message,
                 $l->ip_address,
                 $l->page_url,
+                $l->utm_source ?? '',
+                $l->utm_medium ?? '',
+                $l->utm_campaign ?? '',
+                $l->utm_content ?? '',
+                $l->utm_term ?? '',
+                $l->gclid ?? '',
+                $l->landing_page ?? '',
+                $l->ext_referrer ?? '',
             ));
         }
 
