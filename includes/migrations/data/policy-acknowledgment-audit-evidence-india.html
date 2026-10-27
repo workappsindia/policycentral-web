@@ -1,0 +1,84 @@
+<div class="pcb-readable">
+<p class="pcb-lead">Most companies can say they sent a policy to employees. Far fewer can prove, months later and under questioning, that a specific person accepted a specific version of it on a specific date, and that nobody has altered the record since. That gap between "we circulated it" and "we can prove it" is where policy acknowledgment programs fail audits, disciplinary cases and regulatory inquiries.</p>
+<p>This guide is about the second half of acknowledgment: evidence. It looks at what Indian law and regulators actually say about attestation, what the Bharatiya Sakshya Adhiniyam, 2023 expects of an electronic record, and what a record should capture so it holds up. For the mechanics of collecting acknowledgments, see our guides on <a href="/blogs/policy-management-software/policy-lifecycle-management/">policy lifecycle management</a> and <a href="/blogs/compliance-audit/policy-acknowledgment-tracking-legal-requirements-2026/">acknowledgment tracking by industry</a>.</p>
+
+<h2>Where Indian rules expect an attestation</h2>
+<p>For listed companies, an annual attestation is not a good practice. It is written into the SEBI Listing Regulations. The <a class="pcb-ext" href="https://www.sebi.gov.in/legal/regulations/jul-2026/securities-and-exchange-board-of-india-listing-obligations-and-disclosure-requirements-regulations-2015-last-amended-on-july-14-2026-_102974.html" target="_blank" rel="nofollow noopener">SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015</a>, as last amended on 14 July 2026, set out a chain of obligations:</p>
+<ul>
+<li><strong>Regulation 17(5):</strong> the board must lay down a code of conduct for all members of the board and senior management, and the code must suitably incorporate the duties of independent directors under the Companies Act, 2013.</li>
+<li><strong>Regulation 26(3):</strong> all members of the board and senior management personnel must <span class="pcb-hl">affirm compliance with that code on an annual basis</span>.</li>
+<li><strong>Schedule V:</strong> the annual report must carry a declaration signed by the chief executive officer stating that the board members and senior management have affirmed compliance with the code.</li>
+<li><strong>Regulation 46(2):</strong> the code of conduct must be disclosed on the company's website.</li>
+</ul>
+<p>A single CEO declaration in the annual report therefore depends on a set of individual affirmations collected during the year. If asked to substantiate it, the company needs the underlying records, not just the signed summary. Our guide to the <a href="/blogs/compliance-audit/mandatory-policies-listed-companies-sebi-lodr/">mandatory policies for listed companies</a> covers the wider checklist.</p>
+<div class="pcb-callout"><span class="pcb-callout-label">The declaration is only as good as the records behind it</span>A CEO who signs the annual declaration is relying on <span class="pcb-hl">individual, dated affirmations</span> from every director and member of senior management. Keep them as a retrievable set, tied to the version of the code each person affirmed.</div>
+<p>Outside listed companies the position is less prescriptive, but the logic is the same. Regulators, auditors, customers doing due diligence and courts all ask the same question about any policy: who was bound by it, and how do you know they accepted it?</p>
+
+<h2>What the evidence law asks of an electronic record</h2>
+<p>Most acknowledgments today are electronic, so the question becomes how an electronic record is proved. Under the <a class="pcb-ext" href="https://egazette.gov.in/WriteReadData/2023/250882.pdf" target="_blank" rel="nofollow noopener">Bharatiya Sakshya Adhiniyam, 2023</a>, Section 63 deals with the admissibility of electronic records. Its main points are worth knowing even if you never see the inside of a courtroom, because they describe what a trustworthy record looks like.</p>
+<p>Section 63(1) treats computer output as a document, admissible without producing the original, if the conditions in the section are met. Those conditions in Section 63(2) are about the system that produced the record:</p>
+<ul>
+<li>the computer or device was used regularly to create, store or process information for the activity in question, under the lawful control of the person running that activity;</li>
+<li>information of that kind was regularly fed into the system in the ordinary course of the activity;</li>
+<li>the system was operating properly, or if it was not, any lapse did not affect the record or its accuracy; and</li>
+<li>the record reproduces, or is derived from, the information fed into the system in the ordinary course.</li>
+</ul>
+<p>Section 63(4) then requires a <span class="pcb-hl">certificate to be submitted with the electronic record</span> each time it is offered. The certificate in the Schedule to the Act has two parts, one completed by the party and one by an expert. Both ask for details of the device or source the record came from, and both ask for the <span class="pcb-stat">hash value</span> of the record and the algorithm used to obtain it, with a hash report attached.</p>
+<div class="pcb-callout"><span class="pcb-callout-label">Why hashes matter</span>The Act's own certificate asks for a hash value and the algorithm used. An acknowledgment system that can show <span class="pcb-hl">a fixed fingerprint of each record</span>, and prove it has not changed, is built for exactly that question.</div>
+<p>This is not legal advice, and how courts apply Section 63 to a given record depends on the facts. The practical lesson is simpler: an acknowledgment record is far easier to defend if the system that holds it is run in the ordinary course of business, logs reliably, and can show that records have not been altered.</p>
+
+<h2>Electronic signatures and electronic contracts</h2>
+<p>Two provisions of the Information Technology Act, 2000, as amended in 2008, matter for acknowledgments that act like an agreement, such as a code of conduct sign-off or a confidentiality undertaking.</p>
+<p>Section 3A allows a subscriber to authenticate an electronic record with an electronic signature technique that is considered reliable and is specified in the Second Schedule. A technique counts as reliable if the signature data is linked to the signatory and no one else, was under the signatory's control when signing, and any later alteration to the signature or to the signed information can be detected. Those conditions are set out in the text of the <a class="pcb-ext" href="https://www.indiacode.nic.in/bitstream/123456789/15386/1/it_amendment_act2008.pdf" target="_blank" rel="nofollow noopener">Information Technology (Amendment) Act, 2008</a>.</p>
+<p>Section 10A adds that where the proposal, acceptance or revocation in forming a contract is expressed in electronic form, the contract is <span class="pcb-hl">not unenforceable solely because</span> electronic means were used. That removes one objection, but it does not by itself prove who accepted what.</p>
+<p>Whether an acknowledgment needs a formal electronic signature, or a logged confirmation by an authenticated employee is enough, depends on the document and the risk. A routine acknowledgment of a leave policy and a signed confidentiality undertaking are not the same thing, and your counsel should set the standard for each.</p>
+
+<h2>What a defensible acknowledgment record captures</h2>
+<p>Putting those pieces together, here is what we recommend each acknowledgment record holds. This is our checklist, drawn from the principles above, not a statutory list.</p>
+<ol>
+<li><strong>Who:</strong> the authenticated identity of the employee, tied to a unique employee ID, with the role and entity at that time.</li>
+<li><strong>What:</strong> the exact policy and version, with a version number and effective date, and a fingerprint of the document content so the text can be shown not to have changed.</li>
+<li><strong>When:</strong> a reliable date and time stamp taken by the system, not typed by the user.</li>
+<li><strong>How:</strong> the method of acknowledgment, such as an authenticated in-app confirmation or a signed attestation, and the language the employee saw.</li>
+<li><strong>What came before:</strong> when the policy was assigned, the reminders sent and any escalation, so a missing acknowledgment is explained rather than invisible.</li>
+<li><strong>Integrity:</strong> an audit trail that is tamper-evident, so that any later edit or deletion is detectable.</li>
+<li><strong>Retention and retrieval:</strong> the record is kept for as long as the policy might be relied on, and can be produced quickly for one employee or for a whole population.</li>
+</ol>
+<p>Version control is the item most often missing. An acknowledgment is only meaningful if it is bound to one version of the text. Our guide to <a href="/blogs/compliance-audit/policy-version-control-prevents-legal-risk/">policy version control and legal risk</a> explains why overwriting a policy file silently can undermine every acknowledgment already collected.</p>
+
+<h2>The audit evidence pack</h2>
+<p>When an auditor or regulator asks about a policy, the quickest way to close the question is a ready pack. For each in-scope policy, be able to produce:</p>
+<ul>
+<li>the approved policy, its approval record and its full version history;</li>
+<li>the list of people it applies to on a given date, and how that list was decided;</li>
+<li>the acknowledgment record for each of them, tied to the right version;</li>
+<li>the list of people who have not acknowledged, with the reminders and escalations sent;</li>
+<li>the date the next review is due and who owns it.</li>
+</ul>
+<p>Our <a href="/blogs/compliance-audit/policy-audit-checklist-indian-hr-compliance/">policy audit checklist</a> shows how this pack fits into a wider audit preparation routine.</p>
+
+<h2>Six ways acknowledgment evidence falls apart</h2>
+<ul>
+<li><strong>The checkbox with no version.</strong> The employee ticked "I agree", but the record does not say to what.</li>
+<li><strong>The overwritten document.</strong> The policy was edited in place, so the text employees accepted no longer exists.</li>
+<li><strong>The email read receipt.</strong> It shows a message was opened, not that the policy was read, understood or accepted.</li>
+<li><strong>No assignment record.</strong> Nobody can show who was supposed to acknowledge, so a gap cannot be measured.</li>
+<li><strong>Editable spreadsheets.</strong> A tracker anyone can change is a weak record for anything contested.</li>
+<li><strong>A language the employee does not read.</strong> A policy delivered in a language the employee cannot follow weakens the acknowledgment. See our guide on <a href="/blogs/compliance-audit/multilingual-hr-policies-hindi-regional-languages/">multilingual HR policies</a>.</li>
+</ul>
+<div class="pcb-callout"><span class="pcb-callout-label">Start with the policies that carry the most risk</span>You do not need courtroom-grade evidence for every notice. Begin with the code of conduct, information security, anti-bribery, whistleblower and data privacy policies, and apply <span class="pcb-hl">the strongest standard where the stakes are highest</span>.</div>
+<p>The <a href="/policies/code-of-conduct-ethics-policy/">Code of Conduct and Ethics Policy</a> and <a href="/policies/whistleblower-ethics-policy/">Whistleblower and Ethics Policy</a> templates in our library are good starting points. Each can be personalized with your company name and downloaded as a PDF.</p>
+
+<h2>How PolicyCentral.ai helps</h2>
+<p>PolicyCentral.ai records acknowledgments against the exact version of each policy and keeps them in a tamper-evident audit trail. It routes drafts through approval, distributes each version to the specific audience it applies to, delivers it in ten Indian languages, and sends reminders and escalations so gaps are visible and explained. When an auditor asks who accepted what and when, the answer is a report, not a search through inboxes.</p>
+<p>If you are preparing for an audit or an annual code of conduct affirmation, request a demo and bring the policy you would find hardest to defend. It is the quickest way to see what a complete evidence record looks like. This guide is for general information and is not legal advice.</p>
+
+<h2>Frequently Asked Questions</h2>
+<p><strong>Is a policy acknowledgment legally binding in India?</strong> An acknowledgment is evidence that an employee received and accepted a policy. Whether it creates a binding obligation depends on the policy, the employment contract and the facts. Section 10A of the Information Technology Act, 2000 says a contract is not unenforceable solely because it was formed electronically, but it does not make every acknowledgment a contract.</p>
+<p><strong>Do listed companies have to collect annual affirmations of the code of conduct?</strong> Yes. Regulation 26(3) of the SEBI Listing Regulations requires all members of the board and senior management personnel to affirm compliance with the code of conduct on an annual basis, and the annual report must carry a declaration signed by the chief executive officer to that effect.</p>
+<p><strong>Is an electronic acknowledgment admissible as evidence?</strong> Under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023, computer output is treated as a document and is admissible if the conditions in the section are met, supported by a certificate in the form set out in the Schedule. How a court applies it depends on the case, so ask your counsel about your own records.</p>
+<p><strong>What is a hash value and why does it appear in the evidence certificate?</strong> A hash value is a fixed fingerprint calculated from the content of an electronic record using an algorithm such as SHA256. If even one character of the record changes, the fingerprint changes. The certificate in the Schedule to the Bharatiya Sakshya Adhiniyam asks for the hash value and the algorithm used, which is how a record's integrity can be shown.</p>
+<p><strong>Is an email read receipt enough proof that an employee read a policy?</strong> No. A read receipt shows only that a message was opened. It does not show which version of the policy was attached, that the employee read it, or that they accepted it. A record tied to an authenticated employee, a specific policy version and a system timestamp is far stronger.</p>
+<p><strong>How long should acknowledgment records be kept?</strong> Keep them for as long as the policy, or the employee's obligations under it, might be relied on, and at least as long as any retention period set by a law or regulation that applies to you. Many companies align it with the employment record retention period. Confirm the right period with your counsel.</p>
+<p><strong>How does PolicyCentral.ai support acknowledgment evidence?</strong> PolicyCentral.ai ties each acknowledgment to the exact policy version, records it in a tamper-evident audit trail, tracks assignment, reminders and escalations, and delivers policies in ten Indian languages, so you can produce a complete evidence pack for an audit.</p>
+</div>
