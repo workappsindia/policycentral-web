@@ -157,6 +157,7 @@ function pcgpt_get_migrations() {
         124 => 'pcgpt_migration_124_nbfc_outsourcing_it_governance_policy_checklist_rbi',
         125 => 'pcgpt_migration_125_policy_review_cycles_how_often_to_review_policies_india',
         126 => 'pcgpt_migration_126_invalidate_sitemap_cache_blog_batch_2026_10',
+        127 => 'pcgpt_migration_127_refresh_blog_edits_2026_10',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
