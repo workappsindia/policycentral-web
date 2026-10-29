@@ -152,6 +152,12 @@ function pcgpt_get_migrations() {
         119 => 'pcgpt_migration_119_invalidate_sitemap_cache_blog_batch_2026_09',
         120 => 'pcgpt_migration_120_refresh_dpdp_and_sebi_lodr_blog_edits',
         121 => 'pcgpt_migration_121_lead_attribution_columns',
+        122 => 'pcgpt_migration_122_leave_policy_india_annual_leave_osh_code',
+        123 => 'pcgpt_migration_123_policy_acknowledgment_audit_evidence_india',
+        124 => 'pcgpt_migration_124_nbfc_outsourcing_it_governance_policy_checklist_rbi',
+        125 => 'pcgpt_migration_125_policy_review_cycles_how_often_to_review_policies_india',
+        126 => 'pcgpt_migration_126_invalidate_sitemap_cache_blog_batch_2026_10',
+        127 => 'pcgpt_migration_127_refresh_blog_edits_2026_10',
         // Add new migrations here. Never remove or reorder existing ones.
     );
 }
